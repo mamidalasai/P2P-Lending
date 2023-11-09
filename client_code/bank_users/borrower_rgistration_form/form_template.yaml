@@ -175,32 +175,32 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - name: link_1
-    properties: {text: View Profile, bold: true}
+    properties: {text: View Profile, bold: true, background: '', foreground: black}
     type: Link
     layout_properties: {grid_position: 'PVIIFB,JEUETP'}
     event_bindings: {click: link_1_click}
   - name: link_2
-    properties: {text: New Loan, bold: true}
+    properties: {text: New Loan, bold: true, background: '', foreground: black}
     type: Link
     layout_properties: {grid_position: 'GRLMLR,YQWSBM'}
     event_bindings: {click: link_2_click}
   - name: link_3
-    properties: {text: Loan Foreclosure Request, bold: true}
+    properties: {text: Loan Foreclosure Request, bold: true, background: '', foreground: black}
     type: Link
     layout_properties: {grid_position: 'WJHGYD,PNHRUH'}
     event_bindings: {click: link_3_click}
   - name: link_4
-    properties: {text: Loan Close, bold: true}
+    properties: {text: Loan Close, bold: true, background: '', foreground: black}
     type: Link
     layout_properties: {grid_position: 'LCRIAZ,LXAHUI'}
     event_bindings: {click: link_4_click}
   - name: link_5
-    properties: {text: Discount Coupons, bold: true}
+    properties: {text: Discount Coupons, bold: true, background: '', foreground: black}
     type: Link
     layout_properties: {grid_position: 'ASMIDJ,DEEXFR'}
     event_bindings: {click: link_5_click}
   - name: link_6
-    properties: {text: Application Tracker, bold: true}
+    properties: {text: Application Tracker, bold: true, background: '', foreground: black}
     type: Link
     layout_properties: {grid_position: 'PWHLCF,XGZRPR'}
     event_bindings: {click: link_6_click}
