@@ -41,7 +41,7 @@ class main_form(main_formTemplate):
             # this statement is used to check whether the user is new or old
             if check_user_already_exist == None:
                 print("main if statement was executed")
-                user_module.add_email_and_coustmert_id(user_email)
+                user_module.add_email_and_user_id(user_email)
                 main_form_module.email = user_email
                 main_form_module.flag = True
                 open_form('bank_users.user_form')
