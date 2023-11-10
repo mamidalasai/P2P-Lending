@@ -131,6 +131,54 @@ db_schema:
     - name: registration_approve
       admin_ui: {width: 200, order: 31}
       type: bool
+    - name: investment
+      admin_ui: {width: 200, order: 24.5}
+      type: string
+    - name: mail_id
+      admin_ui: {width: 200, order: 24.25}
+      type: string
+    - name: about
+      admin_ui: {width: 200, order: 24.125}
+      type: string
+    - name: terms
+      admin_ui: {width: 200, order: 24.15625}
+      type: bool
+    - name: alerts
+      admin_ui: {width: 200, order: 24.140625}
+      type: bool
+    - name: qualification
+      admin_ui: {width: 200, order: 24.375}
+      type: string
+    - name: address_type
+      admin_ui: {width: 200, order: 24.4375}
+      type: string
+    - name: house_no
+      admin_ui: {width: 200, order: 24.46875}
+      type: string
+    - name: building_name
+      admin_ui: {width: 200, order: 24.453125}
+      type: string
+    - name: street
+      admin_ui: {width: 200, order: 24.4453125}
+      type: string
+    - name: state
+      admin_ui: {width: 200, order: 24.75}
+      type: string
+    - name: pincode
+      admin_ui: {width: 200, order: 24.625}
+      type: string
+    - name: house_landmark
+      admin_ui: {width: 200, order: 24.5625}
+      type: string
+    - name: lending_individual
+      admin_ui: {width: 200, order: 24.6875}
+      type: bool
+    - name: lending_institutional
+      admin_ui: {width: 200, order: 24.65625}
+      type: bool
+    - name: lending_period
+      admin_ui: {width: 200, order: 24.671875}
+      type: string
     title: user_profile
   borrower:
     title: borrower

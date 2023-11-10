@@ -37,16 +37,16 @@ def add_lendor_four_form(qualification,pannumber,identity,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['qualification'] = qualification
-    row[0]['identity_proof'] = identity
+    row[0]['pan_photo'] = identity
     row[0]['pan_number'] = pannumber
 
 @anvil.server.callable
 def add_lendor_five_form(martial,spouse_profession,spouse_number,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    row[0]['martial_status'] = martial
-    row[0]['spouse_profession'] = spouse_profession
-    row[0]['spouse_number'] = spouse_number
+    row[0]['marital_status'] = martial
+    row[0]['spouse_profficen'] = spouse_profession
+    row[0]['spouse_mobile'] = spouse_number
 
 @anvil.server.callable
 def add_lendor_six_form(address_type,house_no,building_name,street,user_id):
@@ -62,20 +62,23 @@ def add_lendor_six_form(address_type,house_no,building_name,street,user_id):
 def add_lendor_seven_form(landmark,city,state,pincode,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    row[0]['landmark'] = landmark
+    row[0]['house_landmark'] = landmark
     row[0]['city'] = city
     row[0]['state'] = state
     row[0]['pincode'] = pincode
     
 @anvil.server.callable
-def add_lendor_eight_form(investment,lending_period,lending_individual,lending_institutinal,user_id):
+def add_lendor_eight_form(lending_individual,lending_institutinal,investment,lending_period,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     #row[0]['lending_type'] = lending_type
-    row[0]['lending_period'] = lending_period
-    row[0]['investment'] = investment
-    row[0]['lending_individual'] =lending_individual
+    row[0]['lending_individual'] = lending_individual
     row[0]['lending_institutional'] = lending_institutinal
+    row[0]['investment'] = investment
+    row[0]['lending_period'] = lending_period
+    
+    
+    
     
     
        
