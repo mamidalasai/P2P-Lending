@@ -22,11 +22,15 @@ class Lender_reg_form_6(Lender_reg_form_6Template):
     building_name = self.text_box_2.text
     street = self.text_box_3.text
     user_id = self.userId
-    anvil.server.call('add_lendor_six_form',address_type,house_no,building_name,street,user_id)
-    open_form('lendor_registration_form.Lender_reg_form_7',user_id = user_id)
+    if not address_type or not house_no or not building_name or not street:
+      Notification("Please fill all the filelds")
+    else:
+     anvil.server.call('add_lendor_six_form',address_type,house_no,building_name,street,user_id)
+     open_form('lendor_registration_form.Lender_reg_form_7',user_id = user_id)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_form_5')
+    user_id = self.userId
+    open_form('lendor_registration_form.Lender_reg_form_5',user_id=user_id)
     """This method is called when the button is clicked"""
     
