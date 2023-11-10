@@ -44,7 +44,8 @@ class main_form(main_formTemplate):
                   elif user_type == 'borrower':
                     open_form('bank_users.borrower_rgistration_form')
                   else:
-                    open_form('admin.dashboard')
+                    open_form('bank_users.user_form')
+                    # open_form('admin.dashboard')
               else:
                 main_form_module.email = user_email
                 main_form_module.flag = False
