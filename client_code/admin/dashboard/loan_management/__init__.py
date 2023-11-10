@@ -14,3 +14,47 @@ class loan_management(loan_managementTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard')
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.loan_disbursed')
+
+  def link_3_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.manual_disbursement')
+
+  def link_4_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.lost_opportunities')
+
+  def link_5_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.rejected_loans')
+
+  def link_6_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.under_process')
+
+  def link_7_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.closed_loans')
+
+  def link_8_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.lapsed')
+
+  def link_9_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.defaulters')
+
+  def link_10_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.npa_form')
+
+  def link_11_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.ots_form')
