@@ -43,9 +43,10 @@ class main_form(main_formTemplate):
                     open_form('lendor_registration_form.dashboard')
                   elif user_type == 'borrower':
                     open_form('bank_users.borrower_rgistration_form')
+                  elif user_type == 'admin':
+                    open_form('admin.dashboard')
                   else:
                     open_form('bank_users.user_form')
-                    # open_form('admin.dashboard')
               else:
                 main_form_module.email = user_email
                 main_form_module.flag = False
