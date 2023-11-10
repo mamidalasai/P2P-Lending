@@ -14,3 +14,11 @@ class admin_teams(admin_teamsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.admin_teams.view_profile')
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard')
