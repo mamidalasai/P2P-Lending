@@ -70,12 +70,18 @@ components:
       name: repeating_panel_1
       layout_properties: {}
   - type: Button
-    properties: {text: button_1}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: back, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     name: button_1
     layout_properties: {grid_position: 'KGTLDH,QXDIQK'}
     event_bindings: {click: button_1_click}
   - type: Button
-    properties: {text: button_2}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: next, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     name: button_2
     layout_properties: {grid_position: 'KGTLDH,IVHFPM'}
     event_bindings: {click: button_2_click}
