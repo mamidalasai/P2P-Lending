@@ -88,42 +88,52 @@ components:
   layout_properties: {slot: default}
   components:
   - name: button_1
-    properties: {text: 'View Profile                       ', role: tonal-button}
+    properties: {text: 'View Profile ', role: tonal-button, background: '#0876E8',
+      foreground: black}
     type: Button
     layout_properties: {row: XICQKC, width_xs: 3, col_xs: 0}
+    event_bindings: {click: button_1_click}
   - name: button_2
-    properties: {text: 'New Loan                             ', role: tonal-button}
+    properties: {text: 'New Loan   ', role: tonal-button, background: '#0876E8', foreground: black}
     type: Button
     layout_properties: {row: XICQKC, width_xs: 3, col_xs: 3}
+    event_bindings: {click: button_2_click}
   - name: button_3
-    properties: {text: 'Loan Close ', role: tonal-button}
+    properties: {text: 'Loan Close ', role: tonal-button, background: '#0876E8', foreground: black}
     type: Button
     layout_properties: {row: XICQKC, width_xs: 3, col_xs: 6}
+    event_bindings: {click: button_3_click}
   - name: button_4
-    properties: {text: 'Today Dues                  ', role: tonal-button}
+    properties: {text: 'Today Dues  ', role: tonal-button, background: '#0876E8',
+      foreground: black}
     type: Button
     layout_properties: {row: XICQKC, width_xs: 3, col_xs: 9}
+    event_bindings: {click: button_4_click}
   - name: button_5
     properties: {text: 'Application
 
-        Tracker', role: tonal-button}
+        Tracker', role: tonal-button, background: '#0876E8', foreground: black}
     type: Button
     layout_properties: {row: ZNHWHE, width_xs: 3, col_xs: 0}
+    event_bindings: {click: button_5_click}
   - name: button_6
     properties: {text: '   Loan
 
-        Foreclosure', role: tonal-button}
+        Foreclosure', role: tonal-button, background: '#0876E8', foreground: black}
     type: Button
     layout_properties: {row: ZNHWHE, width_xs: 3, col_xs: 3}
+    event_bindings: {click: button_6_click}
   - name: button_7
     properties: {text: 'Discount
 
-        Coupons', role: tonal-button}
+        Coupons', role: tonal-button, background: '#0876E8', foreground: black}
     type: Button
     layout_properties: {row: ZNHWHE, width_xs: 3, col_xs: 6}
+    event_bindings: {click: button_7_click}
   - name: button_8
     properties: {text: 'View/Download
 
-        Portfolio', role: tonal-button}
+        Portfolio', role: tonal-button, background: '#0876E8', foreground: black}
     type: Button
     layout_properties: {row: ZNHWHE, width_xs: 3, col_xs: 9}
+    event_bindings: {click: button_8_click}

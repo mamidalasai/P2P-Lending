@@ -68,6 +68,34 @@ class borrower_rgistration_form(borrower_rgistration_formTemplate):
     """This method is called when the button is clicked"""
     open_form('bank_users.borrower_rgistration_form.borrower_profile')
 
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.borrower_rgistration_form.new_loan_request')
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.borrower_rgistration_form.borrower_loan_close')
+
+  def button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.borrower_rgistration_form.borrower_today_dues')
+
+  def button_5_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.borrower_rgistration_form.application_tracker')
+
+  def button_6_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request')
+
+  def button_7_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.borrower_rgistration_form.borrower_discount_coupons')
+
+  def button_8_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.borrower_rgistration_form.borrower_view_portfolio')
+
  
  
   
