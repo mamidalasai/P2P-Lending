@@ -34,6 +34,11 @@ class Lender_reg_form_1(Lender_reg_form_1Template):
     self.text_box_1.text = ''
     self.drop_down_1_copy_1.selected_value = ''
     self.text_box_2.text = ''
+
+  def button_1_click(self, **event_args):
+    open_form('bank_users.user_form')
+    """This method is called when the button is clicked"""
+    
       
      
     

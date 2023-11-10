@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 components:
 - name: image_1_copy_1
   properties: {role: null, vertical_align: center, height: 90, tooltip: '', border: '',
@@ -39,7 +41,7 @@ components:
   properties: {role: null, selected: false, align: left, tooltip: '', border: '',
     enabled: true, foreground: '', value: '', visible: true, text: Institutional,
     font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
-    background: '', bold: false, group_name: radioGroup1, underline: false}
+    background: 'theme:On Primary', bold: false, group_name: radioGroup1, underline: false}
   type: RadioButton
   layout_properties: {grid_position: 'JWWMUR,CTVVUO'}
 - name: label_3_copy_1
@@ -49,13 +51,29 @@ components:
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'GJGPBZ,ZPBBNS'}
-- name: text_box_1
-  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: 'theme:On Primary', bold: false, underline: false}
-  type: TextBox
-  layout_properties: {grid_position: 'GJGPBZ,QPYVJM'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: [Select one, Rs 10000, Rs 20000, Rs 30000, Rs 40000, Rs  50000, Rs 60000,
+      Rs 70000, Rs 80000, Rs 90000, Rs 100000]
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: theme:On Primary
+    bold: false
+    underline: false
+    include_placeholder: false
+  name: drop_down_1
+  layout_properties: {grid_position: 'GJGPBZ,FJCYHP'}
 - name: label_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Lending Period, font_size: null, font: '', spacing_above: small,
@@ -63,13 +81,28 @@ components:
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'HULYYQ,TLJPZE'}
-- name: text_box_2
-  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: 'theme:On Primary', bold: false, underline: false}
-  type: TextBox
-  layout_properties: {grid_position: 'HULYYQ,DUNMZT'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: [Select one, 1 year, 2-3 Years, 4-5 years, 5 above years, '']
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: theme:On Primary
+    bold: false
+    underline: false
+    include_placeholder: false
+  name: drop_down_2
+  layout_properties: {grid_position: 'HULYYQ,FYJUTX'}
 - name: button_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary Container', visible: true, text: Prev, font_size: null,
