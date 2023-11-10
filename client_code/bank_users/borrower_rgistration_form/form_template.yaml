@@ -82,3 +82,40 @@ components:
   properties: {text: User Name, bold: true, icon: 'fa:user', role: headline}
   type: Label
   layout_properties: {slot: title}
+- name: grid_panel_1
+  properties: {}
+  type: GridPanel
+  layout_properties: {slot: default}
+  components:
+  - name: link_7
+    properties: {text: View Profile, align: center, bold: true}
+    type: Link
+    layout_properties: {row: RUBMSU, width_xs: 4, col_xs: 0}
+  - name: link_9
+    properties: {text: New Loan, align: center, bold: true}
+    type: Link
+    layout_properties: {row: RUBMSU, width_xs: 4, col_xs: 4}
+  - name: link_10
+    properties: {text: Loan Close, align: center, bold: true}
+    type: Link
+    layout_properties: {row: RUBMSU, width_xs: 4, col_xs: 8}
+  - name: link_11
+    properties: {text: Today Dues, align: center, bold: true}
+    type: Link
+    layout_properties: {row: IXEWFF, width_xs: 4, col_xs: 0}
+  - name: link_12
+    properties: {text: Application Status, align: center, bold: true}
+    type: Link
+    layout_properties: {row: IXEWFF, width_xs: 4, col_xs: 4}
+  - name: link_13
+    properties: {align: center, bold: true, text: Loan Foreclosure}
+    type: Link
+    layout_properties: {row: IXEWFF, width_xs: 4, col_xs: 8}
+  - name: link_14
+    properties: {align: center, bold: true, text: Discount Coupons}
+    type: Link
+    layout_properties: {row: JRHTJN, width_xs: 4, col_xs: 0}
+  - name: link_15
+    properties: {align: center, bold: true, text: View/Download Portfolio}
+    type: Link
+    layout_properties: {row: JRHTJN, width_xs: 4, col_xs: 4}
