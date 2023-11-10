@@ -51,8 +51,8 @@ class admin_view_profile_2(admin_view_profile_2Template):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.admin_view_profile.admin_view_profile_4')
+    open_form('admin.dashboard.admin_view_profile.admin_view_profile_3')
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.admin_view_profile.admin_view_profile_2')
+    open_form('admin.dashboard.admin_view_profile')
