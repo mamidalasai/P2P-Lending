@@ -131,9 +131,6 @@ db_schema:
     - name: registration_approve
       admin_ui: {width: 200, order: 31}
       type: bool
-    - name: investment
-      admin_ui: {width: 200, order: 24.5}
-      type: string
     - name: mail_id
       admin_ui: {width: 200, order: 24.25}
       type: string
@@ -169,15 +166,6 @@ db_schema:
       type: string
     - name: house_landmark
       admin_ui: {width: 200, order: 24.5625}
-      type: string
-    - name: lending_individual
-      admin_ui: {width: 200, order: 24.6875}
-      type: bool
-    - name: lending_institutional
-      admin_ui: {width: 200, order: 24.65625}
-      type: bool
-    - name: lending_period
-      admin_ui: {width: 200, order: 24.671875}
       type: string
     title: user_profile
   borrower:
