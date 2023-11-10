@@ -46,7 +46,7 @@ components:
   layout_properties: {grid_position: 'ZAHTSU,YHWPJW'}
 - type: Label
   properties: {}
-  name: label_2
+  name: full_name_label
   layout_properties: {grid_position: 'ZAHTSU,LLBNLX'}
   data_bindings:
   - {property: text, code: 'self.item[''fullname'']'}
@@ -59,7 +59,7 @@ components:
   layout_properties: {grid_position: 'JFGHKK,FPGJUV'}
 - type: Label
   properties: {}
-  name: label_4
+  name: email_id_label
   layout_properties: {grid_position: 'JFGHKK,LZOCYL'}
   data_bindings:
   - {property: text, code: 'self.item[''email_id'']'}
@@ -72,7 +72,7 @@ components:
   layout_properties: {grid_position: 'ZZXLBX,XJHXPC'}
 - type: Label
   properties: {}
-  name: label_6
+  name: mobile_no_label
   layout_properties: {grid_position: 'ZZXLBX,BGDOZM'}
   data_bindings:
   - {property: text, code: 'self.item[''mobile_no'']'}
@@ -85,7 +85,7 @@ components:
   layout_properties: {grid_position: 'ANEGHE,OIVWVJ'}
 - type: Label
   properties: {}
-  name: label_8
+  name: date_of_birth_label
   layout_properties: {grid_position: 'ANEGHE,THXTDX'}
   data_bindings:
   - {property: text, code: 'self.item[''date_of_birth'']'}
@@ -98,23 +98,28 @@ components:
   layout_properties: {grid_position: 'JIPXWO,FEXTHJ'}
 - type: Label
   properties: {}
-  name: label_10
+  name: city_label
   layout_properties: {grid_position: 'JIPXWO,ZZNIPF'}
   data_bindings:
   - {property: text, code: 'self.item[''city'']'}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Upload pan Card:', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
-  name: label_11
-  layout_properties: {grid_position: 'TMVNCD,WJCPUH'}
+- name: label_23
+  properties: {text: 'Pan Number:'}
+  type: Label
+  layout_properties: {grid_position: 'TMVNCD,WJCPUH EBHVDO,IYCEGV'}
+- name: label_25
+  properties: {text: 'Aadhaar Number:'}
+  type: Label
+  layout_properties: {grid_position: 'TMVNCD,WJCPUH RNOQWY,AWRIMZ'}
 - type: Label
   properties: {}
-  name: label_12
-  layout_properties: {grid_position: 'TMVNCD,FXCWVF'}
+  name: pan_no_label
+  layout_properties: {grid_position: 'TMVNCD,FXCWVF XNNAOW,IWMQZL'}
   data_bindings:
   - {property: text, code: 'self.item[''upload_pan_card'']'}
+- name: aadhaar_no_label
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'TMVNCD,FXCWVF MSPNKI,IKIEES'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: 'Gender:', font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -124,7 +129,7 @@ components:
   layout_properties: {grid_position: 'ZTAFPA,GHVDYC'}
 - type: Label
   properties: {}
-  name: label_14
+  name: gender_label
   layout_properties: {grid_position: 'ZTAFPA,WDMJPV'}
   data_bindings:
   - {property: text, code: 'self.item[''gender'']'}
@@ -137,7 +142,7 @@ components:
   layout_properties: {grid_position: 'ZZYYSN,TIWZVY'}
 - type: Label
   properties: {}
-  name: label_16
+  name: mother_tounge_label
   layout_properties: {grid_position: 'ZZYYSN,AQRDLE'}
   data_bindings:
   - {property: text, code: 'self.item[''mother_tounge'']'}
@@ -147,11 +152,19 @@ components:
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
     icon: ''}
   name: label_17
-  layout_properties: {grid_position: 'BLHQIW,ILIRMK'}
+  layout_properties: {grid_position: 'BLHQIW,ILIRMK ASYFRC,GQGNVR'}
+- name: label_19
+  properties: {text: User Type}
+  type: Label
+  layout_properties: {grid_position: 'BLHQIW,ILIRMK LNUICI,NXRLRV'}
 - type: Label
   properties: {}
-  name: label_18
-  layout_properties: {grid_position: 'BLHQIW,NYSLTL'}
+  name: marrital_status_label
+  layout_properties: {grid_position: 'BLHQIW,NYSLTL SGWYRL,ZYEDWB'}
   data_bindings:
   - {property: text, code: 'self.item[''marrital_status'']'}
+- name: user_type_label
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'BLHQIW,NYSLTL ZJDDTK,RBQSIF'}
 is_package: true
