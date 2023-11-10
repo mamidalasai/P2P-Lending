@@ -22,16 +22,17 @@ class Lender_reg_form_7(Lender_reg_form_7Template):
     state = self.text_box_3.text
     pincode = self.text_box_4.text
     user_id = self.userId
-    anvil.server.call('add_lendor_seven_form',landmark,city,state,pincode,user_id)
+    if not landmark or not city or not state or not pincode:
+      Notification("Please fill all the fields")
+    else:
+     anvil.server.call('add_lendor_seven_form',landmark,city,state,pincode,user_id)
     
-    open_form('lendor_registration_form.Lender_reg_form_8',user_id = user_id)
+     open_form('lendor_registration_form.Lender_reg_form_8',user_id = user_id)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_form_6')
+    user_id = self.userId
+    open_form('lendor_registration_form.Lender_reg_form_6',user_id=user_id)
     """This method is called when the button is clicked"""
 
-  def text_box_4_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-    
+  

@@ -21,11 +21,15 @@ class Lender_reg_form_5(Lender_reg_form_5Template):
     spouse_profession = self.text_box_1.text
     spouse_number = self.text_box_2.text
     user_id = self.userId
-    anvil.server.call('add_lendor_five_form',martial,spouse_profession,spouse_number,user_id)
-    open_form('lendor_registration_form.Lender_reg_form_6',user_id = user_id)
+    if not martial or not spouse_profession or not spouse_number:
+      Notification("Please fill all the fields")
+    else:
+     anvil.server.call('add_lendor_five_form',martial,spouse_profession,spouse_number,user_id)
+     open_form('lendor_registration_form.Lender_reg_form_6',user_id = user_id)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_form_4')
-    """This method is called when the button is clicked"""
+     user_id = self.userId
+     open_form('lendor_registration_form.Lender_reg_form_4',user_id=user_id)
+     """This method is called when the button is clicked"""
     
