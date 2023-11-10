@@ -7,6 +7,8 @@ components:
   properties: {align: center, bold: true}
   type: Label
   layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']'}
 - name: label_2
   properties: {align: center, bold: true}
   type: Label
@@ -27,6 +29,8 @@ components:
   properties: {bold: true, align: center}
   type: Label
   layout_properties: {column: HEMILB}
+  data_bindings:
+  - {property: text, code: 'self.item[''email_id'']'}
 - name: label_7
   properties: {bold: true, align: center}
   type: Label
@@ -35,3 +39,5 @@ components:
   properties: {bold: true, align: center}
   type: Label
   layout_properties: {column: SQXFPE}
+  data_bindings:
+  - {property: text, code: 'self.item[''application_status'']'}
