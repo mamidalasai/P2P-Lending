@@ -1,0 +1,21 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: XOTRCI}
+  data_bindings:
+  - {property: text, code: 'self.item[''spouse_profficen'']'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: LXDSKB}
+  data_bindings:
+  - {property: text, code: 'self.item[''usertype'']'}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: BRYCCU}
+  data_bindings:
+  - {property: text, code: 'self.item[''registration_approve'']'}
+is_package: true
