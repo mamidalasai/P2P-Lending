@@ -11,7 +11,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.borrower_rgistration_form}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -131,6 +131,9 @@ db_schema:
     - name: registration_approve
       admin_ui: {width: 200, order: 31}
       type: bool
+    - name: investment
+      admin_ui: {width: 200, order: 24.5}
+      type: string
     title: user_profile
   borrower:
     title: borrower
