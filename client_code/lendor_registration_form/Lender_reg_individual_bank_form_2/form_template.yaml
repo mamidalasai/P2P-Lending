@@ -22,10 +22,10 @@ components:
   type: Label
   layout_properties: {grid_position: ''}
 - name: label_2_copy_1
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: IFSC Code, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: IFSC Code, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {grid_position: 'UTAHLY,EFDCXC'}
 - name: text_box_1
@@ -36,10 +36,10 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'UTAHLY,STSYIO'}
 - name: label_3_copy_1
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Salary Paid, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Salary Paid, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {grid_position: 'DVMPCK,LLXVJV'}
 - name: drop_down_1
@@ -47,7 +47,7 @@ components:
     role: null
     align: full
     tooltip: ''
-    placeholder: ''
+    placeholder: Select one
     border: ''
     enabled: true
     foreground: ''
@@ -61,12 +61,12 @@ components:
     background: theme:On Primary
     bold: false
     underline: false
-    include_placeholder: false
+    include_placeholder: true
   type: DropDown
   layout_properties: {grid_position: 'DVMPCK,SVWTSF'}
 - name: label_1
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Select Bank
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Select Bank
 
       (Bank name)', font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
@@ -81,10 +81,10 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'CYXGQY,MCAGMG'}
 - name: label_2
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Net Banking, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Net Banking, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {grid_position: 'DVNORB,NIUTUG'}
 - name: text_box_3

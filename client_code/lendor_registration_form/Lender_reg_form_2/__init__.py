@@ -24,15 +24,15 @@ class Lender_reg_form_2(Lender_reg_form_2Template):
     """This method is called when the button is clicked"""
 
   def button_2_click(self, **event_args):
-    investment=self.drop_down_1.selected_value
+    #investment=self.drop_down_1.selected_value
     mobile = self.text_box_1.text
     email = self.text_box_2.text
     photo = self.file_loader_1.file
     user_id = self.userId
-    if not investment or not mobile or not email :
+    if not mobile or not email or not photo :
       Notification("Please fill all the fields").show()
     else:
-      anvil.server.call('add_lendor_second_form',investment,mobile,email,photo,user_id)
+      anvil.server.call('add_lendor_second_form',mobile,email,photo,user_id)
       open_form('lendor_registration_form.Lender_reg_form_3',user_id=user_id)
     """This method is called when the button is clicked"""
     

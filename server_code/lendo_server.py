@@ -15,10 +15,10 @@ def add_lendor_frist_form(name,gender,city,user_id):
     row[0]['city'] = city
     
 @anvil.server.callable
-def add_lendor_second_form(investment,mobile,email,photo,user_id):
+def add_lendor_second_form(mobile,email,photo,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    row[0]['investment'] = investment
+    #row[0]['investment'] = investment
     row[0]['mobile'] = mobile
     row[0]['mail_id'] = email
     row[0]['user_photo'] = photo

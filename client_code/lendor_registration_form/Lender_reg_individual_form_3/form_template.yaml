@@ -22,10 +22,10 @@ components:
   type: Label
   layout_properties: {grid_position: ''}
 - name: label_2_copy_1
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Annual salary, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Annual salary, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {grid_position: 'GUHTRC,SIRBDK'}
 - name: text_box_1
@@ -36,10 +36,10 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'GUHTRC,BCBQBT'}
 - name: label_3_copy_1
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Designation, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Designation, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {grid_position: 'UTMAFU,OZAOYV'}
 - name: text_box_2
@@ -50,8 +50,8 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'UTMAFU,KXCRKN'}
 - name: label_1
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Upload Employee Id
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Upload Employee Id
 
       (Image Size less-than 2MB)', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
@@ -63,8 +63,8 @@ components:
   type: FileLoader
   layout_properties: {grid_position: 'OJCELP,GGXQEK'}
 - name: label_2
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Upload last six months bank Statements
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Upload last six months bank Statements
 
       (Image size less-than 2MB)', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
