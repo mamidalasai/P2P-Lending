@@ -214,7 +214,37 @@ db_schema:
   loan_details:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: loan_id
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: email_id
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: customer_id
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: full_name
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: min_amount
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: max_amount
+      admin_ui: {width: 200, order: 5}
+      type: number
+    - name: 'tenure '
+      admin_ui: {width: 200, order: 6}
+      type: number
+    - name: interest_rate
+      admin_ui: {width: 200, order: 7}
+      type: number
+    - name: 'total_repayment '
+      admin_ui: {width: 200, order: 8}
+      type: number
+    - name: loan_status
+      admin_ui: {order: 9, width: 200}
+      type: bool
     title: loan_details
   lender:
     client: none
