@@ -1,0 +1,51 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: RGYNRL}
+  data_bindings:
+  - {property: text, code: 'self.item[''pan_number'']'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: XEUVBW}
+  data_bindings:
+  - {property: text, code: 'self.item[''city'']'}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: NORMES}
+  data_bindings:
+  - {property: text, code: 'self.item[''email_user'']'}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: STXTRE}
+  data_bindings:
+  - {property: text, code: 'self.item[''last_confirm'']'}
+- type: Label
+  properties: {}
+  name: label_5
+  layout_properties: {column: YFQSPL}
+  data_bindings:
+  - {property: text, code: 'self.item[''mobile_check'']'}
+- type: Label
+  properties: {}
+  name: label_6
+  layout_properties: {column: NNFIBK}
+  data_bindings:
+  - {property: text, code: 'self.item[''mouther_tounge'']'}
+- type: Label
+  properties: {}
+  name: label_7
+  layout_properties: {column: NGBUFH}
+  data_bindings:
+  - {property: text, code: 'self.item[''marital_status'']'}
+- type: Label
+  properties: {}
+  name: label_8
+  layout_properties: {column: ZOIEFF}
+  data_bindings:
+  - {property: text, code: 'self.item[''Date_mariage'']'}
+is_package: true
