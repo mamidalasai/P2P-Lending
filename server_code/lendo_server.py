@@ -66,10 +66,11 @@ def add_lendor_seven_form(landmark,city,state,pincode,user_id):
     row[0]['city'] = city
     row[0]['state'] = state
     row[0]['pincode'] = pincode
-    
+
+
 @anvil.server.callable
-def add_lendor_eighth_form(investment,lending_period,lending_individual,lending_institutional,user_id):
-  row = app_tables.lender.add_row(investment=investment, individual_type=lending_individual, institutional_type=lending_institutional,lending_period=lending_period,coustmer_id=user_id)
+def add_lendor_eighth_form(lending_type, investment,lending_period, user_id):
+  row = app_tables.lender.add_row(investment=investment, lending_type=lending_type,lending_period=lending_period,coustmer_id=user_id)
     
     
     
