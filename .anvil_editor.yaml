@@ -76,6 +76,7 @@ unique_ids:
     admin.dashboard.admin_view_profile.admin_view_profile_3: '1699616395130482141164256.8445'
     borrower_registration_form.star_1_borrower_registration_form_begin_4.star_1_borrower_registration_form_begin_4a: '1699376049516888173468231.8647'
     bank_users.main_form.about_main_form: '1697797228207989144224833.6753'
+    admin.dashboard.view_profile.edit_form: '169996780467215868230296.983032'
     admin.dashboard.loan_management.defaulters: '1699528827402559675627616.8564'
     bank_users.borrower_rgistration_form.new_loan_request.check_out_business: '1699351584236650494825877.3939'
     lendor_registration_form.dashboard.vblr: '1699960229158369964369354.56226'
@@ -125,6 +126,7 @@ unique_ids:
     admin.dashboard.admin_teams.view_profile: '1699528208717177568108194.0108'
     bank_users.borrower_rgistration_form.borrower_faqs: '1699009417464474440243967.0539'
     lendor_registration_form.dashboard.opbal: '1699956535223911918554378.0013'
+    admin.dashboard.view_profile: '1699967781060728634256553.5089'
     borrower_registration_form.Form20: '1698334144959105386682709.67921'
     bank_users.borrower_rgistration_form.borrower_today_dues: '1699528449422864265737618.313'
     bank_users.borrower_rgistration_form.borrower_loan_close: '1699009593401243330903186.185'
@@ -135,6 +137,7 @@ unique_ids:
     admin.dashboard.admin_view_profile.admin_view_profile_4: '1699617177495761712240856.969'
     lendor_registration_form.dashboard.vdp: '1699963103625209878486803.42514'
     admin.dashboard.admin_view_profile.RowTemplate2: '1699615213200725595906271.6008'
+    admin.dashboard.view_profile.update_form: '1699967990279922551849592.2898'
     lendor_registration_form.Lender_reg_form_5: '1699427198730807417103674.682'
     bank_users.main_form.location_main_form: '1697798227516171604874293.17773'
   modules:
