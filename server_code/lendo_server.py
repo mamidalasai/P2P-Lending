@@ -15,10 +15,10 @@ def add_lendor_frist_form(name,gender,city,user_id):
     row[0]['city'] = city
     
 @anvil.server.callable
-def add_lendor_second_form(investment,mobile,email,photo,user_id):
+def add_lendor_second_form(mobile,email,photo,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    row[0]['investment'] = investment
+    #row[0]['investment'] = investment
     row[0]['mobile'] = mobile
     row[0]['mail_id'] = email
     row[0]['user_photo'] = photo
@@ -68,15 +68,8 @@ def add_lendor_seven_form(landmark,city,state,pincode,user_id):
     row[0]['pincode'] = pincode
     
 @anvil.server.callable
-def add_lendor_eight_form(lending_individual,lending_institutinal,investment,lending_period,user_id):
-  row = app_tables.user_profile.search(coustmer_id=user_id)
-  if row:
-    #row[0]['lending_type'] = lending_type
-    row[0]['lending_individual'] = lending_individual
-    row[0]['lending_institutional'] = lending_institutinal
-    row[0]['investment'] = investment
-    row[0]['lending_period'] = lending_period
-    
+def add_lendor_eighth_form(investment,lending_period,lending_individual,lending_institutional,user_id):
+  row = app_tables.lender.add_row(investment=investment, individual_type=lending_individual, institutional_type=lending_institutional,lending_period=lending_period,coustmer_id=user_id)
     
     
     

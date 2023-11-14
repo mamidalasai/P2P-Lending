@@ -30,7 +30,7 @@ class Lender_reg_form_8(Lender_reg_form_8Template):
       user_id = self.userId
 
         # Make sure 'lending_individual' and 'lending_institutional' are passed as booleans
-      anvil.server.call('add_lendor_eight_form',  bool(lending_individual), bool(lending_institutional), investment,lending_period, user_id)
+      anvil.server.call('add_lendor_eighth_form', bool(lending_individual), bool(lending_institutional), investment,lending_period, user_id)
 
       if lending_individual:
             open_form('lendor_registration_form.Lender_reg_individual_form_1',user_id=user_id)
