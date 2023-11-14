@@ -37,7 +37,7 @@ components:
   layout_properties: {grid_position: 'TUEMCK,BVTAAJ'}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Email, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Alternate Email, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
