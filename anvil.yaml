@@ -177,7 +177,7 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     - name: coustmer_id
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {order: 1, width: 200}
       type: string
     - name: user_name
       admin_ui: {width: 200, order: 2}
@@ -220,8 +220,20 @@ db_schema:
     client: none
     server: full
     columns:
-    - name: email
-      admin_ui: {width: 200, order: 0}
+    - name: email_id
+      admin_ui: {order: 0, width: 200}
       type: string
+    - name: top_up
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: investment
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: coustmer_id
+      admin_ui: {width: 200, order: -1}
+      type: string
+    - name: user_name
+      admin_ui: {width: 200, order: -0.5}
+      type: number
     title: lender
 renamed: true
