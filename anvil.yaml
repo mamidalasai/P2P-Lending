@@ -247,23 +247,23 @@ db_schema:
       type: bool
     title: loan_details
   lender:
+    title: lender
     client: none
     server: full
     columns:
-    - name: email_id
-      admin_ui: {order: 0, width: 200}
-      type: string
-    - name: top_up
-      admin_ui: {width: 200, order: 1}
-      type: string
-    - name: investment
-      admin_ui: {width: 200, order: 2}
-      type: string
     - name: coustmer_id
-      admin_ui: {width: 200, order: -1}
+      admin_ui: {width: 200}
       type: string
     - name: user_name
-      admin_ui: {width: 200, order: -0.5}
+      admin_ui: {width: 200}
       type: number
-    title: lender
+    - name: email_id
+      admin_ui: {width: 200}
+      type: string
+    - name: top_up
+      admin_ui: {width: 200}
+      type: string
+    - name: investment
+      admin_ui: {width: 200}
+      type: string
 renamed: true
