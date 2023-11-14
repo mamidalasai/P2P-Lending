@@ -14,7 +14,7 @@ class opbal(opbalTemplate):
     self.init_components(**properties)
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.avlbal")
+    open_form("lendor_registration_form.dashboard.avlbal")
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
