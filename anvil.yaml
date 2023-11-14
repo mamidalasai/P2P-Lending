@@ -216,4 +216,12 @@ db_schema:
     server: full
     columns: []
     title: loan_details
+  lender:
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: lender
 renamed: true
