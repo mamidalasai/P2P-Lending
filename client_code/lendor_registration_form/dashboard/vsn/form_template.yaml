@@ -30,7 +30,7 @@ components:
     event_bindings: {click: button_1_click}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: View/Download Portfolio, font_size: null, font: '', spacing_above: small,
+      visible: true, text: View/Send Notifications, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_1
@@ -107,12 +107,12 @@ components:
     layout_properties: {grid_position: 'KXIGQY,ZEQYRV'}
     event_bindings: {click: link_10_click}
   - type: Link
-    properties: {text: View/Edit Profile}
+    properties: {text: View/Download Portfolio}
     name: link_11
     layout_properties: {grid_position: 'BUONXT,PRGXZS'}
     event_bindings: {click: link_11_click}
   - type: Link
-    properties: {text: View/Send Notifications}
+    properties: {text: View/Edit Profile}
     name: link_12
     layout_properties: {grid_position: 'EZEKGD,KBJGBG'}
     event_bindings: {click: link_12_click}
