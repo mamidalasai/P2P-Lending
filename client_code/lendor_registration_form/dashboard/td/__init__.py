@@ -1,4 +1,4 @@
-from ._anvil_designer import ldTemplate
+from ._anvil_designer import tdTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class ld(ldTemplate):
+class td(tdTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -30,11 +30,11 @@ class ld(ldTemplate):
 
   def link_4_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vlo")
+    open_form("lendor_registration_form.dashboard.ld")
 
   def link_5_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.td")
+    open_form("lendor_registration_form.dashboard.vlo")
 
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""

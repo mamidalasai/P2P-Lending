@@ -68,9 +68,6 @@ class avlbal(avlbalTemplate):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.cp")
 
-  def outlined_button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.rta")
 
 
 

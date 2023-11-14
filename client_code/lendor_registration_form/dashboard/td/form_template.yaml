@@ -32,7 +32,7 @@ components:
     event_bindings: {click: button_1_click}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Loan Disbursement, font_size: null, font: '', spacing_above: small,
+      visible: true, text: Today's Dues, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_1
@@ -74,12 +74,12 @@ components:
     layout_properties: {grid_position: 'COFHBC,NUWOKB'}
     event_bindings: {click: link_2_click}
   - type: Link
-    properties: {text: View Lost Oppurtunities}
+    properties: {text: Loan Disbursement}
     name: link_4
     layout_properties: {grid_position: 'LPKVWH,AIPCEY'}
     event_bindings: {click: link_4_click}
   - type: Link
-    properties: {text: Today's Dues}
+    properties: {text: View Lost Oppurtunities}
     name: link_5
     layout_properties: {grid_position: 'WBTWRL,YZOQFP'}
     event_bindings: {click: link_5_click}
