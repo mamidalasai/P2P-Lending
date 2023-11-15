@@ -18,7 +18,3 @@ class borrowers(borrowersTemplate):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('admin.dashboard')
-
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('admin.dashboard.admin_view_profile')

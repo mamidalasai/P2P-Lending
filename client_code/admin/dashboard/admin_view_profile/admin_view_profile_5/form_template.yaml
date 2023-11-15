@@ -64,31 +64,15 @@ components:
       properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.admin_view_profile.admin_view_profile_5.RowTemplate6}
       name: repeating_panel_1
       layout_properties: {}
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: black, visible: true, text: back, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
+        bold: false, underline: false, icon: ''}
+      name: button_1
+      layout_properties: {slot: footer}
+      event_bindings: {click: button_1_click}
     data_bindings: []
-  - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: back, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: false, underline: false, icon: ''}
-    name: button_1
-    layout_properties: {slot: footer, grid_position: 'MVSLYC,HCCDZB'}
-    event_bindings: {click: button_1_click}
-  - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: edit, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: false, underline: false, icon: ''}
-    name: button_2
-    layout_properties: {grid_position: 'MVSLYC,SDYWVI'}
-    event_bindings: {click: button_2_click}
-  - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Update, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: false, underline: false, icon: ''}
-    name: button_3
-    layout_properties: {grid_position: 'MVSLYC,NKEDED'}
-    event_bindings: {click: button_3_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
