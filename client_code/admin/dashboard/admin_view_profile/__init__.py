@@ -41,23 +41,32 @@ class admin_view_profile(admin_view_profileTemplate):
     print(a)
 
     self.result = []
+    self.index = []
     if a == -1:
       alert("No Data Available Here!")
     else:
+      b = -1
       for i in self.user_type:
+        b+=1
         if i == 'borrower' or i == 'Borrower':
-          d = self.user_type.index(i)
-          self.result.append({'coustmer_id' : self.list_1[d], 'full_name' : self.list_2[d], 'profile_status' : self.list_3[d], 'gender' : self.list_4[d], 'user_age' : self.list_5[d],
-                          'date_of_birth' : self.list_6[d], 'mobile' : self.list_7[d], 'aadhaar_no' : self.list_8[d]})
+          self.index.append(b)
+          
+      for i in self.index:
+        self.result.append({'coustmer_id' : self.list_1[i], 'full_name' : self.list_2[i], 'profile_status' : self.list_3[i], 'gender' : self.list_4[i], 'user_age' : self.list_5[i],
+                          'date_of_birth' : self.list_6[i], 'mobile' : self.list_7[i], 'aadhaar_no' : self.list_8[i]})
 
       self.repeating_panel_1.items = self.result
 
       print(self.list_1, self.list_2, self.list_3)
       print(self.result)
-      print(a)
+      print(self.index)
 
 
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.admin_view_profile.admin_view_profile_2')
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.borrowers')

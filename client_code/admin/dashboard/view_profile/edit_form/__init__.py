@@ -169,3 +169,10 @@ class edit_form(edit_formTemplate):
       data[a]['terms'] = bool(self.text_box_35.text)
       print(a)
     open_form('admin.dashboard.view_profile')
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    data = tables.app_tables.user_profile.search()
+    c_id = []
+    for i in data:
+      c_id.append(i[''])
