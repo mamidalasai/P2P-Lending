@@ -47,6 +47,7 @@ class loan_request(loan_requestTemplate):
       self.label_16.text = self.loan_status[-1]
       self.label_17.text = self.max_amount[-1]
       self.label_18.text = self.min_amount[-1]
+      self.label_19.text = self.tenure[-1]
       self.label_20.text = self.total_repayment[-1]
       print(self.total_repayment)
 
