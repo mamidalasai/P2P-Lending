@@ -251,6 +251,9 @@ db_schema:
     - name: total_repayment_amount
       admin_ui: {width: 200}
       type: number
+    - name: 'total_repayment '
+      admin_ui: {width: 200}
+      type: number
     title: loan_details
   lender:
     title: lender
