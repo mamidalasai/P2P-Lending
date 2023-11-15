@@ -257,7 +257,7 @@ db_schema:
     title: loan_details
   lender:
     title: lender
-    client: search
+    client: none
     server: full
     columns:
     - name: user_name
@@ -305,7 +305,4 @@ db_schema:
     - name: email
       admin_ui: {width: 200}
       type: string
-    - name: fin_rta
-      admin_ui: {width: 200, order: 15}
-      type: number
 renamed: true
