@@ -84,10 +84,14 @@ def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
     
 
 @anvil.server.callable
-def add_lendor_individual_form_2(user_id):
-    row = app_tables.lender.search(coustmer_id=user_id)
-       
-  
+def add_lendor_individual_form_2(business_phone_number, landmark,comp_address,user_id):
+  row = app_tables.lender.search(coustmer_id=user_id)
+  if row:
+    row[0]['business_no']=business_phone_number
+    row[0]['company_landmark']=landmark
+    row[0]['company_add']=comp_address      
+
+
 @anvil.server.callable
 def add_lendor_individual_form_3(user_id):
     row = app_tables.lender.search(coustmer_id=user_id)
