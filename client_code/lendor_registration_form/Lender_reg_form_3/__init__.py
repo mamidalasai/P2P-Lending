@@ -1,4 +1,4 @@
-from ._anvil_designer import Lender_reg_form_7Template
+from ._anvil_designer import Lender_reg_form_3Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,8 +8,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class Lender_reg_form_7(Lender_reg_form_7Template):
-  def __init__(self, user_id,**properties):
+class Lender_reg_form_3(Lender_reg_form_3Template):
+  def __init__(self,user_id, **properties):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -17,26 +17,23 @@ class Lender_reg_form_7(Lender_reg_form_7Template):
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
-    landmark = self.text_box_1.text
-    city = self.text_box_2.text
-    state = self.text_box_3.text
-    pincode = self.text_box_4.text
+    qualification = self.drop_down_1.selected_value
+    pannumber = self.text_box_1.text
+    identity = self.file_loader_1.file
     user_id = self.userId
-    if not landmark or not city or not state or not pincode:
+    if not qualification or not pannumber or not identity:
       Notification("Please fill all the fields")
     else:
-     anvil.server.call('add_lendor_seven_form',landmark,city,state,pincode,user_id)
-    
-     open_form('lendor_registration_form.Lender_reg_form_8',user_id = user_id)
+     anvil.server.call('add_lendor_four_form',qualification,pannumber,identity,user_id)
+     open_form('lendor_registration_form.Lender_reg_form_3',user_id = user_id)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
     user_id = self.userId
-    open_form('lendor_registration_form.Lender_reg_form_6',user_id=user_id)
+    open_form('lendor_registration_form.Lender_reg_form_2',user_id=user_id)
     """This method is called when the button is clicked"""
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("bank_users.user_form")
-
-  
+    

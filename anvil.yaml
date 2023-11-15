@@ -11,7 +11,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: lendor_registration_form.dashboard.opbal}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -251,10 +251,13 @@ db_schema:
     - name: total_repayment_amount
       admin_ui: {width: 200}
       type: number
+    - name: 'total_repayment '
+      admin_ui: {width: 200}
+      type: number
     title: loan_details
   lender:
     title: lender
-    client: search
+    client: none
     server: full
     columns:
     - name: user_name
@@ -302,7 +305,4 @@ db_schema:
     - name: email
       admin_ui: {width: 200}
       type: string
-    - name: fin_rta
-      admin_ui: {width: 200, order: 15}
-      type: number
 renamed: true
