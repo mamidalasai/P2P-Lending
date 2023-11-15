@@ -22,4 +22,8 @@ class Lender_reg_Institutional_form_5(Lender_reg_Institutional_form_5Template):
   def button_1_click(self, **event_args):
     open_form('lendor_registration_form.Lender_reg_Institutional_form_4')
     """This method is called when the button is clicked"""
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form("bank_users.user_form")
     
