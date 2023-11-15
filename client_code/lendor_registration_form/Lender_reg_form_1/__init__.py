@@ -26,7 +26,7 @@ class Lender_reg_form_1(Lender_reg_form_1Template):
     if not name or not gender or not date_of_birth:
       Notification("please fill all required fields")
     else:
-      anvil.server.call('add_borrower_step1',name,gender,date_of_birth,user_id)
+      anvil.server.call('add_lendor_frist_form',name,gender,date_of_birth,user_id)
       open_form('lendor_registration_form.Lender_reg_form_2',user_id=user_id)
 
     

@@ -11,7 +11,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard.loan_management}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -167,6 +167,15 @@ db_schema:
     - name: house_landmark
       admin_ui: {width: 200, order: 24.5625}
       type: string
+    - name: street_adress_1
+      admin_ui: {width: 200, order: 10.5}
+      type: string
+    - name: street_address_2
+      admin_ui: {width: 200, order: 11.5}
+      type: string
+    - name: country
+      admin_ui: {width: 200, order: 32.5}
+      type: string
     title: user_profile
   borrower:
     title: borrower
@@ -253,6 +262,9 @@ db_schema:
       type: number
     - name: total_repayment
       admin_ui: {width: 200, order: 16}
+      type: number
+    - name: 'total_repayment '
+      admin_ui: {width: 200}
       type: number
     title: loan_details
   lender:
