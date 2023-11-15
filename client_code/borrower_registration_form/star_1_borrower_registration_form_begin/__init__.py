@@ -46,7 +46,7 @@ class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_
     if not full_name or not gender or not email or not mobile_no or not dob:
       Notification("plz enter All Details For Proceed Next")
     else:
-      anvil.server.call('add_borrower_step1',full_name,gender,emobile_no,dob,user_id)
+      anvil.server.call('add_borrower_step1',full_name,gender,email,mobile_no,dob,user_id)
       Notification("step 1 form fill up submited sucessfull")
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2',user_id = user_id)
 
