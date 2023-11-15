@@ -23,13 +23,13 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin',self.userId)
 
   def button_2_click(self, **event_args):
-    gender = self.gender_borrower_registration_dropdown.selected_value
+    mobile_no = self.borrower_mobile_number_text_copy_1.text
     user_photo = self.borrower_registration_img_file_loader.file
-    city = self.borrower_registration_cit_text.text
+    alternate_email  = self.borrower_alternate_email.text
     user_id = self.userId
-    if not gender or not user_photo or not city:
+    if not mobile_no or not user_photo or not alternate_email:
       Notification("Please Fill The All required fileds")
     else:
-      anvil.server.call('add_borrower_step2',gender,user_photo,city,user_id)
+      anvil.server.call('add_borrower_step2',mobile_no,user_photo,alternate_email,user_id)
       Notification("step 2 form fill up submited sucessfull")
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3',user_id = user_id)

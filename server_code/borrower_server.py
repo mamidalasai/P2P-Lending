@@ -7,36 +7,25 @@ from anvil.tables import app_tables
 import anvil.server
 
 
-
 @anvil.server.callable
-def add_borrower_step1(full_name,gender,email,mobile_no,dob,user_id):
+def add_borrower_step1(full_name,gender,dob,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['full_name'] = full_name
     row[0]['gender'] = gender
-    row[0]['email_user'] = email
-    row[0]['mobile'] = mobile_no
     row[0]['date_of_birth'] = dob
 
-@anvil.server.callable
-def dateofbirth(dob):
-  user=anvil.user_profile.get_user()
-  if user :
-    user['dob']= dob
-    user.save()
-    return " date of birth saved successfully"
-  else:
-    return "user not identified"
     
     
-
 @anvil.server.callable
-def add_borrower_step2(gender,user_photo,city,user_id):
+def add_borrower_step2(mobile_no,user_photo,alternate_email,user_id):
   row=app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    row[0]['gender']=gender
+    row[0]['mobile']=mobile_no
     row[0]['user_photo']=user_photo
-    row[0]['city']=city
+    row[0]['another_email']= alternate_email
+
+
 
 
 @anvil.server.callable
@@ -76,6 +65,10 @@ def add_user_profile(min_amount, tenure,max_amount):
     max_amount=max_amount
   
   )
+
+
+
+
 
 @anvil.server.callable
 def calculate_processing_fee(minimum_amount, tenure):

@@ -48,17 +48,17 @@ components:
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'KWRHYA,HUCQTE PLHGMB,NXPEFL'}
-- name: borrower_registration_cit_text
-  properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: Enter Your City,
+- name: borrower_alternate_email
+  properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: Enter Alternate Email,
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    font: '', spacing_above: small, type: email, spacing_below: small, italic: false,
     background: 'theme:On Primary', bold: false, underline: false}
   type: TextBox
   layout_properties: {grid_position: 'KWRHYA,HUCQTE OKWMJB,UAGEPI'}
 - name: borrower_mobile_number_text_copy_1
   properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: Enter Your Mobile Number,
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
     background: 'theme:On Secondary', bold: false, underline: false}
   type: TextBox
   layout_properties: {grid_position: 'KWRHYA,HUCQTE HJFYNX,FLJOZD'}
