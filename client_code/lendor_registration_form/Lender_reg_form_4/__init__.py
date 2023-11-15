@@ -32,4 +32,8 @@ class Lender_reg_form_4(Lender_reg_form_4Template):
     user_id = self.userId
     open_form('lendor_registration_form.Lender_reg_form_3',user_id=user_id)
     """This method is called when the button is clicked"""
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form("bank_users.user_form")
     
