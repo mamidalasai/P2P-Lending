@@ -111,6 +111,7 @@ unique_ids:
     admin.dashboard.manage_settings.manage_roi: '1699529143824844026062899.4764'
     borrower_registration_form.Form7: '169832278179654078354858.017265'
     lendor_registration_form.dashboard.vler: '1699962962727731721010167.028'
+    admin.dashboard.loan_management.loan_request: '1700043596862443822511060.83405'
     bank_users.borrower_rgistration_form.borrower_view_portfolio: '1699528474441915613941068.2769'
     bank_users.borrower_rgistration_form.boorrower_edit_profile: '1698653709394569134493869.6183'
     borrower_registration_form.Form18: '1698333864378192988731243.505'
@@ -151,6 +152,7 @@ unique_ids:
     borrower_registration_form: '1697801606303980155019216.2473'
     lendor_registration_form: '1698165522178708771223568.9454'
   server_modules:
+    admin_server: '1700043474080162396920168.8238'
     bank_user_main_server: '1697783776748650823106864.2817'
     borrower_server: '169816543913997904134922.20096'
     lendo_server: '1699507662691410806325953.31323'
