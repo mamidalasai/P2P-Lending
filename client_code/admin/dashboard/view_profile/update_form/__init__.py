@@ -18,45 +18,63 @@ class update_form(update_formTemplate):
       Notification("Fill All Required Details").show()
     else:
       data = tables.app_tables.user_profile.search()
-      a = -1
-      for row in data:
-        a += 1
+      id_list = []
+      for i in data:
+        id_list.append(i['coustmer_id'])
 
-      if a == -1:
-        alert("No Data Available Here")
+      if int(self.text_box_1.text) in id_list:
+        c = id_list.index(int(self.text_box_1.text))
+        data[c]['full_name'] = self.text_box_2.text
+        data[c]['profile_status'] = bool(self.text_box_3.text)
+        data[c]['gender'] = self.text_box_4.text
+        data[c]['user_age'] = int(self.text_box_5.text)
+        data[c]['date_of_birth'] = self.date_picker_1.date
+        data[c]['mobile'] = self.text_box_7.text
+        data[c]['aadhaar_no'] = self.text_box_8.text
+        data[c]['pan_number'] = self.text_box_9.text
+        data[c]['city'] = self.text_box_10.text
+        data[c]['last_confirm'] = bool(self.text_box_12.text)
+        data[c]['mobile_check'] = bool(self.text_box_13.text)
+        data[c]['mouther_tounge'] = self.text_box_14.text
+        data[c]['marital_status'] = self.text_box_15.text
+        data[c]['Date_mariage'] = self.date_picker_2.date
+        data[c]['spouse_name'] = self.text_box_17.text
+        data[c]['spouse_mobile'] = self.text_box_18.text
+        data[c]['spouse_company_name'] = self.text_box_19.text
+        data[c]['spouse_company_address'] = self.text_box_20.text
+        data[c]['spouse_profficen'] = self.text_box_21.text
+        data[c]['usertype'] = self.text_box_22.text
+        data[c]['registration_approve'] = bool(self.text_box_23.text)
+        data[c]['about'] = self.text_box_24.text
+        data[c]['address_type'] = self.text_box_25.text
+        data[c]['alerts'] = bool(self.text_box_26.text)
+        data[c]['building_name'] = self.text_box_27.text
+        data[c]['house_landmark'] = self.text_box_28.text
+        data[c]['house_no'] = self.text_box_29.text
+        data[c]['pincode'] = self.text_box_30.text
+        data[c]['qualification'] = self.text_box_32.text
+        data[c]['state'] = self.text_box_33.text
+        data[c]['street'] = self.text_box_34.text
+        data[c]['terms'] = bool(self.text_box_35.text)
+        print(c)
       else:
-        data[a]['full_name'] = self.text_box_2.text
-        data[a]['profile_status'] = bool(self.text_box_3.text)
-        data[a]['gender'] = self.text_box_4.text
-        data[a]['user_age'] = int(self.text_box_5.text)
-        data[a]['date_of_birth'] = self.date_picker_1.date
-        data[a]['mobile'] = self.text_box_7.text
-        data[a]['aadhaar_no'] = self.text_box_8.text
-        data[a]['pan_number'] = self.text_box_9.text
-        data[a]['city'] = self.text_box_10.text
-        data[a]['last_confirm'] = bool(self.text_box_12.text)
-        data[a]['mobile_check'] = bool(self.text_box_13.text)
-        data[a]['mouther_tounge'] = self.text_box_14.text
-        data[a]['marital_status'] = self.text_box_15.text
-        data[a]['Date_mariage'] = self.date_picker_2.date
-        data[a]['spouse_name'] = self.text_box_17.text
-        data[a]['spouse_mobile'] = self.text_box_18.text
-        data[a]['spouse_company_name'] = self.text_box_19.text
-        data[a]['spouse_company_address'] = self.text_box_20.text
-        data[a]['spouse_profficen'] = self.text_box_21.text
-        data[a]['usertype'] = self.text_box_22.text
-        data[a]['registration_approve'] = bool(self.text_box_23.text)
-        data[a]['about'] = self.text_box_24.text
-        data[a]['address_type'] = self.text_box_25.text
-        data[a]['alerts'] = bool(self.text_box_26.text)
-        data[a]['building_name'] = self.text_box_27.text
-        data[a]['house_landmark'] = self.text_box_28.text
-        data[a]['house_no'] = self.text_box_29.text
-        data[a]['pincode'] = self.text_box_30.text
-        data[a]['qualification'] = self.text_box_32.text
-        data[a]['state'] = self.text_box_33.text
-        data[a]['street'] = self.text_box_34.text
-        data[a]['terms'] = bool(self.text_box_35.text)
-        print(a)
+        alert("No data available here")
   
-    open_form('admin.dashboard.view_profile')
+    
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.admin_view_profile.admin_view_profile_5')
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    data = tables.app_tables.user_profile.search()
+    id_list = []
+    for i in data:
+      id_list.append(i['coustmer_id'])
+
+    if int(self.text_box_1.text) in id_list:
+      c = id_list.index(int(self.text_box_1.text))
+      self.button_2_click()
+      
+        
