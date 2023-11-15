@@ -33,7 +33,7 @@ class Lender_reg_form_2(Lender_reg_form_2Template):
       Notification("Please fill all the fields").show()
     else:
       anvil.server.call('add_lendor_second_form',mobile,email,photo,user_id)
-      open_form('lendor_registration_form.Lender_reg_form_3',user_id=user_id)
+      open_form('lendor_registration_form.Lender_reg_form_4',user_id=user_id)
     """This method is called when the button is clicked"""
 
   def button_3_click(self, **event_args):

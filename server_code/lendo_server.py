@@ -105,3 +105,11 @@ def add_lendor_individual_bank_form_1(user_id):
 @anvil.server.callable
 def add_lendor_individual_bank_form_2(user_id):
     row = app_tables.lender.search(coustmer_id=user_id)
+
+@anvil.server.callable
+def add_rtr_form(top_up,fin_rta):
+  #row = app_tables.lender.search()
+  row = app_tables.lender.search(tables.order_by("date_time", ascending=False))
+  if row:
+    row[0]['top_up'] = top_up
+    row[0]['fin_rta'] = fin_rta

@@ -9,12 +9,25 @@ import anvil.server
 
 
 @anvil.server.callable
-def add_borrower_step1(full_name,mobile_no,dob,user_id):
+def add_borrower_step1(full_name,gender,email,mobile_no,dob,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['full_name'] = full_name
+    row[0]['gender'] = gender
+    row[0]['email_user'] = email
     row[0]['mobile'] = mobile_no
     row[0]['date_of_birth'] = dob
+
+@anvil.server.callable
+def dateofbirth(dob):
+  user=anvil.user_profile.get_user()
+  if user :
+    user['dob']= dob
+    user.save()
+    return " date of birth saved successfully"
+  else:
+    return "user not identified"
+    
     
 
 @anvil.server.callable
