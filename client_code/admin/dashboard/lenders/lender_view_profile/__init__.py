@@ -1,4 +1,4 @@
-from ._anvil_designer import admin_view_profileTemplate
+from ._anvil_designer import lender_view_profileTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,13 +8,13 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class admin_view_profile(admin_view_profileTemplate):
+class lender_view_profile(lender_view_profileTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = 
+    self.data = tables.app_tables.user_profile.search()
 
     a = -1
     self.list_1 = []
@@ -25,7 +25,6 @@ class admin_view_profile(admin_view_profileTemplate):
     self.list_6 = []
     self.list_7 = []
     self.list_8 = []
-    self.user_type = []
     
     for i in self.data:
       a+=1
@@ -37,7 +36,6 @@ class admin_view_profile(admin_view_profileTemplate):
       self.list_6.append(i['date_of_birth'])
       self.list_7.append(i['mobile'])
       self.list_8.append(i['aadhaar_no'])
-      self.user_type.append(i[''])
     print(a)
 
     self.result = []
@@ -54,9 +52,3 @@ class admin_view_profile(admin_view_profileTemplate):
       print(self.list_1, self.list_2, self.list_3)
       print(self.result)
       print(a)
-
-
-
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('admin.dashboard.admin_view_profile.admin_view_profile_2')
