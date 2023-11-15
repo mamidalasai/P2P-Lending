@@ -56,14 +56,14 @@ components:
   layout_properties: {grid_position: ''}
 - name: label_5_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Step - 1, font_size: null, font: '', spacing_above: small,
+    visible: true, text: Basic Details, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: ''}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Applicant full name, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Full name, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
@@ -106,7 +106,7 @@ components:
   layout_properties: {grid_position: 'RCKTRT,EBIXFB'}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: City Residence, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Date of Birth, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
