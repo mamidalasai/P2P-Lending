@@ -9,17 +9,28 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class Lender_reg_individual_form_1(Lender_reg_individual_form_1Template):
-  def __init__(self, **properties):
+  def __init__(self,user_id, **properties):
+    self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_individual_form_2')
-    """This method is called when the button is clicked"""
+    emp_type = self.drop_down_1.selected_value
+    org_type = self.drop_down_2.selected_value
+    company_name = self.text_box_1.text
+    user_id = self.userId
+    if not emp_type or not org_type or not company_name:
+      Notification("please fill the required fields ").show()
+    else:
+      anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,user_id)
+    open_form('lendor_registration_form.Lender_reg_individual_form_2',user_id=self.userId)
 
+
+
+  
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_form_8')
-    """This method is called when the button is clicked"""
+    open_form('lendor_registration_form.Lender_reg_form_8',user_id=self.userId)
+   
     

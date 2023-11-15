@@ -19,7 +19,7 @@ class Lender_reg_form_8(Lender_reg_form_8Template):
   
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_form_7')
+    open_form('lendor_registration_form.Lender_reg_form_7',user_id=self.userId)
     """This method is called when the button is clicked"""
 
   def button_2_click(self, **event_args):
