@@ -16,25 +16,31 @@ class Lender_reg_form_6(Lender_reg_form_6Template):
 
     # Any code you write here will run before the form opens.
 
-  def button_2_click(self, **event_args):
-    address_type = self.drop_down_1.selected_value
-    house_no = self.text_box_1.text
-    building_name = self.text_box_2.text
-    street = self.text_box_3.text
-    user_id = self.userId
-    if not address_type or not house_no or not building_name or not street:
-      Notification("Please fill all the filelds")
-    else:
-     anvil.server.call('add_lendor_six_form',address_type,house_no,building_name,street,user_id)
-     open_form('lendor_registration_form.Lender_reg_form_7',user_id = user_id)
-    """This method is called when the button is clicked"""
+  
 
   def button_1_click(self, **event_args):
-    user_id = self.userId
-    open_form('lendor_registration_form.Lender_reg_form_3',user_id=user_id)
+    open_form('lendor_registration_form.Lender_reg_form_7',user_id=self.userId)
     """This method is called when the button is clicked"""
+
+  def button_2_click(self, **event_args):
+      lending_type = self.lending_type_dropdown.selected_value
+      investment = self.drop_down_1.selected_value
+      lending_period = self.drop_down_2.selected_value  # Convert to string
+      user_id = self.userId
+
+        # Make sure 'lending_individual' and 'lending_institutional' are passed as booleans
+      anvil.server.call('add_lendor_eighth_form', lending_type, investment,lending_period, user_id)
+
+      if lending_type == 'Individual':
+            open_form('lendor_registration_form.Lender_reg_individual_form_1',user_id=user_id)
+      elif lending_type == 'Institutional':
+            open_form('lendor_registration_form.Lender_reg_Institutional_form_1',user_id=user_id)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("bank_users.user_form")
+        
+
+    
+    
     
