@@ -24,6 +24,5 @@ class Lender_reg_bankdirect_bank_form_2(Lender_reg_bankdirect_bank_form_2Templat
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")
-    """This method is called when the button is clicked"""
     
     

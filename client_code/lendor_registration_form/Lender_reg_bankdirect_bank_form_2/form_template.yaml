@@ -62,7 +62,7 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: ['', Via Cash, Deposit]
+    items: [Via Cash, Deposit]
     visible: true
     font_size: null
     font: ''
