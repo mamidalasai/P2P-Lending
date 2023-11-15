@@ -35,6 +35,10 @@ class Lender_reg_form_8(Lender_reg_form_8Template):
             open_form('lendor_registration_form.Lender_reg_individual_form_1',user_id=user_id)
       elif lending_type == 'Institutional':
             open_form('lendor_registration_form.Lender_reg_Institutional_form_1',user_id=user_id)
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form("bank_users.user_form")
         
 
     
