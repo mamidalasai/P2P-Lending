@@ -17,9 +17,4 @@ import anvil.server
 # def say_hello(name):
 #   print("Hello, " + name + "!")
 #   return 42
-#
-@anvil.server.callable
-def lender(customer_id, email_id):
-  app_tables.lender.add_row(customer_id=customer_id,
-                            email_id=email_id
-                           )
+

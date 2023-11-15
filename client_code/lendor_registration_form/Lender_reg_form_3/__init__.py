@@ -17,16 +17,17 @@ class Lender_reg_form_3(Lender_reg_form_3Template):
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
-    qualification = self.drop_down_1.selected_value
-    pannumber = self.text_box_1.text
-    identity = self.file_loader_1.file
+    aadhaar_card = self.text_box_2.text
+    aadhaar_photo = self.file_loader_2.file
+    pan_card = self.text_box_1.text
+    pan_id = self.file_loader_1.file
     user_id = self.userId
-    if not qualification or not pannumber or not identity:
+    if not aadhaar_card or not aadhaar_photo or not pan_card or not pan_id:
       Notification("Please fill all the fields")
     else:
-     anvil.server.call('add_lendor_four_form',qualification,pannumber,identity,user_id)
-     open_form('lendor_registration_form.Lender_reg_form_3',user_id = user_id)
-    """This method is called when the button is clicked"""
+     anvil.server.call('add_lendor_third_form', aadhaar_photo, pan_card, pan_id,aadhaar_card,user_id)
+     open_form('lendor_registration_form.Lender_reg_form_4',user_id = user_id)
+
 
   def button_1_click(self, **event_args):
     user_id = self.userId
