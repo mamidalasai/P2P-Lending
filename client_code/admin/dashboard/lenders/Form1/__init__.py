@@ -1,4 +1,4 @@
-from ._anvil_designer import admin_view_profileTemplate
+from ._anvil_designer import Form1Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,13 +8,13 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class admin_view_profile(admin_view_profileTemplate):
+class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = tables.app_tables.user_profile.search()
+    self.data1 = tables.app_tables.user_profile.search()
 
     a = -1
     self.list_1 = []
@@ -27,7 +27,7 @@ class admin_view_profile(admin_view_profileTemplate):
     self.list_8 = []
     self.user_type = []
     
-    for i in self.data:
+    for i in self.data1:
       a+=1
       self.list_1.append(i['coustmer_id'])
       self.list_2.append(i['full_name'])
@@ -48,7 +48,7 @@ class admin_view_profile(admin_view_profileTemplate):
       b = -1
       for i in self.user_type:
         b+=1
-        if i == 'borrower' or i == 'Borrower':
+        if i == 'lender' or i == 'Lender':
           self.index.append(b)
           
       for i in self.index:
@@ -60,13 +60,3 @@ class admin_view_profile(admin_view_profileTemplate):
       print(self.list_1, self.list_2, self.list_3)
       print(self.result)
       print(self.index)
-
-
-
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('admin.dashboard.admin_view_profile.admin_view_profile_2')
-
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('admin.dashboard.borrowers')
