@@ -62,7 +62,7 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: ['', Via Cash, Deposit]
+    items: [Via Cash, Deposit]
     visible: true
     font_size: null
     font: ''
@@ -93,7 +93,7 @@ components:
   layout_properties: {grid_position: 'ATVVGU,UINLQT'}
 - name: label_2
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Net Banking, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Net Banking(Yes/NO), font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
