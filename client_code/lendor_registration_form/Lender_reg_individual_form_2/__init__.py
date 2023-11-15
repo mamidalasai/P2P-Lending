@@ -17,8 +17,15 @@ class Lender_reg_individual_form_2(Lender_reg_individual_form_2Template):
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
-    
-    open_form('lendor_registration_form.Lender_reg_individual_form_3',user_id=self.userId)
+    comp_address = self.text_box_1.text
+    landmark = self.text_box_1.text
+    business_phone_number = self.text_box_3.text
+    user_id = self.userId
+    if not comp_address or not landmark or not business_phone_number:
+      Notification("please fill the required fields").show()
+    else:
+      anvil.server.call('add_lendor_individual_form_2',business_phone_number, landmark,comp_address,user_id)
+      open_form('lendor_registration_form.Lender_reg_individual_form_3',user_id=self.userId)
     
 
   def button_1_click(self, **event_args):
