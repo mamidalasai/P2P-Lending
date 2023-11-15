@@ -66,13 +66,38 @@ def add_lendor_seven_form(landmark,city,state,pincode,user_id):
     row[0]['city'] = city
     row[0]['state'] = state
     row[0]['pincode'] = pincode
+
+
+@anvil.server.callable
+def add_lendor_eighth_form(lending_type, investment,lending_period, user_id):
+  row = app_tables.lender.add_row(investment=investment, lending_type=lending_type,lending_period=lending_period,coustmer_id=user_id)
+    
     
 @anvil.server.callable
-def add_lendor_eighth_form(investment,lending_period,lending_individual,lending_institutional,user_id):
-  row = app_tables.lender.add_row(investment=investment, individual_type=lending_individual, institutional_type=lending_institutional,lending_period=lending_period,coustmer_id=user_id)
+def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
+  row = app_tables.lender.search(coustmer_id=user_id)
+  if row:
+    row[0]['company_name']=company_name
+    row[0]['organization_type']=org_type
+    row[0]['employment_type']=emp_type
+
     
-    
-    
-    
+
+@anvil.server.callable
+def add_lendor_individual_form_2(user_id):
+    row = app_tables.lender.search(coustmer_id=user_id)
        
   
+@anvil.server.callable
+def add_lendor_individual_form_3(user_id):
+    row = app_tables.lender.search(coustmer_id=user_id)
+       
+  
+@anvil.server.callable
+def add_lendor_individual_bank_form_1(user_id):
+    row = app_tables.lender.search(coustmer_id=user_id)
+       
+  
+@anvil.server.callable
+def add_lendor_individual_bank_form_2(user_id):
+    row = app_tables.lender.search(coustmer_id=user_id)

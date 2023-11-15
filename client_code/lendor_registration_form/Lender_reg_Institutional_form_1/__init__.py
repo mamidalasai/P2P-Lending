@@ -9,17 +9,18 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class Lender_reg_Institutional_form_1(Lender_reg_Institutional_form_1Template):
-  def __init__(self, **properties):
+  def __init__(self,user_id, **properties):
+    self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_Institutional_form_2')
+    open_form('lendor_registration_form.Lender_reg_Institutional_form_2',user_id=self.userId)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_form_8')
+    open_form('lendor_registration_form.Lender_reg_form_8',user_id=self.userId)
     """This method is called when the button is clicked"""
     
