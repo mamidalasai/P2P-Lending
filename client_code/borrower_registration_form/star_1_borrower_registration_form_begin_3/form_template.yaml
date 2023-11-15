@@ -16,7 +16,7 @@ components:
   event_bindings: {click: button_1_click}
 - name: label_1_copy_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Step-3, font_size: null, font: '', spacing_above: small,
+    visible: true, text: Basic Details, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label

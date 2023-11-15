@@ -25,7 +25,7 @@ components:
   layout_properties: {grid_position: 'SLIBLJ,VMXXUN', full_width_row: true}
 - name: label_5_copy_1_copy_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: ' Step-1 ', font_size: null, font: '', spacing_above: small,
+    visible: true, text: Basic Details, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
@@ -38,7 +38,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'GMNRMZ,DRXMVR'}
 - name: borrower_full_name_test
-  properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: Enter Your Full Name,
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter Your Full Name,
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: 'theme:Light Overlay 1', bold: false, underline: false}
