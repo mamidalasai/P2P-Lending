@@ -21,6 +21,8 @@ class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_
 
   def next_butto_for_step_2_click(self, **event_args):
     full_name = self.borrower_full_name_test.text
+    gender=self.gender_dd.selected_value
+    email=self.email_tb.text
     mobile_no = self.borrower_mobile_number_text.text
     if len(mobile_no)==0:
        alert('please enter a mobile number')
@@ -37,6 +39,7 @@ class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_
       if age<min_age:
         alert(f"you must be atleast{min_age} years old")
       
+      result=anvil.server.call('dateofbirth',dob)  
       
     user_id = self.userId
     if not full_name or not mobile_no or not dob:
