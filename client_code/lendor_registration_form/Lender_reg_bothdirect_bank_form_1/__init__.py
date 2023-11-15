@@ -1,4 +1,4 @@
-from ._anvil_designer import Lender_reg_Institutional_bank_form_2Template
+from ._anvil_designer import Lender_reg_bothdirect_bank_form_1Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class Lender_reg_Institutional_bank_form_2(Lender_reg_Institutional_bank_form_2Template):
+class Lender_reg_bothdirect_bank_form_1(Lender_reg_bothdirect_bank_form_1Template):
   def __init__(self,user_id, **properties):
     self.userId = user_id
     # Set Form properties and Data Bindings.
@@ -17,13 +17,13 @@ class Lender_reg_Institutional_bank_form_2(Lender_reg_Institutional_bank_form_2T
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
-    open_form('lendor_registration_form.dashboard')
+    
+    open_form('lendor_registration_form.Lender_reg_Institutional_bank_form_2',user_id=self.userId)
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_Institutional_bank_form_1',user_id=self.userId)
+    open_form('lendor_registration_form.Lender_reg_form_8',user_id=self.userId)
 
   def button_3_click(self, **event_args):
-    open_form("bank_users.user_form")
     """This method is called when the button is clicked"""
-    
+    open_form("bank_users.user_form")
     
