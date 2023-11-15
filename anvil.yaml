@@ -206,6 +206,30 @@ db_schema:
     - name: last_six_month_bank_proof
       admin_ui: {width: 200, order: 47}
       type: media
+    - name: account_name
+      admin_ui: {width: 200, order: 48}
+      type: string
+    - name: account_type
+      admin_ui: {width: 200, order: 49}
+      type: string
+    - name: account_number
+      admin_ui: {width: 200, order: 50}
+      type: string
+    - name: account_bank_branch
+      admin_ui: {width: 200, order: 51}
+      type: string
+    - name: ifsc_code
+      admin_ui: {width: 200, order: 52}
+      type: string
+    - name: salary_type
+      admin_ui: {width: 200, order: 53}
+      type: string
+    - name: select_bank
+      admin_ui: {width: 200, order: 54}
+      type: string
+    - name: net_bank
+      admin_ui: {width: 200, order: 55}
+      type: string
     title: user_profile
   borrower:
     title: borrower

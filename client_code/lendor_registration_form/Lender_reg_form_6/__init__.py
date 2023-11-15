@@ -26,8 +26,6 @@ class Lender_reg_form_6(Lender_reg_form_6Template):
       investment = self.drop_down_1.selected_value
       lending_period = self.drop_down_2.selected_value  
       user_id = self.userId
-
-        # Make sure 'lending_individual' and 'lending_institutional' are passed as booleans
       anvil.server.call('add_lendor_six_form', lending_type, investment,lending_period, user_id)
 
       if lending_type == 'Individual':
@@ -36,7 +34,6 @@ class Lender_reg_form_6(Lender_reg_form_6Template):
             open_form('lendor_registration_form.Lender_reg_Institutional_form_1',user_id=user_id)
 
   def button_3_click(self, **event_args):
-    """This method is called when the button is clicked"""
     open_form("bank_users.user_form")
         
 

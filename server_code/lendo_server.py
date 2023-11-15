@@ -91,17 +91,27 @@ def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_si
 
 
 @anvil.server.callable
-def add_lendor_bank_details_form_1(user_id):
+def add_lendor_bank_details_form_1(account_name, account_type,account_number,bank_branch, user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    row[0]['about'] = None
+    row[0]['account_name'] = account_name
+    row[0]['account_type'] = account_type
+    row[0]['account_number'] = account_number
+    row[0]['account_bank_branch'] = bank_branch
 
 
 @anvil.server.callable
-def add_lendor_bank_details_form_2(user_id):
+def add_lendor_bank_details_form_2(ifsc,salary_type,select_bank,net_bank, user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    row[0]['about'] = None
+    row[0]['ifsc_code'] = ifsc
+    row[0]['salary_type'] = salary_type
+    row[0]['select_bank'] = select_bank
+    row[0]['net_bank'] = net_bank
+    row[0]['usertype'] = 'lender'
+    row[0]['last_confirm'] = True
+
+#--- lender reg was completed ---#
 
 
 
