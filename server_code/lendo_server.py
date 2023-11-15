@@ -7,12 +7,12 @@ from anvil.tables import app_tables
 import anvil.server
 
 @anvil.server.callable
-def add_lendor_frist_form(name,gender,city,user_id):
+def add_lendor_frist_form(name,gender,date_of_birth,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['full_name'] = name
     row[0]['gender'] = gender
-    row[0]['city'] = city
+    row[0]['date_of_birth'] = date_of_birth
     
 @anvil.server.callable
 def add_lendor_second_form(mobile,email,photo,user_id):
