@@ -176,6 +176,36 @@ db_schema:
     - name: country
       admin_ui: {width: 200, order: 32.5}
       type: string
+    - name: company_name
+      admin_ui: {width: 200, order: 38}
+      type: string
+    - name: organization_type
+      admin_ui: {width: 200, order: 39}
+      type: string
+    - name: employment_type
+      admin_ui: {width: 200, order: 40}
+      type: string
+    - name: business_no
+      admin_ui: {width: 200, order: 41}
+      type: string
+    - name: company_landmark
+      admin_ui: {width: 200, order: 42}
+      type: string
+    - name: company_address
+      admin_ui: {width: 200, order: 43}
+      type: string
+    - name: annual_salary
+      admin_ui: {width: 200, order: 44}
+      type: string
+    - name: designation
+      admin_ui: {width: 200, order: 45}
+      type: string
+    - name: emp_id_proof
+      admin_ui: {width: 200, order: 46}
+      type: media
+    - name: last_six_month_bank_proof
+      admin_ui: {width: 200, order: 47}
+      type: media
     title: user_profile
   borrower:
     title: borrower

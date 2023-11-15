@@ -62,7 +62,7 @@ def add_lendor_six_form(lending_type, investment,lending_period, user_id):
     
 @anvil.server.callable
 def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
-  row = app_tables.lender.search(coustmer_id=user_id)
+  row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['company_name']=company_name
     row[0]['organization_type']=org_type
@@ -72,26 +72,40 @@ def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
 
 @anvil.server.callable
 def add_lendor_individual_form_2(business_phone_number, landmark,comp_address,user_id):
-  row = app_tables.lender.search(coustmer_id=user_id)
+  row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['business_no']=business_phone_number
     row[0]['company_landmark']=landmark
-    row[0]['company_add']=comp_address      
+    row[0]['company_address']=comp_address      
 
 
 @anvil.server.callable
-def add_lendor_individual_form_3(user_id):
-    row = app_tables.lender.search(coustmer_id=user_id)
-       
+def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_six_month,user_id):
+  row = app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    row [0]['annual_salary']=annual_salary
+    row[0]['designation'] = designation
+    row[0]['emp_id_proof']=emp_id_proof
+    row[0]['last_six_month_bank_proof']=last_six_month
   
+
+
 @anvil.server.callable
-def add_lendor_individual_bank_form_1(user_id):
-    row = app_tables.lender.search(coustmer_id=user_id)
-       
-  
+def add_lendor_bank_details_form_1(user_id):
+  row = app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    row[0]['about'] = None
+
+
 @anvil.server.callable
-def add_lendor_individual_bank_form_2(user_id):
-    row = app_tables.lender.search(coustmer_id=user_id)
+def add_lendor_bank_details_form_2(user_id):
+  row = app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    row[0]['about'] = None
+
+
+
+# this one for dashboard start 
 
 @anvil.server.callable
 def add_rtr_form(top_up,fin_rta):
