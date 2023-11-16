@@ -87,7 +87,7 @@ def add_loan_details(min_amount, tenure,max_amount):
   
   )
 
-
-
-
-
+@anvil.server.callable
+def get_user_profile(user_id):
+    user_profile =app_tables.user_profile.get(coustmer_id=user_id)
+    return user_profile
