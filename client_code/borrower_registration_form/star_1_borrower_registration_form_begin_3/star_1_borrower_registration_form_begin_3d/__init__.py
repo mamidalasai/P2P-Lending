@@ -14,7 +14,6 @@ class star_1_borrower_registration_form_begin_3d(star_1_borrower_registration_fo
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
     emp_type = self.drop_down_1.selected_value
@@ -30,13 +29,10 @@ class star_1_borrower_registration_form_begin_3d(star_1_borrower_registration_fo
 
 
 
+  # this is prev button
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_form_8',user_id=self.userId)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',user_id=self.userId)
 
-  def drop_down_1_change(self, **event_args):
-    """This method is called when an item is selected"""
-    pass
 
   def button_3_click(self, **event_args):
-    """This method is called when the button is clicked"""
     open_form("bank_users.user_form")
