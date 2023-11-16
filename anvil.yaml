@@ -245,6 +245,27 @@ db_schema:
     - name: mail_id
       admin_ui: {width: 200}
       type: string
+    - name: college_name
+      admin_ui: {width: 200, order: 61}
+      type: string
+    - name: college_id
+      admin_ui: {width: 200, order: 62}
+      type: string
+    - name: college_proof
+      admin_ui: {width: 200, order: 63}
+      type: media
+    - name: college_address
+      admin_ui: {width: 200, order: 64}
+      type: string
+    - name: running_Home_Loan
+      admin_ui: {width: 200, order: 65}
+      type: string
+    - name: other_loan
+      admin_ui: {width: 200, order: 66}
+      type: string
+    - name: running_or_live loans
+      admin_ui: {width: 200, order: 67}
+      type: string
     title: user_profile
   borrower:
     title: borrower

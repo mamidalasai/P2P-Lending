@@ -25,11 +25,11 @@ class star_1_borrower_registration_form_begin_3e(star_1_borrower_registration_fo
       Notification("please fill the required fields").show()
     else:
       anvil.server.call('add_lendor_individual_form_2',business_phone_number, landmark,comp_address,user_id)
-      open_form('lendor_registration_form.Lender_reg_individual_form_3',user_id=self.userId)
+      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3f',user_id=user_id)
 
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_individual_form_1', user_id=self.userId)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3d',user_id=user_id)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""

@@ -41,7 +41,7 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: [Married, UN-Married, '']
+    items: [Married, UN-Married]
     visible: true
     font_size: null
     font: ''
