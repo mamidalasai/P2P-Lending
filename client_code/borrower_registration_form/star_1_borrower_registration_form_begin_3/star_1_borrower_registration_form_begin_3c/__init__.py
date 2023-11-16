@@ -27,9 +27,9 @@ class star_1_borrower_registration_form_begin_3c(star_1_borrower_registration_fo
     user_id = self.userId
     anvil.server.call('add_borrower_step3c',status_of_user,user_id)
     if status_of_user == 'Student':
-      open_form()
+      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_student',user_id=user_id)
     elif status_of_user == 'Employee':
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3d',user_id=user_id)
     else:
-      open_form()
+      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business',user_id=user_id)
     
