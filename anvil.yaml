@@ -329,9 +329,6 @@ db_schema:
     - name: tenure
       admin_ui: {width: 200, order: 15}
       type: number
-    - name: total_repayment
-      admin_ui: {width: 200}
-      type: number
     title: loan_details
   lender:
     title: lender
