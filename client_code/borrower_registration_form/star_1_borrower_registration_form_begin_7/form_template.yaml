@@ -35,9 +35,8 @@ components:
   layout_properties: {grid_position: 'MYZZAH,LHOVQD'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: House No, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: true, underline: false, icon: ''}
   name: label_4
   layout_properties: {grid_position: 'QCHURB,VETZMY'}
 - type: TextBox

@@ -230,6 +230,18 @@ db_schema:
     - name: net_bank
       admin_ui: {width: 200, order: 55}
       type: string
+    - name: father_name
+      admin_ui: {width: 200, order: 56}
+      type: string
+    - name: father_age
+      admin_ui: {width: 200, order: 57}
+      type: string
+    - name: mother_name
+      admin_ui: {width: 200, order: 58}
+      type: string
+    - name: mother_age
+      admin_ui: {width: 200, order: 59}
+      type: string
     title: user_profile
   borrower:
     title: borrower
