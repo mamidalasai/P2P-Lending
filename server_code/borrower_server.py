@@ -77,6 +77,13 @@ def add_borrower_step5(spouse_mobile,spouse_company_name,spouse_company_address,
     row[0]['spouse_company_address']=spouse_company_address
     row[0]['spouse_profficen']=spouse_profficen
 
+
+
+# the borrower registration form end hear do not change any code ---#
+
+
+
+
 @anvil.server.callable
 def add_loan_details(min_amount, tenure,max_amount):
   app_tables.loan_details.add_row(
@@ -91,6 +98,9 @@ def add_loan_details(min_amount, tenure,max_amount):
 def get_user_profile(user_id):
     user_profile =app_tables.user_profile.get(coustmer_id=user_id)
     return user_profile
+
+
+
 
 @anvil.server.callable
 def check_loan_existence(user_id):

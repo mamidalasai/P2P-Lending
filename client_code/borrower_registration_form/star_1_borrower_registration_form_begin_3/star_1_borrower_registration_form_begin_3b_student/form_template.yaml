@@ -14,10 +14,6 @@ components:
   type: Button
   layout_properties: {grid_position: 'GCTYGT,TKYCQY'}
   event_bindings: {click: home_borrower_registration_form_copy_1_click}
-- name: spacer_1_copy_1_copy_1
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'RUDJVO,FQJOBC'}
 - name: label_1_copy_1_copy_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Student Details, font_size: null, font: '', spacing_above: small,
@@ -26,7 +22,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'KUSTUQ,UEUGAG'}
 - name: label_1
-  properties: {text: 'College Name:'}
+  properties: {text: 'College Name:', align: center, bold: true}
   type: Label
   layout_properties: {grid_position: 'JJRAJQ,WPNTZU'}
 - name: borrower_college_name_text
@@ -34,7 +30,7 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'JJRAJQ,OVIRZH'}
 - name: label_2
-  properties: {text: 'College Id:'}
+  properties: {text: 'College Id:', align: center, bold: true}
   type: Label
   layout_properties: {grid_position: 'ETIKUL,OQZJVW'}
 - name: borrower_college_id_text
@@ -42,7 +38,7 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'ETIKUL,OBTINV'}
 - name: label_3
-  properties: {text: 'College Proof:'}
+  properties: {text: 'College Proof:', align: center, bold: true}
   type: Label
   layout_properties: {grid_position: 'EIUQCI,SNVTWO'}
 - name: borrower_college_proof_img
@@ -50,7 +46,7 @@ components:
   type: FileLoader
   layout_properties: {grid_position: 'EIUQCI,PJYIKM'}
 - name: label_4
-  properties: {text: 'College Address:'}
+  properties: {text: 'College Address:', align: center, bold: true}
   type: Label
   layout_properties: {grid_position: 'CESJQI,RDIOWV'}
 - name: borrower_college_address_text
