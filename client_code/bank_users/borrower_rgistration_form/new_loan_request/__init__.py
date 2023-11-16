@@ -13,6 +13,8 @@ class new_loan_request(new_loan_requestTemplate):
     #self.userId=user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+  def  loan(self, min_amount, max_amount): 
     all_requests = app_tables.loan_details.search()
 
     if all_requests:
