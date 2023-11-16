@@ -118,9 +118,9 @@ def add_lendor_bank_details_form_2(ifsc,salary_type,select_bank,net_bank, user_i
 # this one for dashboard start 
 
 @anvil.server.callable
-def add_rtr_form(top_up,fin_rta):
+def add_rtr_form(top_up,final_rta):
   #row = app_tables.lender.search()
   row = app_tables.lender.search(tables.order_by("date_time", ascending=False))
   if row:
     row[0]['top_up'] = top_up
-    row[0]['fin_rta'] = fin_rta
+    row[0]['final_rta'] = final_rta
