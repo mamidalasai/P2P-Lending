@@ -11,7 +11,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.borrower_rgistration_form.new_loan_request}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -328,12 +328,6 @@ db_schema:
       type: number
     - name: tenure
       admin_ui: {width: 200, order: 15}
-      type: number
-    - name: total_repayment
-      admin_ui: {width: 200, order: 16}
-      type: number
-    - name: 'total_repayment '
-      admin_ui: {width: 200}
       type: number
     title: loan_details
   lender:

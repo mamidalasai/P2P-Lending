@@ -5,6 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from datetime import datetime
 
 
 @anvil.server.callable
@@ -77,11 +78,12 @@ def add_borrower_step5(spouse_mobile,spouse_company_name,spouse_company_address,
     row[0]['spouse_profficen']=spouse_profficen
 
 @anvil.server.callable
-def add_user_profile(min_amount, tenure,max_amount):
-  app_tables.user_profile.add_row(
+def add_loan_details(min_amount, tenure,max_amount):
+  app_tables.loan_details.add_row(
     min_amount=min_amount,
     tenure=tenure,
-    max_amount=max_amount
+    max_amount=max_amount,
+    timestamp=datetime.now()
   
   )
 
@@ -89,9 +91,3 @@ def add_user_profile(min_amount, tenure,max_amount):
 
 
 
-@anvil.server.callable
-def calculate_processing_fee(minimum_amount, tenure):
-    # Define your processing fee calculation logic here
-    processing_fee_percentage = 0.05  # 5% processing fee
-    processing_fee = minimum_amount * processing_fee_percentage * tenure
-    return processing_fee
