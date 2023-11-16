@@ -13,16 +13,26 @@ class new_loan_request(new_loan_requestTemplate):
     #self.userId=user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    all_requests = app_tables.loan_details.search()
 
+    if all_requests:
+            most_recent_request = None
+
+            for request in all_requests:
+                if most_recent_request is None or request['timestamp'] > most_recent_request['timestamp']:
+                    most_recent_request = request
+
+            self.customer_id = most_recent_request['customer_id']
+    user_request = app_tables.loan_details.get(customer_id=self.customer_id)
+    max_amount = user_request['max_amount']
+    self.max_amount.text=f"{max_amount}"
     # Any code you write here will run before the form opens.
-    min_amount=self.min_amount
-    max_amount=self.max_amount
+    min_amount = self.min_amount.text  # Convert the string to a float
+    max_amount = self.max_amount.text  # Convert the string to a float
     tenure = self.tenure.selected_value
-    #anvil.server.call('add_user_profile', min_amount,max_amount,tenure,user_id)
-   # self.coustmer_id = 1000
-    #user_request = app_tables.user_profile.get(coustmer_id=self.coustmer_id)
-    #max_amount = user_request['max_amount']
-    #self.max_amount.text=f"{max_amount}"
+
+    anvil.server.call('add_loan_details', min_amount, max_amount, tenure)
+   
   def button_1_copy_click(self, **event_args):
     if self.check_box_1.checked:
      open_form('bank_users.borrower_rgistration_form.new_loan_request.loan_type') 
