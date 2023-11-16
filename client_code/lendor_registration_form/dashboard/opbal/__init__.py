@@ -21,8 +21,8 @@ class opbal(opbalTemplate):
         if all_requests:
             # Extract the necessary information from the latest row
             latest_request = all_requests[0]
-            fin_rta = latest_request['fin_rta']
-            self.output_lbl.text = f" {fin_rta}"
+            final_rta = latest_request['final_rta']
+            self.output_lbl.text = f" {final_rta}"
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.avlbal")

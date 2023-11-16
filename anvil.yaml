@@ -278,6 +278,9 @@ db_schema:
     - name: borrower_approve_date_time
       admin_ui: {width: 200, order: 8}
       type: datetime
+    - name: beseem_score
+      admin_ui: {width: 200, order: 9}
+      type: string
   product_borrower:
     client: full
     server: full
@@ -332,7 +335,7 @@ db_schema:
     title: loan_details
   lender:
     title: lender
-    client: none
+    client: full
     server: full
     columns:
     - name: user_name
@@ -347,30 +350,12 @@ db_schema:
     - name: investment
       admin_ui: {width: 200}
       type: string
-    - name: organization_type
-      admin_ui: {width: 200}
-      type: string
     - name: lending_period
-      admin_ui: {width: 200}
-      type: string
-    - name: employment_type
       admin_ui: {width: 200}
       type: string
     - name: date_time
       admin_ui: {width: 200}
       type: datetime
-    - name: business_no
-      admin_ui: {width: 200}
-      type: string
-    - name: company_add
-      admin_ui: {width: 200}
-      type: string
-    - name: company_landmark
-      admin_ui: {width: 200}
-      type: string
-    - name: company_name
-      admin_ui: {width: 200}
-      type: string
     - name: coustmer_id
       admin_ui: {order: 1, width: 200}
       type: number
@@ -380,4 +365,7 @@ db_schema:
     - name: email
       admin_ui: {width: 200}
       type: string
+    - name: final_rta
+      admin_ui: {width: 200, order: 15}
+      type: number
 renamed: true
