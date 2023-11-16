@@ -91,3 +91,8 @@ def add_loan_details(min_amount, tenure,max_amount):
 def get_user_profile(user_id):
     user_profile =app_tables.user_profile.get(coustmer_id=user_id)
     return user_profile
+
+@anvil.server.callable
+def check_loan_existence(user_id):
+    existing_loan = app_tables.loan_details.get(coustmer_id=user_id)
+    return existing_loan is not None
