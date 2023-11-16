@@ -39,7 +39,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: RIFDPA,FXDAEC
-- name: max_amount
+- name: max_amount_lb
   properties: {text: '', background: white}
   type: Label
   layout_properties: {grid_position: 'RIFDPA,WXMQBR'}

@@ -15,6 +15,7 @@ class new_loan_request(new_loan_requestTemplate):
     self.init_components(**properties)
 
   def  loan(self, min_amount, max_amount): 
+    
     all_requests = app_tables.loan_details.search()
 
     if all_requests:
@@ -24,10 +25,10 @@ class new_loan_request(new_loan_requestTemplate):
                 if most_recent_request is None or request['timestamp'] > most_recent_request['timestamp']:
                     most_recent_request = request
 
-            self.customer_id = most_recent_request['customer_id']
-    user_request = app_tables.loan_details.get(customer_id=self.customer_id)
-    max_amount = user_request['max_amount']
-    self.max_amount.text=f"{max_amount}"
+                    self.customer_id = most_recent_request['customer_id']
+                    user_request = app_tables.loan_details.get(customer_id=self.customer_id)
+                    max_amount = user_request['max_amount']
+                    self.max_amount_lb.text = f"{max_amount}"
     # Any code you write here will run before the form opens.
     min_amount = self.min_amount.text  # Convert the string to a float
     max_amount = self.max_amount.text  # Convert the string to a float
