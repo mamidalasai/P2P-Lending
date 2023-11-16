@@ -11,7 +11,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: lendor_registration_form.dashboard.opbal}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -347,30 +347,12 @@ db_schema:
     - name: investment
       admin_ui: {width: 200}
       type: string
-    - name: organization_type
-      admin_ui: {width: 200}
-      type: string
     - name: lending_period
-      admin_ui: {width: 200}
-      type: string
-    - name: employment_type
       admin_ui: {width: 200}
       type: string
     - name: date_time
       admin_ui: {width: 200}
       type: datetime
-    - name: business_no
-      admin_ui: {width: 200}
-      type: string
-    - name: company_add
-      admin_ui: {width: 200}
-      type: string
-    - name: company_landmark
-      admin_ui: {width: 200}
-      type: string
-    - name: company_name
-      admin_ui: {width: 200}
-      type: string
     - name: coustmer_id
       admin_ui: {order: 1, width: 200}
       type: number
@@ -380,4 +362,7 @@ db_schema:
     - name: email
       admin_ui: {width: 200}
       type: string
+    - name: final_rta
+      admin_ui: {width: 200, order: 15}
+      type: number
 renamed: true

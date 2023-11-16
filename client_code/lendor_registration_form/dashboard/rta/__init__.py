@@ -24,12 +24,12 @@ class rta(rtaTemplate):
     if all_requests:
         latest_request = all_requests[0]
         investment = latest_request['investment']
-        fin_rta = int(latest_request['investment']) + int(top_up)
+        final_rta = int(latest_request['investment']) + int(top_up)
         #user_name = self.user_name
-        self.fin_rta.text = f"Total Available Amount: {fin_rta}"
+        self.fin_rta.text = f"Total Available Amount: {final_rta}"
 
         # Call the server function with the correct name and parameter
-        anvil.server.call('add_rtr_form', top_up,fin_rta )
+        anvil.server.call('add_rtr_form', top_up,final_rta )
         Notification("Topup added successfully").show()
 
   def button_1_click(self, **event_args):
