@@ -278,6 +278,9 @@ db_schema:
     - name: borrower_approve_date_time
       admin_ui: {width: 200, order: 8}
       type: datetime
+    - name: beseem_score
+      admin_ui: {width: 200, order: 9}
+      type: string
   product_borrower:
     client: full
     server: full
