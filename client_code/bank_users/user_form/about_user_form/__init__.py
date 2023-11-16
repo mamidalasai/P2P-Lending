@@ -16,3 +16,7 @@ class about_user_form(about_user_formTemplate):
 
   def login_sign_up_main_form_link_click(self, **event_args):
     anvil.users.login_with_form()
+
+  def link_7_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
