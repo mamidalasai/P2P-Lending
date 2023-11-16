@@ -73,7 +73,7 @@ components:
         spacing_below: small, italic: false, background: '#0876E8', bold: true, underline: false,
         icon: 'fa:stumbleupon'}
       name: button_9
-      layout_properties: {x: 316, y: 215, width: 255}
+      layout_properties: {x: 316, y: 215, width: 265}
       event_bindings: {click: button_9_click}
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',

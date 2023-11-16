@@ -18,3 +18,6 @@ import anvil.server
 #   print("Hello, " + name + "!")
 #   return 42
 
+@anvil.server.callable
+def lender(coustmer_id,email_id):
+  app_tables.lender.add_row(coustmer_id=coustmer_id,email_id=email_id)
