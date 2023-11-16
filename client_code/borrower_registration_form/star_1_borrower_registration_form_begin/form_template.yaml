@@ -64,10 +64,11 @@ components:
   type: Label
   layout_properties: {grid_position: 'COVMLK,LKQUSX'}
 - name: borrower_date_of_birth_date_picker
-  properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
-    placeholder: '', border: '', enabled: true, foreground: '', visible: true, font_size: null,
-    font: '', spacing_above: small, spacing_below: small, italic: false, date: '',
-    min_date: '', background: 'theme:On Primary', bold: true, underline: false, format: ''}
+  properties: {role: null, align: left, max_date: '2005-01-01', pick_time: false,
+    tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+    font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+    date: '', min_date: '1923-01-01', background: 'theme:On Primary', bold: true,
+    underline: false, format: ''}
   type: DatePicker
   layout_properties: {grid_position: 'COVMLK,COZRUY VSUKEN,VQGHJP'}
   event_bindings: {change: borrower_date_of_birth_date_picker_change}

@@ -20,7 +20,7 @@ def add_lendor_second_form(mobile,email,photo,user_id):
   if row:
     #row[0]['investment'] = investment
     row[0]['mobile'] = mobile
-    row[0]['mail_id'] = email
+    row[0]['another_email'] = email
     row[0]['user_photo'] = photo
 
 
