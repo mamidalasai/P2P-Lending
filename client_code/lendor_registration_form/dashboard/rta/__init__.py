@@ -19,14 +19,14 @@ class rta(rtaTemplate):
             tables.order_by("date_time", ascending=False)
         )
     top_up = self.tp_tb.text
-    fin_rta = self.fin_rta
+    final_rta = self.final_rta
     
     if all_requests:
         latest_request = all_requests[0]
         investment = latest_request['investment']
         final_rta = int(latest_request['investment']) + int(top_up)
         #user_name = self.user_name
-        self.fin_rta.text = f"Total Available Amount: {final_rta}"
+        self.final_rta.text = f"Total Available Amount: {final_rta}"
 
         # Call the server function with the correct name and parameter
         anvil.server.call('add_rtr_form', top_up,final_rta )
