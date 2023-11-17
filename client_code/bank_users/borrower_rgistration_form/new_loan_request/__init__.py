@@ -7,16 +7,17 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from .. import borrower_main_form_module
 
 class new_loan_request(new_loan_requestTemplate):
   def __init__(self, **properties):
-    #self.userId=user_id
-    # Set Form properties and Data Bindings.
+    #self.user_id=main_form_module.userId
+    self.user_id=1000
     self.init_components(**properties)
 
   def  loan(self, min_amount, max_amount): 
     
-    all_requests = app_tables.loan_details.search()
+    all_requests = app_tables.loan_details.search(coustmer_id=self.user_id)
 
     if all_requests:
             most_recent_request = None
@@ -25,15 +26,15 @@ class new_loan_request(new_loan_requestTemplate):
                 if most_recent_request is None or request['timestamp'] > most_recent_request['timestamp']:
                     most_recent_request = request
 
-                    self.customer_id = most_recent_request['customer_id']
-                    user_request = app_tables.loan_details.get(customer_id=self.customer_id)
+                    self.coustmer_id = most_recent_request['coustmer_id']
+                    user_request = app_tables.loan_details.get(coustmer_id=self.coustmer_idustmer_id)
                     max_amount = user_request['max_amount']
                     self.max_amount_lb.text = f"{max_amount}"
     # Any code you write here will run before the form opens.
     min_amount = self.min_amount.text  # Convert the string to a float
     max_amount = self.max_amount.text  # Convert the string to a float
     tenure = self.tenure.selected_value
-
+       
     anvil.server.call('add_loan_details', min_amount, max_amount, tenure)
    
   def button_1_copy_click(self, **event_args):
