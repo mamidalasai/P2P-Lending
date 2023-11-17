@@ -266,6 +266,33 @@ db_schema:
     - name: running_or_live loans
       admin_ui: {width: 200, order: 67}
       type: string
+    - name: business_name
+      admin_ui: {width: 200, order: 69.5}
+      type: string
+    - name: business_location
+      admin_ui: {width: 200, order: 69.25}
+      type: string
+    - name: business_add
+      admin_ui: {width: 200, order: 69.125}
+      type: string
+    - name: branch_name
+      admin_ui: {width: 200, order: 69.375}
+      type: string
+    - name: nearest_location
+      admin_ui: {width: 200, order: 69.4375}
+      type: string
+    - name: business_type
+      admin_ui: {width: 200, order: 69.46875}
+      type: string
+    - name: employees_working
+      admin_ui: {width: 200, order: 69.453125}
+      type: string
+    - name: year_estd
+      admin_ui: {width: 200, order: 69.4453125}
+      type: string
+    - name: industry_type
+      admin_ui: {width: 200}
+      type: string
     title: user_profile
   borrower:
     title: borrower
@@ -323,9 +350,6 @@ db_schema:
     - name: email_id
       admin_ui: {width: 200, order: 1}
       type: string
-    - name: coustmer_id
-      admin_ui: {order: 5, width: 200}
-      type: number
     - name: full_name
       admin_ui: {width: 200, order: 3}
       type: string
@@ -353,9 +377,21 @@ db_schema:
     - name: tenure
       admin_ui: {width: 200, order: 15}
       type: number
-    - name: customer_id
-      admin_ui: {width: 200}
+    - name: coustmer_id
+      admin_ui: {order: 5, width: 200}
       type: number
+    - name: loan_acc_number
+      admin_ui: {width: 200, order: 12}
+      type: string
+    - name: member_rom
+      admin_ui: {width: 200, order: 11.5}
+      type: string
+    - name: beseem_score
+      admin_ui: {width: 200, order: 11.75}
+      type: string
+    - name: borrower_bank_acc_details
+      admin_ui: {width: 200, order: 11.875}
+      type: string
     title: loan_details
   lender:
     title: lender
@@ -392,4 +428,12 @@ db_schema:
     - name: final_rta
       admin_ui: {width: 200, order: 15}
       type: number
+  membership:
+    client: none
+    server: full
+    columns:
+    - name: member_club
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: membership
 renamed: true

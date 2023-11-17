@@ -17,6 +17,7 @@ class Lender_reg_individual_form_3(Lender_reg_individual_form_3Template):
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
+    self.userId = user_id
     open_form('lendor_registration_form.Lender_reg_individual_form_2',user_id=self.userId)
     
 
