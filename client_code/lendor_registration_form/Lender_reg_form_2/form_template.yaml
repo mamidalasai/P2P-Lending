@@ -5,7 +5,7 @@ components:
 - type: FlowPanel
   properties: {}
   name: flow_panel_1
-  layout_properties: {grid_position: 'LSSQTE,LKFYGP'}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR LSSQTE,LKFYGP'}
   components:
   - name: image_1_copy_1_copy_1_copy_4
     properties: {role: null, vertical_align: center, height: 49, tooltip: '', border: '',
@@ -16,74 +16,66 @@ components:
       col_widths: {}
       grid_position: ',RHCVUB'
       width: 268
-- name: button_3
-  properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: black, visible: true, text: Home, font_size: 13, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0876e8',
-    bold: true, underline: false, icon: 'fa:home'}
-  type: Button
-  layout_properties: {grid_position: 'LSSQTE,RBQOWX'}
-  event_bindings: {click: button_3_click}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Lender Registration, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
-  layout_properties: {grid_position: ''}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR'}
 - name: label_5_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Basic Details, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
-  layout_properties: {grid_position: ''}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR'}
 - name: label_3_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Mobile number, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
-  layout_properties: {grid_position: 'TUEMCK,WQUDUB'}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR TUEMCK,WQUDUB'}
 - name: text_box_1
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: 'theme:On Primary', bold: false, underline: false}
   type: TextBox
-  layout_properties: {grid_position: 'TUEMCK,BVTAAJ'}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR TUEMCK,BVTAAJ'}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Alternate Email, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
-  layout_properties: {grid_position: 'BKDQCC,CCQQWY'}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR BKDQCC,CCQQWY'}
 - name: text_box_2
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: 'theme:On Primary', bold: false, underline: false}
   type: TextBox
-  layout_properties: {grid_position: 'BKDQCC,GLRWMX'}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR BKDQCC,GLRWMX'}
 - name: label_2
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Upload Photo, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
-  layout_properties: {grid_position: 'ZAGQLH,UGBPQQ'}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR ZAGQLH,UGBPQQ'}
 - name: file_loader_1
   properties: {}
   type: FileLoader
-  layout_properties: {grid_position: 'ZAGQLH,IDKKSD'}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR ZAGQLH,IDKKSD'}
 - name: button_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary Container', visible: true, text: Prev, font_size: null,
     font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
     background: '#0876E8', bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
-  layout_properties: {grid_position: 'XMJFRN,QBUCVL'}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR XMJFRN,QBUCVL'}
   event_bindings: {click: button_1_click}
 - name: button_2
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
@@ -91,6 +83,14 @@ components:
     font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
     background: '#0876E8', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
-  layout_properties: {grid_position: 'XMJFRN,LWCVTD'}
+  layout_properties: {grid_position: 'PVYFIA,SNRIAR XMJFRN,LWCVTD'}
   event_bindings: {click: button_2_click}
+- name: button_3
+  properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+    foreground: black, visible: true, text: Home, font_size: 13, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#0876e8',
+    bold: true, underline: false, icon: 'fa:home'}
+  type: Button
+  layout_properties: {grid_position: 'PVYFIA,MZIBFC'}
+  event_bindings: {click: button_3_click}
 is_package: true

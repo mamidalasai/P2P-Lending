@@ -29,6 +29,7 @@ class Lender_reg_bothdirect_bank_form_1(Lender_reg_bothdirect_bank_form_1Templat
       open_form('lendor_registration_form.Lender_reg_bankdirect_bank_form_2',user_id=self.userId)
 
   def button_1_click(self, **event_args):
+    user_id = self.userId
     open_form('lendor_registration_form.Lender_reg_form_6',user_id=self.userId)
 
   def button_3_click(self, **event_args):

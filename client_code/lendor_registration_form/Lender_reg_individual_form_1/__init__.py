@@ -31,7 +31,8 @@ class Lender_reg_individual_form_1(Lender_reg_individual_form_1Template):
 
   
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_form_6',user_id=self.userId)
+     user_id = self.userId
+     open_form('lendor_registration_form.Lender_reg_form_6',user_id=self.userId)
 
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""

@@ -389,4 +389,16 @@ db_schema:
     - name: final_rta
       admin_ui: {width: 200, order: 15}
       type: number
+    - name: business_name
+      admin_ui: {width: 200, order: 10}
+      type: string
+    - name: business_location
+      admin_ui: {width: 200, order: 9.5}
+      type: string
+    - name: business_add
+      admin_ui: {width: 200, order: 9.75}
+      type: string
+    - name: branch_name
+      admin_ui: {width: 200, order: 9.875}
+      type: string
 renamed: true
