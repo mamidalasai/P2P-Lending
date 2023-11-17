@@ -77,7 +77,9 @@ def add_borrower_step5(spouse_mobile,spouse_company_name,spouse_company_address,
     row[0]['spouse_company_address']=spouse_company_address
     row[0]['spouse_profficen']=spouse_profficen
 
-
+@anvil.server.callable
+def add_borrower_step_3d(emp_type,org_type,company_name,user_id):
+  
 
 # the borrower registration form end hear do not change any code ---#
 
