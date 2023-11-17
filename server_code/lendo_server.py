@@ -107,6 +107,31 @@ def add_lendor_institutional_form_2(nearest_loc,business_type,empolyees_working,
     row[0]['year_estd'] = year_estd
 
 @anvil.server.callable
+def add_lendor_institutional_form_3(industry_type,six_monthturnover,last_six_statments,user_id):
+  row = app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    row[0]['industry_type'] = industry_type
+    row[0]['six_month_turnover'] = six_monthturnover
+    row[0]['last_six_month_bank_proof'] = last_six_statments
+
+@anvil.server.callable
+def add_lendor_institutional_form_4(director_name,director_no,din,cin,user_id):
+  row = app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    row[0]['director_name'] = director_name
+    row[0]['director_no'] = director_no
+    row[0]['din'] = din
+    row[0]['cin'] = cin
+
+@anvil.server.callable
+def add_lendor_institutional_form_5(reg_office_add,off_add_proof,proof_verification,user_id):
+  row = app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    row[0]['registered_off_add'] = reg_office_add
+    row[0]['off_add_proof'] = off_add_proof
+    row[0]['proof_verification'] = proof_verification
+
+@anvil.server.callable
 def add_lendor_bank_details_form_1(account_name, account_type,account_number,bank_branch, user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
