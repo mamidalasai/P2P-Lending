@@ -142,3 +142,15 @@ def add_rtr_form(top_up,final_rta):
   if row:
     row[0]['top_up'] = top_up
     row[0]['final_rta'] = final_rta
+
+#code for foreclose request
+
+@anvil.server.callable
+def search_user(query):
+  result=app_tables.foreclose.search()
+  if query:
+    result=[
+    x for x in result
+    if query in x["coustmer_id"]
+    ]
+  return result
