@@ -10,7 +10,7 @@ from anvil.tables import app_tables
 
 class new_loan_request(new_loan_requestTemplate):
   def __init__(self, **properties):
-    #self.userId=user_id
+    self.userId=user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -33,12 +33,12 @@ class new_loan_request(new_loan_requestTemplate):
     min_amount = self.min_amount.text  # Convert the string to a float
     max_amount = self.max_amount.text  # Convert the string to a float
     tenure = self.tenure.selected_value
-
-    anvil.server.call('add_loan_details', min_amount, max_amount, tenure)
+    user_id=self.userId
+    anvil.server.call('add_loan_details', min_amount, max_amount, tenure,user_id)
    
   def button_1_copy_click(self, **event_args):
     if self.check_box_1.checked:
-     open_form('bank_users.borrower_rgistration_form.new_loan_request.loan_type') 
+     open_form('bank_users.borrower_rgistration_form.new_loan_request.loan_type',user_id=self.userId) 
     else:
       alert('Please select Terms and Conditions')
     def button_1_click(self, **event_args):
