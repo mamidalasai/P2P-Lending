@@ -16,9 +16,9 @@ class application_tracker(application_trackerTemplate):
     #self.user_id=main_form_module.userId
     self.user_id=1000
     # Any code you write here will run before the form opens.
-    self.repeating_panel_1=tables.app_tables.loan_details.get(coustmer_id=self.user_id)
-    loan_exists = anvil.server.call('check_loan_existence', user_id)
-    if loan_exists:
+    self.repeating_panel_5=app_tables.loan_details.get(coustmer_id=self.user_id)
+    
+    if self.repeating_panel_5:
       print("Loan already exists for this user.")
     else:
       print("No existing loan for this user.")
