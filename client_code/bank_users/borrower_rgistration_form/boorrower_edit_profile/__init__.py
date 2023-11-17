@@ -10,6 +10,7 @@ from anvil.tables import app_tables
 
 class boorrower_edit_profile(boorrower_edit_profileTemplate):
   def __init__(self, **properties):
+    
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
