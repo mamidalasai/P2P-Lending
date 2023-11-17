@@ -287,9 +287,6 @@ db_schema:
     - name: employees_working
       admin_ui: {width: 200, order: 69.453125}
       type: string
-    - name: year_estd
-      admin_ui: {width: 200, order: 69.4453125}
-      type: string
     - name: industry_type
       admin_ui: {width: 200}
       type: string
@@ -317,6 +314,9 @@ db_schema:
     - name: proof_verification
       admin_ui: {width: 200, order: 71.96875}
       type: media
+    - name: year_estd
+      admin_ui: {width: 200, order: 69.4609375}
+      type: date
     title: user_profile
   borrower:
     title: borrower

@@ -22,8 +22,11 @@ class Lender_reg_Institutional_form_4(Lender_reg_Institutional_form_4Template):
     din = self.text_box_3.text
     cin = self.text_box_4.text
     user_id = self.userId
-    anvil.server.call('add_lendor_institutional_form_4',director_name,director_no,din,cin,user_id)
-    open_form('lendor_registration_form.Lender_reg_Institutional_form_5',user_id = user_id)
+    if not director_name or not director_no or not din or not cin:
+      Notification("Please fill all the fields")
+    else:
+     anvil.server.call('add_lendor_institutional_form_4',director_name,director_no,din,cin,user_id)
+     open_form('lendor_registration_form.Lender_reg_Institutional_form_5',user_id = user_id)
 
   def button_1_click(self, **event_args):
     user_id = self.userId

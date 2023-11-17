@@ -21,8 +21,9 @@ class Lender_reg_Institutional_form_5(Lender_reg_Institutional_form_5Template):
     off_add_proof = self.text_box_2.text
     proof_verification = self.file_loader_1.file
     user_id = self.userId
+    if not reg_off_add or not 
     anvil.server.call('add_lendor_institutional_form_5',reg_off_add,off_add_proof,proof_verification,user_id)
-    open_form('lendor_registration_form.Lender_reg_Institutional_bank_form_1',user_id = user_id)
+    open_form('lendor_registration_form.Lender_reg_bothdirect_bank_form_1',user_id=user_id)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
