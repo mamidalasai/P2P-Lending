@@ -11,8 +11,8 @@ from .. import borrower_main_form_module as main_form_module
 
 class borrower_profile(borrower_profileTemplate):
   def __init__(self, **properties):
-    #self.user_id=main_form_module.userId
-    self.user_id=1000
+    self.user_id=main_form_module.userId
+    #self.user_id=1000
     self.init_components(**properties)
     
     # Any code you write here will run before the form opens.

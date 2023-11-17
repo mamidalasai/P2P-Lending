@@ -120,7 +120,7 @@ db_schema:
       admin_ui: {width: 200, order: 28}
       type: string
     - name: usertype
-      admin_ui: {order: 30, width: 200}
+      admin_ui: {order: 13.5, width: 200}
       type: string
     - name: aadhaar_no
       admin_ui: {order: 14, width: 200}
@@ -352,6 +352,9 @@ db_schema:
       type: number
     - name: tenure
       admin_ui: {width: 200, order: 15}
+      type: number
+    - name: customer_id
+      admin_ui: {width: 200}
       type: number
     title: loan_details
   lender:
