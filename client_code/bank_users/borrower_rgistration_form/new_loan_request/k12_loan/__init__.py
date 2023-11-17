@@ -7,12 +7,14 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ... import borrower_main_form_module
 
 class k12_loan(k12_loanTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    #self.user_id=main_form_module.userId
+    self.user_id=1000
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):

@@ -7,9 +7,11 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+from ... import borrower_main_form_module
 class check_out_form(check_out_formTemplate):
   def __init__(self, **properties):
+     #self.user_id=main_form_module.userId
+    self.user_id=1000
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.names = 'K-12 Educational loan'
@@ -21,7 +23,7 @@ class check_out_form(check_out_formTemplate):
     else:
             self.int_rate.text = "Interest rate not found."
 
-    all_requests = app_tables.loan_details.search()
+    all_requests = app_tables.loan_details.search(coustmer_id=user_request)
 
     if all_requests:
               most_recent_request = None
@@ -30,7 +32,7 @@ class check_out_form(check_out_formTemplate):
                 if most_recent_request is None or request['timestamp'] > most_recent_request['timestamp']:
                     most_recent_request = request
 
-              self.customer_id = most_recent_request['customer_id']
+              self.customer_id = most_recent_request['coustmer_id']
               min_amount = most_recent_request['min_amount']
               tenure = most_recent_request['tenure']
               max_amount = most_recent_request['max_amount']
