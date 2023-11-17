@@ -8,29 +8,37 @@ components:
   type: Label
   layout_properties: {column: JKSDUP}
   data_bindings:
-  - {property: text, code: 'self.item[''loan_id'']'}
+  - {property: text, code: 'self.item['''']'}
 - name: label_2
   properties: {align: center, bold: true}
   type: Label
   layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item['''']'}
 - name: label_3
   properties: {align: center, bold: true}
   type: Label
   layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item['''']'}
 - name: label_4
   properties: {bold: true, align: center}
   type: Label
   layout_properties: {column: CHVOCG}
+  data_bindings:
+  - {property: text, code: 'self.item['''']'}
 - name: label_5
   properties: {bold: true, align: center}
   type: Label
   layout_properties: {column: VKTTOA}
+  data_bindings:
+  - {property: text, code: 'self.item['''']'}
 - name: label_6
   properties: {bold: true, align: center}
   type: Label
   layout_properties: {column: HEMILB}
   data_bindings:
-  - {property: text, code: 'self.item[''email_id'']'}
+  - {property: text, code: 'self.item['''']'}
 - name: label_7
   properties: {bold: true, align: center}
   type: Label
@@ -40,4 +48,4 @@ components:
   type: Label
   layout_properties: {column: SQXFPE}
   data_bindings:
-  - {property: text, code: 'self.item[''application_status'']'}
+  - {property: text, code: 'self.item['''']'}
