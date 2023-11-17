@@ -17,10 +17,17 @@ class Lender_reg_Institutional_form_1(Lender_reg_Institutional_form_1Template):
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
+    business_name = self.text_box_1.text
+    business_add = self.text_box_2.text
+    business_location = self.text_box_3.text
+    branch_name = self.text_box_4.text
+    user_id = self.userId
+    anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_location,branch_name,user_id)
     open_form('lendor_registration_form.Lender_reg_Institutional_form_2',user_id=self.userId)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
+    user_id = self.userId
     open_form('lendor_registration_form.Lender_reg_form_8',user_id=self.userId)
     """This method is called when the button is clicked"""
 

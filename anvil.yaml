@@ -266,6 +266,30 @@ db_schema:
     - name: running_or_live loans
       admin_ui: {width: 200, order: 67}
       type: string
+    - name: business_name
+      admin_ui: {width: 200, order: 69.5}
+      type: string
+    - name: business_location
+      admin_ui: {width: 200, order: 69.25}
+      type: string
+    - name: business_add
+      admin_ui: {width: 200, order: 69.125}
+      type: string
+    - name: branch_name
+      admin_ui: {width: 200, order: 69.375}
+      type: string
+    - name: nearest_location
+      admin_ui: {width: 200, order: 69.4375}
+      type: string
+    - name: business_type
+      admin_ui: {width: 200, order: 69.46875}
+      type: string
+    - name: employees_working
+      admin_ui: {width: 200, order: 69.453125}
+      type: string
+    - name: year_estd
+      admin_ui: {width: 200, order: 69.4453125}
+      type: string
     title: user_profile
   borrower:
     title: borrower
@@ -389,16 +413,4 @@ db_schema:
     - name: final_rta
       admin_ui: {width: 200, order: 15}
       type: number
-    - name: business_name
-      admin_ui: {width: 200, order: 10}
-      type: string
-    - name: business_location
-      admin_ui: {width: 200, order: 9.5}
-      type: string
-    - name: business_add
-      admin_ui: {width: 200, order: 9.75}
-      type: string
-    - name: branch_name
-      admin_ui: {width: 200, order: 9.875}
-      type: string
 renamed: true
