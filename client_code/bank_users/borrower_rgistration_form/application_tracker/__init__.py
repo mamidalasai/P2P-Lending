@@ -7,14 +7,16 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from .. import borrower_main_form_module
 
 class application_tracker(application_trackerTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    current_user=get_current_user_id()
+    #self.user_id=main_form_module.userId
+    self.user_id=1000
     # Any code you write here will run before the form opens.
-    self.repeating_panel_1=tables.app_tables.loan_details.search()
+    self.repeating_panel_1=tables.app_tables.loan_details.get(coustmer_id=self.user_id)
     loan_exists = anvil.server.call('check_loan_existence', user_id)
     if loan_exists:
       print("Loan already exists for this user.")
