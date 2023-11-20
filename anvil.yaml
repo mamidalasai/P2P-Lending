@@ -299,9 +299,6 @@ db_schema:
     - name: director_no
       admin_ui: {width: 200, order: 71.25}
       type: string
-    - name: cin
-      admin_ui: {width: 200, order: 71.75}
-      type: string
     - name: din
       admin_ui: {width: 200, order: 71.625}
       type: string
@@ -316,6 +313,9 @@ db_schema:
       type: media
     - name: year_estd
       admin_ui: {width: 200}
+      type: date
+    - name: cin
+      admin_ui: {width: 200, order: 71.5625}
       type: string
     title: user_profile
   borrower:
