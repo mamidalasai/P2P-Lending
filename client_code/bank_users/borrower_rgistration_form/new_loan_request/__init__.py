@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from .. import borrower_main_form_module
+from .. import borrower_main_form_module as main_form_module
 
 class new_loan_request(new_loan_requestTemplate):
   def __init__(self, **properties):
@@ -26,8 +26,8 @@ class new_loan_request(new_loan_requestTemplate):
                     user_request = app_tables.loan_details.get(coustmer_id=self.coustmer_idustmer_id)
                     max_amount = user_request['max_amount']
                     self.max_amount_lb.text = f"{max_amount}"
-    min_amount = self.min_amount.text  # Convert the string to a float
-    max_amount = self.max_amount.text  # Convert the string to a float
+    min_amount = self.min_amount.text  
+    max_amount = self.max_amount.text  
     tenure = self.tenure.selected_value
     anvil.server.call('add_loan_details', min_amount, max_amount, tenure)
    

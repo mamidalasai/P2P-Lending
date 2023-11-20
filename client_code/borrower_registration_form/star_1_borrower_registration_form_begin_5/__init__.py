@@ -28,5 +28,5 @@ class star_1_borrower_registration_form_begin_5(star_1_borrower_registration_for
     spouse_company_address = self.borrower_registration_company_adress_text.text
     spouse_profficen = self.borrower_spouse_profession.text
     user_id = self.user_id
-    anvil.server.call('add_borrower_step5',spouse_mobile,spouse_company_name,spouse_company_address,spouse_profficen,user_id)
+    #anvil.server.call('add_borrower_step5',spouse_mobile,spouse_company_name,spouse_company_address,spouse_profficen,user_id)
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_6',userId=user_id)

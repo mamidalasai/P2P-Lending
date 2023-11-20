@@ -22,9 +22,12 @@ class Lender_reg_Institutional_form_1(Lender_reg_Institutional_form_1Template):
     business_location = self.text_box_3.text
     branch_name = self.text_box_4.text
     user_id = self.userId
-    anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_location,branch_name,user_id)
-    open_form('lendor_registration_form.Lender_reg_Institutional_form_2',user_id=self.userId)
-    """This method is called when the button is clicked"""
+    if not business_name or not business_add or not business_location or not branch_name:
+      Notification("Please fill all the fields")
+    else:
+      anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_location,branch_name,user_id)
+      open_form('lendor_registration_form.Lender_reg_Institutional_form_2',user_id=self.userId)
+    
 
   def button_1_click(self, **event_args):
     user_id = self.userId

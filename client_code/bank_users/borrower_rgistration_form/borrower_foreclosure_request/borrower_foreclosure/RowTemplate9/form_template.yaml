@@ -1,0 +1,39 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''ref_number'']'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']'}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_amount'']'}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: HLBLQK}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_type'']'}
+- type: Label
+  properties: {}
+  name: label_5
+  layout_properties: {column: GOSHRS}
+  data_bindings:
+  - {property: text, code: 'self.item[''tenure'']'}
+- type: Label
+  properties: {}
+  name: label_6
+  layout_properties: {column: LTQPWA}
+  data_bindings:
+  - {property: text, code: 'self.item[''start_date'']'}
