@@ -21,6 +21,7 @@ class Lender_reg_form_2(Lender_reg_form_2Template):
   def button_1_click(self, **event_args):
     user_id = self.userId
     open_form('lendor_registration_form.Lender_reg_form_1',user_id=user_id)
+    
 
   def button_2_click(self, **event_args):
     #investment=self.drop_down_1.selected_value
