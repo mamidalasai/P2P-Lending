@@ -28,5 +28,4 @@ class star_1_borrower_registration_form_begin_7(star_1_borrower_registration_for
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_8',user_id=user_id)
 
   def home_borrower_registration_form_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    open_form('bank_users.user_form')
