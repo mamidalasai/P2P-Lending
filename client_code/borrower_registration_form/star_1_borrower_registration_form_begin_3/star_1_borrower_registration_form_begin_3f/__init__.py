@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class star_1_borrower_registration_form_begin_3f(star_1_borrower_registration_form_begin_3fTemplate):
-  def __init__(self,user_id, **properties):
+  def __init__(self, user_id , **properties):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -23,7 +23,7 @@ class star_1_borrower_registration_form_begin_3f(star_1_borrower_registration_fo
     last_six_month = self.file_loader_2.file
     user_id = self.userId
     anvil.server.call('add_lendor_individual_form_3',annual_salary, designation,emp_id_proof,last_six_month,user_id)
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',userId =user_id)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',userId =self.userId)
 
 
   def button_1_click(self, **event_args):
