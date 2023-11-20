@@ -25,11 +25,11 @@ class star_1_borrower_registration_form_begin_9(star_1_borrower_registration_for
     if not ifsc or not salary_type or not select_bank or not net_bank:
       Notification("please fill all required fields").show()
     else:
-      anvil.server.call('add_lendor_bank_details_form_2', ifsc,salary_type,select_bank,net_bank, user_id)
-      open_form('lendor_registration_form.dashboard')
+      anvil.server.call('add_borrower_step9', ifsc,salary_type,select_bank,net_bank, user_id)
+      open_form('bank_users.borrower_rgistration_form')
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_bothdirect_bank_form_1',user_id=self.userId)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_8',user_id=self.userId)
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")
