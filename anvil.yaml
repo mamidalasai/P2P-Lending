@@ -315,8 +315,8 @@ db_schema:
       admin_ui: {width: 200, order: 71.96875}
       type: media
     - name: year_estd
-      admin_ui: {width: 200, order: 69.4609375}
-      type: date
+      admin_ui: {width: 200}
+      type: string
     title: user_profile
   borrower:
     title: borrower

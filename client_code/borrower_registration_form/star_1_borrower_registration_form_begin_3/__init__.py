@@ -19,7 +19,7 @@ class star_1_borrower_registration_form_begin_3(star_1_borrower_registration_for
     open_form('bank_users.user_form')
     
   def button_1_click(self, **event_args):
-    open_form('bank_users.user_form')
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2',user_id = self.userId)
   
   def button_2_click(self, **event_args):
     aadhar= self.borrower_registration_aadhar_text.text

@@ -18,13 +18,12 @@ class star_1_borrower_registration_form_begin_3b_student(star_1_borrower_registr
 
   def button_1_copy_1_copy_1_copy_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',use_id=user_id)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',use_id=self.user_id)
 
   def home_borrower_registration_form_copy_1_click(self, **event_args):
     open_form('bank_users.user_form')
 
   def button_1_next_copy_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
     college_name=self.borrower_college_name_text.text
     college_id=self.borrower_college_id_text.text
     college_proof=self.borrower_college_proof_img.file
@@ -33,4 +32,4 @@ class star_1_borrower_registration_form_begin_3b_student(star_1_borrower_registr
     if not college_name or not college_id or not college_proof or not college_address:
       Notification("please fill all requrired fields").show()
     else:
-      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_id=self.userId)
+      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_Id=user_id)

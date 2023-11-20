@@ -27,15 +27,15 @@ class star_1_borrower_registration_form_begin_4(star_1_borrower_registration_for
     else:
       anvil.server.call('add_borrower_step4',marital_status,user_id)
       if marital_status == 'UN-Married':
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',userId = user_id)
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id = user_id)
       elif marital_status == 'Married':
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4.star_1_borrower_registration_form_begin_4a',userId=user_id)
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4.star_1_borrower_registration_form_begin_4a',user_id = user_id)
       else:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',userId = user_id)
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id = user_id)
 
   
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',userId=user_id)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',userId=self.userId)
 
 
     
