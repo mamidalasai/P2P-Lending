@@ -89,6 +89,7 @@ unique_ids:
     admin.dashboard.admin_teams.view_profile.edit_form: '1699528319288104807163991.37613'
     bank_users.borrower_rgistration_form.new_loan_request.check_out_form: '169933088356349719305016.7759'
     admin.dashboard.admin_view_profile.admin_view_profile_5: '1699617990434750579050634.538'
+    lendor_registration_form.dashboard.vlfr.foreclose_details: '1700454637827919052628054.0963'
     lendor_registration_form.Lender_reg_form_3: '1699427114774355019321073.1847'
     lendor_registration_form.Lender_reg_individual_form_3: '1699429299471944361321501.9009'
     lendor_registration_form.Lender_reg_bankdirect_bank_form_2: '1699429556412724511736888.3689'
