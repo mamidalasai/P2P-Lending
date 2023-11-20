@@ -18,3 +18,7 @@ class borrower_foreclosure_request(borrower_foreclosure_requestTemplate):
   def home_borrower_registration_form_copy_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.borrower_rgistration_form')
+
+  def button_5_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request.borrower_foreclosure')
