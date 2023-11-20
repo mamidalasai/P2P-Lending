@@ -16,9 +16,8 @@ class application_tracker(application_trackerTemplate):
     #self.user_id=main_form_module.userId
     self.user_id=1000
     # Any code you write here will run before the form opens.
-    self.repeating_panel_5.items=app_tables.loan_details.get(coustmer_id=self.user_id)
+    self.repeating_panel_5.items=app_tables.loan_details.search()
     if self.repeating_panel_5:
-      
       alert("Loan already exists for this user.")
     else:
       alert("No existing loan for this user.")

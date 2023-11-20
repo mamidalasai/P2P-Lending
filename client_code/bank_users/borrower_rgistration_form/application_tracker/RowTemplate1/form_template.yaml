@@ -1,24 +1,32 @@
 is_package: true
 container:
   type: DataRowPanel
-  properties: {align: center}
+  properties: {align: center, visible: true, auto_display_data: true}
 components:
 - name: loan_id_label
-  properties: {}
+  properties: {text: '', visible: true}
   type: Label
   layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
 - name: loan_amount_label
   properties: {}
   type: Label
   layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''total_repayment_amount'']', writeback: false}
 - name: tenure_label
   properties: {}
   type: Label
   layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''tenure'']', writeback: false}
 - name: date_label
   properties: {}
   type: Label
   layout_properties: {column: CHVOCG}
+  data_bindings:
+  - {property: text, code: 'self.item[''timestamp'']', writeback: false}
 - name: name_label
   properties: {}
   type: Label
@@ -27,6 +35,8 @@ components:
   properties: {}
   type: Label
   layout_properties: {column: HEMILB}
+  data_bindings:
+  - {property: text, code: 'self.item[''email_id'']', writeback: false}
 - name: desk_label
   properties: {}
   type: Label
@@ -35,3 +45,5 @@ components:
   properties: {}
   type: Label
   layout_properties: {column: SQXFPE}
+  data_bindings:
+  - {property: text, code: 'self.item[''application_status'']', writeback: false}
