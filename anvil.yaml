@@ -287,12 +287,36 @@ db_schema:
     - name: employees_working
       admin_ui: {width: 200, order: 69.453125}
       type: string
-    - name: year_estd
-      admin_ui: {width: 200, order: 69.4453125}
-      type: string
     - name: industry_type
       admin_ui: {width: 200}
       type: string
+    - name: six_month_turnover
+      admin_ui: {width: 200, order: 72}
+      type: string
+    - name: director_name
+      admin_ui: {width: 200, order: 71.5}
+      type: string
+    - name: director_no
+      admin_ui: {width: 200, order: 71.25}
+      type: string
+    - name: cin
+      admin_ui: {width: 200, order: 71.75}
+      type: string
+    - name: din
+      admin_ui: {width: 200, order: 71.625}
+      type: string
+    - name: registered_off_add
+      admin_ui: {width: 200, order: 71.875}
+      type: string
+    - name: off_add_proof
+      admin_ui: {width: 200, order: 71.9375}
+      type: string
+    - name: proof_verification
+      admin_ui: {width: 200, order: 71.96875}
+      type: media
+    - name: year_estd
+      admin_ui: {width: 200, order: 69.4609375}
+      type: date
     title: user_profile
   borrower:
     title: borrower
