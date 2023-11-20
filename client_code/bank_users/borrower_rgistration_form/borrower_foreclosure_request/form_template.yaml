@@ -6,6 +6,10 @@ components:
     source: _/theme/kotackpng.png, spacing_below: small, background: '', horizontal_align: left}
   type: Image
   layout_properties: {grid_position: 'ZVQXDB,IJXEGR'}
+- name: button_1
+  properties: {text: " Revised\nLoan\n Amount\n", background: '#0876E6'}
+  type: Button
+  layout_properties: {grid_position: 'ZVQXDB,ATFIKB'}
 - name: home_borrower_registration_form_copy_1_copy_1
   properties: {role: tonal-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: black, visible: true, text: Home, font_size: null, font: '', spacing_above: small,
