@@ -37,4 +37,5 @@ components:
     bold: false, underline: true, icon: ''}
   name: button_1
   layout_properties: {column: JPUHJN}
+  event_bindings: {click: button_1_click}
 is_package: true
