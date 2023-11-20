@@ -1,28 +1,33 @@
-is_package: true
 container: {type: DataRowPanel}
 components:
 - type: Label
   properties: {}
   name: label_1
-  layout_properties: {column: JKSDUP}
+  layout_properties: {column: JUWAHF}
   data_bindings:
   - {property: text, code: 'self.item[''loan_id'']'}
 - type: Label
   properties: {}
   name: label_2
-  layout_properties: {column: VJQQOR}
+  layout_properties: {column: XWSQXN}
   data_bindings:
   - {property: text, code: 'self.item[''borrower_name'']'}
 - type: Label
   properties: {}
   name: label_3
-  layout_properties: {column: OJLQEN}
+  layout_properties: {column: ARNJJY}
   data_bindings:
   - {property: text, code: 'self.item[''amount'']'}
-- type: Button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: '', visible: true, text: View details, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
-    bold: false, underline: true, icon: ''}
-  name: button_1
-  layout_properties: {column: MZETWI}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: QWPKQU}
+  data_bindings:
+  - {property: text, code: 'self.item[''outstanding_amount'']'}
+- type: Label
+  properties: {}
+  name: label_5
+  layout_properties: {column: PNLXFW}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_date'']'}
+is_package: true

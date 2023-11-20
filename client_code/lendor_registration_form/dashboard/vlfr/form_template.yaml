@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
-    properties: {}
+    properties: {col_widths: '{}'}
     name: column_panel_1
     layout_properties: {grid_position: 'LRGVLZ,YDSHFK'}
     components:
@@ -22,14 +22,14 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: SRJHKV,XSYXJM
-  - type: Button
-    properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Back, font_size: 15, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876e8',
-      bold: false, underline: false, icon: ''}
-    name: button_1
-    layout_properties: {grid_position: 'AUUAZJ,FQVZON'}
-    event_bindings: {click: button_1_click}
+    - type: Button
+      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+        foreground: black, visible: true, text: Back, font_size: 15, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#0876e8',
+        bold: false, underline: false, icon: ''}
+      name: button_1
+      layout_properties: {grid_position: 'SRJHKV,HZIEOY'}
+      event_bindings: {click: button_1_click}
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: View Loan Foreclosure Requests, font_size: 20, font: '',
@@ -37,37 +37,42 @@ components:
       background: '', bold: true, underline: true, icon: ''}
     name: label_1
     layout_properties: {grid_position: 'JICCEY,UEHAQW'}
+  - type: Spacer
+    properties: {height: 50}
+    name: spacer_1
+    layout_properties: {grid_position: 'MHIWYV,VPLAOJ'}
   - type: ColumnPanel
     properties: {role: outlined-card, col_widths: '{}'}
     name: outlined_card_1
-    layout_properties: {grid_position: 'WCVWEV,WRFWJB'}
+    layout_properties: {grid_position: 'WRMQBW,ZHRGOI'}
     components:
-    - name: data_grid_1
+    - type: DataGrid
       properties:
         role: null
         columns:
-        - {id: JKSDUP, title: Loan Number, data_key: column_1, $$hashKey: 'object:283'}
-        - {id: VJQQOR, title: Borrower Nme, data_key: column_2, $$hashKey: 'object:284'}
-        - {id: OJLQEN, title: Amount, data_key: column_3, $$hashKey: 'object:285'}
-        - {id: MZETWI, title: '', data_key: column_4, $$hashKey: 'object:341'}
+        - {id: JUWAHF, title: Loan Number, data_key: column_1, $$hashKey: 'object:10808'}
+        - {id: XWSQXN, title: Borrower Name, data_key: column_2, $$hashKey: 'object:10809'}
+        - {id: ARNJJY, title: Amount, data_key: column_3, $$hashKey: 'object:10810'}
+        - {id: QWPKQU, title: Outstanding Amount, data_key: column_4, $$hashKey: 'object:10858'}
+        - {id: PNLXFW, title: Starting Date, data_key: column_5, $$hashKey: 'object:10860'}
         auto_header: true
         tooltip: ''
         border: ''
         foreground: ''
         rows_per_page: 20
         visible: true
-        wrap_on: mobile
-        show_page_controls: false
+        wrap_on: never
+        show_page_controls: true
         spacing_above: small
         spacing_below: small
         background: ''
-      type: DataGrid
+      name: data_grid_1
+      layout_properties: {grid_position: 'XISWTA,CQHDZC'}
       components:
-      - name: repeating_panel
-        properties: {item_template: lendor_registration_form.dashboard.vlfr.RowTemplate7}
-        type: RepeatingPanel
+      - type: RepeatingPanel
+        properties: {spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.vlfr.RowTemplate7}
+        name: repeating_panel
         layout_properties: {}
-      layout_properties: {grid_position: 'AGPEZH,YJKNHN'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

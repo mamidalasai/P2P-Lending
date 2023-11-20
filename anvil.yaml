@@ -453,4 +453,10 @@ db_schema:
     - name: amount
       admin_ui: {width: 200}
       type: number
+    - name: outstanding_amount
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: loan_date
+      admin_ui: {width: 200, order: 3}
+      type: date
 renamed: true
