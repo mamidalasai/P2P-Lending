@@ -22,8 +22,11 @@ class Lender_reg_Institutional_form_2(Lender_reg_Institutional_form_2Template):
     empolyees_working = self.drop_down_2.selected_value
     year = self.date_picker_1.date
     user_id = self.userId
-    anvil.server.call('add_lendor_institutional_form_2',nearest_loc,business_type,empolyees_working,year,user_id)
-    open_form('lendor_registration_form.Lender_reg_Institutional_form_3',user_id = user_id)
+    if not nearest_loc or not business_type or not empolyees_working or not year:
+      Notification("Please fill all the fields")
+    else:
+     anvil.server.call('add_lendor_institutional_form_2',nearest_loc,business_type,empolyees_working,year,user_id)
+     open_form('lendor_registration_form.Lender_reg_Institutional_form_3',user_id = user_id)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
