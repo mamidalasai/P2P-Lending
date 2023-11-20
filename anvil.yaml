@@ -299,9 +299,6 @@ db_schema:
     - name: director_no
       admin_ui: {width: 200, order: 71.25}
       type: string
-    - name: cin
-      admin_ui: {width: 200, order: 71.75}
-      type: string
     - name: din
       admin_ui: {width: 200, order: 71.625}
       type: string
@@ -452,6 +449,24 @@ db_schema:
     - name: final_rta
       admin_ui: {width: 200, order: 15}
       type: number
+    - name: business_no
+      admin_ui: {width: 200}
+      type: string
+    - name: employment_type
+      admin_ui: {width: 200}
+      type: string
+    - name: organization_type
+      admin_ui: {width: 200}
+      type: string
+    - name: company_add
+      admin_ui: {width: 200}
+      type: string
+    - name: company_landmark
+      admin_ui: {width: 200}
+      type: string
+    - name: company_name
+      admin_ui: {width: 200}
+      type: string
   membership:
     client: none
     server: full
