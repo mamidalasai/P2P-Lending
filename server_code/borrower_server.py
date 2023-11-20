@@ -79,7 +79,7 @@ def add_borrower_step5(spouse_mobile,spouse_company_name,spouse_company_address,
 
 @anvil.server.callable
 def add_borrower_step7(home_loan,other_loan,live_loan,user_id):
-  row = app_tables.user_profile.search(country=user_id)
+  row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['running_Home_Loan'] = home_loan
     row[0]['running_or_live loans']= live_loan
