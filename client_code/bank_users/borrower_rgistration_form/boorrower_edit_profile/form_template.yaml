@@ -37,7 +37,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: FFAZCJ,TILVKS
-- name: text_box_1
+- name: borrower_full_name_text
   properties: {background: white}
   type: TextBox
   layout_properties: {grid_position: 'FFAZCJ,LKCTXU'}
@@ -50,7 +50,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: ADGYID,JHYFCJ
-- name: text_box_2
+- name: mail_text
   properties: {background: white}
   type: TextBox
   layout_properties: {grid_position: 'ADGYID,VLYNBS'}
@@ -63,7 +63,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: QAHJBM,DMISYN
-- name: text_box_3
+- name: mobile_text
   properties: {background: white}
   type: TextBox
   layout_properties: {grid_position: 'QAHJBM,TDVHAD'}
@@ -76,7 +76,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: ZXBVDF,KKYSBB
-- name: label_2
+- name: date_label
   properties: {background: white}
   type: Label
   layout_properties: {grid_position: 'ZXBVDF,BXIPRV'}
@@ -89,7 +89,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: SAMLBI,IIKIZQ
-- name: text_box_4
+- name: city_text
   properties: {background: white}
   type: TextBox
   layout_properties: {grid_position: 'SAMLBI,MMVODB'}
@@ -102,7 +102,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: MCOSMG,AHINEJ
-- name: label_4
+- name: pan_text
   properties: {background: white}
   type: Label
   layout_properties: {grid_position: 'MCOSMG,JUNHNQ'}
@@ -122,11 +122,15 @@ components:
     icon: ''}
   name: label_15
   layout_properties: {grid_position: 'NFAGTP,WNWNZL ERFWUJ,VGAKZF'}
-- name: drop_down_1
-  properties: {background: white}
+- name: gender_down
+  properties:
+    background: white
+    items: [Male, FeMale, Others]
+    include_placeholder: true
+    placeholder: Select your gender
   type: DropDown
   layout_properties: {grid_position: 'NFAGTP,VXMEWB KOKPBD,CAVVLK'}
-- name: label_6
+- name: mother_label
   properties: {background: white}
   type: Label
   layout_properties: {grid_position: 'NFAGTP,VXMEWB HPYGMR,LKRSOT'}

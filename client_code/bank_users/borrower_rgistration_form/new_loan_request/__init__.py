@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from .. import borrower_main_form_module
+from .. import borrower_main_form_module as main_form_module
 
 class new_loan_request(new_loan_requestTemplate):
   def __init__(self, **properties):
