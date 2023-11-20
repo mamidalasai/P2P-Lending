@@ -313,6 +313,9 @@ db_schema:
       type: media
     - name: year_estd
       admin_ui: {width: 200}
+      type: date
+    - name: cin
+      admin_ui: {width: 200, order: 71.5625}
       type: string
     title: user_profile
   borrower:
@@ -449,24 +452,6 @@ db_schema:
     - name: final_rta
       admin_ui: {width: 200, order: 15}
       type: number
-    - name: business_no
-      admin_ui: {width: 200}
-      type: string
-    - name: employment_type
-      admin_ui: {width: 200}
-      type: string
-    - name: organization_type
-      admin_ui: {width: 200}
-      type: string
-    - name: company_add
-      admin_ui: {width: 200}
-      type: string
-    - name: company_landmark
-      admin_ui: {width: 200}
-      type: string
-    - name: company_name
-      admin_ui: {width: 200}
-      type: string
   membership:
     client: none
     server: full
