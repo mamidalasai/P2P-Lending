@@ -46,6 +46,9 @@ components:
     type: Link
     layout_properties: {grid_position: 'BEBBVL,XIXDMT'}
     event_bindings: {click: about_main_form_link_click}
+  - name: link_1
+    properties: {text: Products, foreground: white, font_size: 15}
+    type: Link
   - name: contact_main_form_link_copy_1
     properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: 'Contact ', font_size: 15, wrap_on: mobile, font: '', col_spacing: medium,
@@ -192,4 +195,32 @@ components:
   properties: {}
   type: ColumnPanel
   layout_properties: {grid_position: 'UUAAMD,PNSHYI'}
+  components:
+  - name: label_2
+    properties: {align: center, text: 'What is Peer to Peer Lending?
+
+        ', bold: true, font_size: 20, foreground: '#a51622'}
+    type: Label
+    layout_properties: {grid_position: 'NBSKAT,OIPHSQ'}
+  - name: image_1
+    properties: {height: 291, source: 'https://miro.medium.com/v2/resize:fit:800/1*DXKkKChhzChtYMfwYulTtw.jpeg'}
+    type: Image
+    layout_properties: {grid_position: 'KCBRJR,FZDYJO'}
+  - name: label_3
+    properties: {align: left, text: 'Peer to Peer lending, also known as P2P Lending,
+        is a financial innovation which connects verified borrowers seeking unsecured
+        personal loans with investors looking to earn higher returns on their investments.
+        Verified borrowers are listed on the P2P lending platform, Investors can see
+        all the details about the borrowers before lending money to them. Investors
+        have the option to lend small amounts to multiple borrowers to diversify their
+        investments.
+
+
+        Peer to Peer Lending is already a hugely successful model for alternate financing
+        across the globe. In India, P2P Lending is gaining traction at a very fast
+        pace and slowly becoming a very attractive investment option for investors.
+        RBI has already taken a cognizance of this innovation and come up with regulations
+        for the sector.', italic: true, font_size: 15, font: '', foreground: '', bold: false}
+    type: Label
+    layout_properties: {grid_position: 'KCBRJR,ZBNMHS'}
 is_package: true
