@@ -26,10 +26,10 @@ class star_1_borrower_registration_form_begin_8(star_1_borrower_registration_for
       Notification("please fill the all required fields").show()
     else:
       anvil.server.call('add_lendor_bank_details_form_1', account_name, account_type,account_number,bank_branch, user_id)
-      open_form('lendor_registration_form.Lender_reg_bankdirect_bank_form_2',user_id=self.userId)
+      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_9',user_id=self.userId)
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_form_6',user_id=self.userId)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id=self.userId)
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")

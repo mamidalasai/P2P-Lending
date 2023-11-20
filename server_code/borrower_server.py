@@ -57,15 +57,15 @@ def add_borrower_step3c(status_of_user,user_id):
 
 
 
-
 @anvil.server.callable
-def add_borrower_step4(mother_toung,marital_status,spouse_name,marrege_date,user_id):
+def add_borrower_step4(marital_status,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    row[0]['mouther_tounge']=mother_toung
     row[0]['marital_status']=marital_status
-    row[0]['spouse_name']=spouse_name
-    row[0]['Date_mariage']=marrege_date
+
+
+
+
 
 
 @anvil.server.callable
@@ -77,10 +77,29 @@ def add_borrower_step5(spouse_mobile,spouse_company_name,spouse_company_address,
     row[0]['spouse_company_address']=spouse_company_address
     row[0]['spouse_profficen']=spouse_profficen
 
-
+@anvil.server.callable
+def add_borrower_step7(home_loan,other_loan,live_loan,user_id):
+  row = app_tables.user_profile.search(country=user_id)
+  if row:
+    row[0]['running_Home_Loan'] = home_loan
+    row[0]['running_or_live loans']= live_loan
+  
   
 
+@anvil.server.callable
+def add_borrower_step9(ifsc,salary_type,select_bank,net_bank, user_id):
+  row = app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    row[0]['ifsc_code'] = ifsc
+    row[0]['salary_type'] = salary_type
+    row[0]['select_bank'] = select_bank
+    row[0]['net_bank'] = net_bank
+    row[0]['usertype'] = 'borrower'
+    row[0]['last_confirm'] = True
+
 # the borrower registration form end hear do not change any code ---#
+
+
 
 
 
