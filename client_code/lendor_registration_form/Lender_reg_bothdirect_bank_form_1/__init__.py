@@ -18,9 +18,9 @@ class Lender_reg_bothdirect_bank_form_1(Lender_reg_bothdirect_bank_form_1Templat
 
   def button_2_click(self, **event_args):
     account_name = self.text_box_1.text
-    account_type = self.text_box_2.text
-    account_number = self.text_box_3.text
-    bank_branch = self.text_box_4.text
+    account_type = self.drop_down_1.selected_value
+    account_number = self.text_box_2.text
+    bank_branch = self.text_box_3.text
     user_id = self.userId
     if not account_name or not account_type or not account_number or not bank_branch:
       Notification("please fill the all required fields").show()

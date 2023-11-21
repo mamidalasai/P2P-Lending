@@ -70,9 +70,7 @@ components:
   layout_properties: {grid_position: 'PWDJFL,YVZXHS'}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Select Bank
-
-      (Bank name)', font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Branch Name, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
@@ -91,13 +89,28 @@ components:
     icon: ''}
   type: Label
   layout_properties: {grid_position: 'EKNMQN,APJIXV'}
-- name: text_box_3
-  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: 'theme:On Primary', bold: false, underline: false}
-  type: TextBox
-  layout_properties: {grid_position: 'EKNMQN,JOLSFK'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: [Select one, 'Yes', 'No']
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: theme:On Primary
+    bold: false
+    underline: false
+    include_placeholder: false
+  name: drop_down_2
+  layout_properties: {grid_position: 'EKNMQN,OMHVBE'}
 - name: button_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary Container', visible: true, text: Prev, font_size: null,

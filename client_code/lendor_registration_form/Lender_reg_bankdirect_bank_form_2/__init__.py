@@ -20,7 +20,7 @@ class Lender_reg_bankdirect_bank_form_2(Lender_reg_bankdirect_bank_form_2Templat
     ifsc = self.text_box_1.text
     salary_type = self.drop_down_1.selected_value
     select_bank = self.text_box_2.text
-    net_bank = self.text_box_3.text
+    net_bank = self.drop_down_2.selected_value
     user_id = self.userId
     if not ifsc or not salary_type or not select_bank or not net_bank:
       Notification("please fill all required fields").show()

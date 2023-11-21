@@ -19,7 +19,7 @@ class Lender_reg_form_5(Lender_reg_form_5Template):
   def button_2_click(self, **event_args):
     postal_zip = self.text_box_1.text
     state = self.text_box_2.text
-    country = self.text_box_2_copy_1.text
+    country = self.text_box_3.text
     user_id = self.userId
     if not postal_zip or not state or not country:
       Notification("Please fill all the filelds").show()
