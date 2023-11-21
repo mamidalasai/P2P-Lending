@@ -230,8 +230,26 @@ components:
   layout_properties: {grid_position: 'BMHMDX,VXLTQN'}
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
-    background: '#730f18'}
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: '#730f18'}
   name: column_panel_2
   layout_properties: {grid_position: 'KQXYST,UHCAMN', full_width_row: true}
+  components:
+  - type: LinearPanel
+    properties: {}
+    name: linear_panel_1
+    layout_properties: {grid_position: 'CWMJOJ,NBUMRI'}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
+        visible: true, text: '© 2016 - 2023, i2ifunding.com (RNVP Technology Pvt.
+          Ltd.) - All Rights Reserved', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_4
+      layout_properties: {grid_position: 'CWMJOJ,WIROUE'}
+- type: Spacer
+  properties: {height: 98.20001220703125}
+  name: spacer_6
+  layout_properties: {grid_position: 'IEDBVS,UHPSJA'}
 is_package: true
