@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import re
 
 class Lender_reg_form_3(Lender_reg_form_3Template):
   def __init__(self,user_id, **properties):
@@ -36,8 +37,8 @@ class Lender_reg_form_3(Lender_reg_form_3Template):
         return
 
         # If all validations pass, call the server function
-      anvil.server.call('add_lendor_third_form', aadhaar_photo, pan_card, pan_id, aadhaar_card, user_id)
-        open_form('lendor_registration_form.Lender_reg_form_4', user_id=user_id)
+    anvil.server.call('add_lendor_third_form', aadhaar_photo, pan_card, pan_id, aadhaar_card, user_id)
+    open_form('lendor_registration_form.Lender_reg_form_4', user_id=user_id)
 
 
     '''else:
