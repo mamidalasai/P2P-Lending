@@ -24,20 +24,19 @@ class Form1(Form1Template):
 
   
   def login_signup_button_click(self, **event_args):
-            anvil.users.login_with_form()
-        current_user = anvil.users.get_user()
-        if current_user:
-            user_email = current_user['email']
-            print(user_email)
-            check_user_already_exist = user_module.check_user_profile(user_email)
-            print(check_user_already_exist)
-            # this statement is used to check whether the user is new or old
-            if check_user_already_exist == None:
-                print("main if statement was executed")
-                user_module.add_email_and_user_id(user_email)
-                main_form_module.email = user_email
-                main_form_module.flag = True
-                open_form('bank_users.user_form')
+    anvil.users.login_with_form()
+    current_user = anvil.users.get_user()
+    if current_user:
+      user_email = current_user['email']
+      print(user_email)
+      check_user_already_exist = user_module.check_user_profile(user_email)
+      print(check_user_already_exist)
+      if check_user_already_exist == None:
+        print("main if statement was executed")
+        user_module.add_email_and_user_id(user_email)
+        main_form_module.email = user_email
+        main_form_module.flag = True
+        open_form('bank_users.user_form')
             else:
               check_user_registration = user_module.check_user_registration_form_done_or_not_engine(user_email)
               print("main else statement was executed")
