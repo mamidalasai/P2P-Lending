@@ -26,8 +26,8 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
     mobile_no = self.borrower_mobile_number_text_copy_1.text
     #if len(mobile_no)==0:
      # alert('enter a number')
-    elif len(mobile_no)<10 or len(mobile_no)>10:
-      alert('enter 10 digits number')
+#    elif len(mobile_no)<10 or len(mobile_no)>10:
+    #  alert('enter 10 digits number')
     user_photo = self.borrower_registration_img_file_loader.file
     alternate_email  = self.borrower_alternate_email.text
     user_id = self.userId
