@@ -8,10 +8,9 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil.js.window import navigator
+from ..user_form import user_module
 from . import main_form_module
 from ..borrower_rgistration_form import borrower_main_form_module
-
-
 
 class main_form(main_formTemplate):
   def __init__(self, **properties):
