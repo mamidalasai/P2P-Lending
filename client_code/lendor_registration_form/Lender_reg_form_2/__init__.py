@@ -30,13 +30,31 @@ class Lender_reg_form_2(Lender_reg_form_2Template):
     email = self.text_box_2.text
     photo = self.file_loader_1.file
     user_id = self.userId
-    if len(mobile) < 10 :
-     alert("Enter a sufficient Vaild mobile number")
-    elif not mobile or not email or not photo:
-     Notification("Please fill all the fields").show()
-     anvil.server.call('add_lendor_second_form',mobile,email,photo,user_id)
-     open_form('lendor_registration_form.Lender_reg_form_3',user_id = user_id)
+    if len(mobile) != 10 or not mobile.isdigit():
+     Notification("Please enter a valid 10-digit mobile number").show()
+     return
 
+    if not email or not photo:
+      Notification("Please fill all the fields").show()
+    else:
+     anvil.server.call('add_lendor_second_form', mobile, email, photo, user_id)
+     open_form('lendor_registration_form.Lender_reg_form_3', user_id=user_id)
+
+
+  
+    #if not mobile or not email or not photo:
+      #Notification("Please fill all the fields").show()
+    #if len(mobile) != 10:
+      #Notification("Enter a vaild Mobile number").show()
+    #else:
+      #anvil.server.call('add_lendor_second_form',mobile,email,photo,user_id)
+      #open_form('lendor_registration_form.Lender_reg_form_3',user_id = user_id)
+      
+    
+      
+     #anvil.server.call('add_lendor_second_form',mobile,email,photo,user_id)
+     #open_form('lendor_registration_form.Lender_reg_form_3',user_id = user_id)
+ 
       
       
       

@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"KSBVGG":7,"GVHJNC":30,"YBTGSX":23}'}
+  properties: {col_widths: '{"GVHJNC":30,"YBTGSX":30}'}
 components:
 - type: FlowPanel
   properties: {}
@@ -61,16 +61,9 @@ components:
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: ''}
-- name: label_2_copy_1
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:Error',
-    visible: true, text: '*', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'IDCPDO,KSBVGG'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
-      Primary Container', visible: true, text: Full name, font_size: 25, font: '',
+      Primary Container', visible: true, text: Full name, font_size: null, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:On
       Tertiary', bold: true, underline: false, icon: ''}
   name: label_2
