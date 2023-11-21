@@ -1,4 +1,4 @@
-from ._anvil_designer import main_form_copyTemplate
+from ._anvil_designer import career_main_formTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -12,7 +12,7 @@ from ..user_form import user_module
 from . import main_form_module
 from ..borrower_rgistration_form import borrower_main_form_module
 
-class main_form_copy(main_form_copyTemplate):
+class career_main_form(career_main_formTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
