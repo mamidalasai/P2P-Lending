@@ -21,9 +21,9 @@ class user_form(user_formTemplate):
     self.email = email
     self.user_name_lable.text = self.name
     if main_form_module.alert_mes(main_form_module.flag):
-      alert(f"Well Come {email} Please Complete The Registration Form To Acess Full App")
+      print("user login")
     else:
-      alert(f"Hii {email} please Complete Your  Registration Form To Acess Full App ")
+      print("user login")
 
   
   def logout_user_form_link_click(self, **event_args):
@@ -36,7 +36,6 @@ class user_form(user_formTemplate):
   # this function is use for new borrower signup and check the user already  signup or not
   def borrower_user_form_link_click(self, **event_args):
     userid = self.user_id
-    alert(f"you are Continue with userid= {userid}")
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
    
 
@@ -45,7 +44,6 @@ class user_form(user_formTemplate):
 
   def lendor_user_form_link_click(self, **event_args):
     userid = self.user_id
-    alert(f"You are continuing with user_id = {userid}")
     open_form('lendor_registration_form.Lender_reg_form_1',user_id=userid)
 
   #--------------------------------------------------------------------#
