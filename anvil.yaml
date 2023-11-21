@@ -472,4 +472,15 @@ db_schema:
     - name: loan_date
       admin_ui: {width: 200, order: 3}
       type: date
+  product_borrower:
+    title: product_borrower
+    client: full
+    server: full
+    columns:
+    - name: names
+      admin_ui: {width: 200}
+      type: string
+    - name: interest_rate
+      admin_ui: {width: 200}
+      type: number
 renamed: true
