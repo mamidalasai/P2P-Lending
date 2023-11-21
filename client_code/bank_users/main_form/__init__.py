@@ -60,4 +60,8 @@ class main_form(main_formTemplate):
 
 #-- imp logic dont go up--#
 
+  def about_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.about_main_form")
+
 
