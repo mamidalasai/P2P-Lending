@@ -53,7 +53,8 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: [Select one]
+    items: [Select one, Savings account, Salary account, Current account, NRI Account,
+      Re-curing Deposit, Fixed Deposit account]
     visible: true
     font_size: null
     font: ''
