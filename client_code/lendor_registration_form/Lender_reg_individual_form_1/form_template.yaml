@@ -54,7 +54,7 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: [Part-Time, Full-Time, Contractual]
+    items: [Select one, '']
     visible: true
     font_size: null
     font: ''

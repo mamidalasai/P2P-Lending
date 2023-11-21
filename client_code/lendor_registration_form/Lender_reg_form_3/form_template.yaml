@@ -46,14 +46,17 @@ components:
   properties: {text: Upload Aadhar Card, bold: true}
   type: Label
   layout_properties: {grid_position: 'ZMYCNA,EWQYZX TDIUNJ,XKJPHS'}
-- name: text_box_2
-  properties: {background: white}
-  type: TextBox
-  layout_properties: {grid_position: 'ZMYCNA,VLIBRV DENXYA,YBAQFU'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: 'theme:On Primary', bold: false, underline: false}
+  name: text_box_1
+  layout_properties: {grid_position: 'ZMYCNA,VLIBRV BHKSVS,TYPAAS'}
 - name: file_loader_2
   properties: {}
   type: FileLoader
-  layout_properties: {grid_position: 'ZMYCNA,VLIBRV HGPSNU,CFXXVD'}
+  layout_properties: {grid_position: 'ZMYCNA,VLIBRV TLAFZD,MHGLUM'}
 - name: label_3_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: PAN number, font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -61,13 +64,13 @@ components:
     icon: ''}
   type: Label
   layout_properties: {grid_position: 'VFXFSY,YAJQMS'}
-- name: text_box_1
+- type: TextBox
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: 'theme:On Primary', bold: false, underline: false}
-  type: TextBox
-  layout_properties: {grid_position: 'VFXFSY,NOKCXD'}
+  name: text_box_2
+  layout_properties: {grid_position: 'VFXFSY,UGYTDB'}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: 'Upload PAN Card
