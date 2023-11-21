@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import re
 
 class Lender_reg_form_3(Lender_reg_form_3Template):
   def __init__(self,user_id, **properties):
@@ -22,11 +23,27 @@ class Lender_reg_form_3(Lender_reg_form_3Template):
     pan_card = self.text_box_2.text
     pan_id = self.file_loader_1.file
     user_id = self.userId
-    if not aadhaar_card or not aadhaar_photo or not pan_card or not pan_id:
-      Notification("Please fill all the fields").show()
-    else:
+    '''if not aadhaar_card or not aadhaar_photo or not pan_card or not pan_id:
+      Notification("Please fill all the fields").show()'''
+# Validate PAN card details
+    pan_pattern = re.compile(r'^[A-Za-z]{5}\d{4}[A-Za-z]$')
+    if not pan_pattern.match(pan_card) or len(pan_card) != 10:
+       Notification("Please enter a valid PAN card number").show()
+       return
+
+        # Validate Aadhaar card details
+    if len(aadhaar_card) != 12 or not aadhaar_card.isdigit():
+        Notification("Please enter a valid Aadhaar number").show()
+        return
+
+        # If all validations pass, call the server function
+    anvil.server.call('add_lendor_third_form', aadhaar_photo, pan_card, pan_id, aadhaar_card, user_id)
+    open_form('lendor_registration_form.Lender_reg_form_4', user_id=user_id)
+
+
+    '''else:
      anvil.server.call('add_lendor_third_form', aadhaar_photo, pan_card, pan_id,aadhaar_card,user_id)
-     open_form('lendor_registration_form.Lender_reg_form_4',user_id = user_id)
+     open_form('lendor_registration_form.Lender_reg_form_4',user_id = user_id)'''
 
 
   def button_1_click(self, **event_args):
