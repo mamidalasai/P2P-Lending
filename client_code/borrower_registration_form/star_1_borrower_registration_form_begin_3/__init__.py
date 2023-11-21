@@ -22,19 +22,22 @@ class star_1_borrower_registration_form_begin_3(star_1_borrower_registration_for
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2',user_id = self.userId)
   
   def button_2_click(self, **event_args):
-    aadhar= self.borrower_registration_aadhar_text.text
+    aadhar = self.borrower_registration_aadhar_text.text
     aadhar_card = self.borrower_registration_img_aadhar_file_loader.file
     pan = self.borrower_registration_pan_text.text
-    pan_card=self.borrower_registration_img_pan_file_loader.file
+    pan_card = self.borrower_registration_img_pan_file_loader.file
     user_id = self.userId
+    
     if not re.match(r'^\d{12}$', aadhar):
-      Notification("Please enter a valid 12-digit Aadhaar number")
+        Notification("Please enter a valid 12-digit Aadhaar number").show()
     # Check if PAN is a valid format
     elif not re.match(r'^[A-Z]{5}[0-9]{4}[A-Z]$', pan):
-      Notification("Please enter a valid PAN card number")
+        Notification("Please enter a valid PAN card number").show()
     elif not aadhar_card or not pan or not pan_card:
-      Notification("Please fill in all required fields")
-      anvil.server.call('add_borrower_step3',aadhar,aadhar_card,pan,pan_card,user_id)
-      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a',user_id=user_id)
+        Notification("Please fill in all required fields").show()
+    else:
+        anvil.server.call('add_borrower_step3', aadhar, aadhar_card, pan, pan_card, user_id)
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a', user_id=user_id)
+
   
     
