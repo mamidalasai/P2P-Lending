@@ -33,7 +33,8 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
 
     # Check if mobile number is a 10-digit number
     if not re.match(r'^\d{10}$', mobile_no):
-      Notification("Please enter a valid 10-digit mobile number").show()
+     # Notification("Please enter a valid 10-digit mobile number").show()
+      self.borrower_mobile_number_text_copy_1='enter valid mobile number'
     elif not user_photo or not alternate_email:
       Notification("Please fill in all required fields").show()
     else:
