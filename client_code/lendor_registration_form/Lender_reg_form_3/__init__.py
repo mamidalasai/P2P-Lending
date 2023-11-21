@@ -23,7 +23,7 @@ class Lender_reg_form_3(Lender_reg_form_3Template):
     pan_id = self.file_loader_1.file
     user_id = self.userId
     if not aadhaar_card or not aadhaar_photo or not pan_card or not pan_id:
-      Notification("Please fill all the fields")
+      Notification("Please fill all the fields").show()
     else:
      anvil.server.call('add_lendor_third_form', aadhaar_photo, pan_card, pan_id,aadhaar_card,user_id)
      open_form('lendor_registration_form.Lender_reg_form_4',user_id = user_id)
