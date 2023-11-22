@@ -25,7 +25,7 @@ class Lender_reg_bankdirect_bank_form_2(Lender_reg_bankdirect_bank_form_2Templat
     if not ifsc or not salary_type or not branch_name or not net_bank:
       Notification("please fill all required fields").show()
     else:
-      anvil.server.call('add_lendor_bank_details_form_2', ifsc,salary_type,select_bank,net_bank, user_id)
+      anvil.server.call('add_lendor_bank_details_form_2', ifsc,salary_type,branch_name,net_bank, user_id)
       open_form('lendor_registration_form.dashboard')
 
   def button_1_click(self, **event_args):
