@@ -9,7 +9,8 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class star_1_borrower_registration_form_begin_3b_business_5(star_1_borrower_registration_form_begin_3b_business_5Template):
-  def __init__(self, **properties):
+  def __init__(self,user_id, **properties):
+    self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -23,7 +24,7 @@ class star_1_borrower_registration_form_begin_3b_business_5(star_1_borrower_regi
       Notification("Please all the fields")
     else:
      anvil.server.call('add_lendor_institutional_form_5',reg_off_add,off_add_proof,proof_verification,user_id)
-     open_form('lendor_registration_form.Lender_reg_bothdirect_bank_form_1',user_id=user_id)
+     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_id=user_id)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
