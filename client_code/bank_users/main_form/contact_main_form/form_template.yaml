@@ -71,15 +71,15 @@ components:
     type: Link
     layout_properties: {grid_position: 'DNMNYS,UWJUEU'}
     event_bindings: {click: location_main_form_link_click}
+- name: spacer_1
+  properties: {height: 29}
+  type: Spacer
+  layout_properties: {grid_position: 'PIMQWD,LFPCUP'}
 - name: flow_panel_2
   properties: {align: justify}
   type: FlowPanel
   layout_properties: {grid_position: 'DASPSM,LODUVQ', full_width_row: true}
-  components:
-  - name: spacer_1
-    properties: {height: 29}
-    type: Spacer
-    layout_properties: {width: 974}
+  components: []
 - name: grid_panel_1
   properties: {}
   type: GridPanel
