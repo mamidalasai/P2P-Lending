@@ -8,9 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil.js.window import navigator
-from ..user_form import user_module
-from . import main_form_module
-from ..borrower_rgistration_form import borrower_main_form_module
+
 
 class career_main_form(career_main_formTemplate):
   def __init__(self, **properties):
@@ -59,3 +57,7 @@ class career_main_form(career_main_formTemplate):
           open_form('bank_users.user_form')
 
 #-- imp logic dont go up--#
+
+  def home_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form")
