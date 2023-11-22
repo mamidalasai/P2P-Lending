@@ -76,8 +76,8 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: [Select one, Less than 50000, 'Between 50,000 - 3,00000', 'Between 3,00000
-        - 7,00000', 'Between 7,00000 - 15,00000', 'Above 15,00000 ', '', '']
+    items: [Select one, '50000', '50,000 - 3,00000', '3,00000 - 7,00000', '7,00000
+        - 15,00000', '15,00000 ', '', '']
     visible: true
     font_size: null
     font: ''
