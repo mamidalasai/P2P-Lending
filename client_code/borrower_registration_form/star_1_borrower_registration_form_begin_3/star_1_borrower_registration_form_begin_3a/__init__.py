@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+import re
 class star_1_borrower_registration_form_begin_3a(star_1_borrower_registration_form_begin_3aTemplate):
   def __init__(self,user_id, **properties):
     self.userId = user_id
