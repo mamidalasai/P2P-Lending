@@ -68,14 +68,20 @@ components:
   properties: {}
   type: FlowPanel
   layout_properties: {grid_position: 'WJMZNB,HWXHIT', full_width_row: true}
+  components: []
+- name: grid_panel_1
+  properties: {}
+  type: GridPanel
+  layout_properties: {grid_position: 'LWKVNS,ALLPWL', full_width_row: true}
   components:
+  - name: image_1
+    properties: {source: 'https://media.licdn.com/dms/image/D4D12AQHuMMctUXluoQ/article-cover_image-shrink_720_1280/0/1691576947883?e=2147483647&v=beta&t=LpFTEwJuhSK8QLRM_VOjcPGxXfqoopURtQev3ciEYkI',
+      display_mode: shrink_to_fit}
+    type: Image
+    layout_properties: {row: FMBLUG, width_xs: 5, col_xs: 1}
   - name: label_1
     properties: {text: " Highly Trusted Peer to Peer Lending \n Platform in India",
       bold: true, font_size: 30, foreground: '#ec2030', font: a}
     type: Label
-    layout_properties: {}
-  - name: image_1
-    properties: {source: 'https://media.licdn.com/dms/image/D4D12AQHuMMctUXluoQ/article-cover_image-shrink_720_1280/0/1691576947883?e=2147483647&v=beta&t=LpFTEwJuhSK8QLRM_VOjcPGxXfqoopURtQev3ciEYkI'}
-    type: Image
-    layout_properties: {width: 588}
+    layout_properties: {row: FMBLUG, width_xs: 5, col_xs: 6}
 is_package: true
