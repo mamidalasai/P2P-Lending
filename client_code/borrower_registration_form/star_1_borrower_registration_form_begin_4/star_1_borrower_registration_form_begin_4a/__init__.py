@@ -20,15 +20,14 @@ class star_1_borrower_registration_form_begin_4a(star_1_borrower_registration_fo
     open_form('bank_users.user_form')
 
   def submit_4_borrower_registration_form_click(self, **event_args):
-    mother_toung = self.borrower_registration_mother_tounge_text.text
-    marital_status = self.marital_status_borrower_registration_dropdown.selected_value
     spouse_name = self.borrower_registration_spouse_name_text.text
     marrege_date = self.marriage_date_date_pickeer.date
+    spouse_mobile_no=self.borrower_registration_spouse_mobile_text_copy_1.text
     user_id = self.userId
-    if not marital_status or not mother_toung or not spouse_name or not marrege_date:
+    if not spouse_name or not marrege_date or not spouse_mobile_no:
       Notification("please provide all Details")
     else:
-      anvil.server.call('add_borrower_step4',mother_toung,marital_status,spouse_name,marrege_date,user_id)
+      anvil.server.call('add_borrower_step4a',spouse_name,marrege_date,spouse_mobile_no,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_5',userId=user_id)
 
   def button_1_click(self, **event_args):
