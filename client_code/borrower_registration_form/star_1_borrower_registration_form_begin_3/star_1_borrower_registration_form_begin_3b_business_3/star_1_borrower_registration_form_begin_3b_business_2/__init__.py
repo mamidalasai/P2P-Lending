@@ -25,7 +25,7 @@ class star_1_borrower_registration_form_begin_3b_business_2(star_1_borrower_regi
     if not nearest_loc or not business_type or not empolyees_working or not year:
       Notification("Please fill all the fields")
     else:
-      anvil.server.call('',nearest_loc,business_type,empolyees_working,year,user_id)
+      anvil.server.call('add_lendor_institutional_form_2',nearest_loc,business_type,empolyees_working,year,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3',user_id = user_id)
     """This method is called when the button is clicked"""
 
