@@ -30,11 +30,14 @@ class Lender_reg_form_3(Lender_reg_form_3Template):
     if not pan_pattern.match(pan_card) or len(pan_card) != 10:
        Notification("Please enter a valid PAN card number").show()
        return
+       
 
         # Validate Aadhaar card details
     if len(aadhaar_card) != 12 or not aadhaar_card.isdigit():
         Notification("Please enter a valid Aadhaar number").show()
         return
+      
+        
 
         # If all validations pass, call the server function
     anvil.server.call('add_lendor_third_form', aadhaar_photo, pan_card, pan_id, aadhaar_card, user_id)
