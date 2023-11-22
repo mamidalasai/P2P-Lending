@@ -35,7 +35,7 @@ components:
     icon: ''}
   type: Label
   layout_properties: {grid_position: 'UCWKKW,TIOZZL'}
-- name: text_box_1_copy_1
+- name: text_box_1
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
@@ -49,4 +49,55 @@ components:
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'UIPMGE,XTDROB'}
+- name: text_box_2
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: 'theme:On Primary', bold: false, underline: false}
+  type: TextBox
+  layout_properties: {grid_position: 'UIPMGE,YXCWUJ'}
+- name: label_1_copy_1_copy_1
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: DIN, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'JDNLNE,TEWMSH'}
+- name: text_box_3
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: 'theme:On Primary', bold: false, underline: false}
+  type: TextBox
+  layout_properties: {grid_position: 'JDNLNE,SGQLES'}
+- name: label_2_copy_1_copy_1
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: CIN, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'HIMACU,RHCTFS'}
+- name: text_box_4
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: 'theme:On Primary', bold: false, underline: false}
+  type: TextBox
+  layout_properties: {grid_position: 'HIMACU,GMNQOL'}
+- name: button_1_copy_1
+  properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
+    foreground: 'theme:On Primary Container', visible: true, text: Prev, font_size: null,
+    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+    background: '#0876E8', bold: true, underline: false, icon: 'fa:angle-double-left'}
+  type: Button
+  layout_properties: {grid_position: 'WRXPXI,GLQOJI'}
+  event_bindings: {click: button_1_click}
+- name: button_2_copy_1
+  properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
+    foreground: 'theme:On Primary Container', visible: true, text: Next, font_size: null,
+    font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
+    background: '#0876E8', bold: true, underline: false, icon: 'fa:angle-double-right'}
+  type: Button
+  layout_properties: {grid_position: 'WRXPXI,JHJTEE'}
+  event_bindings: {click: button_2_click}
 is_package: true
