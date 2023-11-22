@@ -1,4 +1,4 @@
-from ._anvil_designer import srar_1_borrower_registration_form_begin_3a_1Template
+from ._anvil_designer import star_1_borrower_registration_form_begin_3a_1Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class srar_1_borrower_registration_form_begin_3a_1(srar_1_borrower_registration_form_begin_3a_1Template):
+class star_1_borrower_registration_form_begin_3a_1(star_1_borrower_registration_form_begin_3a_1Template):
   def __init__(self, user_id,**properties):
     self.userId = user_id
     # Set Form properties and Data Bindings.
@@ -25,7 +25,7 @@ class srar_1_borrower_registration_form_begin_3a_1(srar_1_borrower_registration_
       Notification("Please fill all the fields").show()
     else:
       anvil.server.call('add_lendor_four_form',street_adress_1,street_address_2,city,user_id)
-      open_form(borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a,user_id=user_id)
+      open_form(star_1_borrower_registration_form_begin_3a,user_id=user_id)
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form(borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3,user_id=user_id)
