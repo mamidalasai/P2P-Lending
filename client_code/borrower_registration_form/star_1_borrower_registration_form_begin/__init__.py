@@ -28,20 +28,10 @@ class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_
     if not re.match(r'^[A-Za-z\s]+$', full_name):
       self.full_name_label.text='enter valid full name'
       self.full_name_label.visible = True  
+    elif not full_name or not gender or not dob:
+      Notification('please fill all details').show()
     else:
       anvil.server.call('add_borrower_step1',full_name,gender,dob,user_id)
       Notification("step 1 form fill up submited sucessfull")
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2',user_id = user_id)
       self.full_name_label.visible = False
-      
-
-
-      
-    
-    
-
-  
-
-
-    
- 
