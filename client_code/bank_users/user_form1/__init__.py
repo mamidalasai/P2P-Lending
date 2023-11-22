@@ -15,4 +15,11 @@ class user_form1(user_form1Template):
 
     # Any code you write here will run before the form opens.
 
+  def button_1_click(self, **event_args):
+     alert("Logged out sucessfully")
+     anvil.users.logout()
+     open_form('bank_users.main_form')
+  
+    
+
   

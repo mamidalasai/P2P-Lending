@@ -1,7 +1,11 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 components:
 - name: flow_panel_1
-  properties: {}
+  properties: {role: null, vertical_align: full, spacing: huge, align: left, tooltip: '',
+    border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
+    background: ''}
   type: FlowPanel
   layout_properties: {grid_position: 'UUQTZX,CLQEYE', full_width_row: true}
   components:
@@ -12,6 +16,14 @@ components:
       spacing_below: small, background: '', horizontal_align: center}
     type: Image
     layout_properties: {width: 209}
+- type: Button
+  properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Logout, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#a51622',
+    bold: true, underline: false, icon: ''}
+  name: button_1
+  layout_properties: {grid_position: 'UUQTZX,SPGDVH', full_width_row: true}
+  event_bindings: {click: button_1_click}
 - name: navbar_links_copy_1_copy_1
   properties: {role: null, vertical_align: full, spacing: huge, align: center, tooltip: '',
     border: '', foreground: '', visible: true, spacing_above: none, spacing_below: small,
@@ -84,4 +96,15 @@ components:
       bold: true, font_size: 30, foreground: '#ec2030', font: a}
     type: Label
     layout_properties: {row: FMBLUG, width_xs: 5, col_xs: 6}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_1
+  layout_properties: {grid_position: 'ERHKRE,BLSYRZ'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'How It Works?', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_2
+  layout_properties: {grid_position: 'TBBKSE,SRXRQZ'}
 is_package: true
