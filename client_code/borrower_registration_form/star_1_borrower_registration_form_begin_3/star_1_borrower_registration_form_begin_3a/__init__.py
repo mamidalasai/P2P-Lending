@@ -20,7 +20,7 @@ class star_1_borrower_registration_form_begin_3a(star_1_borrower_registration_fo
     open_form('bank_users.user_form')
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3',user_id = self.userId)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a_1',user_id = self.userId)
 
   def button_2_click(self, **event_args):
     father_name = self.father_name_br3a_text.text
