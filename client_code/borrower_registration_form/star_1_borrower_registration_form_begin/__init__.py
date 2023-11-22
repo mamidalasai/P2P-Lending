@@ -8,6 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import datetime
+import re
 
 class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_beginTemplate):
   def __init__(self, user_id,**properties):
@@ -24,24 +25,13 @@ class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_
     gender=self.gender_dd.selected_value
     dob = self.borrower_date_of_birth_date_picker.date
     user_id = self.userId
-    if not full_name or not gender or not dob:
-      Notification("plz enter All Details For Proceed Next")
+    if not re.match(r'^[A-Za-z\s]+$', full_name):
+      self.full_name_label.text='enter valid full name'
+      self.full_name_label.visible = True  
+    elif not full_name or not gender or not dob:
+      Notification('please fill all details').show()
     else:
       anvil.server.call('add_borrower_step1',full_name,gender,dob,user_id)
       Notification("step 1 form fill up submited sucessfull")
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2',user_id = user_id)
-
-  
-
-      
-
-
-      
-    
-    
-
-  
-
-
-    
- 
+      self.full_name_label.visible = False

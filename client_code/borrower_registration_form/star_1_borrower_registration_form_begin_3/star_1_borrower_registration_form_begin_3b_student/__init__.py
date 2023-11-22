@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import re
 
 class star_1_borrower_registration_form_begin_3b_student(star_1_borrower_registration_form_begin_3b_studentTemplate):
   def __init__(self,user_id, **properties):
@@ -29,7 +30,15 @@ class star_1_borrower_registration_form_begin_3b_student(star_1_borrower_registr
     college_proof=self.borrower_college_proof_img.file
     college_address=self.borrower_college_address_text
     user_id=self.user_id
-    if not college_name or not college_id or not college_proof or not college_address:
+    if not re.match(r'^[A-Za-z\s]+$', college_name):
+      Notification("Please enter a valid college name").show()
+    elif not college_address:
+      Notification("Please enter a valid college address").show()
+    elif not college_id:
+      Notification("Please enter a valid college ID").show()
+    elif not college_proof or not isinstance(college_proof, anvil.BlobMedia):
+      Notification("Please upload a valid college proof").show()
+    elif not college_name or not college_id or not college_proof or not college_address:
       Notification("please fill all requrired fields").show()
     else:
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_Id=user_id)
