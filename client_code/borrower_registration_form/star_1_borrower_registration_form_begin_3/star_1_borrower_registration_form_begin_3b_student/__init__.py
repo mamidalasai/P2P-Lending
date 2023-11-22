@@ -44,4 +44,4 @@ class star_1_borrower_registration_form_begin_3b_student(star_1_borrower_registr
     elif not college_name or not college_id or not college_proof or not college_address:
       Notification("please fill all requrired fields").show()
     else:
-      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_Id=user_id)
+      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_id=user_id)

@@ -37,5 +37,5 @@ class star_1_borrower_registration_form_begin_3c(star_1_borrower_registration_fo
     elif status_of_user == 'Employee':
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3d',user_id=user_id)
     else:
-      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_1',user_id=user_id)
+      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_1',user_id=user_id)
     
