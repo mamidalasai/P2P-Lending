@@ -13,9 +13,9 @@ class star_1_borrower_registration_form_begin_6(star_1_borrower_registration_for
     self.user_id=userId
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+  
     # Any code you write here will run before the form opens.
-
+   
   def home_borrower_registration_form_copy_1_copy_1_click(self, **event_args):
     open_form('bank_users.user_form')
 

@@ -63,16 +63,17 @@ def add_borrower_step4(marital_status,user_id):
   if row:
     row[0]['marital_status']=marital_status
 
-
-
-
-
+@anvil.server.callable
+def add_borrower_step4a(spouse_name,marrege_date,spouse_mobile_no,user_id):
+  row=app_tables.user_profile.search(coustmer_id=user_id)
+  row[0]['spouse_name']=spouse_name
+  row[0]['Date_mariage']=marrege_date
+  row[0]['spouse_mobile']=spouse_mobile_no
 
 @anvil.server.callable
-def add_borrower_step5(spouse_mobile,spouse_company_name,spouse_company_address,spouse_profficen,user_id):
+def add_borrower_step5(spouse_company_name,spouse_company_address,spouse_profficen,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    row[0]['spouse_mobile']=spouse_mobile
     row[0]['spouse_company_name']=spouse_company_name
     row[0]['spouse_company_address']=spouse_company_address
     row[0]['spouse_profficen']=spouse_profficen
