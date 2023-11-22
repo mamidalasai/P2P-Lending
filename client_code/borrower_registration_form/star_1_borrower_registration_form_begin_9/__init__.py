@@ -33,3 +33,8 @@ class star_1_borrower_registration_form_begin_9(star_1_borrower_registration_for
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert('Agreements, Privacy Policy and Applicant should accept following:Please note that any information concealed (as what we ask for), would be construed as illegitimate action on your part and an intentional attempt to hide material information which if found in future, would attract necessary action (s) at your sole cost. Hence, request to be truthful to your best knowledge while sharing your details)')
+
