@@ -86,25 +86,64 @@ components:
   type: GridPanel
   layout_properties: {grid_position: 'LWKVNS,ALLPWL', full_width_row: true}
   components:
+  - name: label_1
+    properties: {text: 'Highly Trusted
+
+        Peer to Peer Lending
+
+        Platform in India'}
+    type: Label
+    layout_properties: {row: ZHXSRM, width_xs: 3, col_xs: 7}
   - name: image_1
     properties: {source: 'https://media.licdn.com/dms/image/D4D12AQHuMMctUXluoQ/article-cover_image-shrink_720_1280/0/1691576947883?e=2147483647&v=beta&t=LpFTEwJuhSK8QLRM_VOjcPGxXfqoopURtQev3ciEYkI',
       display_mode: shrink_to_fit}
     type: Image
-    layout_properties: {row: FMBLUG, width_xs: 5, col_xs: 1}
-  - name: label_1
-    properties: {text: " Highly Trusted Peer to Peer Lending \n Platform in India",
-      bold: true, font_size: 30, foreground: '#ec2030', font: a}
+    layout_properties: {row: GVTVAG, width_xs: 5, col_xs: 1}
+  - name: label_4
+    properties: {}
     type: Label
-    layout_properties: {row: FMBLUG, width_xs: 5, col_xs: 6}
+    layout_properties: {row: GVTVAG, width_xs: 3, col_xs: 7}
 - type: Spacer
   properties: {height: 32}
   name: spacer_1
   layout_properties: {grid_position: 'ERHKRE,BLSYRZ'}
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'How It Works?', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#0d1625',
+    visible: true, text: Get online personal loans at attractive interest rates through P2P Lending,
+    font_size: 18, font: a, spacing_above: small, icon_align: left, spacing_below: small,
+    italic: true, background: '', bold: false, underline: false, icon: ''}
+  name: label_3
+  layout_properties: {row: VEQWXM, width_xs: 5, col_xs: 6, width: 588.5, grid_position: 'ERHKRE,ZBJRRR'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '#081a32',
+    visible: true, text: 'How It Works?', font_size: 25, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: true, icon: ''}
   name: label_2
   layout_properties: {grid_position: 'TBBKSE,SRXRQZ'}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_2
+  layout_properties: {grid_position: 'ZMBEDP,GXCQQH'}
+- type: Button
+  properties: {role: tonal-button, align: right, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Borrower, font_size: 15, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: button_2
+  layout_properties: {grid_position: 'HEUPGL,QTODQV', full_width_row: false, row_background: ''}
+- type: Button
+  properties: {role: tonal-button, align: left, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: 'Lendor    ', font_size: 15, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: button_3
+  layout_properties: {grid_position: 'HEUPGL,GMWTTZ', full_width_row: false, row_background: ''}
+- name: label_1_copy
+  properties: {text: " Highly Trusted Peer to Peer Lending \n Platform in India",
+    bold: true, font_size: 30, foreground: '#ec2030', font: a}
+  type: Label
+  layout_properties:
+    col_widths: {}
+    grid_position: FWXRBY,TPAMPU
 is_package: true
