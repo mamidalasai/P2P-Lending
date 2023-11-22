@@ -22,11 +22,11 @@ class star_1_borrower_registration_form_begin_4(star_1_borrower_registration_for
   def button_next_click(self, **event_args):
     marital_status = self.marital_status_borrower_registration_dropdown.selected_value
     user_id = self.userId
-    if not marital_status:
-      Notification("please provide all Details").show()
+    if not marital_status or marital_status not in ['Not Married', 'Married', 'Other']:
+      Notification("Please select a valid marital status").show()
     else:
       anvil.server.call('add_borrower_step4',marital_status,user_id)
-      if marital_status == 'UN-Married':
+      if marital_status == 'Not Married':
         open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id = user_id)
       elif marital_status == 'Married':
         open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4.star_1_borrower_registration_form_begin_4a',user_id = user_id)

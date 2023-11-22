@@ -28,10 +28,17 @@ class star_1_borrower_registration_form_begin_3a(star_1_borrower_registration_fo
     mother_name = self.mother_name_br3a_text.text
     mother_age = self.mother_age_br3a_text.text
     user_id = self.userId
-    if not father_name or not father_age or not mother_name or not mother_age:
-      Notification("please fill all required fields").show()
+    if not re.match(r'^[A-Za-z\s]+$', father_name):
+      self.label_1.text='enter valid name'
+      self.label_1.visible=True
+    elif not re.match(r'^[A-Za-z\s]+$', mother_name):
+      self.label_2.text='enter valid name'
+      self.label_2.visible=True
+    elif not father_name or not father_age or not mother_name or not mother_age:
+      Notification("Please fill all required fields").show()
     else:
       anvil.server.call('add_borrower_step3a',father_name,father_age,mother_name,mother_age,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',user_id=user_id)
-    
+      self.label_1.visible=False
+      self.label_2.visible=False
 
