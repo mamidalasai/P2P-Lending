@@ -31,9 +31,11 @@ class star_1_borrower_registration_form_begin_3b_student(star_1_borrower_registr
     college_address=self.borrower_college_address_text
     user_id=self.user_id
     if not re.match(r'^[A-Za-z\s]+$', college_name):
-      Notification("Please enter a valid college name").show()
+      self.label_5.text='enter valid college name'
+      self.label_5.visible=True
     elif not college_address:
-      Notification("Please enter a valid college address").show()
+      self.label_6.text='enter valid college address'
+      self.label_6.visible=True
     elif not college_id:
       Notification("Please enter a valid college ID").show()
     elif not college_proof or not isinstance(college_proof, anvil.BlobMedia):
