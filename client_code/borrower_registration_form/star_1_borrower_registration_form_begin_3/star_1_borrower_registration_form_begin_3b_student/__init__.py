@@ -37,9 +37,10 @@ class star_1_borrower_registration_form_begin_3b_student(star_1_borrower_registr
       self.label_6.text='enter valid college address'
       self.label_6.visible=True
     elif not college_id:
-      Notification("Please enter a valid college ID").show()
+      self.label_7.text='please enter valid id'
+      self.label_7.visible=True
     elif not college_proof or not isinstance(college_proof, anvil.BlobMedia):
-      Notification("Please upload a valid college proof").show()
+      self.label_8.text='enter valid college proof'
     elif not college_name or not college_id or not college_proof or not college_address:
       Notification("please fill all requrired fields").show()
     else:
