@@ -25,11 +25,14 @@ class foreclose(forecloseTemplate):
     emi = int(emi)
 
     monthly_installment = min_amount / tenure
-    paid_amount = monthly_installment * payment_done
+    paid_amount = emi * payment_done
     paid_amount = int(paid_amount)
 
-    remaining_amount = min_amount - paid_amount
+    remaining_amount = min_amount - monthly_installment*payment_done
     remaining_amount = int(remaining_amount)
+
+   
+    
 
     penalty_rate = 0.03  # 3%
     penalty_amount = remaining_amount * penalty_rate
@@ -43,7 +46,7 @@ class foreclose(forecloseTemplate):
     self.pa_label.text = f"{penalty_amount}"
     self.paid_label.text = f"{paid_amount}"
     self.paid_output.text = f"You paid {paid_amount} rs for {payment_done} months"
-    # Any code you write here will run before the form opens.
+    
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""

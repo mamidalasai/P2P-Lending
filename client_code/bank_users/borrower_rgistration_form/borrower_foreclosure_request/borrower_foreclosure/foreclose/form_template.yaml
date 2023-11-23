@@ -159,3 +159,7 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- type: Button
+  properties: {text: button_2}
+  name: button_2
+  layout_properties: {slot: title}
