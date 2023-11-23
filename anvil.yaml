@@ -320,6 +320,12 @@ db_schema:
     - name: cin
       admin_ui: {width: 200, order: 71.5625}
       type: string
+    - name: education_certificate
+      admin_ui: {width: 200, order: 29.5}
+      type: media
+    - name: bank_name
+      admin_ui: {width: 200, order: 75.5}
+      type: string
     title: user_profile
   borrower:
     title: borrower

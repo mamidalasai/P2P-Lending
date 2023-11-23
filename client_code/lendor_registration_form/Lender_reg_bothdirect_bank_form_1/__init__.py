@@ -20,12 +20,12 @@ class Lender_reg_bothdirect_bank_form_1(Lender_reg_bothdirect_bank_form_1Templat
     account_name = self.text_box_1.text
     account_type = self.drop_down_1.selected_value
     account_number = self.text_box_2.text
-    bank_branch = self.text_box_3.text
+    bank_name = self.text_box_3.text
     user_id = self.userId
-    if not account_name or not account_type or not account_number or not bank_branch:
+    if not account_name or not account_type or not account_number or not bank_name:
       Notification("please fill the all required fields").show()
     else:
-      anvil.server.call('add_lendor_bank_details_form_1', account_name, account_type,account_number,bank_branch, user_id)
+      anvil.server.call('add_lendor_bank_details_form_1', account_name, account_type,account_number,bank_name, user_id)
       open_form('lendor_registration_form.Lender_reg_bankdirect_bank_form_2',user_id=self.userId)
 
   def button_1_click(self, **event_args):

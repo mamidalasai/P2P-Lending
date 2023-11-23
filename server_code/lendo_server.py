@@ -24,6 +24,14 @@ def add_lendor_second_form(mobile,email,photo,user_id):
     row[0]['another_email'] = email
     row[0]['user_photo'] = photo
 
+@anvil.server.callable
+def add_lendor_third_3e_form(qualification,certificate,user_id):
+  row = app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    
+    row[0]['qualification'] = qualification
+    row[0]['education_certificate'] = certificate
+    
 
 @anvil.server.callable
 def add_lendor_third_form(aadhaar_photo, pan_card, pan_id,aadhaar_card,user_id):
@@ -133,22 +141,22 @@ def add_lendor_institutional_form_5(reg_office_add,off_add_proof,proof_verificat
     row[0]['proof_verification'] = proof_verification
 
 @anvil.server.callable
-def add_lendor_bank_details_form_1(account_name, account_type,account_number,bank_branch, user_id):
+def add_lendor_bank_details_form_1(account_name, account_type,account_number,bank_name, user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['account_name'] = account_name
     row[0]['account_type'] = account_type
     row[0]['account_number'] = account_number
-    row[0]['account_bank_branch'] = bank_branch
+    row[0]['select_bank'] = bank_name
 
 
 @anvil.server.callable
-def add_lendor_bank_details_form_2(ifsc,salary_type,select_bank,net_bank, user_id):
+def add_lendor_bank_details_form_2(ifsc,salary_type,branch_name,net_bank, user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['ifsc_code'] = ifsc
     row[0]['salary_type'] = salary_type
-    row[0]['select_bank'] = select_bank
+    row[0]['branch_name'] = branch_name
     row[0]['net_bank'] = net_bank
     row[0]['usertype'] = 'lender'
     row[0]['last_confirm'] = True
