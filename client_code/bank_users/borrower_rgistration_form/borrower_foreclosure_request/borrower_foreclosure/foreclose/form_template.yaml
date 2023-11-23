@@ -4,87 +4,135 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: outlined_card_1_copy_1
+  - type: ColumnPanel
     properties: {role: outlined-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'PRAIUU,LBTNNK'}
+    name: outlined_card_1
+    layout_properties: {grid_position: 'UESVHL,IRTQPW'}
     components:
-    - name: grid_panel_1_copy_1
+    - type: GridPanel
       properties: {}
-      type: GridPanel
-      layout_properties: {grid_position: 'ZGVOWU,YIQDWY'}
+      name: grid_panel_1
+      layout_properties:
+        col_widths: {}
+        grid_position: YLPCHG,EPGSCE
       components:
-      - name: label_2_copy_1
-        properties: {text: 'EMI Amount :', bold: true}
-        type: Label
-        layout_properties: {row: IORRBH, width_xs: 3, col_xs: 2}
-      - name: emi_label_copy_1
-        properties: {bold: true}
-        type: Label
-        layout_properties: {row: IORRBH, width_xs: 4, col_xs: 7}
-      - name: label_8_copy_1
-        properties: {text: 'Paid Amount  :', bold: true}
-        type: Label
-        layout_properties: {row: FAWSGF, width_xs: 3, col_xs: 2}
-      - name: paid_amount_label_copy_1
-        properties: {text: '', bold: true}
-        type: Label
-        layout_properties: {row: FAWSGF, width_xs: 4, col_xs: 7}
-      - name: pa_output_label_copy_1
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'EMI Amount :', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_3
+        layout_properties: {row: ZKKANY, width_xs: 3, col_xs: 2, width: 149.75}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: emi_label
+        layout_properties: {row: ZKKANY, width_xs: 3, col_xs: 6, width: 149.75}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Paid Amount :', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_7
+        layout_properties: {row: QFPDXK, width_xs: 3, col_xs: 2, width: 149.75}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: paid_label
+        layout_properties: {row: QFPDXK, width_xs: 3, col_xs: 6, width: 149.75}
+      - type: Label
         properties: {}
-        type: Label
-        layout_properties: {row: HTYOEV, width_xs: 8, col_xs: 2}
-      - name: label_4_copy_1
-        properties: {text: 'Remaining Amount :', bold: true}
-        type: Label
-        layout_properties: {row: YLQIEO, width_xs: 4, col_xs: 2}
-      - name: r_amount_label_copy_1
-        properties: {bold: true}
-        type: Label
-        layout_properties: {row: YLQIEO, width_xs: 4, col_xs: 7}
-      - name: label_6_copy_1
-        properties: {text: 'Penalty for Remaining  Amount :', bold: true}
-        type: Label
-        layout_properties: {row: BYQYXQ, width_xs: 5, col_xs: 2}
-      - name: pra_label_copy_1
-        properties: {bold: true}
-        type: Label
-        layout_properties: {row: BYQYXQ, width_xs: 4, col_xs: 6}
-      - name: label_3_copy_1
-        properties: {text: 'Total Due Amount :
-
-            ', bold: true, font_size: 20}
-        type: Label
-        layout_properties: {row: KGBGCL, width_xs: 4, col_xs: 2}
-      - name: tda_label_copy_1
-        properties: {bold: true}
-        type: Label
-        layout_properties: {row: KGBGCL, width_xs: 4, col_xs: 7}
-      - name: label_5_copy_1
-        properties: {text: (remaining amount with 3%  penalty )}
-        type: Label
-        layout_properties: {row: ICGWPA, width_xs: 6, col_xs: 2}
-      - name: label_7_copy_1
-        properties: {text: Reason for Foreclose}
-        type: Label
-        layout_properties: {row: MVBWVC, width_xs: 4, col_xs: 2}
-      - name: text_box_1_copy_1
-        properties: {placeholder: write reason here, background: 'theme:On Primary'}
-        type: TextBox
-        layout_properties: {row: AKXHHD, width_xs: 9, col_xs: 2}
-      - name: link_1_copy_1
-        properties: {text: Terms & Conditions, background: '', foreground: '#0876E8',
+        name: paid_output
+        layout_properties: {row: BOATHZ, width_xs: 3, col_xs: 2}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Remaining Amount :', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_2
+        layout_properties: {row: YEHXRB, width_xs: 4, col_xs: 2, width: 151.25}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: ra_label
+        layout_properties: {row: YEHXRB, width_xs: 3, col_xs: 6, width: 151.25}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Penalty for Remaining Amount :', font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        name: label_5
+        layout_properties: {row: NOMNRR, width_xs: 4, col_xs: 2, width: 111}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: pa_label
+        layout_properties: {row: NOMNRR, width_xs: 3, col_xs: 6, width: 149.75}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Total Due Amount :', font_size: 23, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_4
+        layout_properties: {row: DGVFCC, width_xs: 4, col_xs: 2, width: 209.656}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: 23, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: fa_label
+        layout_properties: {row: DGVFCC, width_xs: 3, col_xs: 6, width: 149.75}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: (Remaining Amount + 3% Penalty), font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: label_8
+        layout_properties: {row: VLWWCL, width_xs: 6, col_xs: 2, width: 329.5}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Reason for Foreclosure, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        name: label_6
+        layout_properties: {row: RFBAHL, width_xs: 3, col_xs: 2, width: 151.25}
+      - type: TextBox
+        properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: write reason here,
+          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+          font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+          background: 'theme:On Primary', bold: false, underline: false}
+        name: reason_textbox
+        layout_properties: {row: NVIHFZ, width_xs: 9, col_xs: 2, width: 417.328}
+      - type: Link
+        properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#0876E8',
+          visible: true, text: Terms and Conditions, font_size: null, wrap_on: mobile,
+          font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+          spacing_below: small, italic: false, background: '', bold: false, underline: false,
           icon: 'fa:info-circle'}
-        type: Link
-        layout_properties: {row: SXCGOJ, width_xs: 4, col_xs: 2}
-      - name: check_box_1_copy_1
-        properties: {text: I agree to proceed with the foreclosure process and also agree Terms and conditions}
-        type: CheckBox
-        layout_properties: {row: KHFFEG, width_xs: 11, col_xs: 1}
+        name: link_1
+        layout_properties: {row: QPOYVR, width_xs: 3, col_xs: 2}
+        event_bindings: {click: link_1_click}
+      - type: CheckBox
+        properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+          foreground: '', allow_indeterminate: false, visible: true, text: 'I have
+            read, agree terms & conditions and agree to proceed with the foreclosure
+            process  ', font_size: null, font: '', spacing_above: small, spacing_below: small,
+          italic: false, background: '', bold: false, checked: false, underline: false}
+        name: f_checkbox
+        layout_properties: {row: FRGNIN, width_xs: 9, col_xs: 2, width: 509.25}
+        event_bindings: {change: f_checkbox_change}
 - type: FlowPanel
   properties: {}
   name: navbar_links

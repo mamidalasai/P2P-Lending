@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.borrower_rgistration_form.borrower_foreclosure_request}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -23,35 +23,44 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
 metadata: {title: 'P2P Bank ', description: this app provide services to person who are ready to invest and ready to give loan}
 startup_form: null
 db_schema:
-  users:
+  product_details:
+    title: product_details
     client: full
     server: full
     columns:
-    - name: email
-      admin_ui: {order: 0.5, width: 200}
+    - name: product_name
+      admin_ui: {width: 200}
       type: string
-    - name: enabled
-      admin_ui: {order: 1, width: 200}
-      type: bool
-    - name: last_login
-      admin_ui: {order: 2, width: 200}
-      type: datetime
-    - name: password_hash
-      admin_ui: {order: 3, width: 200}
+    - name: product_categories
+      admin_ui: {width: 200}
       type: string
-    - name: n_password_failures
-      admin_ui: {order: 4, width: 200}
+    - name: processing_fee
+      admin_ui: {width: 200}
       type: number
-    - name: confirmed_email
-      admin_ui: {order: 5, width: 200}
-      type: bool
-    - name: signed_up
-      admin_ui: {order: 6, width: 200}
-      type: datetime
-    - name: email_confirmation_key
-      admin_ui: {order: 1.5, width: 200}
+    - name: extension_fee
+      admin_ui: {width: 200}
+      type: number
+    - name: membership_type
+      admin_ui: {width: 200}
       type: string
-    title: Users
+    - name: interest_type
+      admin_ui: {width: 200}
+      type: string
+    - name: max_days
+      admin_ui: {width: 200}
+      type: number
+    - name: min_days
+      admin_ui: {width: 200}
+      type: number
+    - name: roi
+      admin_ui: {width: 200}
+      type: number
+    - name: discount_coupons
+      admin_ui: {width: 200}
+      type: string
+    - name: product_id
+      admin_ui: {order: -1, width: 200}
+      type: string
   user_profile:
     client: full
     server: full
@@ -327,41 +336,42 @@ db_schema:
       admin_ui: {width: 200, order: 75.5}
       type: string
     title: user_profile
-  borrower:
-    title: borrower
+  membership:
     client: none
     server: full
     columns:
-    - name: email_id
+    - name: member_club
       admin_ui: {width: 200, order: 0}
       type: string
+    title: membership
+  foreclose:
+    title: foreclose
+    client: full
+    server: full
+    columns:
     - name: coustmer_id
-      admin_ui: {order: 1, width: 200}
+      admin_ui: {width: 200}
       type: string
-    - name: user_name
-      admin_ui: {width: 200, order: 2}
+    - name: borrower_name
+      admin_ui: {width: 200}
       type: string
-    - name: max_amount
-      admin_ui: {order: 3, width: 200}
-      type: number
-    - name: out_standing_amount
-      admin_ui: {width: 200, order: 4}
-      type: number
     - name: loan_id
-      admin_ui: {width: 200, order: 5}
-      type: number
-    - name: admin_approve
-      admin_ui: {width: 200, order: 6}
-      type: bool
-    - name: borrowing_status
-      admin_ui: {width: 200, order: 7}
-      type: bool
-    - name: borrower_approve_date_time
-      admin_ui: {width: 200, order: 8}
-      type: datetime
-    - name: beseem_score
-      admin_ui: {width: 200, order: 9}
+      admin_ui: {width: 200}
       type: string
+    - name: amount
+      admin_ui: {width: 200}
+      type: number
+    - name: outstanding_amount
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: loan_date
+      admin_ui: {width: 200, order: 3}
+      type: date
+  foreclosure:
+    client: none
+    server: full
+    columns: []
+    title: foreclosure
   loan_details:
     client: full
     server: full
@@ -418,6 +428,35 @@ db_schema:
       admin_ui: {width: 200}
       type: number
     title: loan_details
+  users:
+    client: full
+    server: full
+    columns:
+    - name: email
+      admin_ui: {order: 0.5, width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {order: 1, width: 200}
+      type: bool
+    - name: last_login
+      admin_ui: {order: 2, width: 200}
+      type: datetime
+    - name: password_hash
+      admin_ui: {order: 3, width: 200}
+      type: string
+    - name: n_password_failures
+      admin_ui: {order: 4, width: 200}
+      type: number
+    - name: confirmed_email
+      admin_ui: {order: 5, width: 200}
+      type: bool
+    - name: signed_up
+      admin_ui: {order: 6, width: 200}
+      type: datetime
+    - name: email_confirmation_key
+      admin_ui: {order: 1.5, width: 200}
+      type: string
+    title: Users
   lender:
     title: lender
     client: full
@@ -453,74 +492,40 @@ db_schema:
     - name: final_rta
       admin_ui: {width: 200, order: 15}
       type: number
-  membership:
+  borrower:
+    title: borrower
     client: none
     server: full
     columns:
-    - name: member_club
+    - name: email_id
       admin_ui: {width: 200, order: 0}
       type: string
-    title: membership
-  foreclose:
-    title: foreclose
-    client: full
-    server: full
-    columns:
     - name: coustmer_id
-      admin_ui: {width: 200}
+      admin_ui: {order: 1, width: 200}
       type: string
-    - name: borrower_name
-      admin_ui: {width: 200}
-      type: string
-    - name: loan_id
-      admin_ui: {width: 200}
-      type: string
-    - name: amount
-      admin_ui: {width: 200}
-      type: number
-    - name: outstanding_amount
+    - name: user_name
       admin_ui: {width: 200, order: 2}
-      type: number
-    - name: loan_date
-      admin_ui: {width: 200, order: 3}
-      type: date
-  product_details:
-    title: product_details
-    client: full
-    server: full
-    columns:
-    - name: product_name
-      admin_ui: {width: 200}
       type: string
-    - name: product_categories
-      admin_ui: {width: 200}
-      type: string
-    - name: processing_fee
-      admin_ui: {width: 200}
+    - name: max_amount
+      admin_ui: {order: 3, width: 200}
       type: number
-    - name: extension_fee
-      admin_ui: {width: 200}
+    - name: out_standing_amount
+      admin_ui: {width: 200, order: 4}
       type: number
-    - name: membership_type
-      admin_ui: {width: 200}
-      type: string
-    - name: interest_type
-      admin_ui: {width: 200}
-      type: string
-    - name: max_days
-      admin_ui: {width: 200}
+    - name: loan_id
+      admin_ui: {width: 200, order: 5}
       type: number
-    - name: min_days
-      admin_ui: {width: 200}
-      type: number
-    - name: roi
-      admin_ui: {width: 200}
-      type: number
-    - name: discount_coupons
-      admin_ui: {width: 200}
-      type: string
-    - name: product_id
-      admin_ui: {order: -1, width: 200}
+    - name: admin_approve
+      admin_ui: {width: 200, order: 6}
+      type: bool
+    - name: borrowing_status
+      admin_ui: {width: 200, order: 7}
+      type: bool
+    - name: borrower_approve_date_time
+      admin_ui: {width: 200, order: 8}
+      type: datetime
+    - name: beseem_score
+      admin_ui: {width: 200, order: 9}
       type: string
 uplink_visible: true
 renamed: true
