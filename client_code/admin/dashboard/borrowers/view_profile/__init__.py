@@ -6,7 +6,7 @@ from anvil.google.drive import app_files
 import anvil.users
 
 class view_profile(view_profileTemplate):
-  def __init__(self, **properties):
+  def __init__(self, value_to_display, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 

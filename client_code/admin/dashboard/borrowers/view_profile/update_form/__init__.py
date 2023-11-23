@@ -6,12 +6,12 @@ from anvil.google.drive import app_files
 import anvil.users
 
 class update_form(update_formTemplate):
-  def __init__(self, **properties):
+  def __init__(self, get_customer_id_value, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-   self.get = get_customer_id_value
+    self.get = get_customer_id_value
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""

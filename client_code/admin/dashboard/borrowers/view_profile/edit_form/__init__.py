@@ -6,7 +6,7 @@ from anvil.google.drive import app_files
 import anvil.users
 
 class edit_form(edit_formTemplate):
-  def __init__(self, **properties):
+  def __init__(self, get_customer_id_value, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
