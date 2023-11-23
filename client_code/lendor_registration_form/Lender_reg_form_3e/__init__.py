@@ -24,7 +24,7 @@ class Lender_reg_form_3e(Lender_reg_form_3eTemplate):
       Notification("Please fill all the fields")
     else:
       anvil.server.call('add_lendor_third_3e_form',qualification,certificate,user_id)
-      open_form('lendor_registration_form.Lender_reg_Institutional_form_3',user_id = user_id)
+      open_form('lendor_registration_form.Lender_reg_form_3',user_id = user_id)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
