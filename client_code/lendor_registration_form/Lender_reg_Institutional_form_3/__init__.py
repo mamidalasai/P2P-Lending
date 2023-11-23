@@ -13,7 +13,22 @@ class Lender_reg_Institutional_form_3(Lender_reg_Institutional_form_3Template):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    user_data = anvil.server.call('get_user_data', user_id)
+        
+    if user_data:
+            self.industry_type = user_data.get('industry_type', '')
+            self.turn_over = user_data.get('six_month_turnover', '')
+    
+    else:
+        self.industry_type = ''
+        self.turn_over = ''
+       
+       #Restore previously entered data if available
+    if self.industry_type:
+            self.text_box_1.text= self.industry_type
+    if self.turn_over:
+            self.text_box_2.text= self.turn_over
+    
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):

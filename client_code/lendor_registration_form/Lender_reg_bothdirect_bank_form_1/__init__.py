@@ -13,6 +13,30 @@ class Lender_reg_bothdirect_bank_form_1(Lender_reg_bothdirect_bank_form_1Templat
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    user_data = anvil.server.call('get_user_data', user_id)
+    if user_data:
+            self.account_name = user_data.get('account_name', '')
+            self.account_type = user_data.get('account_type', '')
+            self.account_number = user_data.get('account_number', '')
+            self.bank_name = user_data.get('select_bank', '')
+            
+            
+    else:
+        self.account_name = ''
+        self.account_type = ''
+        self.account_number = ''
+        self.bank_name = ''
+        
+
+       #Restore previously entered data if available
+    if self.account_name:
+            self.text_box_1.text= self.account_name
+    if self.account_type:
+            self.drop_down_1.selected_value = self.account_type
+    if self.account_number:
+          self.text_box_2.text = self.account_number
+    if self.bank_name:
+           self.text_box_3.text = self.bank_name
 
     # Any code you write here will run before the form opens.
 

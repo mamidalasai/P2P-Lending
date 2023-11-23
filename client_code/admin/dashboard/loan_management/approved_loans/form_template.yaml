@@ -13,7 +13,7 @@ components:
     name: content_panel_copy
     layout_properties:
       col_widths: {}
-      grid_position: XPYIJE,DUMJYO
+      grid_position: AETBJQ,AWJFKB
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 32, tooltip: '', border: '',
@@ -23,68 +23,43 @@ components:
       name: image_1
       layout_properties:
         col_widths: {}
-        grid_position: DQQMQD,YPDHHC
+        grid_position: JJMMBB,QIWPVU
     - type: Link
       properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: '#0876E8',
-        visible: true, text: 'Home    ', font_size: 15, wrap_on: mobile, font: '',
+        visible: true, text: 'Back  ', font_size: null, wrap_on: mobile, font: '',
         col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
         spacing_below: small, italic: false, background: '', bold: true, underline: false,
-        icon: 'fa:home'}
+        icon: 'fa:backward'}
       name: link_1
-      layout_properties: {grid_position: 'DQQMQD,EWUQKH'}
+      layout_properties: {grid_position: 'JJMMBB,TXJQMK'}
       event_bindings: {click: link_1_click}
-    - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: Loan Management, font_size: 15, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_1
-      layout_properties: {grid_position: 'GAWPTG,ETBNFC'}
-    - type: Link
-      properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#0876E8',
-        visible: true, text: ' Open Loans ', font_size: null, wrap_on: mobile, font: '',
-        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      name: link_2
-      layout_properties: {grid_position: 'VYUFHP,KKYJVY'}
-      event_bindings: {click: link_2_click}
-    - type: Link
-      properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#0876E8',
-        visible: true, text: Closed loans, font_size: null, wrap_on: mobile, font: '',
-        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      name: link_3
-      layout_properties: {grid_position: 'VYUFHP,KRLYQV'}
-      event_bindings: {click: link_3_click}
-    - type: Link
-      properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#0876E8',
-        visible: true, text: '  Rejected loans', font_size: null, wrap_on: mobile,
-        font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      name: link_5
-      layout_properties: {grid_position: 'WBEZSX,VNINYH'}
-      event_bindings: {click: link_5_click}
-    - type: Link
-      properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#0876E8',
-        visible: true, text: ' Under process', font_size: null, wrap_on: mobile, font: '',
-        col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      name: link_6
-      layout_properties: {grid_position: 'WBEZSX,GNIFFV'}
-      event_bindings: {click: link_6_click}
-  - type: Link
-    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#0876E8',
-      visible: true, text: ' approved loans', font_size: null, wrap_on: mobile, font: '',
-      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    name: link_4
-    layout_properties: {grid_position: 'TLSNGB,QZYPTY'}
-    event_bindings: {click: link_4_click}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: EPCWQG, title: Loan ID, data_key: column_1, $$hashKey: 'object:53723'}
+      - {id: WMIWXU, title: Costumer ID, data_key: column_2, $$hashKey: 'object:53724'}
+      - {id: PVBYZX, title: Full Name, data_key: column_3, $$hashKey: 'object:53725'}
+      - {id: HCAQYD, title: Loan Status, data_key: column_4, $$hashKey: 'object:53773'}
+      - {id: DBUUUO, title: '', data_key: column_5, $$hashKey: 'object:53775'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'SYHKHY,ODSIUS'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan_management.approved_loans.RowTemplate2}
+      name: repeating_panel_1
+      layout_properties: {}
 - type: FlowPanel
   properties: {}
   name: navbar_links
