@@ -6,8 +6,7 @@ services:
   server_config: {}
 - source: /runtime/services/anvil/users.yml
   client_config: {allow_signup: true, enable_automatically: true, use_email: true,
-    confirm_email: true, use_google: true, require_secure_passwords: true, use_token: true,
-    use_facebook: true}
+    confirm_email: true, use_google: true, require_secure_passwords: true}
   server_config: {user_table: users}
 - source: /runtime/services/google.yml
   client_config: {}
@@ -15,10 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-- source: /runtime/services/facebook.yml
-  client_config: {}
-  server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: admin.dashboard}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -371,7 +367,7 @@ db_schema:
     server: full
     columns:
     - name: loan_id
-      admin_ui: {order: 0.5, width: 200}
+      admin_ui: {width: 200, order: 0}
       type: number
     - name: email_id
       admin_ui: {width: 200, order: 1}
@@ -392,10 +388,10 @@ db_schema:
       admin_ui: {order: 9, width: 200}
       type: bool
     - name: application_status
-      admin_ui: {order: 1.5, width: 200}
+      admin_ui: {width: 200}
       type: bool
     - name: timestamp
-      admin_ui: {order: 1.75, width: 200}
+      admin_ui: {width: 200}
       type: datetime
     - name: total_repayment_amount
       admin_ui: {width: 200}
@@ -406,18 +402,21 @@ db_schema:
     - name: coustmer_id
       admin_ui: {order: 5, width: 200}
       type: number
+    - name: loan_acc_number
+      admin_ui: {width: 200, order: 12}
+      type: string
     - name: member_rom
       admin_ui: {width: 200, order: 11.5}
       type: string
     - name: beseem_score
       admin_ui: {width: 200, order: 11.75}
       type: string
+    - name: borrower_bank_acc_details
+      admin_ui: {width: 200, order: 11.875}
+      type: string
     - name: payment_done
       admin_ui: {width: 200}
       type: number
-    - name: email
-      admin_ui: {order: 1.25, width: 200}
-      type: string
     title: loan_details
   lender:
     title: lender
@@ -521,7 +520,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: product_id
-      admin_ui: {order: 5.5, width: 200}
+      admin_ui: {order: -1, width: 200}
       type: string
 uplink_visible: true
 renamed: true
