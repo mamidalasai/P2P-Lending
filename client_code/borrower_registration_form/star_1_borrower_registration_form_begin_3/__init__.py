@@ -27,20 +27,16 @@ class star_1_borrower_registration_form_begin_3(star_1_borrower_registration_for
     pan = self.borrower_registration_pan_text.text
     pan_card = self.borrower_registration_img_pan_file_loader.file
     user_id = self.userId
-    
+
+    self.label_1.text=''
+    self.label_2.text=''
     if not re.match(r'^\d{12}$', aadhar):
       self.label_1.text='enter valid aadhar no'
-      self.label_1.visible=True
     # Check if PAN is a valid format
     elif not re.match(r'^[A-Z]{5}[0-9]{4}[A-Z]$', pan):
       self.label_2.text='enter valid pan no'
-      self.label_2.visible=True
     elif not aadhar_card or not pan or not pan_card:
         Notification("Please fill in all required fields").show()
     else:
         anvil.server.call('add_borrower_step3', aadhar, aadhar_card, pan, pan_card, user_id)
         open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a_1', user_id=user_id)
-        self.label_1.visible=False
-        self.label_2.visible=False
-  
-    
