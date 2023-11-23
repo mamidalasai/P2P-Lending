@@ -31,7 +31,7 @@ components:
     name: label_1
     layout_properties: {grid_position: 'EJRVTI,HMSFTX'}
   - type: ColumnPanel
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, col_widths: '{}'}
     name: outlined_card_1
     layout_properties: {grid_position: 'UESVHL,IRTQPW'}
     components:
@@ -40,15 +40,15 @@ components:
       name: grid_panel_1
       layout_properties:
         col_widths: {}
-        grid_position: YLPCHG,EPGSCE
+        grid_position: FBOXMD,AIUBIR
       components:
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'EMI Amount :', font_size: null, font: '', spacing_above: small,
+          visible: true, text: 'Monthly EMI :', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_3
-        layout_properties: {row: ZKKANY, width_xs: 3, col_xs: 2, width: 149.75}
+        layout_properties: {row: ZKKANY, width_xs: 3, col_xs: 2, width: 100.75}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -90,11 +90,11 @@ components:
         layout_properties: {row: YEHXRB, width_xs: 4, col_xs: 6, width: 154.656}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Penalty for Remaining Amount :', font_size: null,
+          visible: true, text: "Penalty Charges : \n(for Remaining Amount )", font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
           italic: false, background: '', bold: true, underline: false, icon: ''}
         name: label_5
-        layout_properties: {row: NOMNRR, width_xs: 4, col_xs: 2, width: 111}
+        layout_properties: {row: NOMNRR, width_xs: 4, col_xs: 2, width: 144.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -104,25 +104,32 @@ components:
         layout_properties: {row: NOMNRR, width_xs: 3, col_xs: 6, width: 149.75}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Total Due Amount :', font_size: 23, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_4
-        layout_properties: {row: DGVFCC, width_xs: 4, col_xs: 2, width: 209.656}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: 23, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: tda_label
-        layout_properties: {row: DGVFCC, width_xs: 3, col_xs: 6, width: 149.75}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: (Remaining Amount + 3% Penalty), font_size: null, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false, icon: ''}
-        name: label_8
-        layout_properties: {row: VLWWCL, width_xs: 6, col_xs: 2, width: 329.5}
+        layout_properties: {row: GKGYHK, width_xs: 3, col_xs: 8, width: 149.75}
+      - type: FlowPanel
+        properties: {}
+        name: flow_panel_1
+        layout_properties: {row: LGPTLA, width_xs: 5, col_xs: 1}
+        components:
+        - type: Label
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+            visible: true, text: 'Total Due Amount :
+
+              ', font_size: 23, font: '', spacing_above: small, icon_align: left,
+            spacing_below: small, italic: false, background: '', bold: true, underline: false,
+            icon: ''}
+          name: label_4
+          layout_properties: {row: HSKMKZ, width_xs: 5, col_xs: 1, width: 144.328}
+        - type: Label
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+            visible: true, text: (Remaining Amount + 3% Penalty), font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: '', bold: false, underline: false, icon: ''}
+          name: label_8
+          layout_properties: {row: IMDZXF, width_xs: 5, col_xs: 1, width: 329.5}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: Reason for Foreclosure, font_size: null, font: '',
@@ -155,11 +162,23 @@ components:
         name: f_checkbox
         layout_properties: {row: FRGNIN, width_xs: 9, col_xs: 2, width: 509.25}
         event_bindings: {change: f_checkbox_change}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: Back, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
+      bold: false, underline: false, icon: 'fa:angle-double-left'}
+    name: button_2
+    layout_properties: {grid_position: 'SRPOUG,ORORQZ'}
+    event_bindings: {click: button_2_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: Pay Now, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#0876E8', bold: true, underline: false, icon: ''}
+    name: button_3
+    layout_properties: {grid_position: 'SRPOUG,VSVAKZ'}
+    event_bindings: {click: button_3_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
-- type: Button
-  properties: {text: button_2}
-  name: button_2
-  layout_properties: {slot: title}
