@@ -104,32 +104,26 @@ components:
         layout_properties: {row: NOMNRR, width_xs: 3, col_xs: 6, width: 149.75}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Total Due Amount :
+
+            ', font_size: 23, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        name: label_4
+        layout_properties: {row: IQSFFG, width_xs: 3, col_xs: 2}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: 23, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: tda_label
-        layout_properties: {row: GKGYHK, width_xs: 3, col_xs: 8, width: 149.75}
-      - type: FlowPanel
-        properties: {}
-        name: flow_panel_1
-        layout_properties: {row: LGPTLA, width_xs: 5, col_xs: 1}
-        components:
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: 'Total Due Amount :
-
-              ', font_size: 23, font: '', spacing_above: small, icon_align: left,
-            spacing_below: small, italic: false, background: '', bold: true, underline: false,
-            icon: ''}
-          name: label_4
-          layout_properties: {row: HSKMKZ, width_xs: 5, col_xs: 1, width: 144.328}
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: (Remaining Amount + 3% Penalty), font_size: null,
-            font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '', bold: false, underline: false, icon: ''}
-          name: label_8
-          layout_properties: {row: IMDZXF, width_xs: 5, col_xs: 1, width: 329.5}
+        layout_properties: {row: IQSFFG, width_xs: 3, col_xs: 6}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: (Remaining Amount + 3% Penalty), font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: label_8
+        layout_properties: {row: SMNSKE, width_xs: 4, col_xs: 2}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: Reason for Foreclosure, font_size: null, font: '',
