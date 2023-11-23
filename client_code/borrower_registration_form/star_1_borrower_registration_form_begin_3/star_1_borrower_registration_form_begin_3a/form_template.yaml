@@ -86,13 +86,13 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'FKCTED,CYCFUM'}
 - name: button_1
-  properties: {text: prev, background: '#0876E8', icon: 'fa:angle-double-left', align: right,
+  properties: {text: Prev, background: '#0876E8', icon: 'fa:angle-double-left', align: right,
     foreground: black, bold: true, role: elevated-button}
   type: Button
   layout_properties: {grid_position: 'RFDUEU,MJDLBI'}
   event_bindings: {click: button_1_click}
 - name: button_2_copy_1
-  properties: {text: next, icon: 'fa:angle-double-right', background: '#0876E8', align: left,
+  properties: {text: Next, icon: 'fa:angle-double-right', background: '#0876E8', align: left,
     foreground: black, bold: true, role: elevated-button, icon_align: right}
   type: Button
   layout_properties: {grid_position: 'RFDUEU,ZJUHFT'}

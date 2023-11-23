@@ -30,7 +30,6 @@ class star_1_borrower_registration_form_begin_3b_business_2(star_1_borrower_regi
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
-    user_id = self.userId
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_1',user_id = user_id)
     """This method is called when the button is clicked"""
 
