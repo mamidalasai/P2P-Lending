@@ -188,3 +188,24 @@ def search_user(query):
     if query in x["coustmer_id"]
     ]
   return result
+
+
+# In your Anvil server module (e.g., server_module.py)
+
+import anvil.server
+from anvil.tables import app_tables
+
+@anvil.server.callable
+def get_user_data(user_id):
+    user = app_tables.user_profile.get(coustmer_id=user_id)
+    if user:
+        return {
+            'full_name': user['full_name'],
+            'gender': user['gender'],
+            'date_of_birth': user['date_of_birth'],
+            'mobile': user['mobile'],
+            'another_email': user['another_email']
+            
+        }
+    else:
+        return None
