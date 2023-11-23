@@ -15,7 +15,9 @@ class star_1_borrower_registration_form_begin_3a_1(star_1_borrower_registration_
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3',)
   def button_2_click(self, **event_args):
     street_adress_1 = self.text_box_1.text
     street_address_2 = self.text_box_2.text
@@ -26,9 +28,6 @@ class star_1_borrower_registration_form_begin_3a_1(star_1_borrower_registration_
     else:
       anvil.server.call('add_lendor_four_form',street_adress_1,street_address_2,city,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a',user_id=user_id)
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3',user_id=user_id)
 
   def home_borrower_registration_form_copy_1_copy_1_click(self, **event_args):
     """This method is called when the button is clicked"""
