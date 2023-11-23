@@ -3,7 +3,6 @@ unique_ids:
     borrower_registration_form.star_1_borrower_registration_form_begin_7: '1698334844098576850520098.2563'
     lendor_registration_form.dashboard.vcl: '1699962796663943013282928.4403'
     admin.dashboard.manage_settings.manage_fee: '1699529180676449465652554.0317'
-    admin.dashboard.lenders.view_profile_copy: '1700724233679577981663895.7635'
     admin.dashboard.manage_settings: '1699528731095179009819656.96207'
     borrower_registration_form.star_1_borrower_registration_form_begin_5: '1698915753108355686900352.70654'
     lendor_registration_form.Lender_reg_Institutional_form_5: '1699430377713576071178309.6973'
@@ -36,7 +35,6 @@ unique_ids:
     ? borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_4
     : '1700571978274780031857795.3887'
     bank_users.borrower_rgistration_form.borrower_location: '1699009464718260389436844.77057'
-    admin.dashboard.lenders.view_profile_copy.edit_form_copy: '1700724322919372913042012.09674'
     bank_users.borrower_rgistration_form.application_tracker.RowTemplate1: '1698928474442141604886683.00064'
     payment.payment: '1700205210866117397317614.8213'
     lendor_registration_form.dashboard.vblr.Borr_loan_request: '1700542763128106365112272.9714'
@@ -113,7 +111,6 @@ unique_ids:
     lendor_registration_form.Lender_reg_form_3e: '1700658289823612098189171.2695'
     borrower_registration_form.star_1_borrower_registration_form_begin_9: '1700161464232284844778301.04285'
     admin.dashboard.manage_settings.manage_roi: '1699529143824844026062899.4764'
-    admin.dashboard.lenders.view_profile_copy.update_form_copy: '1700724339370266352750211.07764'
     admin.dashboard.borrowers.view_profile: '1699967781060728634256553.5089'
     admin.dashboard.borrowers.view_profile.edit_form: '169996780467215868230296.983032'
     ? borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_5
@@ -121,7 +118,6 @@ unique_ids:
     lendor_registration_form.dashboard.vler: '1699962962727731721010167.028'
     admin.dashboard.loan_management.loan_request: '1700043596862443822511060.83405'
     bank_users.borrower_rgistration_form.borrower_view_portfolio: '1699528474441915613941068.2769'
-    admin.dashboard.lenders.RowTemplate6: '1700723555927373451035829.6266'
     bank_users.borrower_rgistration_form.boorrower_edit_profile: '1698653709394569134493869.6183'
     admin.dashboard.manage_products.view_product.RowTemplate5: '1700713251863745364072386.9193'
     admin.dashboard.loan_management.ots_form: '1699528942527986796789491.0994'
