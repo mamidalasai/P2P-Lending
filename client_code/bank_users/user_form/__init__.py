@@ -44,6 +44,18 @@ class user_form(user_formTemplate):
   def lendor_button_click(self, **event_args):
     userid = self.user_id
     open_form('lendor_registration_form.Lender_reg_form_1',user_id=userid)
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_3.visible = True
+    self.grid_panel_3_copy_1.visible = False
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
+    self.grid_panel_3.visible = False
+    self.grid_panel_3_copy_1.visible = True
+
     
   
     

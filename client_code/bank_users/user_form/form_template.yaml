@@ -118,17 +118,24 @@ components:
     bold: true, underline: false, icon: ''}
   name: label_2
   layout_properties: {grid_position: 'TBBKSE,SRXRQZ', full_width_row: true}
+- name: button_3
+  properties: {text: Borrower, align: right, bold: true, foreground: White, background: '#9b1b26',
+    role: filled-button, font_size: 20}
+  type: Button
+  layout_properties: {grid_position: 'HWGPHQ,JZJJYZ'}
+  event_bindings: {click: button_3_click}
+- name: button_2
+  properties: {text: 'Lendor    ', bold: true, align: left, foreground: white, background: '#081a32',
+    font_size: 20}
+  type: Button
+  layout_properties: {grid_position: 'HWGPHQ,BNMTBH'}
+  event_bindings: {click: button_2_click}
 - type: Spacer
-  properties: {height: 32}
+  properties: {height: 31}
   name: spacer_2
   layout_properties: {grid_position: 'ZMBEDP,GXCQQH'}
-- name: label_1
-  properties: {align: center, text: Borrower, bold: true, font_size: 21, role: null,
-    underline: true}
-  type: Label
-  layout_properties: {grid_position: 'LXWAQB,RZQDBA'}
 - name: grid_panel_3
-  properties: {background: '#a51622'}
+  properties: {background: '#a51622', visible: false}
   type: GridPanel
   layout_properties: {grid_position: 'UHGPTF,UAUDOX', full_width_row: true}
   components:
@@ -140,12 +147,13 @@ components:
     properties: {text: 'Create Borrower Account
 
 
-        ', bold: true, align: center, foreground: '#0b2547', background: white, font_size: 18}
+        ', bold: false, align: center, foreground: '#0b2547', background: white, font_size: 18,
+      italic: true}
     type: Label
     layout_properties: {row: TFNWHX, width_xs: 3, col_xs: 1}
   - name: label_5
     properties: {background: white, foreground: '#081a32', text: "Loan Assesment \n\
-        \n", bold: true, align: center, font_size: 18}
+        \n", bold: false, align: center, font_size: 18, italic: true}
     type: Label
     layout_properties: {row: TFNWHX, width_xs: 4, col_xs: 4}
   - name: label_6
@@ -153,12 +161,12 @@ components:
         Our Platform
 
 
-        ', align: center, bold: true, font_size: 18}
+        ', align: center, bold: false, font_size: 18, italic: true}
     type: Label
     layout_properties: {row: TFNWHX, width_xs: 3, col_xs: 8}
   - name: label_7
-    properties: {align: center, bold: true, text: Get Funding Commitments From Investors,
-      background: white, font_size: 18}
+    properties: {align: center, bold: false, text: Get Funding Commitments From Investors,
+      background: white, font_size: 18, italic: true}
     type: Label
     layout_properties: {row: QCXSQU, width_xs: 3, col_xs: 1}
   - name: label_8
@@ -166,37 +174,26 @@ components:
         And Documentation
 
 
-        ', align: center, bold: true, font_size: 18}
+        ', align: center, bold: false, font_size: 18, italic: true}
     type: Label
     layout_properties: {row: QCXSQU, width_xs: 4, col_xs: 4}
   - name: label_9
-    properties: {bold: true, align: center, foreground: '#0b2547', background: white,
-      text: "Loan Disbursal And repayments\n  ", font_size: 18}
+    properties: {bold: false, align: center, foreground: '#0b2547', background: white,
+      text: "Loan Disbursal And repayments\n  ", font_size: 18, italic: true}
     type: Label
     layout_properties: {row: QCXSQU, width_xs: 3, col_xs: 8}
+  - name: borrower_button
+    properties: {text: Continue As A Borrower, role: elevated-button, bold: true,
+      background: white, foreground: Black, font_size: 16}
+    type: Button
+    layout_properties: {row: ETSUGN, width_xs: 8, col_xs: 2}
+    event_bindings: {click: borrower_button_click}
   - name: spacer_7
     properties: {height: 0}
     type: Spacer
     layout_properties: {row: ETSUGN, width_xs: 3, col_xs: 6}
-- name: spacer_4
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'OKJICO,TFMUVT'}
-- name: borrower_button
-  properties: {text: Continue As a Borrower, role: filled-button, bold: true, background: '#a51622'}
-  type: Button
-  layout_properties: {grid_position: 'LKQMGQ,ZSLDRN'}
-  event_bindings: {click: borrower_button_click}
-- name: spacer_6
-  properties: {height: 39}
-  type: Spacer
-  layout_properties: {grid_position: 'DQEHMX,CYPRVQ'}
-- name: label_10
-  properties: {align: center, text: Lendor, underline: true, bold: true, font_size: 21}
-  type: Label
-  layout_properties: {grid_position: 'ESIXCB,ZOKLMN'}
 - name: grid_panel_3_copy_1
-  properties: {background: '#081a32'}
+  properties: {background: '#081a32', visible: false}
   type: GridPanel
   layout_properties: {grid_position: 'VUTQML,WOERBT', full_width_row: true}
   components:
@@ -208,7 +205,8 @@ components:
     properties: {text: 'Create Investor Account
 
 
-        ', bold: true, align: center, foreground: '#081a32', background: white, font_size: 18}
+        ', bold: false, align: center, foreground: '#081a32', background: white, font_size: 18,
+      italic: true}
     type: Label
     layout_properties: {row: TFNWHX, width_xs: 3, col_xs: 1}
   - name: label_5_copy_1
@@ -216,7 +214,7 @@ components:
         Loan Projects
 
 
-        ', bold: true, align: center, font_size: 18}
+        ', bold: false, align: center, font_size: 18, italic: true}
     type: Label
     layout_properties: {row: TFNWHX, width_xs: 4, col_xs: 4}
   - name: label_6_copy_1
@@ -224,12 +222,12 @@ components:
         of Your Preference
 
 
-        ', align: center, bold: true, font_size: 18}
+        ', align: center, bold: false, font_size: 18, italic: true}
     type: Label
     layout_properties: {row: TFNWHX, width_xs: 3, col_xs: 8}
   - name: label_7_copy_1
-    properties: {align: center, bold: true, text: Physical Verification And Documentation,
-      background: white, font_size: 18}
+    properties: {align: center, bold: false, text: Physical Verification And Documentation,
+      background: white, font_size: 18, italic: true}
     type: Label
     layout_properties: {row: QCXSQU, width_xs: 3, col_xs: 1}
   - name: label_8_copy_1
@@ -237,25 +235,25 @@ components:
         Receive From Next Month
 
 
-        ', align: center, bold: true, font_size: 18}
+        ', align: center, bold: false, font_size: 18, italic: true}
     type: Label
     layout_properties: {row: QCXSQU, width_xs: 4, col_xs: 4}
   - name: label_9_copy_1
-    properties: {bold: true, align: center, foreground: '#0b2547', background: white,
+    properties: {bold: false, align: center, foreground: '#0b2547', background: white,
       text: 'Build Portfolio and Grow Your Money
 
 
-        ', font_size: 18}
+        ', font_size: 18, italic: true}
     type: Label
     layout_properties: {row: QCXSQU, width_xs: 3, col_xs: 8}
+  - name: lendor_button
+    properties: {text: 'Continue As  a Lendor         ', role: outlined-button, background: white,
+      foreground: Black, bold: true, font_size: 16}
+    type: Button
+    layout_properties: {row: JIMUGO, width_xs: 8, col_xs: 2}
+    event_bindings: {click: lendor_button_click}
 - name: spacer_5
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'DFBTLU,KCKCAL'}
-- name: lendor_button
-  properties: {text: 'Continue As  a Lendor         ', role: outlined-button, background: '#081a32',
-    foreground: white}
-  type: Button
-  layout_properties: {grid_position: 'GLHMGS,KKQAXZ'}
-  event_bindings: {click: lendor_button_click}
 is_package: true
