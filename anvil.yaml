@@ -414,6 +414,9 @@ db_schema:
     - name: borrower_bank_acc_details
       admin_ui: {width: 200, order: 11.875}
       type: string
+    - name: payment_done
+      admin_ui: {width: 200}
+      type: number
     title: loan_details
   lender:
     title: lender
