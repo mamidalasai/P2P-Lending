@@ -13,6 +13,29 @@ class Lender_reg_Institutional_form_4(Lender_reg_Institutional_form_4Template):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    user_data = anvil.server.call('get_user_data', user_id)
+        
+    if user_data:
+            self.director_name = user_data.get('director_name', '')
+            self.director_no= user_data.get('director_no', '')
+            self.din = user_data.get('din', '')
+            self.cin= user_data.get('cin', '')
+    
+    else:
+        self.director_name = ''
+        self.director_no = ''
+        self.din = ''
+        self.cin= ''
+       
+       #Restore previously entered data if available
+    if self.director_name:
+            self.text_box_1.text= self.director_name
+    if self.director_no:
+            self.text_box_2.text= self.director_no
+    if self.din:
+            self.text_box_3.text= self.din
+    if self.cin:
+            self.text_box_4.text= self.cin
 
     # Any code you write here will run before the form opens.
 
