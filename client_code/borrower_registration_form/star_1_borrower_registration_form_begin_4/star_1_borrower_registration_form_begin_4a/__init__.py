@@ -10,7 +10,6 @@ from anvil.tables import app_tables
 
 class star_1_borrower_registration_form_begin_4a(star_1_borrower_registration_form_begin_4aTemplate):
   def __init__(self,user_id, **properties):
-    # Set Form properties and Data Bindings.
     self.userId = user_id
     self.init_components(**properties)
 
@@ -28,7 +27,7 @@ class star_1_borrower_registration_form_begin_4a(star_1_borrower_registration_fo
       Notification("please provide all Details")
     else:
       anvil.server.call('add_borrower_step4a',spouse_name,marrege_date,spouse_mobile_no,user_id)
-      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_5',userId=user_id)
+      open_form('borrower_registration_form.star_1_borrower_registration_form_begin_5',user_id=user_id)
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3',userId=user_id)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3',userId=self.userId)

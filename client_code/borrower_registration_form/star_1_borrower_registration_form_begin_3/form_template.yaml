@@ -58,7 +58,7 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'MXFWWU,ZWZHLK PWJJWY,JLFLQX'}
 - name: label_1
-  properties: {}
+  properties: {foreground: red}
   type: Label
   layout_properties: {grid_position: 'MXFWWU,ZWZHLK XQPTII,WONKQI'}
 - name: borrower_registration_img_aadhar_file_loader
@@ -70,7 +70,7 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'MXFWWU,ZWZHLK XFCBNG,QYHGQQ'}
 - name: label_2
-  properties: {}
+  properties: {foreground: red}
   type: Label
   layout_properties: {grid_position: 'MXFWWU,ZWZHLK KOMXVE,RAFMPZ'}
 - name: borrower_registration_img_pan_file_loader
