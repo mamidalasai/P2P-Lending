@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import datetime
+from datetime import datetime,timedelta
 import re
 class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_beginTemplate):
     def __init__(self, user_id, **properties):
@@ -33,9 +33,12 @@ class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_
         if not re.match(r'^[A-Za-z\s]+$', full_name):
             self.full_name_label.text = 'Enter a valid full name'
           
-        # Validate date of birth
         elif not dob or dob > datetime.now().date():
             self.dob_label.text = 'Enter a valid date of birth'
+
+        # Validate age (must be 18 or older)
+        elif datetime.now().date() - dob < timedelta(days=365 * 18):
+            self.dob_label.text = 'You must be at least 18 years old'
         elif not full_name or not gender:
             Notification('Please fill all details').show()
         else:
