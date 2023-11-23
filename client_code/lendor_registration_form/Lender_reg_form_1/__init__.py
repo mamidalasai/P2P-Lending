@@ -39,9 +39,22 @@ class Lender_reg_form_1(Lender_reg_form_1Template):
         gender = self.drop_down_1_copy_1.selected_value
         date_of_birth = self.date_picker_1.date
         user_id = self.userId
+      if not full_name or not gender or not date_of_birth:
+        Notification("Please fill all required fields").show()
+      else:
+        today = datetime.now()
+        age = today.year - date_of_birth.year - ((today.month, today.day) < (date_of_birth.month, date_of_birth.day))
+        if age >= 18:
+          an
+        
+      
+         
+         
+      
+    
 
-        if not full_name or not gender or not date_of_birth:
-            Notification("Please fill all required fields").show()
-        else:
-            anvil.server.call('add_lendor_frist_form', full_name, gender, date_of_birth, user_id)
-            open_form('lendor_registration_form.Lender_reg_form_2', user_id=user_id)
+        #if not full_name or not gender or not date_of_birth:
+            #Notification("Please fill all required fields").show()
+        #else:
+            #anvil.server.call('add_lendor_frist_form', full_name, gender, date_of_birth, user_id)
+            #open_form('lendor_registration_form.Lender_reg_form_2', user_id=user_id)
