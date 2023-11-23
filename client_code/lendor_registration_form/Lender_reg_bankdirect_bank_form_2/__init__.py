@@ -13,6 +13,30 @@ class Lender_reg_bankdirect_bank_form_2(Lender_reg_bankdirect_bank_form_2Templat
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    user_data = anvil.server.call('get_user_data', user_id)
+    if user_data:
+            self.ifsc = user_data.get('ifsc_code', '')
+            self.salary_type = user_data.get('salary_type', '')
+            self.branch_name = user_data.get('branch_name', '')
+            self.net_bank= user_data.get('net_bank', '')
+            
+            
+    else:
+        self.ifsc = ''
+        self.salary_type = ''
+        self.branch_name = ''
+        self.net_bank = ''
+        
+
+       #Restore previously entered data if available
+    if self.ifsc:
+            self.text_box_1.text= self.ifsc
+    if self.salary_type:
+            self.drop_down_1.selected_value = self.salary_type
+    if self.branch_name:
+          self.text_box_2.text = self.branch_name
+    if self.net_bank:
+           self.drop_down_2.selected_value = self.net_bank
 
     # Any code you write here will run before the form opens.
 
