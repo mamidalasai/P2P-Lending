@@ -13,6 +13,27 @@ class Lender_reg_individual_form_1(Lender_reg_individual_form_1Template):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    user_data = anvil.server.call('get_user_data', user_id)
+        
+    if user_data:
+            self.company_name = user_data.get('company_name', '')
+            self.org_type = user_data.get('organization_type', '')
+            self.emp_type = user_data.get('employment_type', '')
+            
+            
+    else:
+        self.company_name = ''
+        self.org_type = ''
+        self.emp_type = ''
+        
+
+       #Restore previously entered data if available
+    if self.emp_type:
+            self.drop_down_1.selected_value = self.emp_type
+    if self.org_type:
+            self.drop_down_2.selected_value = self.org_type
+    if self.company_name:
+            self.text_box_1.text= self.company_name
 
     # Any code you write here will run before the form opens.
 

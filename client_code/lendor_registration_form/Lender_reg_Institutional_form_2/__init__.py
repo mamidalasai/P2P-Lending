@@ -13,6 +13,32 @@ class Lender_reg_Institutional_form_2(Lender_reg_Institutional_form_2Template):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    user_data = anvil.server.call('get_user_data', user_id)
+        
+    if user_data:
+            self.nearest_loc = user_data.get('nearest_location', '')
+            self.business_type = user_data.get('business_type', '')
+            self.empolyees_working = user_data.get('employees_working', '')
+            self.year = user_data.get('year_estd', '')
+            
+            
+    else:
+        self.nearest_loc = ''
+        self.business_type = ''
+        self.empolyees_working = ''
+        self.year = ''
+        
+
+       #Restore previously entered data if available
+    if self.nearest_loc:
+            self.text_box_1.text= self.nearest_loc
+    if self.business_type:
+            self.drop_down_1.selected_value = self.business_type
+    if self.empolyees_working:
+           self.drop_down_2.selected_value = self.empolyees_working
+    if self.year:
+           self.date_picker_1.date = self.year
+
 
     # Any code you write here will run before the form opens.
 

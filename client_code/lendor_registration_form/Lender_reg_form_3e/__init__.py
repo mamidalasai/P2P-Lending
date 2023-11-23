@@ -13,6 +13,16 @@ class Lender_reg_form_3e(Lender_reg_form_3eTemplate):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    user_data = anvil.server.call('get_user_data', user_id)
+        
+    if user_data:
+            self.qualification = user_data.get('qualificatiom', '')
+    else:
+        self.qualification = ''
+   
+       #Restore previously entered data if available
+    if self.qualification:
+            self.drop_down_1.selected_value = self.qualification
 
     # Any code you write here will run before the form opens.
 

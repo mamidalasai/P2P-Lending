@@ -13,6 +13,27 @@ class Lender_reg_form_6(Lender_reg_form_6Template):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    user_data = anvil.server.call('get_user_data', user_id)
+        
+    if user_data:
+            self.lending_type = user_data.get('lending_type', '')
+            self.investment = user_data.get('investment', '')
+            self.lending_period = user_data.get('lending_period', '')
+            
+            
+    else:
+        self.lending_type = ''
+        self.investment = ''
+        self.lending_period = ''
+        
+
+       #Restore previously entered data if available
+    if self.lending_type:
+            self.lending_type_dropdown.selected_value = self.lending_type
+    if self.investment:
+            self.drop_down_1.selected_value = self.investment
+    if self.lending_period:
+            self.drop_down_2.selected_value = self.lending_period
 
     # Any code you write here will run before the form opens.
 
