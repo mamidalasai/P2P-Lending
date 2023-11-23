@@ -52,7 +52,7 @@ components:
       visible: true
       wrap_on: never
       show_page_controls: true
-      spacing_above: small
+      spacing_above: large
       spacing_below: small
       background: ''
     name: data_grid_1
