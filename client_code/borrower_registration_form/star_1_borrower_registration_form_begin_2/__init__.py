@@ -20,7 +20,10 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
         open_form('bank_users.user_form')
 
     def borrower_registration_next_step1_button_click(self, **event_args):
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin', self.userId)
+      row=app_tables.user_profile.get(coustmer_id=self.userId)
+      if row:
+        self.frow['full_name']
+      open_form('borrower_registration_form.star_1_borrower_registration_form_begin', self.userId)
 
     def button_2_click(self, **event_args):
         mobile_no = self.borrower_mobile_number_text_copy_1.text
