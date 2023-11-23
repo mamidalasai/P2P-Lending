@@ -21,7 +21,6 @@ class user_form(user_formTemplate):
     self.user_id =  user_module.find_user_id(email)
     
     self.email = email
-    self.user_name_lable.text = self.name
     if main_form_module.alert_mes(main_form_module.flag):
       print("user login")
     else:
