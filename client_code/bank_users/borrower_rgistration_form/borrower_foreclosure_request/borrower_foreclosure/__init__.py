@@ -23,32 +23,32 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
 
         # Save selected_row as an instance variable for later use
     self.selected_row = selected_row
-  
-    def button_foreclose_click(self, **event_args):
-        # Retrieve selected_row from instance variable
-        selected_row = self.selected_row
+  def button_foreclose_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    selected_row = self.selected_row
 
-        payment_done = selected_row['payment_done']
+    payment_done = selected_row['payment_done']
 
-        if payment_done > 12:
+    if payment_done > 12:
           open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request.borrower_foreclosure.foreclose', selected_row=selected_row)
 
          
-        else:
+    else:
           alert('You are not eligible for foreclosure! You have to pay atleast 12 months. ')
 
    
-
-
-    # Any code you write here will run before the form opens.
+    
+        
 
   def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request.borrower_foreclosure')
+        """This method is called when the button is clicked"""
+        open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request')
 
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form')
+        """This method is called when the button is clicked"""
+        open_form('bank_users.borrower_rgistration_form')
+
+  
 
   
 
