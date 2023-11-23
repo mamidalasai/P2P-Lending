@@ -15,7 +15,6 @@ class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_
         self.init_components(**properties)
         
         # Any code you write here will run before the form opens.
-
     def home_borrower_registration_form_click(self, **event_args):
         open_form('bank_users.user_form')
 
@@ -39,13 +38,15 @@ class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_
         # Validate age (must be 18 or older)
         elif datetime.now().date() - dob < timedelta(days=365 * 18):
             self.dob_label.text = 'You must be at least 18 years old'
-        elif not full_name or not gender:
+        elif not full_name or not gender or not dob:
             Notification('Please fill all details').show()
         else:
             anvil.server.call('add_borrower_step1', full_name, gender, dob, user_id)
             Notification("Step 1 form fill up submitted successfully")
             open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2', user_id=user_id)
-           
+            row=app_tables.user_profile.get(coustmer_id=user_id)
+            if row:
+              self.full_name_label.text=row['full_name']
 
     def borrower_full_name_test_change(self, **event_args):
         # This event is triggered when the text in the full name text box changes.
@@ -60,3 +61,4 @@ class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_
         dob = self.borrower_date_of_birth_date_picker.date
         if not dob or dob > datetime.now().date():
             self.dob_label.text = ''
+     

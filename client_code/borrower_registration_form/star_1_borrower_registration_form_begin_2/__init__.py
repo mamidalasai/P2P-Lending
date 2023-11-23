@@ -20,9 +20,6 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
         open_form('bank_users.user_form')
 
     def borrower_registration_next_step1_button_click(self, **event_args):
-      row=app_tables.user_profile.get(coustmer_id=self.userId)
-      if row:
-        self.frow['full_name']
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin', self.userId)
 
     def button_2_click(self, **event_args):
@@ -32,13 +29,11 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
         user_id = self.userId
         self.mobile_label.text = ''
         self.email_label.text = ''
-
+        if not re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', alternate_email):
+          self.email_label.text = 'Enter a valid email address'
         # Check if mobile number is a 10-digit number
-        if not re.match(r'^\d{10}$', mobile_no):
-            self.mobile_label.text = 'Enter valid mobile no'
-        # Check if email address is in a valid format
-        #elif not re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', alternate_email):
-         #   self.email_label.text = 'Enter a valid email address'
+        elif not re.match(r'^\d{10}$', mobile_no):
+          self.mobile_label.text = 'Enter valid mobile no'
         elif not user_photo or not alternate_email:
             Notification("Please fill in all required fields").show()
         else:
