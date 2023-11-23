@@ -1,19 +1,20 @@
-is_package: true
 container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 components:
 - type: ColumnPanel
   properties: {}
   name: content_panel
-  layout_properties: {slot: default}
+  layout_properties:
+    col_widths: {}
+    grid_position: CGGMYR,RKJRXK
   components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: content_panel_copy
     layout_properties:
       col_widths: {}
-      grid_position: IAXFZK,XEZHNP
+      grid_position: SDSJYQ,RIJUQY
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 32, tooltip: '', border: '',
@@ -33,7 +34,53 @@ components:
       name: link_1
       layout_properties: {grid_position: 'JJMMBB,TXJQMK'}
       event_bindings: {click: link_1_click}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'GIVGUZ,ZROLIT'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Loan ID, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'ZKLBCZ,RHAUHC'}
+  - type: Label
+    properties: {}
+    name: label_2
+    layout_properties: {grid_position: 'ZKLBCZ,DGULGN'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Customer ID, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_3
+    layout_properties: {grid_position: 'SWTEKF,IPYAZO'}
+  - type: Label
+    properties: {}
+    name: label_4
+    layout_properties: {grid_position: 'SWTEKF,GYZUJD'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Full Name, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'TJEMWX,WFSGOC'}
+  - type: Label
+    properties: {}
+    name: label_6
+    layout_properties: {grid_position: 'TJEMWX,SDZABW'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Loan Status, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_7
+    layout_properties: {grid_position: 'NWIEAF,CIEEHL'}
+  - type: Label
+    properties: {}
+    name: label_8
+    layout_properties: {grid_position: 'NWIEAF,YOSDKV'}
+is_package: true
