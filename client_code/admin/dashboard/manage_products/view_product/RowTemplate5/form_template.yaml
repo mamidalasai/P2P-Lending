@@ -1,11 +1,5 @@
 container: {type: DataRowPanel}
 components:
-- name: label_1
-  properties: {}
-  type: Label
-  layout_properties: {column: MLIRND}
-  data_bindings:
-  - {property: text, code: 'self.item[''product_id'']'}
 - type: Label
   properties: {}
   name: label_2
@@ -30,4 +24,10 @@ components:
   layout_properties: {column: AHLIAF}
   data_bindings:
   - {property: text, code: 'self.item[''extension_fee'']'}
+- type: Link
+  properties: {}
+  name: link_1
+  layout_properties: {column: MLIRND}
+  data_bindings:
+  - {property: text, code: 'self.item[''product_id'']'}
 is_package: true
