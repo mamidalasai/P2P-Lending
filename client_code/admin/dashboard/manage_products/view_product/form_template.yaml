@@ -24,6 +24,7 @@ components:
       italic: false, background: '', bold: true, underline: false, icon: 'fa:home'}
     name: link_1
     layout_properties: {grid_position: 'KRXBYS,ENZCPN'}
+    event_bindings: {click: link_1_click}
   - type: DataGrid
     properties:
       role: null
@@ -51,6 +52,22 @@ components:
       properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.manage_products.view_product.RowTemplate5}
       name: repeating_panel_1
       layout_properties: {}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: EDIT, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'VVFVNT,YCMYES'}
+    event_bindings: {click: button_1_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: UPDATE, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_2
+    layout_properties: {grid_position: 'VVFVNT,BCCKTQ'}
+    event_bindings: {click: button_2_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
