@@ -20,7 +20,7 @@ class star_1_borrower_registration_form_begin_5(star_1_borrower_registration_for
     open_form('bank_users.user_form')
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user=self.user_id)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_id=self.userId)
 
   def button_for_next_begin_6_click(self, **event_args):
     spouse_company_name = self.borrower_company_name.text
@@ -28,4 +28,4 @@ class star_1_borrower_registration_form_begin_5(star_1_borrower_registration_for
     spouse_profficen = self.borrower_spouse_profession.text
     user_id = self.userId
     anvil.server.call('add_borrower_step5',spouse_company_name,spouse_company_address,spouse_profficen,user_id)
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',userId=user_id)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id=user_id)
