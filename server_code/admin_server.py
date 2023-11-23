@@ -18,3 +18,17 @@ import anvil.server
 # def say_hello(name):
 #   print("Hello, " + name + "!")
 #   return 42
+
+@anvil.server.callable
+def product_details(product_id, product_name, product_categories, processing_fee, extension_fee, membership_type, interest_type, max_days, min_days, roi, discount_coupons):
+  row = app_tables.product_details.add_row(product_id=product_id,
+                                           product_name=product_name,
+                                           product_categories = product_categories,
+                                           processing_fee=processing_fee,
+                                           extension_fee=extension_fee,
+                                           membership_type=membership_type,
+                                           interest_type= interest_type,
+                                           max_days = max_days,
+                                           min_days = min_days,
+                                           roi = roi,
+                                           discount_coupons = discount_coupons)
