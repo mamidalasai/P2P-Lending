@@ -60,6 +60,10 @@ class view_profile(view_profileTemplate):
         self.label_7.text = self.type_list[b]
         self.label_11.text = self.int_type[b]
         self.label_8.text = self.max_days[b]
-        self.
+        self.label_9.text = self.min_days[b]
+        self.label_10.text = self.roi[b]
+        self.label_12.text = self.dis_cou[b]
+        
+        
         
       
