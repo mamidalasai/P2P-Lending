@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class edit_form(edit_formTemplate):
-  def __init__(self, **properties):
+  def __init__(self, get_product_id_value, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -39,13 +39,15 @@ class edit_form(edit_formTemplate):
     if a == -1:
       alert("No Data Available Here!!")
     else:
-      self.label_1.text = self.id_list[-1]
-      self.text_box_2.text = self.name_list[-1]
-      self.text_box_3.text = self.profee_list[-1]
-      self.text_box_4.text = self.extfee_list[-1]
-      self.drop_down_2.selected_value = self.type_list[-1]
-      self.drop_down_3.selected_value = self.max_list[-1]
-      self.drop_down_4.selected_value = self.min_list[-1]
+     if value_to_display in self.id_list:
+      c = self.id_list.index(value_to_display)
+      self.label_1.text = self.id_list[c]
+      self.text_box_2.text = self.name_list[c]
+      self.text_box_3.text = self.profee_list[c]
+      self.text_box_4.text = self.extfee_list[c]
+      self.drop_down_2.selected_value = self.type_list[c]
+      self.drop_down_3.selected_value = self.max_list[c]
+      self.drop_down_4.selected_value = self.min_list[c]
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
