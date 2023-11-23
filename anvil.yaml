@@ -489,9 +489,6 @@ db_schema:
     client: full
     server: full
     columns:
-    - name: product_id
-      admin_ui: {width: 200}
-      type: number
     - name: product_name
       admin_ui: {width: 200}
       type: string
@@ -521,6 +518,9 @@ db_schema:
       type: number
     - name: discount_coupons
       admin_ui: {width: 200}
+      type: string
+    - name: product_id
+      admin_ui: {order: -1, width: 200}
       type: string
 uplink_visible: true
 renamed: true

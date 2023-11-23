@@ -14,7 +14,7 @@ class manage_producs1(manage_producs1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.id = 1000
+    self.id = 'A' + str(1000000)  
     self.label_1.text = self.id
     self.data = tables.app_tables.product_details.search()
 
@@ -25,9 +25,11 @@ class manage_producs1(manage_producs1Template):
       a+=1
       self.list_1.append(i['product_id']) 
     if a == -1 :
-      self.id = 1000
+      self.id = 'A' + str(1000000)
+      self.label_1.text = self.id
+      
     else:
-      self.id = self.list_1[-1]+1
+      self.id = 'A'+ str(int(self.list_1[-1][1:])+1)
       self.label_1.text = self.id
    
   def link_1_copy_click(self, **event_args):
@@ -64,7 +66,7 @@ class manage_producs1(manage_producs1Template):
     else:
      anvil.server.call('product_details', self.id, product_name, product_categories, processing_fee, extension_fee, membership_type, interest_type, max_days, min_days, roi, discount_coupons)
      alert("Submitted succesfully")
-     open_form('log_in_form.Home.manage_products')
+     open_form('admin.dashboard.manage_products')
  
 
   def check_box_3_change(self, **event_args):
