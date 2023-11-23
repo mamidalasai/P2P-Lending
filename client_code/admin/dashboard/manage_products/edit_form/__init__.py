@@ -39,13 +39,14 @@ class edit_form(edit_formTemplate):
     if a == -1:
       alert("No Data Available Here!!")
     else:
+
       self.label_1.text = self.id_list[-1]
       self.text_box_2.text = self.name_list[-1]
       self.text_box_3.text = self.profee_list[-1]
       self.text_box_4.text = self.extfee_list[-1]
       self.drop_down_2.selected_value = self.type_list[-1]
-      self.drop_down_3.selected_value = self.max_list[-1]
-      self.drop_down_4.selected_value = self.min_list[-1]
+      self.drop_down_3.text = self.max_list[-1]
+      self.drop_down_4.text = self.min_list[-1]
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -68,8 +69,8 @@ class edit_form(edit_formTemplate):
        data[a]['processing_fee'] = int(self.text_box_3.text)
        data[a]['extension_fee'] = int(self.text_box_4.text)
        data[a]['membership_type'] = self.drop_down_2.selected_value
-       data[a]['max_days'] = int(self.drop_down_3.selected_value)
-       data[a]['min_days'] = int(self.drop_down_4.selected_value)
+       data[a]['max_days'] = int(self.drop_down_3.text)
+       data[a]['min_days'] = int(self.drop_down_4.text)
        data[a]['roi'] = int(self.text_box_5.text)
 
   def link_1_copy_click(self, **event_args):
