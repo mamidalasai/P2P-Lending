@@ -1,4 +1,4 @@
-from ._anvil_designer import npa_formTemplate
+from ._anvil_designer import RowTemplate4Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class npa_form(npa_formTemplate):
+class RowTemplate4(RowTemplate4Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -17,4 +17,5 @@ class npa_form(npa_formTemplate):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('admin.dashboard.loan_management')
+    value_to_pass = self.link_1.text
+    open_form('admin.dashboard.lenders.view_profile_copy', value_to_pass)

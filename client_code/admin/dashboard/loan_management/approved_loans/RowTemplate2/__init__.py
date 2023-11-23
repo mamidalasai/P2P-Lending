@@ -1,4 +1,4 @@
-from ._anvil_designer import loan_disbursedTemplate
+from ._anvil_designer import RowTemplate2Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class loan_disbursed(loan_disbursedTemplate):
+class RowTemplate2(RowTemplate2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -17,4 +17,5 @@ class loan_disbursed(loan_disbursedTemplate):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('admin.dashboard.loan_management')
+    value_to_pass = self.label_2.text
+    open_form('admin.dashboard.loan_management.approved_loans.view_profile', value_to_pass)
