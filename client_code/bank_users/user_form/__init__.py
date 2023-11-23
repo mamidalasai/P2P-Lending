@@ -44,6 +44,11 @@ class user_form(user_formTemplate):
   def lendor_button_click(self, **event_args):
     userid = self.user_id
     open_form('lendor_registration_form.Lender_reg_form_1',user_id=userid)
+
+  def show_borrower_data_grid(self, **event_args):
+        # Show DataGrid for Borrower
+    self.data_grid_1.visible = True
+    self.data_grid_2.visible = False
     
   
     
