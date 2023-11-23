@@ -30,4 +30,4 @@ class star_1_borrower_registration_form_begin_4a(star_1_borrower_registration_fo
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_5',user_id=user_id)
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3',userId=self.userId)
+    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_id=self.userId)
