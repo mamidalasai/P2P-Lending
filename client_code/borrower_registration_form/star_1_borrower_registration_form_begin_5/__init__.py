@@ -9,9 +9,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class star_1_borrower_registration_form_begin_5(star_1_borrower_registration_form_begin_5Template):
-  def __init__(self,userId, **properties):
+  def __init__(self,user_id, **properties):
     # Set Form properties and Data Bindings.
-    self.user_id = userId
+    self.userId = user_id
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
@@ -26,6 +26,6 @@ class star_1_borrower_registration_form_begin_5(star_1_borrower_registration_for
     spouse_company_name = self.borrower_company_name.text
     spouse_company_address = self.borrower_registration_company_adress_text.text
     spouse_profficen = self.borrower_spouse_profession.text
-    user_id = self.user_id
+    user_id = self.userId
     anvil.server.call('add_borrower_step5',spouse_company_name,spouse_company_address,spouse_profficen,user_id)
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',userId=user_id)
