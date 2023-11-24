@@ -18,6 +18,7 @@ class admin_teams(admin_teamsTemplate):
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('admin.dashboard.admin_teams.view_profile')
+    self.drop_down_1.items = ['sai', 'siva']
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""

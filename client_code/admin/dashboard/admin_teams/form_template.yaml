@@ -160,7 +160,7 @@ components:
         underline: false
         include_placeholder: true
       name: drop_down_1
-      layout_properties: {x: 312.2000366210938, y: 305.8000122070313, width: 246.4}
+      layout_properties: {x: 312.20001220703125, y: 305.8000183105469, width: 246.4}
       event_bindings: {change: drop_down_1_change}
     - type: Link
       properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: '#0876E8',
