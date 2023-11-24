@@ -33,6 +33,35 @@ components:
       name: link_1
       layout_properties: {grid_position: 'JJMMBB,TXJQMK'}
       event_bindings: {click: link_1_click}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: EPCWQG, title: Loan ID, data_key: column_1, $$hashKey: 'object:53723'}
+      - {id: WMIWXU, title: Costumer ID, data_key: column_2, $$hashKey: 'object:53724'}
+      - {id: PVBYZX, title: Full Name, data_key: column_3, $$hashKey: 'object:53725'}
+      - {id: HCAQYD, title: Loan Status, data_key: column_4, $$hashKey: 'object:53773'}
+      - {id: DBUUUO, title: '', data_key: column_5, $$hashKey: 'object:53775'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: large
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties:
+      col_widths: {}
+      grid_position: CGBQQP,CQBVOZ
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan_management.rejected_loans.RowTemplate8}
+      name: repeating_panel_1
+      layout_properties: {}
 - type: FlowPanel
   properties: {}
   name: navbar_links
