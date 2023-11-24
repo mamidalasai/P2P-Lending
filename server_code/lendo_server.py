@@ -25,7 +25,7 @@ def add_lendor_second_form(mobile,email,photo,user_id):
     row[0]['user_photo'] = photo
 
 @anvil.server.callable
-def add_lendor_third_3e_form(qualification,certificate,user_id):
+def add_lendor_education_form(qualification,certificate,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     
@@ -55,12 +55,12 @@ def add_lendor_four_form(street_adress_1,street_address_2,city,user_id):
 
                           
 @anvil.server.callable
-def add_lendor_five_form(postal_zip,state,country,user_id):
+def add_lendor_five_form(pincode,state,country,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['state'] = state
     row[0]['country'] = country
-    row[0]['pincode'] = postal_zip
+    row[0]['pincode'] = pincode
 
 
 
@@ -204,7 +204,50 @@ def get_user_data(user_id):
             'gender': user['gender'],
             'date_of_birth': user['date_of_birth'],
             'mobile': user['mobile'],
-            'another_email': user['another_email']
+            'another_email': user['another_email'],
+            'aadhaar_no': user['aadhaar_no'],
+            'pan_number' : user['pan_number'],
+            'qualification': user['qualification'],
+            'street_adress_1': user['street_adress_1'],
+            'street_address_2': user['street_address_2'],
+            'city': user['city'],
+            'pincode': user['pincode'],
+            'state': user['state'],
+            'country': user['country'],
+            #'lending_type': user['lending_type'],
+            #'investment': user['investment'],
+            #'lending_period': user['lending_period'],
+            'employment_type': user['employment_type'],
+            'organization_type': user['organization_type'],
+            'company_name': user['company_name'],
+            'business_no': user['business_no'],
+            'company_landmark': user['company_landmark'],
+            'company_address': user['company_address'],
+            'business_name': user['business_name'],
+            'business_add': user['business_add'],
+            'business_location': user['business_location'],
+            'branch_name': user['branch_name'],
+            'nearest_location': user['nearest_location'],
+            'business_type': user['business_type'],
+            'employees_working': user['employees_working'],
+            'year_estd': user['year_estd'],
+            'industry_type': user['industry_type'],
+            'six_month_turnover': user['six_month_turnover'],
+            'director_name': user['director_name'],
+            'director_no': user['director_no'],
+            'din': user['din'],
+            'cin': user['cin'],
+            'registered_off_add': user['registered_off_add'],
+            'off_add_proof': user['off_add_proof'],
+            'account_name': user['account_name'],
+            'account_type': user['account_type'],
+            'account_number': user['account_number'],
+            'select_bank': user['select_bank'],
+            'ifsc_code': user['ifsc_code'],
+            'salary_type': user['salary_type'],
+            'branch_name': user['branch_name'],
+            'net_bank': user['net_bank']
+          
             
         }
     else:

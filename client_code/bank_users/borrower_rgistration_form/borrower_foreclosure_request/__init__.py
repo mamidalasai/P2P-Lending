@@ -14,11 +14,10 @@ class borrower_foreclosure_request(borrower_foreclosure_requestTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    self.repeating_panel_1.items=app_tables.loan_details.search()
 
   def home_borrower_registration_form_copy_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.borrower_rgistration_form')
 
-  def button_5_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request.borrower_foreclosure')
+ 

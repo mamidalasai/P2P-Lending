@@ -13,7 +13,22 @@ class Lender_reg_Institutional_form_5(Lender_reg_Institutional_form_5Template):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    user_data = anvil.server.call('get_user_data', user_id)
+        
+    if user_data:
+            self.reg_off_add = user_data.get('registered_off_add', '')
+            self.off_add_proof= user_data.get('off_add_proof', '')
+            
+    else:
+        self.reg_off_add = ''
+        self.off_add_proof = ''
+       
+       #Restore previously entered data if available
+    if self.reg_off_add:
+            self.text_box_1.text= self.reg_off_add
+    if self.off_add_proof:
+            self.text_box_2.text= self.off_add_proof
+    
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):

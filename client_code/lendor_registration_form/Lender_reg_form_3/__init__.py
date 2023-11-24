@@ -14,6 +14,23 @@ class Lender_reg_form_3(Lender_reg_form_3Template):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    user_data = anvil.server.call('get_user_data', user_id)
+        
+    if user_data:
+            self.aadhaar_no = user_data.get('aadhaar_no', '')
+            self.pan_number = user_data.get('pan_number', '')
+            
+            
+    else:
+        self.aadhaar_no = ''
+        self.pan_number = ''
+        
+
+       #Restore previously entered data if available
+    if self.aadhaar_no:
+            self.text_box_1.text = self.aadhaar_no
+    if self.pan_number:
+            self.text_box_2.text = self.pan_number
 
     # Any code you write here will run before the form opens.
 
@@ -51,7 +68,7 @@ class Lender_reg_form_3(Lender_reg_form_3Template):
 
   def button_1_click(self, **event_args):
     user_id = self.userId
-    open_form('lendor_registration_form.Lender_reg_form_3e',user_id=user_id)
+    open_form('lendor_registration_form.Lender_reg_education_form',user_id=user_id)
     """This method is called when the button is clicked"""
 
   def button_3_click(self, **event_args):
