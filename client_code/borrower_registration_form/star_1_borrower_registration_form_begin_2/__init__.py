@@ -12,6 +12,11 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
     def __init__(self, user_id, **properties):
         # Set Form properties and Data Bindings.
         self.userId = user_id
+        user_data=anvil.server.call('get_user_data',user_id)
+        if user_data:
+          self.mobile=user_data.get('mobile','')
+          self.alternate_email=user_data.get('alternate_email','')
+          
         self.init_components(**properties)
 
         # Any code you write here will run before the form opens.
