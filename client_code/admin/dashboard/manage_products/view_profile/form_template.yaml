@@ -164,13 +164,6 @@ components:
         layout_properties: {x: 177, y: 78, width: 225}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: ' Product Categories', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_5_copy
-        layout_properties: {x: 7, y: 251.80001831054688, width: 145}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: ' Processing Fee', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
@@ -223,6 +216,13 @@ components:
         name: button_2
         layout_properties: {x: 330, y: 867.7999877929688, width: 336}
         event_bindings: {click: button_2_click}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: ' Product Categories', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_5_copy
+        layout_properties: {x: 0, y: 251.80001831054688, width: 145}
 - type: FlowPanel
   properties: {}
   name: navbar_links
