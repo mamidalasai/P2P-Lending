@@ -14,6 +14,7 @@ def add_lendor_frist_form(name,gender,date_of_birth,user_id):
     row[0]['full_name'] = name
     row[0]['gender'] = gender
     row[0]['date_of_birth'] = date_of_birth
+    row[0]['form_count'] = 0
 
 @anvil.server.callable
 def add_lendor_second_form(mobile,email,photo,user_id):
@@ -23,6 +24,7 @@ def add_lendor_second_form(mobile,email,photo,user_id):
     row[0]['mobile'] = mobile
     row[0]['another_email'] = email
     row[0]['user_photo'] = photo
+    row[0]['form_count'] = 1
 
 @anvil.server.callable
 def add_lendor_education_form(qualification,certificate,user_id):
