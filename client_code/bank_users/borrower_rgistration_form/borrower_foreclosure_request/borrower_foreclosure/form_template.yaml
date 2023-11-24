@@ -126,6 +126,20 @@ components:
         layout_properties: {row: FXCYAS, width_xs: 4, col_xs: 7, width: 145.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Loan Account Number :', font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        name: label_14
+        layout_properties: {row: VKMPNU, width_xs: 5, col_xs: 2, width: 145.328}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_loan_acc_number
+        layout_properties: {row: VKMPNU, width_xs: 4, col_xs: 6, width: 145.328}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Total payments Made :', font_size: null, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: true, underline: false, icon: ''}

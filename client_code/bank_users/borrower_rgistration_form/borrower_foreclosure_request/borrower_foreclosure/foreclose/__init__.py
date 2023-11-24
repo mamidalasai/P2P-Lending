@@ -26,39 +26,28 @@ class foreclose(forecloseTemplate):
     emi = int(emi)
 
     monthly_installment = min_amount / tenure
-    monthly_installment=int(monthly_installment)
     paid_amount = emi * payment_done
     paid_amount = int(paid_amount)
-    monthly_interest_amount=emi-monthly_installment
-    monthly_interest_amount=int( monthly_interest_amount)
 
-    outstanding_amount= min_amount - monthly_installment*payment_done
-    outstanding_amount = int(outstanding_amount)
-    oustanding_month=tenure-payment_done
-    outstanding_amount_i_amount=monthly_interest_amount*oustanding_month
-    outstanding_amount_i_amount=int(outstanding_amount_i_amount)
-    total_outstanding_amount=outstanding_amount+outstanding_amount_i_amount
+    remaining_amount = min_amount - monthly_installment*payment_done
+    remaining_amount = int(remaining_amount)
+
+   
     
 
     penalty_rate = 0.03  # 3%
-    penalty_amount = outstanding_amount * penalty_rate
+    penalty_amount = remaining_amount * penalty_rate
     penalty_amount = int(penalty_amount)
-    total_due_amount = outstanding_amount + penalty_amount
+    total_due_amount = remaining_amount + penalty_amount
     total_due_amount = int(total_due_amount)
 
-    self.ra_label.text = f"{outstanding_amount}"
+    self.ra_label.text = f"{remaining_amount}"
     self.tda_label.text = f"{total_due_amount}"
     self.emi_label.text = f"{emi}"
     self.pa_label.text = f"{penalty_amount}"
-    self.paid_label.text = f"{paid_amount}"
+    self.paid_label.text = f"{paid_amount}  ({payment_done} months)"
     self.mi_label.text = f"{monthly_installment}"
-    self.fir_label.text = f"{monthly_interest_amount}"
-    self.label_20.text = f"{monthly_installment}"
-    self.label_8.text = f"{outstanding_amount_i_amount}"
-    self.label_18.text = f"{total_outstanding_amount} "
-    self.label_17.text = f"{outstanding_amount}"
-    self.label_23.text = f"({payment_done} months)"
-    self.label_24.text = f"({oustanding_month} months)"
+    #self.fir_label.text = f"{}"
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.borrower_rgistration_form')
@@ -82,7 +71,7 @@ class foreclose(forecloseTemplate):
                 app_tables.foreclosure.add_row(
                     loan_id=self.selected_row['loan_id'],
                     borrower_name=self.selected_row['full_name'],
-                    outstanding_amount=self.ra_label.text,
+                    remaining_amount=self.ra_label.text,
                     total_due_amount=self.tda_label.text,
                     emi_amount=self.emi_label.text,
                     paid_amount=self.paid_label.text,
@@ -92,8 +81,8 @@ class foreclose(forecloseTemplate):
                 )
 
                
-                alert("The Foreclosure Statement will be processed within 15 working days from the date of request. Please place this request to know the principal amount outstanding for closure of loan and applicable charges. If you have provided your mobile number or email, we will inform you about the closure of your request by SMS or email respectively. Providing the mobile number or email here will not result in an update of your mobile number or email as recorded with us. KOTAK Bank does not take any responsibility, and will also not be liable, for your claims if the details provided by you are incorrect/incomplete.")
-                open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request')
+                alert('Foreclosure request submitted successfully! pay amount now.')
+         
         else:
             alert('Please enter a reason for foreclosure.')
     else:
