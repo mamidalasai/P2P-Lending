@@ -11,13 +11,16 @@ from anvil.tables import app_tables
 class star_1_borrower_registration_form_begin_4a(star_1_borrower_registration_form_begin_4aTemplate):
   def __init__(self,user_id, **properties):
     self.userId = user_id
+    user_data=app_tables.user_profile.get(coustmer_id=user_id)
+    if user_data:
+      self.borrower_registration_spouse_name_text.text=user_data['spouse_name']
+      self.marriage_date_date_pickeer.date=user_data['Date_mariage']
+      self.borrower_registration_spouse_mobile_text_copy_1.text=user_data['spouse_mobile']
+      user_data.update()
     self.init_components(**properties)
-
-    # Any code you write here will run before the form opens.
-
   def home_borrower_registration_form_copy_1_click(self, **event_args):
     open_form('bank_users.user_form')
-
+    
   def submit_4_borrower_registration_form_click(self, **event_args):
     spouse_name = self.borrower_registration_spouse_name_text.text
     marrege_date = self.marriage_date_date_pickeer.date
