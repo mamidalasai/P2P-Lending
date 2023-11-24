@@ -16,9 +16,18 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
         if user_data:
           self.mobile=user_data.get('mobile','')
           self.alternate_email=user_data.get('alternate_email','')
-          
+          self.upload_photo=user_data.get('upload_photo','')
+        else:
+          self.mobile=''
+          self.alternate_email=''
+          self.upload_photo=''
         self.init_components(**properties)
-
+        if self.mobile:
+          self.borrower_mobile_number_text_copy_1.text=self.mobile
+        if self.alternate_email:
+          self.borrower_alternate_email.text=self.alternate_email
+        if self.upload_photo:
+          self.borrower_registration_img_file_loader.file=self.upload_photo
         # Any code you write here will run before the form opens.
 
     def home_borrower_registration_button_click(self, **event_args):
