@@ -46,7 +46,7 @@ class foreclose(forecloseTemplate):
     total_due_amount = outstanding_amount + penalty_amount
     total_due_amount = int(total_due_amount)
 
-    self.ra_label.text = f"{outstanding_amount} ({oustanding_month} months)"
+    self.ra_label.text = f"{outstanding_amount}"
     self.tda_label.text = f"{total_due_amount}"
     self.emi_label.text = f"{emi}"
     self.pa_label.text = f"{penalty_amount}"
@@ -58,6 +58,7 @@ class foreclose(forecloseTemplate):
     self.label_18.text = f"{total_outstanding_amount} "
     self.label_17.text = f"{outstanding_amount}"
     self.label_23.text = f"({payment_done} months)"
+    self.label_24.text = f"({oustanding_month} months)"
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.borrower_rgistration_form')
