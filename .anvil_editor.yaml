@@ -72,6 +72,7 @@ unique_ids:
     admin.dashboard.borrowers: '1699528468358308523806957.0701'
     admin.dashboard.loan_management: '1699528569921998135077477.3452'
     admin.dashboard.loan_management.rejected_loans: '1699528958889169021462649.09222'
+    admin.dashboard.loan_management.rejected_loans.view_profile_2: '1700812221243295088415002.8101'
     admin.dashboard.loan_management.approved_loans.view_profile: '1700740546893987573171578.3491'
     lendor_registration_form.dashboard.rta: '1699957883953144866963289.06934'
     ? borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_2
@@ -79,6 +80,7 @@ unique_ids:
     bank_users.borrower_rgistration_form.new_loan_request: '1698662158540530088363841.0887'
     admin.dashboard.loan_management.open_loans: '1699528907914284548214666.92645'
     borrower_registration_form.star_1_borrower_registration_form_begin_4.star_1_borrower_registration_form_begin_4a: '1699376049516888173468231.8647'
+    admin.dashboard.loan_management.rejected_loans.RowTemplate8: '1700812073713245303231724.8567'
     bank_users.main_form.about_main_form: '1700562950795405574544713.0248'
     bank_users.borrower_rgistration_form.new_loan_request.check_out_business: '1699351584236650494825877.3939'
     lendor_registration_form.dashboard.vblr: '1699960229158369964369354.56226'
