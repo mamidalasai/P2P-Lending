@@ -335,6 +335,9 @@ db_schema:
     - name: bank_name
       admin_ui: {width: 200, order: 75.5}
       type: string
+    - name: form_count
+      admin_ui: {width: 200, order: 88.5}
+      type: number
     title: user_profile
   membership:
     client: none
@@ -439,21 +442,18 @@ db_schema:
     - name: coustmer_id
       admin_ui: {order: 5, width: 200}
       type: number
-    - name: loan_acc_number
-      admin_ui: {width: 200, order: 12}
-      type: string
     - name: member_rom
       admin_ui: {width: 200, order: 11.5}
       type: string
     - name: beseem_score
       admin_ui: {width: 200, order: 11.75}
       type: string
-    - name: borrower_bank_acc_details
-      admin_ui: {width: 200, order: 11.875}
-      type: string
     - name: payment_done
       admin_ui: {width: 200}
       type: number
+    - name: email
+      admin_ui: {width: 200}
+      type: string
     title: loan_details
   users:
     client: full
