@@ -23,10 +23,10 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
           self.mobile=''
           
         self.init_components(**properties)
+        if self.alternate_email:
+         self.borrower_alternate_email.text=self.alternate_email
         if self.mobile:
           self.borrower_mobile_number_text_copy_1.text=self.mobile
-        if self.alternate_email:
-          self.borrower_alternate_email.text=self.alternate_email
         if self.upload_photo:
           self.borrower_registration_img_file_loader.file=self.upload_photo
         # Any code you write here will run before the form opens.
