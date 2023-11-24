@@ -11,6 +11,12 @@ from anvil.tables import app_tables
 class star_1_borrower_registration_form_begin_3d(star_1_borrower_registration_form_begin_3dTemplate):
   def __init__(self,user_id, **properties):
     self.userId = user_id
+    user_data=app_tables.user_profile.get(coustmer_id=user_id)
+    if user_data:
+      self.text_box_1.text=user_data['company_name']
+      self.drop_down_1.selected_value=user_data['employment_type']
+      self.drop_down_2.selected_value=user_data['organization_type']
+      user_data.update()
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
