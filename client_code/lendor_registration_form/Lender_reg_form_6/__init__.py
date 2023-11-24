@@ -21,7 +21,7 @@ class Lender_reg_form_6(Lender_reg_form_6Template):
 
         user_data = app_tables.lender.search(coustmer_id=user_id)
 
-        if user_data:
+        if user_data and len(user_data) > 0:
             lending_type = user_data[0]['lending_type']
             investment = user_data[0]['investment']
             lending_period = user_data[0]['lending_period']
@@ -44,12 +44,15 @@ class Lender_reg_form_6(Lender_reg_form_6Template):
         investment = self.drop_down_1.selected_value
         lending_period = self.drop_down_2.selected_value
         user_id = self.userId
-        anvil.server.call('add_lendor_six_form', lending_type, investment, lending_period, user_id)
 
-        if lending_type == 'Individual':
-            open_form('lendor_registration_form.Lender_reg_individual_form_1', user_id=user_id)
-        elif lending_type == 'Institutional':
-            open_form('lendor_registration_form.Lender_reg_Institutional_form_1', user_id=user_id)
+        # Check if user_data is not empty before accessing its elements
+        if lending_type and investment and lending_period:
+            anvil.server.call('add_lendor_six_form', lending_type, investment, lending_period, user_id)
+
+            if lending_type == 'Individual':
+                open_form('lendor_registration_form.Lender_reg_individual_form_1', user_id=user_id)
+            elif lending_type == 'Institutional':
+                open_form('lendor_registration_form.Lender_reg_Institutional_form_1', user_id=user_id)
 
     def button_3_click(self, **event_args):
         open_form("bank_users.user_form")
