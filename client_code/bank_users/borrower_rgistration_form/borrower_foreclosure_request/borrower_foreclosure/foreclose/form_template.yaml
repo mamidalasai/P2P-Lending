@@ -71,7 +71,11 @@ components:
               icon_align: left, spacing_below: small, italic: false, background: '',
               bold: true, underline: false, icon: ''}
             name: paid_label
-            layout_properties: {row: MPVXLB, width_xs: 4, col_xs: 6, width: 149.656}
+            layout_properties: {row: MPVXLB, width_xs: 2, col_xs: 6, width: 149.656}
+          - type: Label
+            properties: {}
+            name: label_23
+            layout_properties: {row: MPVXLB, width_xs: 3, col_xs: 8}
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
               visible: true, text: 'Monthly Installment :', font_size: null, font: '',
@@ -88,11 +92,11 @@ components:
             layout_properties: {row: CULTKB, width_xs: 4, col_xs: 6, width: 149.656}
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-              visible: true, text: 'Interest rate :', font_size: null, font: '', spacing_above: small,
-              icon_align: left, spacing_below: small, italic: false, background: '',
-              bold: false, underline: false, icon: ''}
+              visible: true, text: ' Monthly Interest rate :', font_size: null, font: '',
+              spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+              background: '', bold: false, underline: false, icon: ''}
             name: label_12
-            layout_properties: {row: ANIWUU, width_xs: 4, col_xs: 1, width: 147.656}
+            layout_properties: {row: ANIWUU, width_xs: 4, col_xs: 1, width: 199}
           - type: Label
             properties: {}
             name: fir_label
@@ -144,6 +148,17 @@ components:
             layout_properties: {row: MTNWVF, width_xs: 4, col_xs: 6, width: 149.656}
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Overall Monthly installment :', font_size: null,
+              font: '', spacing_above: small, icon_align: left, spacing_below: small,
+              italic: false, background: '', bold: false, underline: false, icon: ''}
+            name: label_19
+            layout_properties: {row: JSAJXP, width_xs: 4, col_xs: 1, width: 159.656}
+          - type: Label
+            properties: {}
+            name: label_20
+            layout_properties: {row: JSAJXP, width_xs: 4, col_xs: 6}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
               visible: true, text: 'Overall Interest Rate :', font_size: null, font: '',
               spacing_above: small, icon_align: left, spacing_below: small, italic: false,
               background: '', bold: false, underline: false, icon: ''}
@@ -184,11 +199,11 @@ components:
           components:
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-              visible: true, text: 'Outstanding Amount :', font_size: null, font: '',
-              spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-              background: '', bold: false, underline: false, icon: ''}
+              visible: true, text: 'Overall Outstanding Amount :', font_size: null,
+              font: '', spacing_above: small, icon_align: left, spacing_below: small,
+              italic: false, background: '', bold: false, underline: false, icon: ''}
             name: label_5
-            layout_properties: {row: QBZOQM, width_xs: 4, col_xs: 1, width: 131.5}
+            layout_properties: {row: QBZOQM, width_xs: 4, col_xs: 1, width: 159.656}
           - type: Label
             properties: {}
             name: label_17
@@ -209,6 +224,13 @@ components:
             layout_properties: {row: OJMWOS, width_xs: 3, col_xs: 6, width: 103.75}
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: (3% penalty), font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: false, underline: false, icon: ''}
+            name: label_22
+            layout_properties: {row: OJMWOS, width_xs: 3, col_xs: 9, width: 104.25}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
               visible: true, text: 'Total Due Amount :
 
                 ', font_size: 23, font: '', spacing_above: small, icon_align: left,
@@ -223,6 +245,13 @@ components:
               bold: true, underline: false, icon: ''}
             name: tda_label
             layout_properties: {row: CERDOW, width_xs: 3, col_xs: 6}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: (outstanding amount+penalty), font_size: null,
+              font: '', spacing_above: small, icon_align: left, spacing_below: small,
+              italic: false, background: '', bold: false, underline: false, icon: ''}
+            name: label_21
+            layout_properties: {row: CERDOW, width_xs: 3, col_xs: 9, width: 104.25}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: Reason for Foreclosure, font_size: null, font: '',
@@ -231,19 +260,23 @@ components:
         name: label_6
         layout_properties: {row: RFBAHL, width_xs: 4, col_xs: 0, width: 151.25}
       - type: TextBox
-        properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: write reason here,
+        properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: mention a reason here for foreclosure,
           border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
           font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
           background: 'theme:On Primary', bold: false, underline: false}
         name: reason_textbox
-        layout_properties: {row: NVIHFZ, width_xs: 12, col_xs: 0, width: 417.328}
+        layout_properties: {row: NVIHFZ, width_xs: 12, col_xs: 0, width: 507}
+      - type: Spacer
+        properties: {height: 8}
+        name: spacer_1
+        layout_properties: {row: TGSUCA, width_xs: 4, col_xs: 4}
       - type: CheckBox
         properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
           foreground: '', allow_indeterminate: false, visible: true, text: I  agree to proceed with the foreclosure process  and,
           font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
           background: '', bold: false, checked: false, underline: false}
         name: f_checkbox
-        layout_properties: {row: RHOAGV, width_xs: 8, col_xs: 0}
+        layout_properties: {row: GEWMFW, width_xs: 8, col_xs: 0}
         event_bindings: {change: f_checkbox_change}
       - type: Link
         properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#0876E8',
@@ -252,7 +285,7 @@ components:
           spacing_below: small, italic: false, background: '', bold: false, underline: false,
           icon: 'fa:info-circle'}
         name: link_1
-        layout_properties: {row: RHOAGV, width_xs: 4, col_xs: 8}
+        layout_properties: {row: GEWMFW, width_xs: 4, col_xs: 8}
         event_bindings: {click: link_1_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -264,9 +297,9 @@ components:
     event_bindings: {click: button_2_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Pay Now, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#0876E8', bold: true, underline: false, icon: ''}
+      foreground: black, visible: true, text: SUBMIT, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
+      bold: true, underline: false, icon: ''}
     name: button_3
     layout_properties: {grid_position: 'SRPOUG,VSVAKZ'}
     event_bindings: {click: button_3_click}
