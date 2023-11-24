@@ -12,6 +12,12 @@ import re
 class star_1_borrower_registration_form_begin_3b_student(star_1_borrower_registration_form_begin_3b_studentTemplate):
   def __init__(self,user_id, **properties):
     self.user_id=user_id
+    user_data=app_tables.user_profile.get(coustmer_id=user_id)
+    if user_data:
+     self.borrower_college_name_text.text=user_data['college_name']
+     self.borrower_college_id_text.text=user_data['college_id']
+     self.borrower_college_address_text.text=user_data['college_address']
+     user_data.update()
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     
@@ -44,4 +50,5 @@ class star_1_borrower_registration_form_begin_3b_student(star_1_borrower_registr
     elif not college_name or not college_id or not college_proof or not college_address:
       Notification("please fill all requrired fields").show()
     else:
+      anvil.server.call('add_borrower_student',college_name,college_id,college_proof,college_address,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_id=user_id)

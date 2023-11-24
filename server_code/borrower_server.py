@@ -65,6 +65,15 @@ def add_borrower_step4(marital_status,user_id):
     row[0]['marital_status']=marital_status
 
 @anvil.server.callable
+def add_borrower_student(college_name,college_id,college_proof,college_address,user_id):
+  row=app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    row[0]['college_name']=college_name
+    row[0]['college_id']=college_id
+    row[0]['college_address']=college_address
+    row[0]['college_proof']=college_proof
+    
+@anvil.server.callable
 def add_borrower_step4a(spouse_name,marrege_date,spouse_mobile_no,user_id):
   row=app_tables.user_profile.search(coustmer_id=user_id)
   row[0]['spouse_name']=spouse_name
