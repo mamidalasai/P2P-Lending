@@ -35,109 +35,216 @@ components:
     name: outlined_card_1
     layout_properties: {grid_position: 'UESVHL,IRTQPW'}
     components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Amount Paid, font_size: 19, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_9
+      layout_properties: {grid_position: 'ICHUVN,QRLOPF'}
     - type: GridPanel
       properties: {}
       name: grid_panel_1
-      layout_properties:
-        col_widths: {}
-        grid_position: FBOXMD,AIUBIR
+      layout_properties: {grid_position: 'ZPRGSD,GXBMWY'}
       components:
+      - type: ColumnPanel
+        properties: {role: outlined-card, col_widths: '{}'}
+        name: outlined_card_2
+        layout_properties: {grid_position: 'ICHUVN,CBZPYS', row: QBZMKP, width_xs: 12,
+          col_xs: 0}
+        components:
+        - type: GridPanel
+          properties: {}
+          name: grid_panel_2
+          layout_properties: {grid_position: 'LTBQEJ,ZUWPLM'}
+          components:
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Total Amount  Paid :', font_size: null, font: '',
+              spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+              background: '', bold: true, underline: false, icon: ''}
+            name: label_10
+            layout_properties: {row: MPVXLB, width_xs: 4, col_xs: 1, width: 149.656}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: '', font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: true, underline: false, icon: ''}
+            name: paid_label
+            layout_properties: {row: MPVXLB, width_xs: 4, col_xs: 6, width: 149.656}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Monthly Installment :', font_size: null, font: '',
+              spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+              background: '', bold: false, underline: false, icon: ''}
+            name: label_13
+            layout_properties: {row: CULTKB, width_xs: 4, col_xs: 1, width: 149.656}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: '', font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: false, underline: false, icon: ''}
+            name: mi_label
+            layout_properties: {row: CULTKB, width_xs: 4, col_xs: 6, width: 149.656}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Interest rate :', font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: false, underline: false, icon: ''}
+            name: label_12
+            layout_properties: {row: ANIWUU, width_xs: 4, col_xs: 1, width: 147.656}
+          - type: Label
+            properties: {}
+            name: fir_label
+            layout_properties: {row: ANIWUU, width_xs: 4, col_xs: 6}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Monthly EMI  :', font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: false, underline: false, icon: ''}
+            name: label_11
+            layout_properties: {row: KEWPJD, width_xs: 4, col_xs: 1, width: 147.656}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: '', font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: false, underline: false, icon: ''}
+            name: emi_label
+            layout_properties: {row: KEWPJD, width_xs: 4, col_xs: 6, width: 148.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Monthly EMI :', font_size: null, font: '', spacing_above: small,
+          visible: true, text: 'Loan Closure Amount ', font_size: 19, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_3
-        layout_properties: {row: ZKKANY, width_xs: 3, col_xs: 2, width: 100.75}
+        layout_properties: {row: RZGBVC, width_xs: 7, col_xs: 0, width: 160.328}
+      - type: ColumnPanel
+        properties: {role: outlined-card, col_widths: '{}'}
+        name: outlined_card_3
+        layout_properties: {row: ZZCDWN, width_xs: 12, col_xs: 0, grid_position: 'TBQZHS,JABTLF'}
+        components:
+        - type: GridPanel
+          properties: {}
+          name: grid_panel_3
+          layout_properties: {grid_position: 'YQDMIZ,IQMWOA'}
+          components:
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Overall Outstanding Amount :', font_size: null,
+              font: '', spacing_above: small, icon_align: left, spacing_below: small,
+              italic: false, background: '', bold: true, underline: false, icon: ''}
+            name: label_7
+            layout_properties: {row: MTNWVF, width_xs: 4, col_xs: 1, width: 149.656}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: '', font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: true, underline: false, icon: ''}
+            name: ra_label
+            layout_properties: {row: MTNWVF, width_xs: 4, col_xs: 6, width: 149.656}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Overall Interest Rate :', font_size: null, font: '',
+              spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+              background: '', bold: false, underline: false, icon: ''}
+            name: label_14
+            layout_properties: {row: DJHESH, width_xs: 4, col_xs: 1, width: 131.5}
+          - type: Label
+            properties: {}
+            name: label_8
+            layout_properties: {row: DJHESH, width_xs: 3, col_xs: 6}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Total Amount :', font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: false, underline: false, icon: ''}
+            name: label_15
+            layout_properties: {row: QPCRTS, width_xs: 3, col_xs: 1, width: 131.5}
+          - type: Label
+            properties: {}
+            name: label_18
+            layout_properties: {row: QPCRTS, width_xs: 3, col_xs: 6}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: emi_label
-        layout_properties: {row: ZKKANY, width_xs: 3, col_xs: 6, width: 149.75}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Paid Amount :', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_7
-        layout_properties: {row: QFPDXK, width_xs: 3, col_xs: 2, width: 149.75}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: paid_label
-        layout_properties: {row: QFPDXK, width_xs: 3, col_xs: 6, width: 149.75}
-      - type: Label
-        properties: {}
-        name: paid_output
-        layout_properties: {row: BOATHZ, width_xs: 3, col_xs: 2}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Remaining Amount :', font_size: null, font: '', spacing_above: small,
+          visible: true, text: Amount Due, font_size: 19, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_2
-        layout_properties: {row: YEHXRB, width_xs: 4, col_xs: 2, width: 151.25}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: ra_label
-        layout_properties: {row: YEHXRB, width_xs: 4, col_xs: 6, width: 154.656}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: "Penalty Charges : \n(for Remaining Amount )", font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '', bold: true, underline: false, icon: ''}
-        name: label_5
-        layout_properties: {row: NOMNRR, width_xs: 4, col_xs: 2, width: 144.328}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: pa_label
-        layout_properties: {row: NOMNRR, width_xs: 3, col_xs: 6, width: 149.75}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Total Due Amount :
+        layout_properties: {row: CTDWAX, width_xs: 3, col_xs: 0, width: 112.75}
+      - type: ColumnPanel
+        properties: {role: outlined-card, col_widths: '{}'}
+        name: outlined_card_4
+        layout_properties: {grid_position: 'NQTPJO,WISZTK', row: IPLDFW, width_xs: 12,
+          col_xs: 0}
+        components:
+        - type: GridPanel
+          properties: {}
+          name: grid_panel_4
+          layout_properties: {grid_position: 'AHFEGK,LEKHQK'}
+          components:
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Outstanding Amount :', font_size: null, font: '',
+              spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+              background: '', bold: false, underline: false, icon: ''}
+            name: label_5
+            layout_properties: {row: QBZOQM, width_xs: 4, col_xs: 1, width: 131.5}
+          - type: Label
+            properties: {}
+            name: label_17
+            layout_properties: {row: QBZOQM, width_xs: 3, col_xs: 6}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Penalty Amount :', font_size: null, font: '',
+              spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+              background: '', bold: false, underline: false, icon: ''}
+            name: label_16
+            layout_properties: {row: OJMWOS, width_xs: 3, col_xs: 1, width: 131.5}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: '', font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: false, underline: false, icon: ''}
+            name: pa_label
+            layout_properties: {row: OJMWOS, width_xs: 3, col_xs: 6, width: 103.75}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: 'Total Due Amount :
 
-            ', font_size: 23, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '', bold: true, underline: false, icon: ''}
-        name: label_4
-        layout_properties: {row: IQSFFG, width_xs: 3, col_xs: 2}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: 23, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: tda_label
-        layout_properties: {row: IQSFFG, width_xs: 3, col_xs: 6}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: (Remaining Amount + 3% Penalty), font_size: null, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false, icon: ''}
-        name: label_8
-        layout_properties: {row: SMNSKE, width_xs: 4, col_xs: 2}
+                ', font_size: 23, font: '', spacing_above: small, icon_align: left,
+              spacing_below: small, italic: false, background: '', bold: true, underline: false,
+              icon: ''}
+            name: label_4
+            layout_properties: {row: CERDOW, width_xs: 4, col_xs: 1}
+          - type: Label
+            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+              visible: true, text: '', font_size: 23, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: true, underline: false, icon: ''}
+            name: tda_label
+            layout_properties: {row: CERDOW, width_xs: 3, col_xs: 6}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: Reason for Foreclosure, font_size: null, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: true, underline: false, icon: ''}
         name: label_6
-        layout_properties: {row: RFBAHL, width_xs: 3, col_xs: 2, width: 151.25}
+        layout_properties: {row: RFBAHL, width_xs: 4, col_xs: 0, width: 151.25}
       - type: TextBox
         properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: write reason here,
           border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
           font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
           background: 'theme:On Primary', bold: false, underline: false}
         name: reason_textbox
-        layout_properties: {row: NVIHFZ, width_xs: 9, col_xs: 2, width: 417.328}
+        layout_properties: {row: NVIHFZ, width_xs: 12, col_xs: 0, width: 417.328}
+      - type: CheckBox
+        properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+          foreground: '', allow_indeterminate: false, visible: true, text: I  agree to proceed with the foreclosure process  and,
+          font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+          background: '', bold: false, checked: false, underline: false}
+        name: f_checkbox
+        layout_properties: {row: RHOAGV, width_xs: 8, col_xs: 0}
+        event_bindings: {change: f_checkbox_change}
       - type: Link
         properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#0876E8',
           visible: true, text: Terms and Conditions, font_size: null, wrap_on: mobile,
@@ -145,17 +252,8 @@ components:
           spacing_below: small, italic: false, background: '', bold: false, underline: false,
           icon: 'fa:info-circle'}
         name: link_1
-        layout_properties: {row: QPOYVR, width_xs: 3, col_xs: 2}
+        layout_properties: {row: RHOAGV, width_xs: 4, col_xs: 8}
         event_bindings: {click: link_1_click}
-      - type: CheckBox
-        properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-          foreground: '', allow_indeterminate: false, visible: true, text: 'I have
-            read, agree terms & conditions and agree to proceed with the foreclosure
-            process  ', font_size: null, font: '', spacing_above: small, spacing_below: small,
-          italic: false, background: '', bold: false, checked: false, underline: false}
-        name: f_checkbox
-        layout_properties: {row: FRGNIN, width_xs: 9, col_xs: 2, width: 509.25}
-        event_bindings: {change: f_checkbox_change}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: black, visible: true, text: Back, font_size: null, font: '', spacing_above: small,
