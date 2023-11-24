@@ -9,55 +9,47 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class Lender_reg_form_6(Lender_reg_form_6Template):
-  def __init__(self,user_id, **properties):
-    self.userId = user_id
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-    user_data = anvil.server.call('get_user_data', user_id)
-        
-    if user_data:
-            self.lending_type_dropdown.selected_value = user_data.get('lending_type', '')
-            self.drop_down_1.selected_value = user_data.get('investment', '')
-            self.drop_down_2.selected_value  = user_data.get('lending_period', '')
-            
-            
-    '''else:
-        self.lending_type = ''
-        self.investment = ''
-        self.lending_period = ''
-        
+    def __init__(self, user_id, **properties):
+        self.userId = user_id
+        # Set Form properties and Data Bindings.
+        self.init_components(**properties)
 
-       #Restore previously entered data if available
-    if self.lending_type:
-            self.lending_type_dropdown.selected_value = self.lending_type
-    if self.investment:
-            self.drop_down_1.selected_value = self.investment
-    if self.lending_period:
-            self.drop_down_2.selected_value = self.lending_period'''
+        # Initialize variables
+        lending_type = None
+        investment = None
+        lending_period = None
 
-    # Any code you write here will run before the form opens.
+        user_data = app_tables.lender.search(coustmer_id=user_id)
 
-  
+        if user_data:
+            lending_type = user_data[0]['lending_type']
+            investment = user_data[0]['investment']
+            lending_period = user_data[0]['lending_period']
 
-  def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.Lender_reg_form_5',user_id=self.userId)
+        # Set selected values for dropdowns
+        if lending_type:
+            self.lending_type_dropdown.selected_value = lending_type
+        if investment:
+            self.drop_down_1.selected_value = investment
+        if lending_period:
+            self.drop_down_2.selected_value = lending_period
 
-  def button_2_click(self, **event_args):
-      lending_type = self.lending_type_dropdown.selected_value
-      investment = self.drop_down_1.selected_value
-      lending_period = self.drop_down_2.selected_value  
-      user_id = self.userId
-      anvil.server.call('add_lendor_six_form', lending_type, investment,lending_period, user_id)
+        # Any code you write here will run before the form opens.
 
-      if lending_type == 'Individual':
-            open_form('lendor_registration_form.Lender_reg_individual_form_1',user_id=user_id)
-      elif lending_type == 'Institutional':
-            open_form('lendor_registration_form.Lender_reg_Institutional_form_1',user_id=user_id)
+    def button_1_click(self, **event_args):
+        open_form('lendor_registration_form.Lender_reg_form_5', user_id=self.userId)
 
-  def button_3_click(self, **event_args):
-    open_form("bank_users.user_form")
-        
+    def button_2_click(self, **event_args):
+        lending_type = self.lending_type_dropdown.selected_value
+        investment = self.drop_down_1.selected_value
+        lending_period = self.drop_down_2.selected_value
+        user_id = self.userId
+        anvil.server.call('add_lendor_six_form', lending_type, investment, lending_period, user_id)
 
-    
-    
-    
+        if lending_type == 'Individual':
+            open_form('lendor_registration_form.Lender_reg_individual_form_1', user_id=user_id)
+        elif lending_type == 'Institutional':
+            open_form('lendor_registration_form.Lender_reg_Institutional_form_1', user_id=user_id)
+
+    def button_3_click(self, **event_args):
+        open_form("bank_users.user_form")
