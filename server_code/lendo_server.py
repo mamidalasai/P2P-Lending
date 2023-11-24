@@ -25,7 +25,7 @@ def add_lendor_second_form(mobile,email,photo,user_id):
     row[0]['user_photo'] = photo
 
 @anvil.server.callable
-def add_lendor_third_3e_form(qualification,certificate,user_id):
+def add_lendor_education_form(qualification,certificate,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     
