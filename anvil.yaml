@@ -335,6 +335,9 @@ db_schema:
     - name: bank_name
       admin_ui: {width: 200, order: 75.5}
       type: string
+    - name: form_count
+      admin_ui: {width: 200, order: 88.5}
+      type: number
     title: user_profile
   membership:
     client: none
