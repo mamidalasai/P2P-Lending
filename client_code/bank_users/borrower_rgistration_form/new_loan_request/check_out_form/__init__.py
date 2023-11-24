@@ -15,7 +15,7 @@ class check_out_form(check_out_formTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.names = 'K-12 Educational loan'
-    user_request = app_tables.product_borrower.get(names=self.names)
+    user_request = app_tables.product_details.get(names=self.names)
 
     if user_request:
             interest_rate = user_request['interest_rate']
