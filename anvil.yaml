@@ -221,8 +221,8 @@ db_schema:
     - name: spouse_company_address
       admin_ui: {width: 200, order: 27}
       type: string
-    - name: spouse_profficen
-      admin_ui: {width: 200, order: 28}
+    - name: profficen
+      admin_ui: {order: 40, width: 200}
       type: string
     - name: usertype
       admin_ui: {order: 13.5, width: 200}
@@ -431,6 +431,15 @@ db_schema:
     - name: form_count
       admin_ui: {width: 200, order: 88.5}
       type: number
+    - name: spouse_designation
+      admin_ui: {width: 200, order: 91}
+      type: string
+    - name: spouse_annual_ctc
+      admin_ui: {width: 200, order: 92}
+      type: string
+    - name: spouse_office_number
+      admin_ui: {width: 200, order: 93}
+      type: string
     title: user_profile
   borrower:
     title: borrower

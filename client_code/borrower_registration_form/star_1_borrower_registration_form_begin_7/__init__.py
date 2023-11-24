@@ -12,7 +12,12 @@ class star_1_borrower_registration_form_begin_7(star_1_borrower_registration_for
   def __init__(self,user_id, **properties):
     self.init_components(**properties)
     self.userId = user_id
-
+    user_data=app_tables.user_profile.get(coustmer_id=user_id)
+    if user_data:
+      self.text_box_1.text=user_data['running_Home_Loan']
+      self.text_box_2.text=user_data['running_or_live loans']
+      self.text_box_3.text=user_data['other_loan']
+      user_data.update()
   def button_1_click(self, **event_args):
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_id = self.userId)
 

@@ -32,7 +32,7 @@ class star_1_borrower_registration_form_begin_3a_1(star_1_borrower_registration_
     if not street_adress_1 or not street_address_2 or not city:
       Notification("Please fill all the fields").show()
     else:
-      anvil.server.call('add_lendor_four_form',street_adress_1,street_address_2,city,user_id)
+      anvil.server.call('add_borrower_3a1_form',street_adress_1,street_address_2,city,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a',user_id=user_id)
 
   def home_borrower_registration_form_copy_1_copy_1_click(self, **event_args):
