@@ -65,7 +65,7 @@ class manage_producs1(manage_producs1Template):
     else:
      anvil.server.call('product_details', self.id, product_name, product_categories, processing_fee, extension_fee, membership_type, interest_type, max_days, min_days, roi, discount_coupons)
      alert("Submitted succesfully")
-     open_form('admin.dashboard.manage_products')
+     open_form('admin.dashboard.manage_products.add_group')
  
 
   def check_box_3_change(self, **event_args):
