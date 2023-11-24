@@ -42,7 +42,6 @@ class manage_producs1(manage_producs1Template):
 
     product_name = self.text_box_2.text
     product_discription = self.text_area_1.text
-    product_categories = self.drop_down_1.selected_value
     processing_fee = int(self.text_box_3.text)
     extension_fee = int(self.text_box_4.text)
     discount_coupons = self.radio_button_3.text
@@ -60,12 +59,12 @@ class manage_producs1(manage_producs1Template):
     roi = int(self.text_box_5.text)
     print(roi)
 
-    if product_name == "" or membership_type == "" or processing_fee == "" or extension_fee == "" or interest_type == "" or max_days == "" or min_days == "" or product_categories == "" or discount_coupons == "" or roi == "":
+    if product_name == "" or membership_type == "" or processing_fee == "" or extension_fee == "" or interest_type == "" or max_days == "" or min_days == ""  or discount_coupons == "" or roi == "":
       Notification("Fill All Required Details").show()
     else:
-     anvil.server.call('product_details', self.id, product_name, product_categories, processing_fee, extension_fee, membership_type, interest_type, max_days, min_days, roi, discount_coupons)
-     alert("Submitted succesfully")
-     open_form('admin.dashboard.manage_products')
+     anvil.server.call('product_details', self.id, product_name, processing_fee, extension_fee, membership_type, interest_type, max_days, min_days, roi, discount_coupons)
+     product_id = self.label_1.text
+     open_form('admin.dashboard.manage_products.add_group',product_id )
  
 
   def check_box_3_change(self, **event_args):
@@ -75,7 +74,6 @@ class manage_producs1(manage_producs1Template):
       self.label_1.visible = True
       self.text_box_2.visible = True
       self.text_area_1.visible = True
-      self.drop_down_1.visible = True
       self.text_box_3.visible = True
       self.text_box_4.visible = True
       self.drop_down_2.visible = True
@@ -88,7 +86,6 @@ class manage_producs1(manage_producs1Template):
     else:
       self.text_box_2.visible = False
       self.text_area_1.visible = False
-      self.drop_down_1.visible = False
       self.text_box_3.visible = False
       self.text_box_4.visible = False
       self.drop_down_2.visible = False
