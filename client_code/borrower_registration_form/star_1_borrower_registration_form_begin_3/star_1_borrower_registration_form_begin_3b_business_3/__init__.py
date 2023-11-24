@@ -11,6 +11,10 @@ from anvil.tables import app_tables
 class star_1_borrower_registration_form_begin_3b_business_3(star_1_borrower_registration_form_begin_3b_business_3Template):
   def __init__(self,user_id, **properties):
     self.userId = user_id
+    user_data=app_tables.user_profile.get(coustmer_id=user_id)
+    if user_data:
+      self.text_box_1.text=user_data['industry_type']
+      self.text_box_2.text=user_data['six_month_turnover']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
