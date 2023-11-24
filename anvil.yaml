@@ -368,9 +368,36 @@ db_schema:
       admin_ui: {width: 200, order: 3}
       type: date
   foreclosure:
-    client: none
+    client: full
     server: full
-    columns: []
+    columns:
+    - name: loan_id
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: borrower_name
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: emi_amount
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: paid_amount
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: remaining_amount
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: penalty_amount
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: total_due_amount
+      admin_ui: {width: 200, order: 6}
+      type: string
+    - name: reason
+      admin_ui: {width: 200, order: 1.5}
+      type: string
+    - name: requested_on
+      admin_ui: {width: 200, order: 7}
+      type: datetime
     title: foreclosure
   loan_details:
     client: full
