@@ -183,7 +183,10 @@ components:
     name: label_26
     layout_properties: {grid_position: 'NDKNOY,ZGNUPS'}
   - type: Label
-    properties: {}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Email ID, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
     name: label_27
     layout_properties: {grid_position: 'JPLLSA,DKXCHL'}
   - type: Label
@@ -191,7 +194,10 @@ components:
     name: label_28
     layout_properties: {grid_position: 'JPLLSA,LANHOD'}
   - type: Label
-    properties: {}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Tenure, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
     name: label_29
     layout_properties: {grid_position: 'RUEVNX,OWTSNZ'}
   - type: Label
