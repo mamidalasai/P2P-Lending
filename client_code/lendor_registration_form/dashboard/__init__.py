@@ -75,10 +75,17 @@ class dashboard(dashboardTemplate):
     """This method is called when the button is clicked"""
     open_form("lendor_registration_form.dashboard.cp")
 
+  def login_signup_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
 
-  def link_2_click(self, **event_args):
+    alert("Logged out sucessfully")
+    anvil.users.logout()
+    open_form('bank_users.main_form')
+
+  def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("bank_users.main_form")
-    
+    open_form("lendor_registration_form.dashboard")
+
+
 
   
