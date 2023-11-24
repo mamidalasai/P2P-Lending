@@ -95,7 +95,7 @@ def add_borrower_step5(spouse_company_name,spouse_company_address,spouse_proffic
   if row:
     row[0]['spouse_company_name']=spouse_company_name
     row[0]['spouse_company_address']=spouse_company_address
-    row[0]['spouse_profficen']=spouse_profficen
+    row[0]['spouse_designation']=spouse_profficen
 
 @anvil.server.callable
 def add_borrower_spouse(annual_ctc,office_number,user_id):
