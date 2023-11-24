@@ -40,8 +40,8 @@ class Lender_reg_form_3(Lender_reg_form_3Template):
     pan_card = self.text_box_2.text
     pan_id = self.file_loader_1.file
     user_id = self.userId
-    '''if not aadhaar_card or not aadhaar_photo or not pan_card or not pan_id:
-      Notification("Please fill all the fields").show()'''
+    if not aadhaar_card or not aadhaar_photo or not pan_card or not pan_id:
+      Notification("Please fill all the fields").show()
 # Validate PAN card details
     pan_pattern = re.compile(r'^[A-Za-z]{5}\d{4}[A-Za-z]$')
     if not pan_pattern.match(pan_card) or len(pan_card) != 10:
