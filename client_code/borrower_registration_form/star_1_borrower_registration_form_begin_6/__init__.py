@@ -11,6 +11,9 @@ from anvil.tables import app_tables
 class star_1_borrower_registration_form_begin_6(star_1_borrower_registration_form_begin_6Template):
   def __init__(self,userId, **properties):
     self.user_id=userId
+    user_data=app_tables.user_profile.get(coustmer_id=userId)
+    if user_data:
+      self.borrower_registration_ctc_text.text=user_data['']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
   
@@ -23,4 +26,7 @@ class star_1_borrower_registration_form_begin_6(star_1_borrower_registration_for
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_5',user_id =self.user_id)
 
   def button_2_click(self, **event_args):
+    annual_ctc=self.borrower_registration_ctc_text.text
+    office_number=self.borrower_registration_off_text.text
+    
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id =self.user_id)
