@@ -39,8 +39,26 @@ class user_form(user_formTemplate):
 
   def borrower_button_click(self, **event_args):
     userid = self.user_id
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
-
+    user_data=app_tables.user_profile.get(coustmer_id=userid)
+    if user_data:
+      actual_count=user_data['form_count']
+      print(actual_count)
+      if actual_count==0:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin',userid=userid)
+      elif actual_count==1:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2')
+      elif actual_count==2:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3')
+      elif actual_count==3:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a_1')
+      elif actual_count==4:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a',userid=userid)
+      elif actual_count==5:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',user_id=userid)    
+    else:
+     open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
+     print(actual_count)
+      
   def lendor_button_click(self, **event_args):
     userid = self.user_id
     open_form('lendor_registration_form.Lender_reg_form_1',user_id=userid)
