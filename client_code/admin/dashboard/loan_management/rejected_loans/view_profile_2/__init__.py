@@ -1,4 +1,4 @@
-from ._anvil_designer import view_profileTemplate
+from ._anvil_designer import view_profile_2Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class view_profile(view_profileTemplate):
+class view_profile_2(view_profile_2Template):
   def __init__(self, value_to_display, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -33,7 +33,7 @@ class view_profile(view_profileTemplate):
     self.list_14 = []
     self.list_15 = []
 
-    
+
     for i in self.data:
       a+=1
       self.list_1.append(i['loan_id'])
@@ -73,5 +73,4 @@ class view_profile(view_profileTemplate):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('admin.dashboard.loan_management.approved_loans')
-    
+    open_form('admin.dashboard.loan_management.rejected_loans')
