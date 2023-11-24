@@ -14,13 +14,14 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
         self.userId = user_id
         user_data=anvil.server.call('get_user_data',user_id)
         if user_data:
-          self.mobile=user_data.get('mobile','')
-          self.alternate_email=user_data.get('alternate_email','')
           self.upload_photo=user_data.get('upload_photo','')
+          self.alternate_email=user_data.get('alternate_email','')
+          self.mobile=user_data.get('mobile','')
         else:
-          self.mobile=''
-          self.alternate_email=''
           self.upload_photo=''
+          self.alternate_email=''
+          self.mobile=''
+          
         self.init_components(**properties)
         if self.mobile:
           self.borrower_mobile_number_text_copy_1.text=self.mobile
