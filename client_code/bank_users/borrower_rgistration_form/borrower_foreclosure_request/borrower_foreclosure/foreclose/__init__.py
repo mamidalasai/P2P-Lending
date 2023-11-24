@@ -46,7 +46,8 @@ class foreclose(forecloseTemplate):
     self.emi_label.text = f"{emi}"
     self.pa_label.text = f"{penalty_amount}"
     self.paid_label.text = f"{paid_amount}  ({payment_done} months)"
-
+    self.mi_label.text = f"{monthly_installment}"
+    #self.fir_label.text = f"{}"
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.borrower_rgistration_form')
