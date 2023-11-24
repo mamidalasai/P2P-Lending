@@ -32,5 +32,4 @@ class star_1_borrower_registration_form_begin_3e(star_1_borrower_registration_fo
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3d',user_id=user_id)
 
   def button_3_click(self, **event_args):
-    """This method is called when the button is clicked"""
     open_form("bank_users.user_form")

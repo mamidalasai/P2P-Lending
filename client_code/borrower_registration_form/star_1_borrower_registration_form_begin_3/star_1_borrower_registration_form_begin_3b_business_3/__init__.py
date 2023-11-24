@@ -31,6 +31,6 @@ class star_1_borrower_registration_form_begin_3b_business_3(star_1_borrower_regi
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_2',user_id = user_id)
     """This method is called when the button is clicked"""
 
-  def button_3_click(self, **event_args):
+  def home_borrower_registration_form_copy_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("bank_users.user_form")
+    open_form('bank_users.user_form')

@@ -12,22 +12,22 @@ import re
 class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_beginTemplate):
     def __init__(self, user_id, **properties):
         self.userId = user_id
-        #user_data=anvil.server.call('get_user_data',user_id)
-        #if user_data:
-         # self.full_name=user_data.get('full_name','')
-          #self.gender=user_data.get('gender','')
-          #self.date_of_birth=user_data.get('date_of_birth',datetime.now())
-        #else:
-         # self.full_name=''
-          #self.gender=''
-          #self.date_of_birth=datetime.now()            
+        user_data=anvil.server.call('get_user_data',user_id)
+        if user_data:
+          self.full_name=user_data.get('full_name','')
+          self.gender=user_data.get('gender','')
+          self.date_of_birth=user_data.get('date_of_birth',datetime.now())
+        else:
+          self.full_name=''
+          self.gender=''
+          self.date_of_birth=datetime.now()            
         self.init_components(**properties)
         
-        #if self.full_name_label:
-         # self.borrower_full_name_test.text=self.full_name
-        #if self.gender_dd:
-         # self.gender_dd.selected_value=self.gender
-          #self.borrower_date_of_birth_date_picker.date=self.date_of_birth
+        if self.full_name:
+          self.borrower_full_name_test.text=self.full_name
+        if self.gender:
+          self.gender_dd.selected_value=self.gender
+          self.borrower_date_of_birth_date_picker.date=self.date_of_birth
             
     def home_borrower_registration_form_click(self, **event_args):
         open_form('bank_users.user_form')
