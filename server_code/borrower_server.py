@@ -16,9 +16,16 @@ def add_borrower_step1(full_name,gender,dob,user_id):
     row[0]['full_name'] = full_name
     row[0]['gender'] = gender
     row[0]['date_of_birth'] = dob
+    row[0]['form_count']=0
 
-    
-    
+@anvil.server.callable
+def add_borrower_3a1_form(street_adress_1,street_address_2,city,user_id):
+  row = app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    row[0]['street_adress_1'] = street_adress_1
+    row[0]['street_address_2'] = street_address_2
+    row[0]['city'] = city    
+    row[0]['form_count']=3
 @anvil.server.callable
 def add_borrower_step2(mobile_no,user_photo,alternate_email,user_id):
   row=app_tables.user_profile.search(coustmer_id=user_id)
@@ -26,7 +33,7 @@ def add_borrower_step2(mobile_no,user_photo,alternate_email,user_id):
     row[0]['mobile']=mobile_no
     row[0]['user_photo']=user_photo
     row[0]['another_email']= alternate_email
-
+    row[0]['form_count']=1
 
 
 
@@ -38,6 +45,7 @@ def add_borrower_step3(aadhar,aadhar_card,pan,pan_card,user_id):
     row[0]['aadhaar_photo']=aadhar_card
     row[0]['pan_number']=pan
     row[0]['pan_photo']=pan_card
+    row[0]['form_count']=2
 
 
 @anvil.server.callable
@@ -48,14 +56,14 @@ def add_borrower_step3a(father_name,father_age,mother_name,mother_age,user_id):
     row[0]['father_age'] = father_age
     row[0]['mother_name'] = mother_name
     row[0]['mother_age'] = mother_age
-
+    row[0]['form_count']=4
 
 @anvil.server.callable
 def add_borrower_step3c(status_of_user,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    row[0]['designation'] = status_of_user
-
+    row[0]['profficen'] = status_of_user
+    row[0]['form_count']=5
 
 
 @anvil.server.callable
@@ -76,9 +84,10 @@ def add_borrower_student(college_name,college_id,college_proof,college_address,u
 @anvil.server.callable
 def add_borrower_step4a(spouse_name,marrege_date,spouse_mobile_no,user_id):
   row=app_tables.user_profile.search(coustmer_id=user_id)
-  row[0]['spouse_name']=spouse_name
-  row[0]['Date_mariage']=marrege_date
-  row[0]['spouse_mobile']=spouse_mobile_no
+  if row:
+   row[0]['spouse_name']=spouse_name
+   row[0]['Date_mariage']=marrege_date
+   row[0]['spouse_mobile']=spouse_mobile_no
 
 @anvil.server.callable
 def add_borrower_step5(spouse_company_name,spouse_company_address,spouse_profficen,user_id):
@@ -89,10 +98,11 @@ def add_borrower_step5(spouse_company_name,spouse_company_address,spouse_proffic
     row[0]['spouse_profficen']=spouse_profficen
 
 @anvil.server.callable
-def add_borrower_spouse(annual_ctc,office_number,spouse_bussiness_name,spouse_bussiness_address,user_id):
+def add_borrower_spouse(annual_ctc,office_number,user_id):
   row=app_tables.user_profile.search(coustmer_id=user_id)
   if row:
-    
+    row[0]['spouse_annual_ctc']=annual_ctc
+    row[0]['spouse_office_number']=office_number
 
 @anvil.server.callable
 def add_borrower_step7(home_loan,other_loan,live_loan,user_id):
@@ -100,7 +110,7 @@ def add_borrower_step7(home_loan,other_loan,live_loan,user_id):
   if row:
     row[0]['running_Home_Loan'] = home_loan
     row[0]['running_or_live loans']= live_loan
-  
+    row[0]['other_loan']=other_loan
   
 
 @anvil.server.callable
