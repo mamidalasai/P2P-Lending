@@ -12,8 +12,14 @@ class star_1_borrower_registration_form_begin_2(star_1_borrower_registration_for
     def __init__(self, user_id, **properties):
         # Set Form properties and Data Bindings.
         self.userId = user_id
+        user_data=app_tables.user_profile.get(coustmer_id=user_id)
+        if user_data:
+          self.borrower_alternate_email.text=user_data['another_email']
+          self.borrower_mobile_number_text_copy_1.text=user_data['mobile']
+          user_data.update()
+          
         self.init_components(**properties)
-
+        
         # Any code you write here will run before the form opens.
 
     def home_borrower_registration_button_click(self, **event_args):
