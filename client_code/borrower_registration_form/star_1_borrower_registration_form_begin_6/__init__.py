@@ -30,5 +30,5 @@ class star_1_borrower_registration_form_begin_6(star_1_borrower_registration_for
     office_number=self.borrower_registration_off_text.text
     spouse_bussiness_name=self.borrower_registration_bus_name_text.text
     spouse_bussiness_address=self.borrower_registration_bus_add_text.text
-    anvil.server.call('',annual_ctc,office_number,spouse_bussiness_name)
+    anvil.server.call('',annual_ctc,office_number,spouse_bussiness_name,spouse_bussiness_address,self.user_id)
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id =self.user_id)
