@@ -22,106 +22,104 @@ components:
     name: button_1
     layout_properties: {grid_position: 'WYPGSC,MKCRFL'}
     event_bindings: {click: button_1_click}
-  - type: XYPanel
-    properties: {height: 505}
-    name: xy_panel_1
-    layout_properties: {grid_position: 'CGUQPY,IXJGGB'}
-    components:
-    - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: Module For Admin Console, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      name: label_1
-      layout_properties: {x: 10, y: 10, width: 855}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '     Manage Borrowers              ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:align-left'}
-      name: button_3
-      layout_properties: {x: 316, y: 74, width: 255}
-      event_bindings: {click: button_3_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '     Manage Lenders                ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:chain-broken'}
-      name: button_4
-      layout_properties: {x: 617.0000305175781, y: 74, width: 241}
-      event_bindings: {click: button_4_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '     Manage Products                ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:exclamation-triangle'}
-      name: button_6
-      layout_properties: {x: 317, y: 146, width: 255}
-      event_bindings: {click: button_6_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '      Manage Settings               ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:cogs'}
-      name: button_7
-      layout_properties: {x: 618.0000305175781, y: 146, width: 240}
-      event_bindings: {click: button_7_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '  Manage Risk Pool
-          (FLDGB)     ', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '#0876E8', bold: true, underline: false,
-        icon: 'fa:stumbleupon'}
-      name: button_9
-      layout_properties: {x: 316, y: 215, width: 265}
-      event_bindings: {click: button_9_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '  Manage Revenu Share         ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:inr'}
-      name: button_8
-      layout_properties: {x: 10, y: 215, width: 245}
-      event_bindings: {click: button_8_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '  Loan  Management               ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:trello'}
-      name: button_5
-      layout_properties: {x: 10, y: 146, width: 245}
-      event_bindings: {click: button_5_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '   Manage Team (RBAC)             ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:cube'}
-      name: button_2
-      layout_properties: {x: 10, y: 74, width: 245}
-      event_bindings: {click: button_2_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '     Manage CMS                      ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:dribbble'}
-      name: button_10
-      layout_properties: {x: 618.0000305175781, y: 215, width: 240}
-      event_bindings: {click: button_10_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '     Manage Reports                 ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:newspaper-o'}
-      name: button_11
-      layout_properties: {x: 10, y: 278, width: 245}
-      event_bindings: {click: button_11_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '      Performance
-          Tracker           ', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '#0876E8', bold: true, underline: false,
-        icon: 'fa:compass'}
-      name: button_13
-      layout_properties: {x: 317, y: 281.3999938964844, width: 241}
-      event_bindings: {click: button_13_click}
+- type: XYPanel
+  properties: {height: 505}
+  name: xy_panel_1
+  layout_properties: {grid_position: 'EKBUZS,VABSSE'}
+  components:
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Module For Admin Console, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {x: 10, y: 10, width: 855}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '     Manage Borrowers              ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:align-left'}
+    name: button_3
+    layout_properties: {x: 316, y: 74, width: 255}
+    event_bindings: {click: button_3_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '     Manage Lenders                ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:chain-broken'}
+    name: button_4
+    layout_properties: {x: 617.0000305175781, y: 74, width: 241}
+    event_bindings: {click: button_4_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '     Manage Products                ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:exclamation-triangle'}
+    name: button_6
+    layout_properties: {x: 317, y: 146, width: 255}
+    event_bindings: {click: button_6_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '      Manage Settings               ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:cogs'}
+    name: button_7
+    layout_properties: {x: 618.0000305175781, y: 146, width: 240}
+    event_bindings: {click: button_7_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '  Manage Risk Pool (FLDGB)     ', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#0876E8', bold: true, underline: false, icon: 'fa:stumbleupon'}
+    name: button_9
+    layout_properties: {x: 316, y: 215, width: 265}
+    event_bindings: {click: button_9_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '  Manage Revenu Share         ', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#0876E8', bold: true, underline: false, icon: 'fa:inr'}
+    name: button_8
+    layout_properties: {x: 10, y: 215, width: 245}
+    event_bindings: {click: button_8_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '  Loan  Management               ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:trello'}
+    name: button_5
+    layout_properties: {x: 10, y: 146, width: 245}
+    event_bindings: {click: button_5_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '   Manage Team (RBAC)             ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:cube'}
+    name: button_2
+    layout_properties: {x: 10, y: 74, width: 245}
+    event_bindings: {click: button_2_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '     Manage CMS                      ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:dribbble'}
+    name: button_10
+    layout_properties: {x: 618.0000305175781, y: 215, width: 240}
+    event_bindings: {click: button_10_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '      Performance Tracker           ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:compass'}
+    name: button_13
+    layout_properties: {x: 317, y: 281.3999938964844, width: 241}
+    event_bindings: {click: button_13_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: black, visible: true, text: '     Manage Reports                 ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:newspaper-o'}
+    name: button_11
+    layout_properties: {x: 286.71351116895676, y: 462.66666412353516, width: 245}
+    event_bindings: {click: button_11_click}
 is_package: true
