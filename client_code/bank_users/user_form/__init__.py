@@ -44,17 +44,18 @@ class user_form(user_formTemplate):
       actual_count=user_data['form_count']
       print(actual_count)
       if actual_count==0:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin',userid=userid)
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
       elif actual_count==1:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2')
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2',user_id=userid)
       elif actual_count==2:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3')
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3',user_id=userid)
       elif actual_count==3:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a_1')
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a_1',user_id=userid)
       elif actual_count==4:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a',userid=userid)
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a',user_id=userid)
       elif actual_count==5:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',user_id=userid)    
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',user_id=userid)
+        
     else:
      open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
      print(actual_count)
