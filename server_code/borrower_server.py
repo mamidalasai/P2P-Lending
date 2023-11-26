@@ -131,12 +131,13 @@ def add_borrower_step9(ifsc,salary_type,select_bank,net_bank, user_id):
 
 
 
-@anvil.server.callable
+'''@anvil.server.callable
 def add_loan_details(min_amount, tenure,max_amount,user_id):
   row=app_tables.loan_details.search(coustmer_id=user_id)
   if row:
     row[0]['max_amount']=max_amount
     row[0]['max_amount']=min_amount
     row[0]['tenure']=tenure
-    row[0]['timestamp']=datetime.now()
+    row[0]['timestamp']=datetime.now()'''
+
 
