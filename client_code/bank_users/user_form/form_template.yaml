@@ -135,7 +135,7 @@ components:
   name: spacer_2
   layout_properties: {grid_position: 'ZMBEDP,GXCQQH'}
 - name: grid_panel_3
-  properties: {background: '#a51622', visible: true}
+  properties: {background: '#a51622', visible: true, foreground: white}
   type: GridPanel
   layout_properties: {grid_position: 'UHGPTF,UAUDOX', full_width_row: true}
   components:
@@ -143,45 +143,83 @@ components:
     properties: {height: 13}
     type: Spacer
     layout_properties: {row: NKCWRD, width_xs: 11, col_xs: 1}
+  - name: image_2
+    properties: {source: _/theme/Screenshot 2023-11-26 151804.png, height: 46.79998779296875}
+    type: Image
+    layout_properties: {row: EPMAWA, width_xs: 3, col_xs: 1}
+    event_bindings: {mouse_enter: image_2_mouse_enter, mouse_leave: image_2_mouse_leave}
+  - name: image_2_copy
+    properties: {source: _/theme/Screenshot 2023-11-26 151824.png, height: 49.600006103515625}
+    type: Image
+    layout_properties: {row: EPMAWA, width_xs: 4, col_xs: 4}
+    event_bindings: {mouse_enter: image_2_copy_mouse_enter, mouse_leave: image_2_copy_mouse_leave}
+  - name: image_2_copy_2
+    properties: {source: _/theme/Screenshot 2023-11-26 151845.png, height: 48.399932861328125}
+    type: Image
+    layout_properties: {row: EPMAWA, width_xs: 3, col_xs: 8}
+  - name: label_1
+    properties: {text: 'Post registration, open the borrower account by filling a
+        simple online form and uploading all the relevant documents. Please remember,
+        the more information and documents you provide, better is the chance you stand
+        to get lower interest rates.', bold: false, italic: true, visible: false,
+      background: '#081a32', align: center}
+    type: Label
+    layout_properties: {row: EMBSZW, width_xs: 3, col_xs: 1}
+    event_bindings: {show: label_1_show, hide: label_1_hide}
   - name: label_4
-    properties: {text: 'Create Borrower Account
+    properties: {text: ' considers more than 50+ parameters like education background,
+        employment stability, debt-income ratio etc. apart from CIBIL to assess your
+        true credit profile and then recommends interest rate and risk category for
+        the loan.
 
-
-        ', bold: false, align: center, foreground: '#0b2547', background: white, font_size: 18,
-      italic: true, visible: true}
+        ', italic: true, background: '#081a32', visible: false, align: center}
     type: Label
-    layout_properties: {row: TFNWHX, width_xs: 3, col_xs: 1}
+    layout_properties: {row: EMBSZW, width_xs: 4, col_xs: 4}
   - name: label_5
-    properties: {background: white, foreground: '#081a32', text: "Loan Assesment \n\
-        \n", bold: false, align: center, font_size: 18, italic: true}
+    properties: {text: 'After your loan request has been assessed by i2i, you should
+        make your loan live on i2ifunding.com through My Account section by setting
+        interest rate and expiry date. Please note that you can increase the interest
+        rate of your loan to make the loan more attractive to investors.', italic: true,
+      visible: false, background: '#081a32', align: center}
     type: Label
-    layout_properties: {row: TFNWHX, width_xs: 4, col_xs: 4}
+    layout_properties: {row: EMBSZW, width_xs: 3, col_xs: 8}
+  - name: image_2_copy_5
+    properties: {source: _/theme/Screenshot 2023-11-26 151907.png, height: 62.399932861328125}
+    type: Image
+    layout_properties: {row: CTPIEY, width_xs: 3, col_xs: 1}
+  - name: image_2_copy_4
+    properties: {source: _/theme/Screenshot 2023-11-26 151920.png, height: 62.399932861328125}
+    type: Image
+    layout_properties: {row: CTPIEY, width_xs: 4, col_xs: 4}
+  - name: image_2_copy_3
+    properties: {source: _/theme/Screenshot 2023-11-26 151941.png, height: 62.399932861328125}
+    type: Image
+    layout_properties: {row: CTPIEY, width_xs: 3, col_xs: 8}
   - name: label_6
-    properties: {background: white, foreground: '#0b2547', text: 'Make Loan Live on
-        Our Platform
-
-
-        ', align: center, bold: false, font_size: 18, italic: true}
+    properties: {text: 'Once your loan is live on our portal, it can be viewed by
+        all the investors registered on our portal. Soon, investors spread across
+        India will start showing investment commitment in your loan project which
+        can be easily monitored by you through my account section.', italic: true,
+      visible: false, background: '#081a32', align: center}
     type: Label
-    layout_properties: {row: TFNWHX, width_xs: 3, col_xs: 8}
+    layout_properties: {row: COOOHK, width_xs: 3, col_xs: 1}
   - name: label_7
-    properties: {align: center, bold: false, text: Get Funding Commitments From Investors,
-      background: white, font_size: 18, italic: true}
+    properties: {visible: false, text: 'Once funding of your loan is complete, i2i
+        conducts physical verification to verify the documents submitted by you against
+        the originals. You also need to sign a legal agreement and provide 3 undated
+        cheques equal to EMI amount for each investor.', italic: true, background: '#081a32',
+      align: center}
     type: Label
-    layout_properties: {row: QCXSQU, width_xs: 3, col_xs: 1}
+    layout_properties: {row: COOOHK, width_xs: 4, col_xs: 4}
   - name: label_8
-    properties: {foreground: '#0b2547', background: white, text: 'Physical Verification
-        And Documentation
-
-
-        ', align: center, bold: false, font_size: 18, italic: true}
+    properties: {text: 'Once all legal formalities have been completed, Individual
+        investors will transfer money to Escrow account and from Escrow Account money
+        will be transferred to your bank account. Post which you need to repay the
+        loan as per the terms mentioned in the agreement. You may also choose to prepay
+        the loan without any penalty.', italic: true, align: center, visible: false,
+      background: '#081a32'}
     type: Label
-    layout_properties: {row: QCXSQU, width_xs: 4, col_xs: 4}
-  - name: label_9
-    properties: {bold: false, align: center, foreground: '#0b2547', background: white,
-      text: "Loan Disbursal And repayments\n  ", font_size: 18, italic: true}
-    type: Label
-    layout_properties: {row: QCXSQU, width_xs: 3, col_xs: 8}
+    layout_properties: {row: COOOHK, width_xs: 3, col_xs: 8}
   - name: borrower_button
     properties: {text: Continue As A Borrower, role: elevated-button, bold: true,
       background: white, foreground: Black, font_size: 16}
@@ -193,7 +231,7 @@ components:
     type: Spacer
     layout_properties: {row: ETSUGN, width_xs: 3, col_xs: 6}
 - name: grid_panel_3_copy_1
-  properties: {background: '#081a32', visible: false}
+  properties: {background: '#081a32', visible: true}
   type: GridPanel
   layout_properties: {grid_position: 'VUTQML,WOERBT', full_width_row: true}
   components:

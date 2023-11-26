@@ -74,6 +74,25 @@ class user_form(user_formTemplate):
     self.grid_panel_3.visible = False
     self.grid_panel_3_copy_1.visible = True
 
+  def image_2_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    anvil.server.call('show_label_with_delay', delay=500)
+
+  def image_2_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_1_hide()
+
+  def label_1_show(self, **event_args):
+    """This method is called when the Label is shown on the screen"""
+    self.label_1.visible=True
+
+  def label_1_hide(self, **event_args):
+    """This method is called when the Label is removed from the screen"""
+    self.label_1.visible=False
+
+
+
+
     
   
     
