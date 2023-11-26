@@ -61,3 +61,7 @@ class location_main_form(location_main_formTemplate):
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form")
+
+  def map_1_bounds_changed(self, **event_args):
+    """This method is called when the viewport bounds have changed."""
+    pass

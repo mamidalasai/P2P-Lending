@@ -34,3 +34,35 @@ class dasboard_about(dasboard_aboutTemplate):
     """This method is called when the link is clicked"""
     pass
 
+  def image_2_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_9.visible=True
+
+  def image_2_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_9.visible=False
+
+  def image_2_copy_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_10.visible=True
+
+  def image_2_copy_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_10.visible=False
+
+  def image_2_copy_copy_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_11.visible=True
+
+  def image_2_copy_copy_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_11.visible=False
+
+  def image_2_copy_copy_copy_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_12.visible=True
+
+  def image_2_copy_copy_copy_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_12.visible=False
+

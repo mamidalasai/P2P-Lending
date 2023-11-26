@@ -123,6 +123,54 @@ class user_form(user_formTemplate):
   def image_2_mouse_leave(self, x, y, **event_args):
     """This method is called when the mouse cursor leaves this component"""
     self.label_1.visible=False
+
+  def image_3_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_9.visible=True
+
+  def image_3_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_9.visible=False
+
+  def image_3_copy_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_10.visible=True
+
+  def image_3_copy_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_10.visible=False
+
+  def image_3_copy_2_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_11.visible=True
+
+  def image_3_copy_2_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_11.visible=False
+
+  def image_3_copy_3_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_12.visible=True
+
+  def image_3_copy_3_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_12.visible=False
+
+  def image_3_copy_4_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_13.visible=True
+
+  def image_3_copy_4_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_13.visible=False
+
+  def image_3_copy_5_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_14.visible=True
+
+  def image_3_copy_5_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_14.visible=False
    
 
  
