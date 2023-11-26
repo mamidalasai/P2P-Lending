@@ -32,10 +32,12 @@ class new_loan_request(new_loan_requestTemplate):
     anvil.server.call('add_loan_details', min_amount, max_amount, tenure)'''
 
     min_amount=self.min_amount_lb.text
+    min_amount=int(min_amount)
     self.max_amount_lb.text=f" 100000"
     max_amount=self.max_amount_lb.text
     tenure=self.tenure_dd.selected_value
-    anvil.server.call('add_loan_details', min_amount, max_amount, tenure, user_id)
+    coustmer_id=self.user_id
+    anvil.server.call('add_loan_details',coustmer_id, min_amount, max_amount, tenure, user_id)
    
   def button_1_copy_click(self, **event_args):
     if self.check_box_1.checked:
