@@ -495,9 +495,6 @@ db_schema:
     - name: paid_amount
       admin_ui: {width: 200, order: 3}
       type: string
-    - name: remaining_amount
-      admin_ui: {width: 200, order: 4}
-      type: string
     - name: penalty_amount
       admin_ui: {width: 200, order: 5}
       type: string
@@ -510,6 +507,9 @@ db_schema:
     - name: requested_on
       admin_ui: {width: 200, order: 7}
       type: datetime
+    - name: outstanding_amount
+      admin_ui: {width: 200}
+      type: string
     title: foreclosure
   users:
     client: full
