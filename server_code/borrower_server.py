@@ -149,3 +149,7 @@ def add_loan_details(coustmer_id, min_amount, max_amount, tenure, user_id):
     
   )
 
+
+@anvil.server.callable
+def add_loan_details(repayment_amount, processing_fee, emi, interest_rate)
+
