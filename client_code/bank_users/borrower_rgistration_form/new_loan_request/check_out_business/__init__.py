@@ -73,8 +73,4 @@ class check_out_business(check_out_businessTemplate):
     """This method is called when the button is clicked"""
     open_form('bank_users.borrower_rgistration_form')
 
-  repayment_amount=repayment_amount
-  processing_fee=processing_fee
-  emi=emi
-  interest_rate=interest_rate
-  anvil.server.call('add_loan_details', repayment_amount, processing_fee, emi, interest_rate)
+ 

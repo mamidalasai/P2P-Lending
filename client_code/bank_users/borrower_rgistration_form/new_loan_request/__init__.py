@@ -15,7 +15,7 @@ class new_loan_request(new_loan_requestTemplate):
     user_id=self.user_id
     #self.user_id=1000
     self.init_components(**properties)
-    '''def  loan(self, min_amount, max_amount): 
+  def  loan(self, min_amount, max_amount): 
     all_requests = app_tables.loan_details.search(coustmer_id=self.user_id)
     if all_requests:
             most_recent_request = None
@@ -29,14 +29,9 @@ class new_loan_request(new_loan_requestTemplate):
     min_amount = self.min_amount.text  
     max_amount = self.max_amount.text  
     tenure = self.tenure.selected_value
-    anvil.server.call('add_loan_details', min_amount, max_amount, tenure)'''
+    anvil.server.call('add_loan_details', min_amount, max_amount, tenure)
 
-    min_amount = self.min_amount_tb.text
-    self.max_amount_lb.text=f" 500000"
-    max_amount=self.max_amount_lb.text
-    tenure = self.tenure_dd.selected_value
-    coustmer_id=self.user_id
-    anvil.server.call('add_loan_details', coustmer_id, min_amount, max_amount, tenure, user_id)
+   
    
   def button_1_copy_click(self, **event_args):
     if self.check_box_1.checked:
