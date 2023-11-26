@@ -28,7 +28,7 @@ class under_process(under_processTemplate):
       self.list_1.append(i['loan_id'])
       self.list_2.append(i['coustmer_id'])
       self.list_3.append(i['full_name'])
-      self.list_4.append(i['loan_status'])
+      self.list_4.append(i['loan_updated_status'])
     print(a)
 
     self.result = []
@@ -39,11 +39,11 @@ class under_process(under_processTemplate):
       b = -1
       for i in self.list_4:
         b+=1
-        if i != False and i != True:
+        if i == 'Under process' and i == "Under Process" or i == 'under process' or i == 'underprocess':
           self.index.append(b)
           
       for i in self.index:
-        self.result.append({'loan_id' : self.list_1[i], 'coustmer_id' : self.list_2[i], 'full_name' : self.list_3[i], 'loan_status' : self.list_4[i]})
+        self.result.append({'loan_id' : self.list_1[i], 'coustmer_id' : self.list_2[i], 'full_name' : self.list_3[i], 'loan_updated_status' : self.list_4[i]})
 
       self.repeating_panel_1.items = self.result
 

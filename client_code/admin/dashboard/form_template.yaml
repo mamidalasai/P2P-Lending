@@ -120,6 +120,6 @@ components:
       font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#0876E8', bold: true, underline: false, icon: 'fa:newspaper-o'}
     name: button_11
-    layout_properties: {x: 286.71351116895676, y: 462.66666412353516, width: 245}
+    layout_properties: {x: 10, y: 281.3999938964844, width: 245}
     event_bindings: {click: button_11_click}
 is_package: true
