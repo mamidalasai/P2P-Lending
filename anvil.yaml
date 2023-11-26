@@ -36,12 +36,6 @@ db_schema:
     - name: full_name
       admin_ui: {width: 200, order: 3}
       type: string
-    - name: min_amount
-      admin_ui: {width: 200, order: 4}
-      type: number
-    - name: max_amount
-      admin_ui: {width: 200, order: 5}
-      type: number
     - name: interest_rate
       admin_ui: {width: 200, order: 7}
       type: number
@@ -57,9 +51,6 @@ db_schema:
     - name: total_repayment_amount
       admin_ui: {width: 200}
       type: number
-    - name: tenure
-      admin_ui: {width: 200, order: 15}
-      type: number
     - name: coustmer_id
       admin_ui: {order: 5, width: 200}
       type: number
@@ -72,6 +63,15 @@ db_schema:
     - name: payment_done
       admin_ui: {width: 200}
       type: number
+    - name: max_amount
+      admin_ui: {width: 200, order: 8}
+      type: string
+    - name: min_amount
+      admin_ui: {width: 200, order: 7}
+      type: string
+    - name: tenure
+      admin_ui: {order: 13.5, width: 200}
+      type: string
     title: loan_details
   lender:
     title: lender
