@@ -74,21 +74,61 @@ class user_form(user_formTemplate):
     self.grid_panel_3.visible = False
     self.grid_panel_3_copy_1.visible = True
 
+  def image_2_copy_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_4.visible=True
+
+  def image_2_copy_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_4.visible=False
+
+  def image_2_copy_2_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_5.visible=True
+
+  def image_2_copy_2_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_5.visible=False
+
+  def image_2_copy_5_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_6.visible=True
+
+  def image_2_copy_5_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_6.visible=False
+
+  def image_2_copy_4_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_7.visible=True
+
+  def image_2_copy_4_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_7.visible=False
+
+  def image_2_copy_3_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_8.visible=True
+
+  def image_2_copy_3_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_8.visible=False
+
   def image_2_mouse_enter(self, x, y, **event_args):
     """This method is called when the mouse cursor enters this component"""
-    anvil.server.call('show_label_with_delay', delay=500)
+    self.label_1.visible=True
+    
+    
 
   def image_2_mouse_leave(self, x, y, **event_args):
     """This method is called when the mouse cursor leaves this component"""
-    self.label_1_hide()
-
-  def label_1_show(self, **event_args):
-    """This method is called when the Label is shown on the screen"""
-    self.label_1.visible=True
-
-  def label_1_hide(self, **event_args):
-    """This method is called when the Label is removed from the screen"""
     self.label_1.visible=False
+   
+
+ 
+
+ 
+  
 
 
 

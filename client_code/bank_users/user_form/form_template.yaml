@@ -144,19 +144,20 @@ components:
     type: Spacer
     layout_properties: {row: NKCWRD, width_xs: 11, col_xs: 1}
   - name: image_2
-    properties: {source: _/theme/Screenshot 2023-11-26 151804.png, height: 46.79998779296875}
+    properties: {source: _/theme/Screenshot 2023-11-26 151804.png, height: 65.60000610351562}
     type: Image
     layout_properties: {row: EPMAWA, width_xs: 3, col_xs: 1}
     event_bindings: {mouse_enter: image_2_mouse_enter, mouse_leave: image_2_mouse_leave}
   - name: image_2_copy
-    properties: {source: _/theme/Screenshot 2023-11-26 151824.png, height: 49.600006103515625}
+    properties: {source: _/theme/Screenshot 2023-11-26 151824.png, height: 62.600006103515625}
     type: Image
     layout_properties: {row: EPMAWA, width_xs: 4, col_xs: 4}
     event_bindings: {mouse_enter: image_2_copy_mouse_enter, mouse_leave: image_2_copy_mouse_leave}
   - name: image_2_copy_2
-    properties: {source: _/theme/Screenshot 2023-11-26 151845.png, height: 48.399932861328125}
+    properties: {source: _/theme/Screenshot 2023-11-26 151845.png, height: 59.600006103515625}
     type: Image
     layout_properties: {row: EPMAWA, width_xs: 3, col_xs: 8}
+    event_bindings: {mouse_enter: image_2_copy_2_mouse_enter, mouse_leave: image_2_copy_2_mouse_leave}
   - name: label_1
     properties: {text: 'Post registration, open the borrower account by filling a
         simple online form and uploading all the relevant documents. Please remember,
@@ -187,14 +188,17 @@ components:
     properties: {source: _/theme/Screenshot 2023-11-26 151907.png, height: 62.399932861328125}
     type: Image
     layout_properties: {row: CTPIEY, width_xs: 3, col_xs: 1}
+    event_bindings: {mouse_enter: image_2_copy_5_mouse_enter, mouse_leave: image_2_copy_5_mouse_leave}
   - name: image_2_copy_4
     properties: {source: _/theme/Screenshot 2023-11-26 151920.png, height: 62.399932861328125}
     type: Image
     layout_properties: {row: CTPIEY, width_xs: 4, col_xs: 4}
+    event_bindings: {mouse_enter: image_2_copy_4_mouse_enter, mouse_leave: image_2_copy_4_mouse_leave}
   - name: image_2_copy_3
     properties: {source: _/theme/Screenshot 2023-11-26 151941.png, height: 62.399932861328125}
     type: Image
     layout_properties: {row: CTPIEY, width_xs: 3, col_xs: 8}
+    event_bindings: {mouse_enter: image_2_copy_3_mouse_enter, mouse_leave: image_2_copy_3_mouse_leave}
   - name: label_6
     properties: {text: 'Once your loan is live on our portal, it can be viewed by
         all the investors registered on our portal. Soon, investors spread across
