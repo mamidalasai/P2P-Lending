@@ -108,20 +108,6 @@ db_schema:
     - name: final_rta
       admin_ui: {width: 200, order: 15}
       type: number
-  membership:
-    client: none
-    server: full
-    columns:
-    - name: member_club
-      admin_ui: {width: 200, order: 0}
-      type: string
-    - name: loan_type
-      admin_ui: {width: 200, order: 1}
-      type: string
-    - name: interest_rate
-      admin_ui: {width: 200, order: 2}
-      type: number
-    title: membership
   product_details:
     title: product_details
     client: full
