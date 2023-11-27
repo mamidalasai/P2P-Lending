@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: bank_users.borrower_rgistration_form.borrower_foreclosure_request}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -36,12 +36,6 @@ db_schema:
     - name: full_name
       admin_ui: {width: 200, order: 3}
       type: string
-    - name: min_amount
-      admin_ui: {width: 200, order: 4}
-      type: number
-    - name: max_amount
-      admin_ui: {width: 200, order: 5}
-      type: number
     - name: interest_rate
       admin_ui: {width: 200, order: 7}
       type: number
@@ -55,10 +49,7 @@ db_schema:
       admin_ui: {width: 200}
       type: datetime
     - name: total_repayment_amount
-      admin_ui: {width: 200}
-      type: number
-    - name: tenure
-      admin_ui: {width: 200, order: 15}
+      admin_ui: {order: 2, width: 200}
       type: number
     - name: coustmer_id
       admin_ui: {order: 5, width: 200}
@@ -72,6 +63,15 @@ db_schema:
     - name: payment_done
       admin_ui: {width: 200}
       type: number
+    - name: max_amount
+      admin_ui: {width: 200, order: 8}
+      type: string
+    - name: min_amount
+      admin_ui: {width: 200, order: 7}
+      type: string
+    - name: tenure
+      admin_ui: {order: 13.5, width: 200}
+      type: string
     title: loan_details
   lender:
     title: lender
@@ -108,14 +108,6 @@ db_schema:
     - name: final_rta
       admin_ui: {width: 200, order: 15}
       type: number
-  membership:
-    client: none
-    server: full
-    columns:
-    - name: member_club
-      admin_ui: {width: 200, order: 0}
-      type: string
-    title: membership
   product_details:
     title: product_details
     client: full
@@ -495,9 +487,6 @@ db_schema:
     - name: paid_amount
       admin_ui: {width: 200, order: 3}
       type: string
-    - name: remaining_amount
-      admin_ui: {width: 200, order: 4}
-      type: string
     - name: penalty_amount
       admin_ui: {width: 200, order: 5}
       type: string
@@ -510,6 +499,9 @@ db_schema:
     - name: requested_on
       admin_ui: {width: 200, order: 7}
       type: datetime
+    - name: outstanding_amount
+      admin_ui: {width: 200}
+      type: string
     title: foreclosure
   users:
     client: full
