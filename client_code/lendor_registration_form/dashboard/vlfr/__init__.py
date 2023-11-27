@@ -15,7 +15,7 @@ class vlfr(vlfrTemplate):
     
     data = anvil.server.call('get_data')
     for row in data:
-        self.repeating_panel.add_row(**row)
+        self.repeating_panel.items = data
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.avlbal")
