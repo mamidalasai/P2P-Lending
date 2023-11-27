@@ -14,6 +14,18 @@ class view_profile_2(view_profile_2Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    self.user = tables.app_tables.user_profile.search()
+    self.type = []
+    self.id = []
+    
+    for i in self.user:
+      self.type.append(i['usertype'])
+      self.id.append(i['coustmer_id'])
+
+    if value_to_display in self.id:
+      a = self.id.index(value_to_display)
+      self.label_34.text = self.type[a]
+
     self.data = tables.app_tables.loan_details.search()
 
     a = -1
@@ -32,7 +44,7 @@ class view_profile_2(view_profile_2Template):
     self.list_13 = []
     self.list_14 = []
     self.list_15 = []
-
+    self.list_16 = []
 
     for i in self.data:
       a+=1
@@ -51,6 +63,7 @@ class view_profile_2(view_profile_2Template):
       self.list_13.append(i['beseem_score'])
       self.list_14.append(i['email_id'])
       self.list_15.append(i['tenure'])
+      self.list_16.append(i['loan_updated_status'])
     print(a)
 
     if value_to_display in self.list_2:
@@ -70,6 +83,7 @@ class view_profile_2(view_profile_2Template):
       self.label_26.text = self.list_13[b]
       self.label_28.text = self.list_14[b]
       self.label_30.text = self.list_15[b]
+      self.label_32.text = self.list_16[b]
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
