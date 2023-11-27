@@ -151,4 +151,3 @@ def add_loan_details(min_amount, tenure,max_amount,user_id):
     row[0]['max_amount']=min_amount
     row[0]['tenure']=tenure
     row[0]['timestamp']=datetime.now()
-
