@@ -71,6 +71,7 @@ def add_borrower_step4(marital_status,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['marital_status']=marital_status
+    row[0]['form_count']=6
 
 @anvil.server.callable
 def add_borrower_student(college_name,college_id,college_proof,college_address,user_id):
@@ -80,7 +81,7 @@ def add_borrower_student(college_name,college_id,college_proof,college_address,u
     row[0]['college_id']=college_id
     row[0]['college_address']=college_address
     row[0]['college_proof']=college_proof
-    row[0]['form_count']
+    
     
 @anvil.server.callable
 def add_borrower_step4a(spouse_name,marrege_date,spouse_mobile_no,user_id):
