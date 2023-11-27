@@ -39,7 +39,7 @@ class under_process(under_processTemplate):
       b = -1
       for i in self.list_4:
         b+=1
-        if i != False and i != True:
+        if i == "Under Process" and i == 'under process' or i == 'underprocess':
           self.index.append(b)
           
       for i in self.index:
