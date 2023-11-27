@@ -17,4 +17,4 @@ class borrower_loan_close(borrower_loan_closeTemplate):
 
   def home_borrower_registration_form_copy_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form')
+    open_form('bank_users.borrower_dashboard')

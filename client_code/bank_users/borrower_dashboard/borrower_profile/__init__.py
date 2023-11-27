@@ -31,7 +31,7 @@ class borrower_profile(borrower_profileTemplate):
       self.marrital_status_label.text=user_profile['marital_status']
       self.user_type_label.text=user_profile['usertype']
   def button_1_click(self, **event_args):
-    open_form('bank_users.borrower_rgistration_form.boorrower_edit_profile')
+    open_form('bank_users.borrower_d.boorrower_edit_profile')
 
   def button_1_copy_click(self, **event_args):
-    open_form('bank_users.borrower_rgistration_form')
+    open_form('bank_users.borrower_dashboard')

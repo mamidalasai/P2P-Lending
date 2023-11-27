@@ -35,11 +35,11 @@ class new_loan_request(new_loan_requestTemplate):
    
   def button_1_copy_click(self, **event_args):
     if self.check_box_1.checked:
-     open_form('bank_users.borrower_rgistration_form.new_loan_request.loan_type') 
+     open_form('bank_users.borrower_dashboard.new_loan_request.loan_type') 
     else:
       alert('Please select Terms and Conditions')
     def button_1_click(self, **event_args):
-      open_form('bank_users.borrower_rgistration_form')
+      open_form('bank_users.borrower_dashboard')
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -52,4 +52,4 @@ class new_loan_request(new_loan_requestTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form')
+    open_form('bank_users.borrower_dashboard')
