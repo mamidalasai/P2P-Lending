@@ -13,7 +13,6 @@ from ..user_form import user_module
 class borrower_dashboard(borrower_dashboardTemplate):
   def __init__(self, **properties):
     email= main_form_module.email
-    self.label_1.text = user_module.get_name(email)
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
