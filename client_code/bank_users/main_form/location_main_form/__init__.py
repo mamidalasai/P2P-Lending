@@ -61,3 +61,23 @@ class location_main_form(location_main_formTemplate):
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form")
+
+  def map_1_bounds_changed(self, **event_args):
+    """This method is called when the viewport bounds have changed."""
+    pass
+
+  def about_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.about_main_form")
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.products_main_form")
+
+  def contact_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.contact_main_form")
+
+  def carrer_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.career_main_form")

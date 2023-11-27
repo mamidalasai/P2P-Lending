@@ -44,17 +44,25 @@ class user_form(user_formTemplate):
       actual_count=user_data['form_count']
       print(actual_count)
       if actual_count==0:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin',userid=userid)
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
       elif actual_count==1:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2')
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2',user_id=userid)
       elif actual_count==2:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3')
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3',user_id=userid)
       elif actual_count==3:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a_1')
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a_1',user_id=userid)
       elif actual_count==4:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a',userid=userid)
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a',user_id=userid)
       elif actual_count==5:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',user_id=userid)    
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',user_id=userid)
+      elif actual_count==6:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_id=userid)
+      elif actual_count==7:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id=userid)
+      elif actual_count==8:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_8',user_id=userid)
+      elif actual_count==9:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_9',user_id=userid)
     else:
      open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
      print(actual_count)
@@ -73,6 +81,113 @@ class user_form(user_formTemplate):
 
     self.grid_panel_3.visible = False
     self.grid_panel_3_copy_1.visible = True
+
+  def image_2_copy_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_4.visible=True
+
+  def image_2_copy_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_4.visible=False
+
+  def image_2_copy_2_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_5.visible=True
+
+  def image_2_copy_2_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_5.visible=False
+
+  def image_2_copy_5_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_6.visible=True
+
+  def image_2_copy_5_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_6.visible=False
+
+  def image_2_copy_4_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_7.visible=True
+
+  def image_2_copy_4_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_7.visible=False
+
+  def image_2_copy_3_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_8.visible=True
+
+  def image_2_copy_3_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_8.visible=False
+
+  def image_2_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_1.visible=True
+    
+    
+
+  def image_2_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_1.visible=False
+
+  def image_3_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_9.visible=True
+
+  def image_3_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_9.visible=False
+
+  def image_3_copy_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_10.visible=True
+
+  def image_3_copy_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_10.visible=False
+
+  def image_3_copy_2_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_11.visible=True
+
+  def image_3_copy_2_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_11.visible=False
+
+  def image_3_copy_3_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_12.visible=True
+
+  def image_3_copy_3_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_12.visible=False
+
+  def image_3_copy_4_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_13.visible=True
+
+  def image_3_copy_4_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_13.visible=False
+
+  def image_3_copy_5_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_14.visible=True
+
+  def image_3_copy_5_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_14.visible=False
+   
+
+ 
+
+ 
+  
+
+
+
 
     
   

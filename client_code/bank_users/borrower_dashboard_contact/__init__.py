@@ -1,4 +1,4 @@
-from ._anvil_designer import dasboard_contactTemplate
+from ._anvil_designer import borrower_dashboard_contactTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class dasboard_contact(dasboard_contactTemplate):
+class borrower_dashboard_contact(borrower_dashboard_contactTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -17,19 +17,19 @@ class dasboard_contact(dasboard_contactTemplate):
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard")
+    open_form("bank_users.borrower_dashboard")
 
   def login_signup_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    
     alert("Logged out sucessfully")
     anvil.users.logout()
     open_form('bank_users.main_form')
 
-  def contact_main_form_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
 
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_about")
+    open_form('bank_users.borrower_dashboard_about')
+
+  def contact_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
