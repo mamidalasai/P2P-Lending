@@ -52,6 +52,7 @@ components:
     properties: {}
     name: label_2
     layout_properties: {grid_position: 'ZKLBCZ,DGULGN'}
+    data_bindings: []
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Customer ID, font_size: null, font: '', spacing_above: small,

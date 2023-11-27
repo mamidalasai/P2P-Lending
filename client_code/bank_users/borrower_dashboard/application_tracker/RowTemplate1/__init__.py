@@ -15,3 +15,15 @@ class RowTemplate1(RowTemplate1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def loan_status_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    user=app_tables.loan_details.search()
+    if user==closed:
+      open_form('bank_users.borrower_dashboard.borrower_loan_close')
+    elif user==approved:
+      open_form('bank_users.borrower_dashboard.application_tracker.borrower_status_form')
+    else:
+      open_form('bank_users.borrower_dashboard.application_tracker.borrower_status_form')
+      value=self.loan_status
+      open_form('bank_users.borrower_dashboard.borrower_profile',value=value)
