@@ -71,7 +71,11 @@ components:
               icon_align: left, spacing_below: small, italic: false, background: '',
               bold: true, underline: false, icon: ''}
             name: paid_label
-            layout_properties: {row: MPVXLB, width_xs: 4, col_xs: 6, width: 149.656}
+            layout_properties: {row: MPVXLB, width_xs: 2, col_xs: 6, width: 149.656}
+          - type: Label
+            properties: {}
+            name: label_23
+            layout_properties: {row: MPVXLB, width_xs: 2, col_xs: 8}
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
               visible: true, text: 'Monthly Installment :', font_size: null, font: '',
@@ -144,7 +148,7 @@ components:
             layout_properties: {row: MTNWVF, width_xs: 2, col_xs: 6, width: 149.656}
           - type: Label
             properties: {}
-            name: label_23
+            name: label_24
             layout_properties: {row: MTNWVF, width_xs: 2, col_xs: 8}
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',

@@ -15,7 +15,6 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
     self.label_loan_id.text = f"{selected_row['loan_id']}"
     self.label_name.text = f"{selected_row['full_name']}"
     self.label_loan_amount.text = f"{selected_row['min_amount']}"
-    self.label_loan_acc_number.text = f"{selected_row['loan_acc_number']}"
     self.label_loan_tenure.text = f"{selected_row['tenure']} Months"
     self.label_interest_rate.text = f"{selected_row['interest_rate']} %  pa"
     self.label_credit_limit.text = f"{selected_row['max_amount']}"
