@@ -43,6 +43,7 @@ class user_form(user_formTemplate):
     if user_data:
       actual_count=user_data['form_count']
       print(actual_count)
+      print("")
       if actual_count==0:
         open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
       elif actual_count==1:
