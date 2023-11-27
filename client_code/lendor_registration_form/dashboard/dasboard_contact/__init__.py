@@ -25,3 +25,11 @@ class dasboard_contact(dasboard_contactTemplate):
     alert("Logged out sucessfully")
     anvil.users.logout()
     open_form('bank_users.main_form')
+
+  def contact_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
+  def about_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("lendor_registration_form.dashboard.dasboard_about")

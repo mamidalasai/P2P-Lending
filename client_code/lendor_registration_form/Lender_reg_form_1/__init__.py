@@ -53,3 +53,4 @@ class Lender_reg_form_1(Lender_reg_form_1Template):
             else:
                 Notification("You are not eligible. Age must be 18 or above").show()
                 return
+
