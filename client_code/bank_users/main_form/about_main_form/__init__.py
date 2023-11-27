@@ -66,7 +66,7 @@ class about_main_form(about_main_formTemplate):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    pass
+    open_form("bank_users.main_form.products_main_form")
 
   def contact_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -75,3 +75,11 @@ class about_main_form(about_main_formTemplate):
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
+
+  def carrer_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.career_main_form")
+
+  def location_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.location_main_form")
