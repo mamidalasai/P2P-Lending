@@ -71,6 +71,7 @@ def add_borrower_step4(marital_status,user_id):
   row = app_tables.user_profile.search(coustmer_id=user_id)
   if row:
     row[0]['marital_status']=marital_status
+    row[0]['form_count']=6
 
 @anvil.server.callable
 def add_borrower_student(college_name,college_id,college_proof,college_address,user_id):
@@ -80,6 +81,7 @@ def add_borrower_student(college_name,college_id,college_proof,college_address,u
     row[0]['college_id']=college_id
     row[0]['college_address']=college_address
     row[0]['college_proof']=college_proof
+    
     
 @anvil.server.callable
 def add_borrower_step4a(spouse_name,marrege_date,spouse_mobile_no,user_id):
@@ -111,7 +113,16 @@ def add_borrower_step7(home_loan,other_loan,live_loan,user_id):
     row[0]['running_Home_Loan'] = home_loan
     row[0]['running_or_live loans']= live_loan
     row[0]['other_loan']=other_loan
-  
+    row[0]['form_count']=7
+@anvil.server.callable
+def add_borrower_step8(account_name, account_type,account_number,bank_name, user_id):
+  row = app_tables.user_profile.search(coustmer_id=user_id)
+  if row:
+    row[0]['account_name'] = account_name
+    row[0]['account_type'] = account_type
+    row[0]['account_number'] = account_number
+    row[0]['select_bank'] = bank_name  
+    row[0]['form_count']=8
 
 @anvil.server.callable
 def add_borrower_step9(ifsc,salary_type,select_bank,net_bank, user_id):
@@ -123,6 +134,7 @@ def add_borrower_step9(ifsc,salary_type,select_bank,net_bank, user_id):
     row[0]['net_bank'] = net_bank
     row[0]['usertype'] = 'borrower'
     row[0]['last_confirm'] = True
+    row[0]['form_count']=9
 
 # the borrower registration form end hear do not change any code ---#
 
