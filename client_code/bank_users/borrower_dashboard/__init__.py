@@ -19,11 +19,6 @@ class borrower_dashboard(borrower_dashboardTemplate):
     # Any code you write here will run before the form opens.
 
 
-
-
-
-
-  
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("bank_users.borrower_dashboard")
