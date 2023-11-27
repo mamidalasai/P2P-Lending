@@ -55,7 +55,14 @@ class user_form(user_formTemplate):
         open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a',user_id=userid)
       elif actual_count==5:
         open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',user_id=userid)
-        
+      elif actual_count==6:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_id=userid)
+      elif actual_count==7:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id=userid)
+      elif actual_count==8:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_8',user_id=userid)
+      elif actual_count==9:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_9',user_id=userid)
     else:
      open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
      print(actual_count)
