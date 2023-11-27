@@ -10,7 +10,7 @@ from anvil.tables import app_tables
 from anvil.js.window import navigator
 from ..user_form import user_module
 from . import main_form_module
-from ..borrower_rgistration_form import borrower_main_form_module
+from ..borrower_dashboard import borrower_main_form_module
 
 class main_form(main_formTemplate):
   def __init__(self, **properties):
@@ -48,7 +48,7 @@ class main_form(main_formTemplate):
             if user_type == 'lender':
               open_form('lendor_registration_form.dashboard')
             elif user_type == 'borrower':
-              open_form('bank_users.borrower_rgistration_form')
+              open_form('bank_users.borrower_dashboard')
             elif user_type == 'admin':
               open_form('admin.dashboard')
             else:
