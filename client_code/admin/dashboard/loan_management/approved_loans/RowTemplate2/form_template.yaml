@@ -19,7 +19,10 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''full_name'']'}
 - type: Label
-  properties: {}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: green,
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   name: label_4
   layout_properties: {column: HCAQYD}
   data_bindings:
