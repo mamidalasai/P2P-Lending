@@ -117,7 +117,7 @@ class view_profile_copy(view_profile_copyTemplate):
       self.spouse_number_list.append(i['spouse_mobile'])
       self.company_name_list.append(i['spouse_company_name'])
       self.company_adress_list.append(i['spouse_company_address'])
-      self.proffic_list.append(i['spouse_profficen'])
+      self.proffic_list.append(i['profficen'])
       self.user_type_list.append(i['usertype'])
       self.approve_list.append(i['registration_approve'])
       self.mobile_list.append(i['mobile'])
