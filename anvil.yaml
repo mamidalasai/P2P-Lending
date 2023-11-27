@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.borrower_rgistration_form.borrower_foreclosure_request}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -70,8 +70,8 @@ db_schema:
       admin_ui: {width: 200, order: 7}
       type: string
     - name: tenure
-      admin_ui: {width: 200, order: 14}
-      type: number
+      admin_ui: {width: 200, order: 10.5}
+      type: string
     title: loan_details
   lender:
     title: lender
