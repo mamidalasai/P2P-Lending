@@ -17,7 +17,7 @@ class borrower_dashboard_about(borrower_dashboard_aboutTemplate):
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("bank_users.Form1")
+    open_form("bank_users.borrower_dashboard")
 
   def login_signup_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -25,38 +25,43 @@ class borrower_dashboard_about(borrower_dashboard_aboutTemplate):
     anvil.users.logout()
     open_form('bank_users.main_form')
 
-  def button_3_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_profile')
-
-  def button_4_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.new_loan_request')
-
-  def button_6_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_loan_close')
-
-  def outlined_button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_today_dues')
-
-  def outlined_button_3_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.application_tracker')
-
-  def outlined_button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request')
-
-  def outlined_button_6_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_discount_coupons')
-
-  def outlined_button_7_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_view_portfolio')
 
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_about')
+    open_form('bank_users.borrower_dashboard_about')
+
+  def image_2_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_9.visible=True
+
+  def image_2_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_9.visible=False
+
+  def image_2_copy_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_10.visible=True
+
+  def image_2_copy_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_10.visible=False
+
+  def image_2_copy_copy_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_11.visible=True
+
+  def image_2_copy_copy_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_11.visible=False
+
+  def image_2_copy_copy_copy_mouse_enter(self, x, y, **event_args):
+    """This method is called when the mouse cursor enters this component"""
+    self.label_12.visible=True
+
+  def image_2_copy_copy_copy_mouse_leave(self, x, y, **event_args):
+    """This method is called when the mouse cursor leaves this component"""
+    self.label_12.visible=False
+
+  def contact_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.borrower_dashboard_contact")
