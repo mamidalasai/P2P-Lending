@@ -21,8 +21,10 @@ class foreclose(forecloseTemplate):
 
         # Calculate EMI
     monthly_interest_rate = selected_row['interest_rate'] / (12 * 100)  # Assuming interest rate is in percentage
-    factor = (1 + monthly_interest_rate) ** tenure   # Calculate (1 + r)^t without using pow
-    emi = min_amount * monthly_interest_rate * factor / (factor - 1)
+    monthly_interest_rate=int(monthly_interest_rate)
+    factor = (1 + monthly_interest_rate) ** int(tenure)# Calculate (1 + r)^t without using pow
+    factor=int(factor)
+    emi = min_amount * monthly_interest_rate * float(factor) / (float(factor) - 1)
     emi = int(emi)
 
     monthly_installment = min_amount / tenure
