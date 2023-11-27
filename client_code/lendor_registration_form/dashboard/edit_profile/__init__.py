@@ -18,8 +18,8 @@ class edit_profile(edit_profileTemplate):
       self.text_box_1.text=user_profile['full_name']
       self.text_box_2.text=user_profile['email_user']
       self.text_box_3.text=user_profile['mobile']
-      self.drop_down_1.selected_value=user_profile['g']
-      self.date_of_birth.text=user_profile['date_of_birth']
+      self.drop_down_1.selected_value=user_profile['gender']
+      self.label_9.text=user_profile['date_of_birth']
       self.ad_number.text=user_profile['aadhaar_no']
       self.pan_number.text=user_profile['pan_number']
       
