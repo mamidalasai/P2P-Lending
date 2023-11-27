@@ -24,10 +24,10 @@ class vep(vepTemplate):
       self.gender.text = f"{gender}"
       date_of_birth = lender_profile[0]['date_of_birth']
       self.dob = f"{date_of_birth}"
-      ad_number = lender_profile[0]['aadhaar_no']
-      self.ad_number= f"{ad_number}"
-      pan_number = lender_profile[0]['pan_number']
-      self.pan_number = f"{pan_number}"
+      #ad_number = lender_profile[0]['aadhaar_no']
+      #self.ad_number= f"{ad_number}"
+      #pan_number = lender_profile[0]['pan_number']
+      #self.pan_number = f"{pan_number}"
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.avlbal")
