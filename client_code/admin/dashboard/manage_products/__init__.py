@@ -31,3 +31,5 @@ class manage_products(manage_productsTemplate):
     """This method is called when the link is clicked"""
     open_form('admin.dashboard')
 
+ 
+
