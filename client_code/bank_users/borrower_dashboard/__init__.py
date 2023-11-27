@@ -31,35 +31,35 @@ class borrower_dashboard(borrower_dashboardTemplate):
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_profile')
+    open_form('bank_users.borrower_dashboard.borrower_profile')
 
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.new_loan_request')
+    open_form('bank_users.borrower_dashboard.new_loan_request')
 
   def button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_loan_close')
+    open_form('bank_users.borrower_dashboard.borrower_loan_close')
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_today_dues')
+    open_form('bank_users.borrower_dashboard.borrower_today_dues')
 
   def outlined_button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.application_tracker')
+    open_form('bank_users.borrower_dashboard.application_tracker')
 
   def outlined_button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request')
+    open_form('bank_users.borrower_dashboard.borrower_foreclosure_request')
 
   def outlined_button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_discount_coupons')
+    open_form('bank_users.borrower_dashboard.borrower_discount_coupons')
 
   def outlined_button_7_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form.borrower_view_portfolio')
+    open_form('bank_users.borrower.borrower_view_portfolio')
 
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""

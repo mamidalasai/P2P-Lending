@@ -29,7 +29,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
     payment_done = selected_row['payment_done']
 
     if payment_done > 12:
-          open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request.borrower_foreclosure.foreclose', selected_row=selected_row)
+          open_form('bank_users.borrower_dashboard.borrower_foreclosure_request.borrower_foreclosure.foreclose', selected_row=selected_row)
 
          
     else:
@@ -41,11 +41,11 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
 
   def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('bank_users.borrower_rgistration_form.borrower_foreclosure_request')
+        open_form('bank_users.borrower_dashboard.borrower_foreclosure_request')
 
   def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('bank_users.borrower_rgistration_form')
+        open_form('bank_users.borrower_dashboard')
 
   
 

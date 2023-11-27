@@ -31,19 +31,18 @@ components:
   properties: {}
   type: Label
   layout_properties: {column: VKTTOA}
+  data_bindings:
+  - {property: text, code: 'self.item[''lender_name'']', writeback: false}
 - name: mail_label
   properties: {}
   type: Label
   layout_properties: {column: HEMILB}
   data_bindings:
-  - {property: text, code: 'self.item[''email_id'']', writeback: false}
-- name: desk_label
-  properties: {}
-  type: Label
-  layout_properties: {column: HMTIIF}
-- name: status_label
-  properties: {}
-  type: Label
+  - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
+- name: loan_status
+  properties: {text: ''}
+  type: Link
   layout_properties: {column: SQXFPE}
+  event_bindings: {click: loan_status_click}
   data_bindings:
-  - {property: text, code: 'self.item[''application_status'']', writeback: false}
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
