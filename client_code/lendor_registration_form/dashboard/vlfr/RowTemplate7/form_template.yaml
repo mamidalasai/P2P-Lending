@@ -17,19 +17,7 @@ components:
   name: label_3
   layout_properties: {column: ARNJJY}
   data_bindings:
-  - {property: text, code: 'self.item[''amount'']'}
-- type: Label
-  properties: {}
-  name: label_4
-  layout_properties: {column: QWPKQU}
-  data_bindings:
-  - {property: text, code: 'self.item[''outstanding_amount'']'}
-- type: Label
-  properties: {}
-  name: label_5
-  layout_properties: {column: PNLXFW}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_date'']'}
+  - {property: text, code: 'self.item[''min_amount'']'}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
     foreground: '', visible: true, text: View Details, font_size: null, font: '',

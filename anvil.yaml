@@ -66,13 +66,13 @@ db_schema:
     - name: max_amount
       admin_ui: {width: 200, order: 8}
       type: string
-    - name: min_amount
-      admin_ui: {width: 200, order: 7}
-      type: string
     - name: tenure
       admin_ui: {width: 200, order: 10.5}
       type: string
     - name: loan_updated_status
+      admin_ui: {width: 200}
+      type: string
+    - name: min_amount
       admin_ui: {width: 200}
       type: string
     title: loan_details
@@ -437,6 +437,9 @@ db_schema:
       type: string
     - name: spouse_office_number
       admin_ui: {width: 200, order: 93}
+      type: string
+    - name: spouse_profficen
+      admin_ui: {width: 200}
       type: string
     title: user_profile
   borrower:
