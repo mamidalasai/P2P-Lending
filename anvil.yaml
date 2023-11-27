@@ -72,6 +72,9 @@ db_schema:
     - name: tenure
       admin_ui: {width: 200, order: 10.5}
       type: string
+    - name: loan_updated_status
+      admin_ui: {width: 200}
+      type: string
     title: loan_details
   lender:
     title: lender

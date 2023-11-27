@@ -28,7 +28,7 @@ class approved_loans(approved_loansTemplate):
       self.list_1.append(i['loan_id'])
       self.list_2.append(i['coustmer_id'])
       self.list_3.append(i['full_name'])
-      self.list_4.append(i['loan_status'])
+      self.list_4.append(i['loan_updated_status'])
     print(a)
 
     self.result = []
@@ -39,7 +39,7 @@ class approved_loans(approved_loansTemplate):
       b = -1
       for i in self.list_4:
         b+=1
-        if i:
+        if i == "Approved" or i == 'approved':
           self.index.append(b)
           
       for i in self.index:

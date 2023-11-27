@@ -19,25 +19,25 @@ class loan_management(loan_managementTemplate):
     """This method is called when the link is clicked"""
     open_form('admin.dashboard')
 
-  def link_2_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('admin.dashboard.loan_management.open_loans')
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.approved_loans')
 
-  def link_3_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('admin.dashboard.loan_management.closed_loans')
-
-  def link_5_click(self, **event_args):
-    """This method is called when the link is clicked"""
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_management.rejected_loans')
 
-  def link_6_click(self, **event_args):
-    """This method is called when the link is clicked"""
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_management.under_process')
 
-  def link_4_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('admin.dashboard.loan_management.approved_loans')
+  def button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.open_loans')
+
+  def button_5_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.closed_loans')
 
 
 
