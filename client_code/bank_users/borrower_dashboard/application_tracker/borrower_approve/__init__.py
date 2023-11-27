@@ -15,5 +15,5 @@ class borrower_approve(borrower_approveTemplate):
     
     user=app_tables.loan_details.search()
     if user==approve:
-      open_form('bank')
+      open_form('bank_users.borrower_dashboard.application_tracker.borrower_approve')
     # Any code you write here will run before the form opens.
