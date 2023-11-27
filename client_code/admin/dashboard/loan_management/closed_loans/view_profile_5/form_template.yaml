@@ -1,19 +1,20 @@
-is_package: true
 container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 components:
 - type: ColumnPanel
   properties: {}
   name: content_panel
-  layout_properties: {slot: default}
+  layout_properties:
+    col_widths: {}
+    grid_position: CGGMYR,RKJRXK
   components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: content_panel_copy
     layout_properties:
       col_widths: {}
-      grid_position: LMMSHE,YYXDIS
+      grid_position: SDSJYQ,RIJUQY
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 32, tooltip: '', border: '',
@@ -33,36 +34,201 @@ components:
       name: link_1
       layout_properties: {grid_position: 'JJMMBB,TXJQMK'}
       event_bindings: {click: link_1_click}
-  - type: DataGrid
-    properties:
-      role: null
-      columns:
-      - {id: EPCWQG, title: Loan ID, data_key: column_1, $$hashKey: 'object:53723'}
-      - {id: WMIWXU, title: Costumer ID, data_key: column_2, $$hashKey: 'object:53724'}
-      - {id: PVBYZX, title: Full Name, data_key: column_3, $$hashKey: 'object:53725'}
-      - {id: HCAQYD, title: Loan Status, data_key: column_4, $$hashKey: 'object:53773'}
-      - {id: DBUUUO, title: '', data_key: column_5, $$hashKey: 'object:53775'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: true
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: large
-      spacing_below: small
-      background: ''
-    name: data_grid_1
-    layout_properties:
-      col_widths: {}
-      grid_position: IHNLWR,ORCPMV
-    components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan_management.closed_loans.RowTemplate14}
-      name: repeating_panel_1
-      layout_properties: {}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties:
+    col_widths: {}
+    grid_position: FEODRL,RKKLYK
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Loan ID, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'ZKLBCZ,RHAUHC'}
+  - type: Label
+    properties: {}
+    name: label_2
+    layout_properties: {grid_position: 'ZKLBCZ,DGULGN'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Customer ID, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_3
+    layout_properties: {grid_position: 'SWTEKF,IPYAZO'}
+  - type: Label
+    properties: {}
+    name: label_4
+    layout_properties: {grid_position: 'SWTEKF,GYZUJD'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Full Name, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'TJEMWX,WFSGOC'}
+  - type: Label
+    properties: {}
+    name: label_6
+    layout_properties: {grid_position: 'TJEMWX,SDZABW'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Loan Status, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_7
+    layout_properties: {grid_position: 'NWIEAF,CIEEHL'}
+  - type: Label
+    properties: {}
+    name: label_8
+    layout_properties: {grid_position: 'NWIEAF,YOSDKV'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Application Status, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_9
+    layout_properties: {grid_position: 'RCXFVE,DRJPMR'}
+  - type: Label
+    properties: {}
+    name: label_10
+    layout_properties: {grid_position: 'RCXFVE,ZGTQQH'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Minimum Amount, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_11
+    layout_properties: {grid_position: 'GIJNJP,FAYAQW'}
+  - type: Label
+    properties: {}
+    name: label_12
+    layout_properties: {grid_position: 'GIJNJP,EEEUTZ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Maximum Amount, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_13
+    layout_properties: {grid_position: 'NAYKOJ,QZCSPK'}
+  - type: Label
+    properties: {}
+    name: label_14
+    layout_properties: {grid_position: 'NAYKOJ,YCXRRO'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Interest Rate ', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_15
+    layout_properties: {grid_position: 'WVGFBW,NXEMKZ'}
+  - type: Label
+    properties: {}
+    name: label_16
+    layout_properties: {grid_position: 'WVGFBW,WFCNFD'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Time Stamp, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_17
+    layout_properties: {grid_position: 'GRQUDY,YQLRJM'}
+  - type: Label
+    properties: {}
+    name: label_18
+    layout_properties: {grid_position: 'GRQUDY,TVYGJI'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Total Repayment Date, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_19
+    layout_properties: {grid_position: 'AOWEBO,ILWLCX'}
+  - type: Label
+    properties: {}
+    name: label_20
+    layout_properties: {grid_position: 'AOWEBO,KXLUDM'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Payment Done, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_21
+    layout_properties: {grid_position: 'JCPLQP,BUJZMB'}
+  - type: Label
+    properties: {}
+    name: label_22
+    layout_properties: {grid_position: 'JCPLQP,OPXKGK'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Member Room, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_23
+    layout_properties: {grid_position: 'GKRWXG,CTZEGQ'}
+  - type: Label
+    properties: {}
+    name: label_24
+    layout_properties: {grid_position: 'GKRWXG,XAHDMS'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Bhesam Score, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_25
+    layout_properties: {grid_position: 'NDKNOY,SDIBSU'}
+  - type: Label
+    properties: {}
+    name: label_26
+    layout_properties: {grid_position: 'NDKNOY,ZGNUPS'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Email ID, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_27
+    layout_properties: {grid_position: 'JPLLSA,DKXCHL'}
+  - type: Label
+    properties: {}
+    name: label_28
+    layout_properties: {grid_position: 'JPLLSA,LANHOD'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Tenure, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_29
+    layout_properties: {grid_position: 'RUEVNX,OWTSNZ'}
+  - type: Label
+    properties: {}
+    name: label_30
+    layout_properties: {grid_position: 'RUEVNX,GYKATJ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Updated Loan Status ', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_31
+    layout_properties: {grid_position: 'NEIFHQ,QYMMCJ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_32
+    layout_properties: {grid_position: 'NEIFHQ,EBJDCH'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: User Type, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_33
+    layout_properties: {grid_position: 'FMEYUG,CWCHFS'}
+  - type: Label
+    properties: {}
+    name: label_34
+    layout_properties: {grid_position: 'FMEYUG,BVXSTI'}
+is_package: true

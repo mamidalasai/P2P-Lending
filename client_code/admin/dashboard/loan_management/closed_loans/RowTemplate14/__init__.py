@@ -1,4 +1,4 @@
-from ._anvil_designer import RowTemplate13Template
+from ._anvil_designer import RowTemplate14Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class RowTemplate13(RowTemplate13Template):
+class RowTemplate14(RowTemplate14Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -18,5 +18,5 @@ class RowTemplate13(RowTemplate13Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     value_to_pass = self.label_2.text
-    open_form('admin.dashboard.loan_management.open_loans.view_profile_4', value_to_pass)
+    open_form('admin.dashboard.loan_management.closed_loans.view_profile_5', value_to_pass)
 
