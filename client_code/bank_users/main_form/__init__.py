@@ -48,7 +48,7 @@ class main_form(main_formTemplate):
             if user_type == 'lender':
               open_form('lendor_registration_form.dashboard')
             elif user_type == 'borrower':
-              open_form('bank_users.borrower_rgistration_form')
+              open_form('bank_users.borrower_dashboard')
             elif user_type == 'admin':
               open_form('admin.dashboard')
             else:
