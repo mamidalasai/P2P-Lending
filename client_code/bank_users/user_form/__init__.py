@@ -17,10 +17,9 @@ class user_form(user_formTemplate):
     self.init_components(**properties)
     self.email = main_form_module.email
     email=self.email
-    self.name = user_module.get_name(email)
+    print("this email print",email)
     self.user_id =  user_module.find_user_id(email)
-    
-    self.email = email
+    print(self.user_id)
     if main_form_module.alert_mes(main_form_module.flag):
       print("user login")
     else:
@@ -34,8 +33,7 @@ class user_form(user_formTemplate):
      open_form('bank_users.main_form')
 
   def home_main_form_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form("bank_users.user_form1")
+    open_form("bank_users.user_form")
 
   def borrower_button_click(self, **event_args):
     userid = self.user_id
@@ -64,10 +62,16 @@ class user_form(user_formTemplate):
         open_form('borrower_registration_form.star_1_borrower_registration_form_begin_8',user_id=userid)
       elif actual_count==9:
         open_form('borrower_registration_form.star_1_borrower_registration_form_begin_9',user_id=userid)
+      else:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
     else:
      open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
      print(actual_count)
-      
+
+
+
+
+  
   def lendor_button_click(self, **event_args):
     userid = self.user_id
     open_form('lendor_registration_form.Lender_reg_form_1',user_id=userid)
