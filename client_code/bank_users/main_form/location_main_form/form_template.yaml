@@ -96,6 +96,11 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'AIFBLC,STKBWN'}
+- name: map_1
+  properties: {height: 174, fullscreen_control: false}
+  type: GoogleMap
+  layout_properties: {grid_position: 'BTYNSC,RMEBDE'}
+  event_bindings: {bounds_changed: map_1_bounds_changed}
 - name: spacer_3
   properties: {height: 42}
   type: Spacer
