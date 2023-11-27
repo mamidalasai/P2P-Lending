@@ -258,27 +258,3 @@ def get_user_data(user_id):
 
 
 
-# Import the Anvil server module
-
-
-# Define a function to fetch data
-@anvil.server.callable
-def get_data():
-    # Fetch data from the foreclosure table
-    foreclosure_data = app_tables.foreclosure.search()
-
-    # Fetch data from the loan_details table
-    loan_details_data = app_tables.loan_details.search()
-
-    # Combine the data from both tables
-    combined_data = [
-        {
-            'loan_id': foreclosure['loan_id'],
-            'borrower_name': foreclosure['borrower_name'],
-            'min_amount': loan_details['min_amount']
-        }
-        for foreclosure, loan_details in zip(foreclosure_data, loan_details_data)
-    ]
-
-    # Return the combined data
-    return combined_data
