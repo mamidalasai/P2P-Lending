@@ -47,6 +47,7 @@ components:
     properties: {text: Products, foreground: white, font_size: 15, icon: 'fa:shopping-cart'}
     type: Link
     layout_properties: {}
+    event_bindings: {click: link_1_click}
   - name: contact_main_form_link_copy_1
     properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: 'Contact ', font_size: 15, wrap_on: mobile, font: '', col_spacing: medium,
