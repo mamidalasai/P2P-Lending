@@ -61,3 +61,19 @@ class career_main_form(career_main_formTemplate):
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form")
+
+  def about_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.about_main_form")
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.products_main_form")
+
+  def contact_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.contact_main_form")
+
+  def location_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.location_main_form")
