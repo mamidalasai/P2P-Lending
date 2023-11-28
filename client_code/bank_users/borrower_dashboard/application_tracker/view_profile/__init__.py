@@ -1,4 +1,4 @@
-from ._anvil_designer import borrower_profile_copyTemplate
+from ._anvil_designer import view_profileTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from .. import borrower_main_form_module as main_form_module
 
-class borrower_profile_copy(borrower_profile_copyTemplate):
+class view_profile(view_profileTemplate):
   def __init__(self, **properties):
     self.user_id=main_form_module.userId
     #self.user_id=1000
@@ -22,15 +22,9 @@ class borrower_profile_copy(borrower_profile_copyTemplate):
       self.full_name_label.text=user_profile['full_name']
       self.email_id_label.text=user_profile['email_user']
       self.mobile_no_label.text=user_profile['mobile']
-      self.date_of_birth_label.text=user_profile['date_of_birth']
       self.city_label.text=user_profile['city']
-      self.pan_no_label.text=user_profile['pan_number']
-      self.aadhaar_no_label.text=user_profile['aadhaar_no']
       self.gender_label.text=user_profile['gender']
-      self.mother_tounge_label.text=user_profile['mouther_tounge']
-      self.marrital_status_label.text=user_profile['marital_status']
-      self.user_type_label.text=user_profile['usertype']
-      
+      user_profile=app_tables.loan_details.get(coustmer_id=self.user_id)
 
   def button_1_copy_click(self, **event_args):
     open_form('bank_users.borrower_dashboard')
