@@ -13,10 +13,10 @@ components:
     grid_position: HJAOEA,HDCZRI
   event_bindings: {click: button_1_copy_click}
 - name: button_1
-  properties: {role: tonal-button, align: right, tooltip: '', border: '', enabled: true,
+  properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: black, visible: true, text: Back, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-    bold: true, underline: false, icon: ''}
+    bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
   layout_properties:
     col_widths: {}
