@@ -95,7 +95,7 @@ class loan_disbursed(loan_disbursedTemplate):
       b = -1
       for i in self.list_4:
         b+=1
-        if i == "Approved" or i == 'approved':
+        if i in :
           self.index.append(b)
           
       for i in self.index:
