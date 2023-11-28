@@ -20,3 +20,7 @@ class foreclose_details(foreclose_detailsTemplate):
     self.total.text=f"{selected_row['paid_amount']}"
 
     # Any code you write here will run before the form opens.
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form("lendor_registration_form.dashboard.vlfr")
