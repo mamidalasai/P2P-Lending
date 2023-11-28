@@ -12,8 +12,7 @@ class borrower_loan_close(borrower_loan_closeTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.data = tables.app_tables.loan_details.search(loan_updated_status='closed' or 'close loans' or 'closeloans' or 'close')
-    self.repeating_panel_1.items=self.data
+    self.repeating_panel_1.items=app_tables.loan_details.search()
 
     # Any code you write here will run before the form opens.
 
