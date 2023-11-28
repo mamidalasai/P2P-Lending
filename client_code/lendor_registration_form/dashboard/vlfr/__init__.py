@@ -12,8 +12,9 @@ class vlfr(vlfrTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    coustmer_id='1000'
-    self.repeating_panel.items=anvil.server.call('search_user',coustmer_id)
+    self.repeating_panel.items=app_tables.foreclosure.search()
+
+
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.avlbal")
