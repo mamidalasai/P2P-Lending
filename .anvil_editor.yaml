@@ -85,6 +85,7 @@ unique_ids:
     lendor_registration_form.dashboard.rta: '1699957883953144866963289.06934'
     ? borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_2
     : '1700570068782198167271670.87088'
+    admin.dashboard.loan_management.loan_disbursed: '1701152997589575772679587.9658'
     admin.dashboard.loan_management.open_loans: '1699528907914284548214666.92645'
     bank_users.borrower_dashboard.new_loan_request: '1698662158540530088363841.0887'
     bank_users.borrower_dashboard.application_tracker.borrower_rejected: '1701084970357795698703959.3584'
@@ -117,6 +118,7 @@ unique_ids:
     borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a: '1699369123665164443906866.3994'
     bank_users.main_form: '1700479916868316718897361.56647'
     lendor_registration_form.Lender_reg_education_Mtech: '1700756951276419563635826.77423'
+    admin.dashboard.loan_management.loan_disbursed.RowTemplate15: '1701153155801211420775535.44803'
     admin.dashboard.manage_products.view_profile: '170072327892078386506068.2929'
     bank_users.borrower_dashboard.application_tracker.RowTemplate1: '1698928474442141604886683.00064'
     borrower_registration_form.star_1_borrower_registration_form_begin_9: '1700161464232284844778301.04285'
