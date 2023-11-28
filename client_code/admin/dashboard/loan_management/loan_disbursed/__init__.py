@@ -98,7 +98,11 @@ class loan_disbursed(loan_disbursedTemplate):
         if (i in self.main_result) and (self.list_4[b] == "approved"):
           self.index.append(b)
           
-    print(self.i)
+      print(self.index)
+      for i in self.index:
+        self.result_3.append({'loan_id' : self.list_1[i], 'coustmer_id' : self.list_2[i], 'full_name' : self.list_3[i], 'loan_updated_status' : self.list_4[i]})
+
+      self.repeating_panel_1.items = self.result_3
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
