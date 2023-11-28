@@ -20,7 +20,19 @@ class add_product_categories_and_groups(add_product_categories_and_groupsTemplat
     pass
 
   def button_1_click(self, **event_args):
-    group_and_category = self.text_box_1.text
+    # Assuming text_box_1 is used for both groups and as a new category
+    groups = self.text_box_1.text
+    category = groups  # Set the category to the user input
     
-    """This method is called when the button is clicked"""
+    # Add the user input (category) to the dropdown options only if it's not already present
+    if category not in self.drop_down_1.items:
+        self.drop_down_1.items.append(category)
+    
+    # Set the selected value to the user input (category)
+    self.drop_down_1.selected_value = category
+    
+    # Call the server function with the updated values
+    anvil.server.call('manage_products', groups, category)
+
+    
     
