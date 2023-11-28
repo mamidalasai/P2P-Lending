@@ -30,4 +30,11 @@ components:
   layout_properties: {column: PNLXFW}
   data_bindings:
   - {property: text, code: 'self.item[''paid_amount'']'}
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: View Details, font_size: null, wrap_on: mobile, font: '',
+    col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: true, underline: true, icon: ''}
+  name: link_1
+  layout_properties: {column: JOBDZA}
 is_package: true

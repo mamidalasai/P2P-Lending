@@ -12,8 +12,7 @@ class vlfr(vlfrTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    data = anvil.server.call('get_data')
-    self.repeating_panel.items = data
+
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""

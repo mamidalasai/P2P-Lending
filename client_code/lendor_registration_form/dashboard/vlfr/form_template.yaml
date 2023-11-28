@@ -57,6 +57,7 @@ components:
         - {id: ARNJJY, title: Amount, data_key: column_3, $$hashKey: 'object:10810'}
         - {id: QWPKQU, title: Outstanding Amount, data_key: column_4, $$hashKey: 'object:10858'}
         - {id: PNLXFW, title: Total amount, data_key: column_5, $$hashKey: 'object:10860'}
+        - {id: JOBDZA, title: '', data_key: column_6, $$hashKey: 'object:351'}
         auto_header: true
         tooltip: ''
         border: ''
