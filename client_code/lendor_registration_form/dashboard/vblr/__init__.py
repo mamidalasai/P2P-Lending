@@ -12,7 +12,20 @@ class vblr(vblrTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    
+    # Call the server function to get data
+    #data = anvil.server.call('get_data')
+
+        # Set the items property of the Repeating Panel to the fetched data
+    #self.repeating_panel_1.items = data
     self.repeating_panel_1.items=app_tables.loan_details.search()
+
+# Call the server function to get data
+    #loan_details_data = anvil.server.call('get_data')
+
+        # Set the items property of the Repeating Panel to the fetched data
+    #self.repeating_panel_1.items = loan_details_data
+    
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.opbal")

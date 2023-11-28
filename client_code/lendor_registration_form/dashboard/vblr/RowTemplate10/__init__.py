@@ -23,3 +23,5 @@ class RowTemplate10(RowTemplate10Template):
 
         # Open the Borr_loan_request form with the selected row data
       open_form("lendor_registration_form.dashboard.vblr.Borr_loan_request", selected_row=selected_row)
+
+    

@@ -30,4 +30,6 @@ components:
   properties: {}
   name: label_4
   layout_properties: {column: XQSISW}
+  data_bindings:
+  - {property: text, code: 'self.item[''member_since'']'}
 is_package: true
