@@ -10,10 +10,49 @@ components:
   name: image_1
   layout_properties: {grid_position: 'RWTSAY,FGPUCT'}
 - type: Label
-  properties: {role: body, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: Home, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: 'fa:home'}
+  properties: {role: body, align: right, tooltip: '', border: '', foreground: 'theme:On
+      Secondary Container', visible: true, text: Home, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
+    bold: true, underline: false, icon: 'fa:home'}
   name: home
   layout_properties: {grid_position: 'RWTSAY,XQQEVR'}
+- type: ColumnPanel
+  properties: {col_widths: '{"KUUAZX":20,"RTSWRI":30,"VWDGEK":10}'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'HOUSHS,IKSUBC'}
+  components:
+  - type: Label
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      visible: true, text: Group and categories, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'TXGTXE,KUUAZX'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    name: text_box_1
+    layout_properties: {grid_position: 'TXGTXE,RTSWRI'}
+  - type: Button
+    properties: {role: tonal-button, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Add, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
+      bold: true, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'TXGTXE,VWDGEK'}
+    event_bindings: {click: button_1_click}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_2
+  layout_properties: {grid_position: 'BEMBLN,ZFTMFO'}
+  components:
+  - type: Button
+    properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Secondary Container', visible: true, text: Save, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#0876E8', bold: true, underline: false, icon: ''}
+    name: button_2
+    layout_properties: {grid_position: 'BITIHY,SWIOJL'}
 is_package: true

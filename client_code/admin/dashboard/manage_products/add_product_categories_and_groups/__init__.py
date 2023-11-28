@@ -18,3 +18,9 @@ class add_product_categories_and_groups(add_product_categories_and_groupsTemplat
   def home_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
+
+  def button_1_click(self, **event_args):
+    group_and_category = self.text_box_1.text
+    
+    """This method is called when the button is clicked"""
+    
