@@ -10,27 +10,25 @@ from anvil.tables import app_tables
 from .. import borrower_main_form_module as main_form_module
 
 class view_profile(view_profileTemplate):
-  def __init__(self, **properties):
-    self.user_id=main_form_module.userId
-    #self.user_id=1000
-    self.init_components(**properties)
+    def __init__(self, selected_row, **properties):
+        # self.user_id=main_form_module.userId
+        # self.user_id=1000
+        self.init_components(**properties)
+    def button_1_copy_click(self, **event_args):
+      open_form('bank_users.borrower_dashboard')
 
-    # Any code you write here will run before the form opens.
-    user_profile=app_tables.user_profile.get(coustmer_id=self.user_id)
-    if user_profile:
+    def button_1_click(self, **event_args):
+     """This method is called when the button is clicked"""
+     open_form('bank_users.borrower_dashboard.application_tracker')
 
-      self.full_name_label.text=user_profile['full_name']
-      self.email_id_label.text=user_profile['email_user']
-      self.mobile_no_label.text=user_profile['mobile']
-      self.city_label.text=user_profile['city']
-      self.gender_label.text=user_profile['gender']
-      user_profile=app_tables.loan_details.get(coustmer_id=self.user_id)
-      if user_profile:
-        self.label_4.text=user_profile['loan_updated_status']
-
-  def button_1_copy_click(self, **event_args):
-    open_form('bank_users.borrower_dashboard')
-
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard.application_tracker')
+        # Any code you write here will run before the form opens.
+     self.loan_id_label.text = f"{selected_row['loan_id']}"
+     try:
+       app_tables.user_profile.get(coustmer_id=str)
+            user_request = app_tables.us.get(coustmer_id=str(selected_row['coustmer_id']))
+            if user_request is not None:
+                # Assuming 'bank_acc_details' is a valid column name in the 'borrower' table
+                bank_acc_details = user_request['bank_acc_details']
+                borrower_approve_date_time = user_request['borrower_approve_date_time']
+                self.label_member_since.text = f"{borrower_approve_date_time}"
+                self.label_bank_acc_details.text = f"{bank_acc_details}"
