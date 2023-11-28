@@ -44,6 +44,8 @@ components:
         properties: {}
         type: Label
         layout_properties: {grid_position: 'VHNOTT,GHVJNX'}
+        data_bindings:
+        - {property: text, code: 'self.item[''loan_amount'']'}
       - name: label_3
         properties: {text: Reason for Foreclosure, bold: true, align: right}
         type: Label
@@ -52,6 +54,8 @@ components:
         properties: {}
         type: Label
         layout_properties: {grid_position: 'ELXOWF,IQMCRL'}
+        data_bindings:
+        - {property: text, code: 'self.item[''reason'']'}
       - name: label_4
         properties: {text: Outstanding Amount, bold: true, align: right}
         type: Label
@@ -60,6 +64,8 @@ components:
         properties: {}
         type: Label
         layout_properties: {grid_position: 'HLGNAZ,QWHNNH'}
+        data_bindings:
+        - {property: text, code: 'self.item[''outstanding_amount'']'}
       - name: label_5
         properties: {text: Total Amount, bold: true, align: right}
         type: Label
@@ -68,3 +74,5 @@ components:
         properties: {}
         type: Label
         layout_properties: {grid_position: 'AEEINR,MSQWJW'}
+        data_bindings:
+        - {property: text, code: 'self.item[''paid_amont'']'}
