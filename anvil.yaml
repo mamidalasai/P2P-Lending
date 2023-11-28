@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -349,9 +349,6 @@ db_schema:
       type: string
     - name: spouse_office_number
       admin_ui: {width: 200, order: 93}
-      type: string
-    - name: spouse_profficen
-      admin_ui: {width: 200}
       type: string
     title: user_profile
   membership:
