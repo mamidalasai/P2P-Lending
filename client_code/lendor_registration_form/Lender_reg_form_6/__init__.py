@@ -30,7 +30,7 @@ class Lender_reg_form_6(Lender_reg_form_6Template):
         if lending_type:
             self.lending_type_dropdown.selected_value = lending_type
         if investment:
-            self.drop_down_1.selected_value = investment
+            self.text_box_1.text = investment
         if lending_period:
             self.drop_down_2.selected_value = lending_period
 
@@ -41,7 +41,7 @@ class Lender_reg_form_6(Lender_reg_form_6Template):
 
     def button_2_click(self, **event_args):
         lending_type = self.lending_type_dropdown.selected_value
-        investment = self.drop_down_1.selected_value
+        investment = self.text_box_1.text
         lending_period = self.drop_down_2.selected_value
         user_id = self.userId
 
