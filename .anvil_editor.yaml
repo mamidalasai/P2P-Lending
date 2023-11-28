@@ -86,6 +86,7 @@ unique_ids:
     lendor_registration_form.dashboard.rta: '1699957883953144866963289.06934'
     ? borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_2
     : '1700570068782198167271670.87088'
+    admin.dashboard.loan_management.loan_disbursed: '1701159525218135540324379.78748'
     admin.dashboard.loan_management.open_loans: '1699528907914284548214666.92645'
     bank_users.borrower_dashboard.new_loan_request: '1698662158540530088363841.0887'
     bank_users.borrower_dashboard.application_tracker.borrower_rejected: '1701084970357795698703959.3584'

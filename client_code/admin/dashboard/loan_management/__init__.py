@@ -39,6 +39,10 @@ class loan_management(loan_managementTemplate):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_management.closed_loans')
 
+  def button_6_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form()
+
 
 
 
