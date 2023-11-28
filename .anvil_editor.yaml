@@ -35,6 +35,7 @@ unique_ids:
     lendor_registration_form.Lender_reg_education_Btech: '1700756844264138134483091.40665'
     lendor_registration_form.Lender_reg_individual_form_2: '1699429198901172624943660.5969'
     lendor_registration_form.Lender_reg_education_form: '1700756183327159833135243.71167'
+    admin.dashboard.loan_management.loan_disbursed.RowTemplate16: '1701160112605363272029232.90436'
     lendor_registration_form.Lender_reg_education_Phd: '1700756992368717264040829.352'
     admin.dashboard.loan_management.open_loans.view_profile_4: '1701079146053366244134425.9466'
     admin.dashboard.loan_management.under_process: '1699528976374246220307697.87708'
@@ -86,6 +87,7 @@ unique_ids:
     lendor_registration_form.dashboard.rta: '1699957883953144866963289.06934'
     ? borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_2
     : '1700570068782198167271670.87088'
+    admin.dashboard.loan_management.loan_disbursed: '1701159817062849579236397.6018'
     admin.dashboard.loan_management.open_loans: '1699528907914284548214666.92645'
     bank_users.borrower_dashboard.new_loan_request: '1698662158540530088363841.0887'
     bank_users.borrower_dashboard.application_tracker.borrower_rejected: '1701084970357795698703959.3584'
