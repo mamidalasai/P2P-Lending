@@ -67,29 +67,13 @@ components:
     icon: ''}
   type: Label
   layout_properties: {grid_position: 'GJGPBZ,ZPBBNS'}
-- type: DropDown
-  properties:
-    role: null
-    align: full
-    tooltip: ''
-    placeholder: Select one
-    border: ''
-    enabled: true
-    foreground: ''
-    items: ['50000', '50,000 - 3,00000', '3,00000 - 7,00000', '7,00000 - 15,00000',
-      '15,00000 ', '', '']
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: theme:On Primary
-    bold: false
-    underline: false
-    include_placeholder: true
-  name: drop_down_1
-  layout_properties: {grid_position: 'GJGPBZ,FJCYHP'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: white, bold: false, underline: false}
+  name: text_box_1
+  layout_properties: {grid_position: 'GJGPBZ,RPHNXL'}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Lending Period, font_size: null, font: '', spacing_above: small, icon_align: left,
