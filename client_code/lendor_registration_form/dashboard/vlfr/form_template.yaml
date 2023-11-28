@@ -9,9 +9,11 @@ components:
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
     name: column_panel_1
-    layout_properties: {grid_position: 'LRGVLZ,YDSHFK'}
+    layout_properties: {grid_position: 'LRGVLZ,YDSHFK', full_width_row: true}
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 54, tooltip: '', border: '',
@@ -53,9 +55,7 @@ components:
         - {id: JUWAHF, title: Loan Number, data_key: column_1, $$hashKey: 'object:10808'}
         - {id: XWSQXN, title: Borrower Name, data_key: column_2, $$hashKey: 'object:10809'}
         - {id: ARNJJY, title: Amount, data_key: column_3, $$hashKey: 'object:10810'}
-        - {id: QWPKQU, title: Outstanding Amount, data_key: column_4, $$hashKey: 'object:10858'}
-        - {id: PNLXFW, title: Starting Date, data_key: column_5, $$hashKey: 'object:10860'}
-        - {id: JPUHJN, title: '', data_key: column_6, $$hashKey: 'object:16440'}
+        - {id: JOBDZA, title: '', data_key: column_6, $$hashKey: 'object:351'}
         auto_header: true
         tooltip: ''
         border: ''

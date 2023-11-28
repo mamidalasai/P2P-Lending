@@ -17,25 +17,13 @@ components:
   name: label_3
   layout_properties: {column: ARNJJY}
   data_bindings:
-  - {property: text, code: 'self.item[''amount'']'}
-- type: Label
-  properties: {}
-  name: label_4
-  layout_properties: {column: QWPKQU}
-  data_bindings:
-  - {property: text, code: 'self.item[''outstanding_amount'']'}
-- type: Label
-  properties: {}
-  name: label_5
-  layout_properties: {column: PNLXFW}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_date'']'}
-- type: Button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: '', visible: true, text: View Details, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
-    bold: false, underline: true, icon: ''}
-  name: button_1
-  layout_properties: {column: JPUHJN}
-  event_bindings: {click: button_1_click}
+  - {property: text, code: 'self.item[''loan_amount'']'}
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: View Details, font_size: null, wrap_on: mobile, font: '',
+    col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: true, underline: true, icon: ''}
+  name: link_1
+  layout_properties: {column: JOBDZA}
+  event_bindings: {click: link_1_click}
 is_package: true
