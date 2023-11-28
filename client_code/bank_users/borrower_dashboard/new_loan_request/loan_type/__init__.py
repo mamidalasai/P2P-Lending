@@ -21,7 +21,7 @@ class loan_type(loan_typeTemplate):
     open_form('bank_users.borrower_rgistration_form.new_loan_request.k12_loan')
 
   def link_2_click(self, **event_args):
-    open_form('bank_users.borrower_rgistration_form.new_loan_request.business_loan')
+    open_form('bank_users.borrower_dashboard.new_loan_request.business_loan')
 
   def button_2_click(self, **event_args):
     open_form('bank_users.borrower_rgistration_form.new_loan_request')
