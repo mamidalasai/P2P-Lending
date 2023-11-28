@@ -9,8 +9,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class foreclose_details(foreclose_detailsTemplate):
-  def __init__(self, **properties):
+  def __init__(self,selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.name.text=f"{selected_row['borrower_name']}"
 
     # Any code you write here will run before the form opens.

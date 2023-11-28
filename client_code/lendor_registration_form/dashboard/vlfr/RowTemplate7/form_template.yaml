@@ -17,19 +17,7 @@ components:
   name: label_3
   layout_properties: {column: ARNJJY}
   data_bindings:
-  - {property: text, code: 'self.item[''min_amount'']'}
-- type: Label
-  properties: {}
-  name: label_4
-  layout_properties: {column: QWPKQU}
-  data_bindings:
-  - {property: text, code: 'self.item[''outstanding_amount'']'}
-- type: Label
-  properties: {}
-  name: label_5
-  layout_properties: {column: PNLXFW}
-  data_bindings:
-  - {property: text, code: 'self.item[''paid_amount'']'}
+  - {property: text, code: 'self.item[''loan_amount'']'}
 - type: Link
   properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
     visible: true, text: View Details, font_size: null, wrap_on: mobile, font: '',
@@ -37,4 +25,5 @@ components:
     italic: false, background: '', bold: true, underline: true, icon: ''}
   name: link_1
   layout_properties: {column: JOBDZA}
+  event_bindings: {click: link_1_click}
 is_package: true

@@ -12,6 +12,7 @@ class vlfr(vlfrTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.repeating_panel.items=app_tables.foreclosure.search()
 
 
   def link_1_click(self, **event_args):
