@@ -15,30 +15,30 @@ components:
   layout_properties: {column: VJQQOR}
   data_bindings:
   - {property: text, code: 'self.item[''total_repayment_amount'']', writeback: false}
-- name: tenure_label
+- name: intrest_rate_label
   properties: {}
   type: Label
   layout_properties: {column: OJLQEN}
   data_bindings:
-  - {property: text, code: 'self.item[''tenure'']', writeback: false}
-- name: date_label
+  - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
+- name: tenure_label
   properties: {}
   type: Label
   layout_properties: {column: CHVOCG}
   data_bindings:
-  - {property: text, code: 'self.item[''timestamp'']', writeback: false}
+  - {property: text, code: 'self.item[''tenure'']', writeback: false}
 - name: name_label
   properties: {}
   type: Label
   layout_properties: {column: VKTTOA}
   data_bindings:
   - {property: text, code: 'self.item[''lender_name'']', writeback: false}
-- name: mail_label
+- name: date_of_apply_label
   properties: {}
   type: Label
   layout_properties: {column: HEMILB}
   data_bindings:
-  - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
+  - {property: text, code: 'self.item[''timestamp'']', writeback: false}
 - name: loan_status
   properties: {text: ''}
   type: Link

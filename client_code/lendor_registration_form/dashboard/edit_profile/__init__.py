@@ -86,8 +86,10 @@ class edit_profile(edit_profileTemplate):
       user_profile['full_name']= self.text_box_1.text
       user_profile['email_user']=self.text_box_2.text
       user_profile['mobile']=self.text_box_3.text
-      user_profile['gender']=self.gender.text
-      user_profile['date_of_birth']=self.date_of_birth.text
+      user_profile['gender']=self.drop_down_1.selected_value
+      user_profile['date_of_birth']=self.label_9.text
       user_profile['aadhaar_no']=self.ad_number.text
       user_profile['pan_number']=self.pan_number.text
       user_profile.update()
+      alert('saved sucessfully')
+      open_form('lendor_registration_form.dashboard')
