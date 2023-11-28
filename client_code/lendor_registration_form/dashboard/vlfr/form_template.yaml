@@ -54,7 +54,7 @@ components:
         - {id: XWSQXN, title: Borrower Name, data_key: column_2, $$hashKey: 'object:10809'}
         - {id: ARNJJY, title: Amount, data_key: column_3, $$hashKey: 'object:10810'}
         - {id: QWPKQU, title: Outstanding Amount, data_key: column_4, $$hashKey: 'object:10858'}
-        - {id: PNLXFW, title: foreclose amount, data_key: column_5, $$hashKey: 'object:10860'}
+        - {id: PNLXFW, title: Total amount, data_key: column_5, $$hashKey: 'object:10860'}
         auto_header: true
         tooltip: ''
         border: ''

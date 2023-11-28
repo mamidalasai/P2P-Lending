@@ -17,7 +17,7 @@ components:
   name: label_3
   layout_properties: {column: ARNJJY}
   data_bindings:
-  - {property: text, code: 'self.item[''amount'']'}
+  - {property: text, code: 'self.item[''min_amount'']'}
 - type: Label
   properties: {}
   name: label_4
@@ -28,4 +28,6 @@ components:
   properties: {}
   name: label_5
   layout_properties: {column: PNLXFW}
+  data_bindings:
+  - {property: text, code: 'self.item[''paid_amount'']'}
 is_package: true
