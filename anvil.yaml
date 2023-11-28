@@ -513,7 +513,7 @@ db_schema:
       type: number
   borrower:
     title: borrower
-    client: none
+    client: full
     server: full
     columns:
     - name: email_id

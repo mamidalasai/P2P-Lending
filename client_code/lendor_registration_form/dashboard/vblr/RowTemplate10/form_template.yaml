@@ -26,4 +26,8 @@ components:
   name: button_1
   layout_properties: {column: IZHOQY}
   event_bindings: {click: button_1_click}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: XQSISW}
 is_package: true
