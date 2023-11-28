@@ -24,15 +24,15 @@ class add_product_categories_and_groups(add_product_categories_and_groupsTemplat
     groups = self.text_box_1.text
     category = groups  # Set the category to the user input
     
+    # Convert category to string explicitly
+    category_str = str(category)
+    
     # Add the user input (category) to the dropdown options only if it's not already present
-    if category not in self.drop_down_1.items:
-        self.drop_down_1.items.append(category)
+    if category_str not in self.drop_down_1.items:
+        self.drop_down_1.items.append(category_str)
     
     # Set the selected value to the user input (category)
-    self.drop_down_1.selected_value = category
+    self.drop_down_1.selected_value = category_str
     
     # Call the server function with the updated values
-    anvil.server.call('manage_products', groups, category)
-
-    
-    
+    anvil.server.call('manage_products', groups, category_str)
