@@ -35,5 +35,4 @@ components:
   name: link_1
   layout_properties: {column: DBUUUO}
   event_bindings: {click: link_1_click}
-  data_bindings: []
 is_package: true
