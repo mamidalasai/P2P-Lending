@@ -30,15 +30,25 @@ class loan_disbursed(loan_disbursedTemplate):
 
     self.b_type = []
     self.l_type = []
-    for i in self.type:
-      if i == "borrower":
-        self.b_type.append(self.type.index(i))
-      elif i == 'lender':
-        self.l_type.append(self.type.index(i))
-        
     self.b = []
     self.l = []
+    self.result1 = []
     
+    for i in self.type:
+      if i == "borrower":
+        self.b.append(self.type.index(i))
+      elif i == 'lender':
+        self.l.append(self.type.index(i))
+
+    c = -1
+    for i in self.account:
+      if i != None:
+        b = self.account.count(i)
+        
+        if b > 1:
+          c = self.account.index(i)
+          self.result1.append(self.id[c])
+        print(b)
 
     a = -1
     for i in self.id:
@@ -52,14 +62,14 @@ class loan_disbursed(loan_disbursedTemplate):
     for i in self.result:
       self.index.append(self.id.index(i))
     a = -1
-    self.result1 = []
-    for i in self.index:
-      if (self.type[i] == 'borrower') and (self.type[i] == 'lender'):
-        pass
-    
 
+    self.main_result = []
+    for i in self.result:
+      if i in self.result1:
+        self.main_result.append(i)
     print(self.result)
     print(self.result1)
+    print(self.main_result)
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
