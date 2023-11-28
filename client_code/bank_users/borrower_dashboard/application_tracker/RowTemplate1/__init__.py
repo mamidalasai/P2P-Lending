@@ -19,4 +19,4 @@ class RowTemplate1(RowTemplate1Template):
   def loan_status_click(self, **event_args):
     """This method is called when the link is clicked"""
     value=self.loan_status
-    open_form('bank_users.borrower_dashboard.borrower_profile',value=value)
+    open_form('bank_users.borrower_dashboard.application_tracker.view_profile',value=value)

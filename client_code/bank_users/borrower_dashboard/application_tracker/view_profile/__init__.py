@@ -25,6 +25,8 @@ class view_profile(view_profileTemplate):
       self.city_label.text=user_profile['city']
       self.gender_label.text=user_profile['gender']
       user_profile=app_tables.loan_details.get(coustmer_id=self.user_id)
+      if user_profile:
+        self.label_4.text=user_profile['loan_updated_status']
 
   def button_1_copy_click(self, **event_args):
     open_form('bank_users.borrower_dashboard')
