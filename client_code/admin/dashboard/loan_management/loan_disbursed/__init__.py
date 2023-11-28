@@ -93,15 +93,12 @@ class loan_disbursed(loan_disbursedTemplate):
       alert("No Data Available Here!")
     else:
       b = -1
-      for i in self.list_4:
+      for i in self.list_2:
         b+=1
-        if i in :
+        if (i in self.main_result) and (self.list_4[b] == "approved"):
           self.index.append(b)
           
-      for i in self.index:
-        self.result.append({'loan_id' : self.list_1[i], 'coustmer_id' : self.list_2[i], 'full_name' : self.list_3[i], 'loan_status' : self.list_4[i]})
-
-      self.repeating_panel_1.items = self.result
+    print(self.i)
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
