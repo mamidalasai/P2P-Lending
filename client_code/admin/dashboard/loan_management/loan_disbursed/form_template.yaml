@@ -40,7 +40,6 @@ components:
       - {id: WMIWXU, title: Costumer ID, data_key: column_2, $$hashKey: 'object:53724'}
       - {id: PVBYZX, title: Full Name, data_key: column_3, $$hashKey: 'object:53725'}
       - {id: HCAQYD, title: Loan Status, data_key: column_4, $$hashKey: 'object:53773'}
-      - {id: DBUUUO, title: Disbursed Status, data_key: column_5, $$hashKey: 'object:53775'}
       auto_header: true
       tooltip: ''
       border: ''
