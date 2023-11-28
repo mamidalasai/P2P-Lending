@@ -37,13 +37,13 @@ components:
     components:
     - type: DataGrid
       properties:
-        role: null
+        role: tonal-data-grid
         columns:
         - {id: JTSYEP, title: User Issues, data_key: column_1, $$hashKey: 'object:34880'}
         - {id: SBBIDK, title: Specific Issue, data_key: column_2, $$hashKey: 'object:34881'}
         - {id: FWKZPI, title: User Discription, data_key: column_3, $$hashKey: 'object:34882'}
         - {id: KZGPHN, title: Feedback Form, data_key: column_4, $$hashKey: 'object:35018'}
-        - {id: RPGLXM, title: Column 5, data_key: column_5, $$hashKey: 'object:35020'}
+        - {id: RPGLXM, title: '', data_key: column_5, $$hashKey: 'object:35020'}
         auto_header: true
         tooltip: ''
         border: ''
