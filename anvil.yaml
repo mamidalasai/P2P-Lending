@@ -449,6 +449,9 @@ db_schema:
     - name: lender_name
       admin_ui: {width: 200, order: 16}
       type: string
+    - name: member_since
+      admin_ui: {width: 200, order: 17}
+      type: date
     title: loan_details
   users:
     client: full
@@ -514,9 +517,12 @@ db_schema:
     - name: final_rta
       admin_ui: {width: 200, order: 15}
       type: number
+    - name: membership
+      admin_ui: {width: 200, order: 10}
+      type: string
   borrower:
     title: borrower
-    client: none
+    client: full
     server: full
     columns:
     - name: email_id
@@ -548,6 +554,9 @@ db_schema:
       type: datetime
     - name: beseem_score
       admin_ui: {width: 200, order: 9}
+      type: string
+    - name: bank_acc_details
+      admin_ui: {width: 200, order: 10}
       type: string
   product_categories:
     client: none
