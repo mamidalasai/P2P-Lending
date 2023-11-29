@@ -14,9 +14,30 @@ class performance_tracker(performance_trackerTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    self.data = tables.app_tables.loan_details.search()
+
+    self.name_list = []
+    
+    a = 0
+    for i in self.data:
+      self.name_list.append(i['loan_updated_status'])
+      
+      a += 1
+    self.label_9.text = a
+    
+
+
+
+    a
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard')
 
+
     
+      
+      
+
+    
+      
