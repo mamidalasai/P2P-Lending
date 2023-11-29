@@ -95,7 +95,7 @@ components:
       event_bindings: {click: button_4_click}
   - name: button_6
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: 'Loan Close                             ',
+      foreground: black, visible: true, text: 'View Loan                              ',
       font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
     type: Button
