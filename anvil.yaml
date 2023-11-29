@@ -354,14 +354,6 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     title: user_profile
-  membership:
-    title: membership
-    client: none
-    server: full
-    columns:
-    - name: member_club
-      admin_ui: {width: 200}
-      type: string
   user_issues_bugreports:
     title: user_issues_bugreports
     client: full
