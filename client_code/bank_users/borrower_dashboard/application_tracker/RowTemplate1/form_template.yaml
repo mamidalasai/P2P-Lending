@@ -14,7 +14,7 @@ components:
   type: Label
   layout_properties: {column: VJQQOR}
   data_bindings:
-  - {property: text, code: 'self.item[''total_repayment_amount'']', writeback: false}
+  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
 - name: intrest_rate_label
   properties: {}
   type: Label
