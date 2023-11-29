@@ -41,6 +41,8 @@ class lapsed_loans(lapsed_loansTemplate):
       if m > 12:
         m = m - self.payment_done[a]
         y += 1
+      else:
+        m = m + self.payment_done[a]
       date_object = datetime(y, m, d).date()
       self.result.append(date_object)
       
