@@ -13,7 +13,8 @@ class borrower_today_dues(borrower_today_duesTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.repeating_panel_1.items=app_tables.loan_details.search()
+    today=datetime.now().date()
+    self.repeating_panel_1.items=app_tables.loan_details.search('due_date','to')
     # Any code you write here will run before the form opens.
 
   def home_borrower_registration_form_copy_1_click(self, **event_args):
