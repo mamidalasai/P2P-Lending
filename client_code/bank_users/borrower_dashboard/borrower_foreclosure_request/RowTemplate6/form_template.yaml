@@ -17,7 +17,7 @@ components:
   name: label_3
   layout_properties: {column: JNXGTJ}
   data_bindings:
-  - {property: text, code: 'self.item[''min_amount'']'}
+  - {property: text, code: 'self.item[''loan_amount'']'}
 - type: Label
   properties: {}
   name: label_4

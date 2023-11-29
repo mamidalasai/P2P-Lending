@@ -82,4 +82,8 @@ class user_bugreports(user_bugreportsTemplate):
       items_to_add = ['Inquiries About Investment Options', 'Retirement Planning Assistance']
       self.drop_down_2.items = items_to_add  
 
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.about_main_form')
+
     

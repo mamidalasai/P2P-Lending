@@ -15,23 +15,23 @@ class foreclose(forecloseTemplate):
     self.init_components(**properties)
     self.selected_row = selected_row 
         # Any code you write here will run before the form opens.
-    min_amount = selected_row['min_amount']
-    min_amount = int(min_amount)
+    loan_amount = selected_row['loan_amount']
+    loan_amount = int(loan_amount)
     payment_done = selected_row['payment_done']
     tenure = selected_row['tenure']  # Assuming tenure is given in months
     tenure = int(tenure)
     monthly_interest_rate = selected_row['interest_rate'] / (12 * 100)  # Assuming interest rate is in percentage
     factor = (1 + monthly_interest_rate) ** tenure  # Calculate (1 + r)^t without using pow
-    emi = min_amount * monthly_interest_rate * factor / (factor - 1)
+    emi = loan_amount * monthly_interest_rate * factor / (factor - 1)
     emi = int(emi)
-    monthly_installment = min_amount / tenure
+    monthly_installment = loan_amount / tenure
     monthly_installment=int(monthly_installment)
     paid_amount = emi * payment_done
     paid_amount = int(paid_amount)
     monthly_interest_amount=emi-monthly_installment
     monthly_interest_amount=int( monthly_interest_amount)
 
-    outstanding_amount= min_amount - monthly_installment*payment_done
+    outstanding_amount= loan_amount - monthly_installment*payment_done
     outstanding_amount = int(outstanding_amount)
     oustanding_month=tenure-payment_done
     outstanding_amount_i_amount=monthly_interest_amount*oustanding_month
@@ -81,7 +81,7 @@ class foreclose(forecloseTemplate):
                 app_tables.foreclosure.add_row(
                     loan_id=self.selected_row['loan_id'],
                     borrower_name=self.selected_row['full_name'],
-                    loan_amount=self.selected_row['min_amount'],
+                    loan_amount=self.selected_row['loan_amount'],
                     outstanding_amount=self.ra_label.text,
                     total_due_amount=self.tda_label.text,
                     emi_amount=self.emi_label.text,
