@@ -7,12 +7,13 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+import datetime
+from ..import borrower_main_form_module as main_form_module 
 class borrower_today_dues(borrower_today_duesTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    self.repeating_panel_1.items=app_tables.loan_details.search()
     # Any code you write here will run before the form opens.
 
   def home_borrower_registration_form_copy_1_click(self, **event_args):
