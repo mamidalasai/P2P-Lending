@@ -184,7 +184,12 @@ class user_form(user_formTemplate):
   def image_3_copy_5_mouse_leave(self, x, y, **event_args):
     """This method is called when the mouse cursor leaves this component"""
     self.label_14.visible=False
-   
+
+  def link_6_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("admin.user_issue.user_bugreports")
+
+
 
  
 
