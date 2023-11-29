@@ -87,3 +87,17 @@ components:
         layout_properties: {grid_position: 'AEEINR,MSQWJW'}
         data_bindings:
         - {property: text, code: 'self.item[''paid_amont'']'}
+      - name: spacer_1
+        properties: {height: 53.5999755859375}
+        type: Spacer
+        layout_properties: {grid_position: 'CZGUZY,HDLFAX'}
+      - name: button_2
+        properties: {text: Approve, role: filled-button, background: '#d62531', align: right}
+        type: Button
+        layout_properties: {grid_position: 'NBOVZJ,BGSUXK'}
+        event_bindings: {click: button_2_click}
+      - name: button_3
+        properties: {text: 'Decline   ', role: filled-button, background: '#d62531',
+          align: left}
+        type: Button
+        layout_properties: {grid_position: 'NBOVZJ,KKOAPD'}

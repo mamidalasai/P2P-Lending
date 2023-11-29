@@ -24,3 +24,7 @@ class foreclose_details(foreclose_detailsTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("lendor_registration_form.dashboard.vlfr")
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    Notification("")
