@@ -7,12 +7,12 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ... import borrower_main_form_module
+#from ... import borrower_main_form_module
 
 class loan_type(loan_typeTemplate):
   def __init__(self, **properties):
     #self.user_id=main_form_module.userId
-    self.user_id=  1000  
+    #self.user_id=  1000  
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
