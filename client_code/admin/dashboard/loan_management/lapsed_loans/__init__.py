@@ -18,6 +18,8 @@ class lapsed_loans(lapsed_loansTemplate):
     # Any code you write here will run before the form opens.
     self.loan = tables.app_tables.loan_details.search()
     self.fourcloser = tables.app_tables.foreclosure.search()
+    self.today = datetime.now().date()
+    print(self.today)
 
     self.due_list = []
     self.loan_amont = []
@@ -35,14 +37,24 @@ class lapsed_loans(lapsed_loansTemplate):
       self.id_1.append(i['loan_id'])
 
 
-    
+    self.index = []  
     for i in self.id:
       if i in self.id_1:
         b = self.id_1.index(i)
-        if self.loan_amont[b] == self.paid_amount[b]:
-          
+        if self.loan_amont[b] != self.paid_amount[b]:
+          self.index.append(self.id_1[b])
+
+    self.result = []
+    self.days = 0
+    for i in self.index:
+      c = self.index.index(i)
+      if self.due_list[c] < self.today:
+        self.result.append(self.id[c])
+        self.days = self.today.day - self.due_list[c].day
     
-    print(self.due_list)
+    print(self.result)
+    print(self.days)
+    
 
 
     
