@@ -17,7 +17,10 @@ class borrower_view_loans(borrower_view_loansTemplate):
     self.repeating_panel_3.items=app_tables.loan_details.search(loan_updated_status='rejected')
     self.repeating_panel_4.items=app_tables.loan_details.search(loan_updated_status='underprocess')
 
-
+    self.label_5.text = str(len(self.repeating_panel_1.items))
+    self.label_6.text=str(len(self.repeating_panel_2.items))
+    self.label_7.text=str(len(self.repeating_panel_3.items))
+    self.label_8.text=str(len(self.repeating_panel_4.items))
     # Any code you write here will run before the form opens.
 
   def home_borrower_registration_form_copy_1_click(self, **event_args):
