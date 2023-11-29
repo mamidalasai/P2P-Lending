@@ -24,7 +24,7 @@ class manage_producs1(manage_producs1Template):
     for i in self.data:
       a+=1
       self.list_1.append(i['product_id']) 
-    if a == -1 :
+    if a == -1:
       self.id = 'A' + str(1000000)
       self.label_1.text = self.id
       
