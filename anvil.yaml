@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: lendor_registration_form.dashboard.vlfr}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -410,6 +410,9 @@ db_schema:
       type: string
     - name: loan_id
       admin_ui: {width: 200, order: 1}
+      type: string
+    - name: status
+      admin_ui: {width: 200, order: 11}
       type: string
     title: foreclosure
   loan_details:
