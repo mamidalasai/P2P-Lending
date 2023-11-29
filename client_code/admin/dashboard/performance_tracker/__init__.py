@@ -18,3 +18,5 @@ class performance_tracker(performance_trackerTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard')
+
+    data = self.
