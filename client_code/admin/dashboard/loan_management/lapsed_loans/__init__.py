@@ -16,35 +16,33 @@ class lapsed_loans(lapsed_loansTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = tables.app_tables.loan_details.search()
+    self.loan = tables.app_tables.loan_details.search()
+    self.fourcloser = tables.app_tables.foreclosure.search()
 
-    self.date_list = []
-    self.payment_done = []
+    self.due_list = []
+    self.loan_amont = []
+    self.paid_amount = []
+
+    self.id = []
+    for i in self.loan:
+      self.due_list.append(i['due_date'].date())
+      self.loan_amont.append(i['loan_amount'])
+      self.id.append(i['loan_id'])
+
+    self.id_1 = []
+    for i in self.fourcloser:
+      self.paid_amount.append(i['paid_amount'])
+      self.id_1.append(i['loan_id'])
+
+
     
-    for i in self.data:
-      self.date_list.append(i[''].date())
-      self.payment_done.append(i['payment_done'])
+    for i in self.id:
+      if i in self.id_1:
+        b = self.id_1.index(i)
+        if self.loan_amont[b] == self.paid_amount[b]:
+          
+    
+    print(self.due_list)
 
-    print(self.date_list)
-    print(self.payment_done)
 
-
-    a = -1
-    self.result = []
-    m = 0
-    y = 0
-    for i in self.date_list:
-      a += 1
-      y = i.year
-      m = i.month + self.payment_done[a]
-      d = i.day
-      if m > 12:
-        m = m - self.payment_done[a]
-        y += 1
-      else:
-        m = m + self.payment_done[a]
-      date_object = datetime(y, m, d).date()
-      self.result.append(date_object)
-      
-    print(self.result)
-  
+    
