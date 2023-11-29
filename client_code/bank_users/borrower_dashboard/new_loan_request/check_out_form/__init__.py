@@ -20,7 +20,7 @@ class check_out_form(check_out_formTemplate):
         self.init_components(**properties)
 
         # Any code you write here will run before the form opens.
-        user_request = app_tables.product_borrower.get(names=self.names)
+        user_request = app_tables.product_details.get(product_name=self.n)
 
         if user_request:
             self.interest_rate = user_request['interest_rate']
