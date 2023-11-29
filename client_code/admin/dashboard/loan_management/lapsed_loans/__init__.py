@@ -24,12 +24,16 @@ class lapsed_loans(lapsed_loansTemplate):
     self.due_list = []
     self.loan_amont = []
     self.paid_amount = []
+    self.intrest = []
+    self.loan_due_amount = []
 
     self.id = []
     for i in self.loan:
       self.due_list.append(i['due_date'].date())
       self.loan_amont.append(i['loan_amount'])
       self.id.append(i['loan_id'])
+      self.intrest.append(i['interest_rate'])
+      self.loan_due_amount.append(i['total_repayment_amount'])
 
     self.id_1 = []
     for i in self.fourcloser:
@@ -45,12 +49,20 @@ class lapsed_loans(lapsed_loansTemplate):
           self.index.append(self.id_1[b])
 
     self.result = []
-    self.days = 0
+    self.days = {}
     for i in self.index:
       c = self.index.index(i)
       if self.due_list[c] < self.today:
+        annual_interest_rate = self.intrest[c]
+        days_in_year = 365
+        daily_interest_rate = (annual_interest_rate / 100) / days_in_year
+        print(daily_interest_rate)
         self.result.append(self.id[c])
-        self.days = self.today.day - self.due_list[c].day
+        interest_per_day = self.loan_due_amount[c] * daily_interest_rate
+        days_late = self.today.day - self.due_list[c].day
+        penalty = interest_per_day * days_late
+        total_due = self.loan_due_amount[c] + penalty
+        self.days[self.id[c]] = total_due
     
     print(self.result)
     print(self.days)
