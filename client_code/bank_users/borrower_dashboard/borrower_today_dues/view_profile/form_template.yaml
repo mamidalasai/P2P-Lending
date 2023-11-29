@@ -43,6 +43,16 @@ components:
   properties: {}
   type: Label
   layout_properties: {grid_position: 'PTPWQV,CHJNQI'}
+- name: label_2
+  properties: {bold: true, text: 'Due amount:'}
+  type: Label
+  layout_properties: {grid_position: 'SFYFOS,UQASGU'}
+- name: due_amount_label
+  properties: {align: left}
+  type: Label
+  layout_properties: {grid_position: 'SFYFOS,EFHMQF'}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
 - name: label_11
   properties: {bold: true, text: 'Intrest Rate:'}
   type: Label
@@ -67,16 +77,6 @@ components:
   properties: {}
   type: Label
   layout_properties: {grid_position: 'SZRCOX,UWUPHU'}
-- name: label_2
-  properties: {bold: true, text: 'Loan Updated Status:'}
-  type: Label
-  layout_properties: {grid_position: 'FGTQBR,TOEHRF'}
-- name: loan_updated_status_label
-  properties: {align: left}
-  type: Label
-  layout_properties: {grid_position: 'FGTQBR,DMKNMB'}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
 - name: button_1
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: black, visible: true, text: Back, font_size: null, font: '', spacing_above: small,
