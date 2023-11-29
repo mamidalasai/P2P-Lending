@@ -18,8 +18,12 @@ class RowTemplate7(RowTemplate7Template):
 
   def link_1_click(self, **event_args):
     
+    
     """This method is called when the link is clicked"""
     selected_row = self.item
    
     open_form("lendor_registration_form.dashboard.vlfr.foreclose_details", selected_row=selected_row)
-
+    if selected_row['status'] == 'approved':
+      open_form("lendor_registration_form.dashboard.vlfr.foreclose_details_approved",selected_row=selected_row)
+    else:
+      open_form("lendor_registration_form.dashboard.vlfr.foreclose_details", selected_row=selected_row)
