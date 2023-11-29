@@ -49,4 +49,24 @@ class performance_tracker(performance_trackerTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard')
-    
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.approved_loans')
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.rejected_loans')
+
+  def link_3_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.open_loans')
+
+  def link_4_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.closed_loans')
+
+  def link_5_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.dashboard.loan_management.under_process')
+

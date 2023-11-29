@@ -12,13 +12,13 @@ components:
   type: Label
   layout_properties: {column: VJQQOR}
   data_bindings:
-  - {property: text, code: 'self.item[''total_repayment_amount'']', writeback: false}
+  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
 - name: today_due
   properties: {}
   type: Label
   layout_properties: {column: OJLQEN}
   data_bindings:
-  - {property: text, code: 'self.item[''timestamp'']', writeback: false}
+  - {property: text, code: 'self.item[''due_date'']', writeback: false}
 - name: link_1
   properties: {bold: true, text: View Details}
   type: Link

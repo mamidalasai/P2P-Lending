@@ -476,6 +476,9 @@ db_schema:
     - name: monthly_emi
       admin_ui: {width: 200, order: -0.005859375}
       type: number
+    - name: due_date
+      admin_ui: {width: 200, order: 19}
+      type: datetime
     title: loan_details
   product_group:
     title: product_group
