@@ -15,10 +15,11 @@ class view_profile(view_profileTemplate):
 
     # Display loan details
     self.loan_id_label.text = f"{selected_row['loan_id']}"
-    self.loan_amount_label.text=f"{selected_row['total_repayment_amount']}"
+    self.loan_amount_label.text=f"{selected_row['loan_amount']}"
     self.intrest_rate_label.text=f"{selected_row['interest_rate']}"
     self.tenure_label.text=f"{selected_row['tenure']}"
     self.date_of_apply_label.text=f"{selected_row['timestamp']}"
+    self.due_amount_label.text=f"{selected_row['due_date']}"
 
   def button_1_copy_click(self, **event_args):
     open_form('bank_users.borrower_dashboard')
