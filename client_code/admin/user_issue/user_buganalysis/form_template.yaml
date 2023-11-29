@@ -21,7 +21,7 @@ components:
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: REPORT A BUG, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#36454F',
+      icon_align: left, spacing_below: small, italic: false, background: '#083973',
       bold: false, underline: true, icon: ''}
     name: label_2
     layout_properties: {row: LZSMVC, width_xs: 12, col_xs: 0, width: 750}

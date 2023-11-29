@@ -61,6 +61,7 @@ class user_bugreports(user_bugreportsTemplate):
     else:
      anvil.server.call('user_issues_bugreports',user_issues,specific_issues,user_discription,image,feedback_form,email_user[-1],str(coustmer_id[-1]))
      alert("Submited successfull")
+     open_form('bank_users.main_form')
      
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
