@@ -32,14 +32,16 @@ class lapsed_loans(lapsed_loansTemplate):
     a = -1
     self.result = []
     m = 0
+    y = 0
     for i in self.date_list:
       a += 1
-      
-      m = i.month
-
+      y = i.year
+      m = i.month + self.payment_done[a]
+      if m > 12:
+        m = m - self.payment_done
+        y += 1
+      print(y, m)
     
-    while True:
-      print(m)
       
     print(self.result)
   
