@@ -14,30 +14,62 @@ components:
   type: Button
   event_bindings: {click: home_borrower_registration_form_copy_1_click}
   layout_properties: {grid_position: 'RTLLKB,SIHOFJ'}
-- name: spacer_1
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'XQOKVC,AYLHWL'}
-- name: button_1
-  properties: {text: Open Loans}
-  type: Button
+- name: outlined_card_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
   layout_properties: {grid_position: 'LCSCLJ,HWKVCB'}
-  event_bindings: {click: button_1_click}
-- name: button_2
-  properties: {text: Close Loans}
-  type: Button
+  components:
+  - name: button_1
+    properties: {text: Open Loans}
+    type: Button
+    layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+    event_bindings: {click: button_1_click}
+  - name: label_5
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
+- name: outlined_card_2
+  properties: {role: outlined-card}
+  type: ColumnPanel
   layout_properties: {grid_position: 'LCSCLJ,YUYEIE'}
-  event_bindings: {click: button_2_click}
-- name: button_3
-  properties: {text: Rejected Loans}
-  type: Button
+  components:
+  - name: button_2
+    properties: {text: Closd Loans}
+    type: Button
+    layout_properties: {grid_position: 'FNHLVB,HDEYKB'}
+    event_bindings: {click: button_2_click}
+  - name: label_6
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'UZVEOM,KGCRHE'}
+- name: outlined_card_3
+  properties: {role: outlined-card}
+  type: ColumnPanel
   layout_properties: {grid_position: 'LCSCLJ,KJNUCJ'}
-  event_bindings: {click: button_3_click}
-- name: button_4
-  properties: {text: Underprocess Loans}
-  type: Button
+  components:
+  - name: button_3
+    properties: {text: Rejected Loans}
+    type: Button
+    layout_properties: {grid_position: 'TYKZVH,HTOGIY'}
+    event_bindings: {click: button_3_click}
+  - name: label_7
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'XIDDNT,YUSBUB'}
+- name: outlined_card_4
+  properties: {role: outlined-card}
+  type: ColumnPanel
   layout_properties: {grid_position: 'LCSCLJ,FSYNPZ'}
-  event_bindings: {click: button_4_click}
+  components:
+  - name: button_4
+    properties: {text: Underprocess Loans}
+    type: Button
+    layout_properties: {grid_position: 'ZATBCN,CWOXRK'}
+    event_bindings: {click: button_4_click}
+  - name: label_8
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'WXCULQ,LTJFAT'}
 - name: label_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Open Loans, font_size: null, font: '', spacing_above: small,
