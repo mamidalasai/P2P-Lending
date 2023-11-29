@@ -22,7 +22,7 @@ class lapsed_loans(lapsed_loansTemplate):
     self.payment_done = []
     
     for i in self.data:
-      self.date_list.append(i['timestamp'].date())
+      self.date_list.append(i[''].date())
       self.payment_done.append(i['payment_done'])
 
     print(self.date_list)
