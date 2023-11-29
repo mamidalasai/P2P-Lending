@@ -19,13 +19,13 @@ class business_loan(business_loanTemplate):
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
-    open_form('bank_users.borrower_rgistration_form.new_loan_request.loan_type')
+    open_form('bank_users.borrower_dashboard.new_loan_request.loan_type')
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     alert('saved successfully!')
-    open_form('bank_users.borrower_rgistration_form.new_loan_request.check_out_business')
+    open_form('bank_users.borrower_dashboard.new_loan_request.check_out_business')
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_rgistration_form')
+    open_form('bank_users.borrower_dashboard')
