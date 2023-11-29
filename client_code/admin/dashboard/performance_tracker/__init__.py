@@ -19,4 +19,4 @@ class performance_tracker(performance_trackerTemplate):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard')
 
-    data = self.
+    
