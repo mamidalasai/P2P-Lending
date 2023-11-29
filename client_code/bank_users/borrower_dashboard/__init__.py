@@ -39,7 +39,7 @@ class borrower_dashboard(borrower_dashboardTemplate):
 
   def button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard.borrower_loan_close')
+    open_form('bank_users.borrower_dashboard.borrower_view_loans')
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
