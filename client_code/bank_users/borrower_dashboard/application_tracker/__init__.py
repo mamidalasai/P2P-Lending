@@ -14,9 +14,10 @@ class application_tracker(application_trackerTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     #self.user_id=main_form_module.userId
-    self.user_id=1000
+    #self.user_id=1000
     # Any code you write here will run before the form oopens.
     self.repeating_panel_5.items=app_tables.loan_details.search(loan_updated_status='underprocess')
+    self.label_1.text=str(len(self.repeating_panel_5.items))
   def home_borrower_registration_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.borrower_dashboard')
