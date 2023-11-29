@@ -350,9 +350,6 @@ db_schema:
     - name: spouse_office_number
       admin_ui: {width: 200, order: 93}
       type: string
-    - name: spouse_profficen
-      admin_ui: {width: 200}
-      type: string
     title: user_profile
   user_issues_bugreports:
     title: user_issues_bugreports
