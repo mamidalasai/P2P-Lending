@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 class lapsed_loans(lapsed_loansTemplate):
@@ -28,15 +28,18 @@ class lapsed_loans(lapsed_loansTemplate):
     print(self.date_list)
     print(self.payment_done)
 
+
     a = -1
     self.result = []
+    m = 0
     for i in self.date_list:
       a += 1
-      initial_date = datetime.strptime(i, '%Y-%m-%d').date()
+      
+      m = i.month
 
-    # Add 12 months to the initial date
-    self.result.append(initial_date.months() + self.payment_done[a])
     
-    # Print the resulting date
-    print(result_date)
+    while True:
+      print(m)
+      
+    print(self.result)
   
