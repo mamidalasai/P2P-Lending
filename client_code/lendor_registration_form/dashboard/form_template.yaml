@@ -72,7 +72,7 @@ components:
     event_bindings: {x_change: toggleswitch_1_x_change}
   - type: Button
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: '', font_size: 15, font: '', spacing_above: none,
+      foreground: '', visible: true, text: '', font_size: 13, font: '', spacing_above: none,
       icon_align: left, spacing_below: none, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: button_status
