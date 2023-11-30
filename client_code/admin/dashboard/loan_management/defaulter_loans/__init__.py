@@ -66,7 +66,6 @@ class defaulter_loans(defaulter_loansTemplate):
         print(days_late)
         penalty = interest_per_day * days_late
         total_due = self.loan_due_amount[c] + penalty
-        
         self.days[self.id[c]] = total_due
     
     self.index1 = []
