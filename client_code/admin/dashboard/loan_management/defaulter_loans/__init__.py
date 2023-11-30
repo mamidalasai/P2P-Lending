@@ -56,7 +56,6 @@ class defaulter_loans(defaulter_loansTemplate):
     for i in self.index:
       c = self.index.index(i)
       d = ((self.today - self.due_list[c]).days > 3) and ((self.today - self.due_list[c]).days < 90)
-      
       if (self.due_list[c] < self.today) and (d):
         annual_interest_rate = self.intrest[c]
         days_in_year = 365
@@ -67,6 +66,7 @@ class defaulter_loans(defaulter_loansTemplate):
         print(days_late)
         penalty = interest_per_day * days_late
         total_due = self.loan_due_amount[c] + penalty
+        
         self.days[self.id[c]] = total_due
     
     self.index1 = []
