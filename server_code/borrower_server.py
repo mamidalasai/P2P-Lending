@@ -175,17 +175,30 @@ def add_loan_details(loan_amount, credit_limit, tenure, user_id):
         # Handle the case where no user profile is found
         return "User profile not found"
 
-def generate_loan_id():
-    # Query the latest loan ID from the data table
-    latest_loan = app_tables.loan_details.search(tables.order_by("loan_id", ascending=False))
+# Global counter for loan_id
+loan_id_counter = 100001
 
-    if latest_loan and len(latest_loan) > 0:
-        # If there are existing loans, increment the last loan ID
-        last_loan_id = latest_loan[0]['loan_id']
-        counter = int(last_loan_id[2:]) + 1
-    else:
-        # If there are no existing loans, start the counter at 100001
-        counter = 100001
+def generate_loan_id():
+    global loan_id_counter
+    
+    # Increment the counter for each new loan
+    counter = loan_id_counter
+    loan_id_counter += 1
 
     # Return the new loan ID
     return f"LA{counter}"
+
+#def generate_loan_id():
+ #   # Query the latest loan ID from the data table
+  #  latest_loan = app_tables.loan_details.search(tables.order_by("loan_id", ascending=False))
+
+  #  if latest_loan and len(latest_loan) > 0:
+        # If there are existing loans, increment the last loan ID
+   #     last_loan_id = latest_loan[0]['loan_id']
+    #    counter = int(last_loan_id[2:]) + 1
+    #else:
+        # If there are no existing loans, start the counter at 100001
+#        counter = 100001
+
+    # Return the new loan ID
+    #return f"LA{counter}"
