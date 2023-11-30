@@ -94,6 +94,14 @@ class dashboard(dashboardTemplate):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.dasboard_contact")
 
+  
+    
+
+  def toggleswitch_1_x_change(self, **event_args):
+    if self.toggleswitch_1.checked:
+        self.label.text = "ONLINE"
+    else:
+        self.label.text = "OFFLINE"
 
 
   
