@@ -46,6 +46,7 @@ unique_ids:
     : '1700571978274780031857795.3887'
     admin.dashboard.lenders.view_profile_copy.edit_form_copy: '1700738442974165215211725.12378'
     payment.payment: '1700205210866117397317614.8213'
+    lendor_registration_form.Toggleswitch: '1701335189405602120940903.774'
     lendor_registration_form.dashboard.vblr.Borr_loan_request: '1700542763128106365112272.9714'
     admin.dashboard.admin_teams.view_profile.update_form: '169952839624818688697299.6676'
     borrower_registration_form.star_1_borrower_registration_form_begin_6: '1698917728035780761604535.7333'
@@ -185,6 +186,7 @@ unique_ids:
     borrower_server: '169816543913997904134922.20096'
     lendo_server: '1699507662691410806325953.31323'
   assets:
+    toggle-switch.html: '1701328671136540227032965.07666'
     theme.css: JY2QQGLXUJWK7GCNGLNVTEX4BU36LTNX
     Screenshot 2023-11-26 225156.png: '1701019590436468840698056.67175'
     Screenshot 2023-11-26 151907.png: '1700992501391933332520889.9286'
@@ -201,5 +203,6 @@ unique_ids:
     titled-design.jpg: '1701090443907776446161195.572'
     Screenshot 2023-11-26 225206.png: '1701019659786992952203670.3728'
     Screenshot 2023-11-26 151804.png: '1700992268058634985056423.6241'
+    toggle-switch.css: '1701328631898476412516700.48914'
     kotackpng.png: '1697784961328616728754407.5461'
     Kotak.jpg: '1701090430646530302017735.53534'
