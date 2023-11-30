@@ -23,6 +23,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
         # Save selected_row as an instance variable for later use
     self.selected_row = selected_row
   def button_foreclose_click(self, **event_args):
+  
     """This method is called when the button is clicked"""
     selected_row = self.selected_row
 

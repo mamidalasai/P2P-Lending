@@ -71,6 +71,7 @@ class foreclose(forecloseTemplate):
     alert('Submitting a foreclosure request implies acknowledgment and acceptance of financial and legal consequences, adhering to established timelines and communication protocols.')
 
   def button_3_click(self, **event_args):
+    
     """This method is called when the button is clicked"""
     if self.f_checkbox.checked:
         # Get the reason entered by the user
@@ -90,9 +91,18 @@ class foreclose(forecloseTemplate):
                     requested_on=datetime.now(),
                     reason=reason
                 )
-
+                
                
+                #self.button_3.visible = True
+                #self.button_4.visible = False
+
+                    # Check if there is an approved foreclosure
+                  #foreclosure_status = app_tables.foreclosure.get(status='approved')
+                 # if foreclosure_status:
+                 #self.button_4.text = foreclosure_status['status']
+                 #self.button_4.visible = True
                 alert("The Foreclosure Statement will be processed within 15 working days from the date of request. Please place this request to know the principal amount outstanding for closure of loan and applicable charges. If you have provided your mobile number or email, we will inform you about the closure of your request by SMS or email respectively. Providing the mobile number or email here will not result in an update of your mobile number or email as recorded with us. KOTAK Bank does not take any responsibility, and will also not be liable, for your claims if the details provided by you are incorrect/incomplete.")
+
                 open_form('bank_users.borrower_dashboard.borrower_foreclosure_request')
         else:
             alert('Please enter a reason for foreclosure.')
