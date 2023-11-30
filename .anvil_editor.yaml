@@ -44,7 +44,6 @@ unique_ids:
     admin.dashboard.lenders: '1699528516670654865261457.5034'
     ? borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_4
     : '1700571978274780031857795.3887'
-    lendor_registration_form.dashboard.Toggleswitch: '1701328737624803445297653.3344'
     admin.dashboard.lenders.view_profile_copy.edit_form_copy: '1700738442974165215211725.12378'
     payment.payment: '1700205210866117397317614.8213'
     lendor_registration_form.dashboard.vblr.Borr_loan_request: '1700542763128106365112272.9714'
@@ -156,6 +155,7 @@ unique_ids:
     admin.dashboard.lenders.RowTemplate4: '1700737487916312936831844.4892'
     admin.dashboard.admin_teams.view_profile: '1699528208717177568108194.0108'
     admin.dashboard.manage_products.add_product_categories_and_groups: '1701090290692291670903022.0623'
+    lendor_registration_form.dashboard.ToggleSwitch: '1701328737624803445297653.3344'
     admin.dashboard.loan_management.lapsed_loans: '1701265825793676423241044.7284'
     lendor_registration_form.dashboard.opbal: '1699956535223911918554378.0013'
     admin.dashboard.loan_management.closed_loans.view_profile_5: '1701079991010941258272977.0447'

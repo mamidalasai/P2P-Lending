@@ -60,11 +60,11 @@ components:
     properties: {}
     name: label_status
     layout_properties: {}
-  - type: form:lendor_registration_form.dashboard.Toggleswitch
+  - type: form:lendor_registration_form.dashboard.ToggleSwitch
     properties: {}
-    name: toggleswitch_1
-    layout_properties: {width: 65}
-    event_bindings: {x_change: toggleswitch_1_x_change}
+    name: toggle_switch_1
+    layout_properties: {width: 73}
+    event_bindings: {x_change: toggle_switch_1_x_change}
   - type: Button
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -72,7 +72,7 @@ components:
       underline: false, icon: ''}
     name: button
     layout_properties: {}
-    event_bindings: {click: button_click}
+    event_bindings: {click: button_click, show: button_show, hide: button_hide}
 - name: spacer_1_copy_1
   properties: {height: 39}
   type: Spacer
