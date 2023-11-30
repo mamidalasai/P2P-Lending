@@ -60,11 +60,6 @@ components:
     properties: {}
     name: label_status
     layout_properties: {}
-  - type: form:lendor_registration_form.dashboard.ToggleSwitch
-    properties: {}
-    name: toggle_switch_1
-    layout_properties: {width: 73}
-    event_bindings: {x_change: toggle_switch_1_x_change}
   - type: Button
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
