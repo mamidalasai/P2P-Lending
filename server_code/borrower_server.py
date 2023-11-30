@@ -157,7 +157,7 @@ def add_loan_details(loan_amount, credit_limit, tenure, user_id):
 
         # Extract the full name from the user profile
         full_name = user_profile['full_name']
-
+        email_id = user_profile['email_user']
         # Add the loan details to the data table
         app_tables.loan_details.add_row(
             loan_id=loan_id,
@@ -165,7 +165,8 @@ def add_loan_details(loan_amount, credit_limit, tenure, user_id):
             credit_limit=credit_limit,
             tenure=tenure,
             coustmer_id=user_id,
-            full_name=full_name,  # Store the full name in the loan_details table
+            full_name=full_name,
+            email_id=email_id,                 
             timestamp=datetime.now()
         )
 
@@ -175,30 +176,37 @@ def add_loan_details(loan_amount, credit_limit, tenure, user_id):
         # Handle the case where no user profile is found
         return "User profile not found"
 
-# Global counter for loan_id
-loan_id_counter = 100001
-
 def generate_loan_id():
-    global loan_id_counter
-    
-    # Increment the counter for each new loan
-    counter = loan_id_counter
-    loan_id_counter += 1
+    # Query the latest loan ID from the data table
+    latest_loan = app_tables.loan_details.search(tables.order_by("loan_id", ascending=False))
+
+    if latest_loan and len(latest_loan) > 0:
+        # If there are existing loans, increment the last loan ID
+        last_loan_id = latest_loan[0]['loan_id']
+        counter = int(last_loan_id[2:]) + 1
+    else:
+        # If there are no existing loans, start the counter at 100001
+        counter = 100001
 
     # Return the new loan ID
     return f"LA{counter}"
 
-#def generate_loan_id():
- #   # Query the latest loan ID from the data table
-  #  latest_loan = app_tables.loan_details.search(tables.order_by("loan_id", ascending=False))
 
-  #  if latest_loan and len(latest_loan) > 0:
-        # If there are existing loans, increment the last loan ID
-   #     last_loan_id = latest_loan[0]['loan_id']
-    #    counter = int(last_loan_id[2:]) + 1
-    #else:
-        # If there are no existing loans, start the counter at 100001
-#        counter = 100001
 
-    # Return the new loan ID
-    #return f"LA{counter}"
+
+
+
+
+@anvil.server.callable
+def update_loan_details(loan_id, emi, total_repayment_amount, interest_rate):
+    rows = app_tables.loan_details.search(loan_id=loan_id)
+
+    if rows:
+        row = rows[0]
+        row['emi'] = emi
+        row['total_repayment_amount'] = total_repayment_amount
+        row['interest_rate'] = interest_rate
+        row.update()
+    else:
+        raise ValueError(f"Row not found for loan_id {loan_id}")
+

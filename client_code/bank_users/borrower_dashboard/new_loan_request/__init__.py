@@ -16,7 +16,7 @@ class new_loan_request(new_loan_requestTemplate):
         tenure = self.tenure_dd.selected_value
         user_id = self.user_id
         
-        loan_id = anvil.server.call('add_loan_details',loan_amount, credit_limit, tenure, user_id)
+        anvil.server.call('add_loan_details',loan_amount, credit_limit, tenure, user_id)
 
         if self.check_box_1.checked:
             open_form('bank_users.borrower_dashboard.new_loan_request.loan_type')
