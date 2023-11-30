@@ -99,7 +99,7 @@ class dashboard(dashboardTemplate):
     pass
 
   def toggleswitch_1_event(self, **event_args):
-     if self.toggleswitch_2.checked:
+     if self.toggleswitch_1.checked:
       self.button_status.text = "ONLINE"
       self.button_status.background = '#00CC00'  # Green color
       self.button_status.foreground = '#FFFFFF'  # White text

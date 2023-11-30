@@ -1,7 +1,8 @@
-properties: []
+properties:
+- {name: prop, type: object, important: true, default_binding_prop: true}
 is_package: true
 events:
-- {name: event, default_event: true}
+- {name: x_change, default_event: true}
 custom_component: true
 components:
 - type: CheckBox
@@ -9,7 +10,7 @@ components:
     allow_indeterminate: false, visible: true, text: '', font_size: null, font: '',
     spacing_above: small, spacing_below: small, italic: false, background: '', bold: false,
     checked: false, underline: false}
-  name: toggleswitch_2
+  name: check_box_1
   layout_properties: {slot: default}
   event_bindings: {change: check_box_1_change, show: check_box_1_show, hide: check_box_1_hide}
 container:
