@@ -22,4 +22,4 @@ userId = 0
 def borrower_table_data_entry():
   user_data=app_tables.user_profile.search(coustmer_id=user_id)
   if user_data:
-    user_data
+    user_1=app_tables.u
