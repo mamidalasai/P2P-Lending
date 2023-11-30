@@ -29,6 +29,7 @@ class defaulter_loans(defaulter_loansTemplate):
     self.id = []
     self.c_id = []
     self.full_name = []
+    self.status = []
     for i in self.loan:
       self.due_list.append(i['due_date'].date())
       self.loan_amont.append(i['loan_amount'])
@@ -37,6 +38,7 @@ class defaulter_loans(defaulter_loansTemplate):
       self.loan_due_amount.append(i['total_repayment_amount'])
       self.c_id.append(i['coustmer_id'])
       self.full_name.append(i['full_name'])
+      self.status.append(i['loan_updated_status'])
 
     self.id_1 = []
     for i in self.fourcloser:
@@ -48,7 +50,7 @@ class defaulter_loans(defaulter_loansTemplate):
     for i in self.id:
       if i in self.id_1:
         b = self.id_1.index(i)
-        if self.loan_amont[b] != self.paid_amount[b]:
+        if (self.loan_amont[b] != 0) and (self.status[b] != "closed"):
           self.index.append(self.id_1[b])
 
     self.result = []
