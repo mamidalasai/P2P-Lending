@@ -16,3 +16,10 @@ from anvil.tables import app_tables
 user_id=""
 
 userId = 0
+
+# this is from the borrower data enters
+
+def borrower_table_data_entry():
+  user_data=app_tables.user_profile.search(coustmer_id=user_id)
+  if user_data:
+    user_1=app_tables.u

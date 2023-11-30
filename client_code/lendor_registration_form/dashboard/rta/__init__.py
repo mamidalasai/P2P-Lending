@@ -38,7 +38,7 @@ class rta(rtaTemplate):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.avlbal")
+    open_form("lendor_registration_form.dashboard.avlbal")
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -70,7 +70,7 @@ class rta(rtaTemplate):
 
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vep")
+    open_form("lendor_registration_form.dashboard.opbal")
 
   def link_10_click(self, **event_args):
     """This method is called when the link is clicked"""
