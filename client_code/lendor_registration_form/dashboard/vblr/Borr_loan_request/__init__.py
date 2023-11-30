@@ -1,4 +1,4 @@
-
+import anvil
 from ._anvil_designer import Borr_loan_requestTemplate
 from anvil import *
 import anvil.tables as tables
@@ -15,11 +15,11 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         # Populate labels with the selected row details
         self.label_user_id.text = f"{selected_row['coustmer_id']}"
         self.label_name.text = f"{selected_row['full_name']}"
-        self.label_loan_amount_applied.text = f"{selected_row['min_amount']}"
+        self.label_loan_amount_applied.text = f"{selected_row['loan_amount']}"
         self.label_loan_acc_number.text = f"{selected_row['loan_id']}"
         self.label_beseem_score.text = f"{selected_row['beseem_score']}"
         self.label_loan_tenure.text = f"{selected_row['tenure']}"
-        self.label_credit_limit.text = f"{selected_row['max_amount']}"
+        self.label_credit_limit.text = f"{selected_row['credit_limit']}"
 
         # Fetch additional details from the 'borrower' table
         try:
@@ -33,14 +33,15 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                 
                 # Fetch additional details from the 'loan_details' table
                 try:
-                    loan_details = app_tables.loan_details.get(loan_id=int(selected_row['loan_id']))
+                    #loan_details = app_tables.loan_details.get(loan_id=int(selected_row['loan_id']))
+                    loan_details = app_tables.loan_details.get(loan_id=str(selected_row['loan_id']))
                     if loan_details is not None:
                         # Assuming 'interest_rate' and 'min_amount' are valid column names in the 'loan_details' table
                         interest_rate = loan_details['interest_rate']
-                        min_amount_text = loan_details['min_amount']
+                        min_amount_text = loan_details['loan_amount']
                         
                         # Calculate and display ROM in amount format
-                        rom_amount = self.calculate_rom(interest_rate, min_amount_text)
+                        rom_amount = self.calculate_rom(interest_rate,min_amount_text)
                         self.label_member_rom.text = f"{rom_amount:.2f}"
                     else:
                         self.label_member_rom.text = "No data for loan_id in loan_details"
