@@ -7,11 +7,14 @@ import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
+from anvil.tables import app_tables
+#from anvil import get_current_user
 
 class dashboard(dashboardTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
 
     # Any code you write here will run before the form opens.
 
@@ -108,18 +111,30 @@ class dashboard(dashboardTemplate):
   def button_hide(self, **event_args):
     """This method is called when the Button is removed from the screen"""
     pass
+    
 
  
 
   def toggleswitch_1_x_change(self, **event_args):
+    
     if self.toggleswitch_1.checked:
       self.button_status.text = "ONLINE"
       self.button_status.background = '#0876e8'  # Green color
       self.button_status.foreground = '#FFFFFF'  # White text
+      # Update 'make_visibility' column in the 'lender' table to True
+      lender_row = app_tables.lender.search() # Assuming you have a row with id=1 for the lender
+      lender_row[0]['make_visibility'] = True
+      lender_row[0].update()
     else:
       self.button_status.text = "OFFLINE"
       self.button_status.background = '#FFFFFF'  # White color
       self.button_status.foreground = '#FF0000'  # Red text
+      lender_row = app_tables.lender.search()# Assuming you have a row with id=1 for the lender
+      lender_row[0]['make_visibility'] = False
+      lender_row[0].update()
+
+
+
 
 
 
