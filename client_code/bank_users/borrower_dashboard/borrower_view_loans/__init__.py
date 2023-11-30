@@ -12,16 +12,17 @@ class borrower_view_loans(borrower_view_loansTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.repeating_panel_1.items=app_tables.loan_details.search(loan_updated_status='open')
-    self.repeating_panel_2.items=app_tables.loan_details.search(loan_updated_status='closed')
-    self.repeating_panel_3.items=app_tables.loan_details.search(loan_updated_status='rejected')
-    self.repeating_panel_4.items=app_tables.loan_details.search(loan_updated_status='underprocess')
-
+    self.user_id=main_form_module.userId
+    self.repeating_panel_1.items=app_tables.loan_details.search(loan_updated_status='open',coustmer_id=self.user_id)
+    self.repeating_panel_2.items=app_tables.loan_details.search(loan_updated_status='close',coustmer_id=self.user_id)
+    self.repeating_panel_3.items=app_tables.loan_details.search(loan_updated_status='reject',coustmer_id=self.user_id)
+    self.repeating_panel_4.items=app_tables.loan_details.search(loan_updated_status='underprocess',coustmer_id=self.user_id)
+    self.repeating_panel_5.items=app_tables.loan_details.search(loan_updated_status='foreclosure',coustmer_id=self.user_id)
     self.label_5.text = str(len(self.repeating_panel_1.items))
     self.label_6.text=str(len(self.repeating_panel_2.items))
     self.label_7.text=str(len(self.repeating_panel_3.items))
     self.label_8.text=str(len(self.repeating_panel_4.items))
-    self.label_10.
+    self.label_9.text=str(len(self.repeating_panel_5.items))
     # Any code you write here will run before the form opens.
 
   def home_borrower_registration_form_copy_1_click(self, **event_args):
