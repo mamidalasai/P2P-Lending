@@ -55,7 +55,7 @@ class lapsed_loans(lapsed_loansTemplate):
     self.days = {}
     for i in self.index:
       c = self.index.index(i)
-      d = (self.today.day - self.due_list[c].day) >= 1 and (self.today.day - self.due_list[c].day) <= 3
+      d = d = ((self.today - self.due_list[c]).days >= 1) and ((self.today - self.due_list[c]).days <= 3)
       if (self.due_list[c] < self.today) and (d):
         annual_interest_rate = self.intrest[c]
         days_in_year = 365
@@ -63,7 +63,7 @@ class lapsed_loans(lapsed_loansTemplate):
         print(daily_interest_rate)
         self.result.append(self.id[c])
         interest_per_day = self.loan_due_amount[c] * daily_interest_rate
-        days_late = self.today.day - self.due_list[c].day
+        days_late = (self.today - self.due_list[c]).days
         penalty = interest_per_day * days_late
         total_due = self.loan_due_amount[c] + penalty
         self.days[self.id[c]] = total_due

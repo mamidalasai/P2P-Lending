@@ -19,7 +19,6 @@ class defaulter_loans(defaulter_loansTemplate):
     self.loan = tables.app_tables.loan_details.search()
     self.fourcloser = tables.app_tables.foreclosure.search()
     self.today = datetime.now().date()
-    print(self.today)
 
     self.due_list = []
     self.loan_amont = []
@@ -56,22 +55,20 @@ class defaulter_loans(defaulter_loansTemplate):
     self.days = {}
     for i in self.index:
       c = self.index.index(i)
-      d = (self.today - self.due_list[c]).day
-      print(d)
+      d = ((self.today - self.due_list[c]).days > 3) and ((self.today - self.due_list[c]).days < 90)
+      
       if (self.due_list[c] < self.today) and (d):
         annual_interest_rate = self.intrest[c]
         days_in_year = 365
         daily_interest_rate = (annual_interest_rate / 100) / days_in_year
-        print(daily_interest_rate)
         self.result.append(self.id[c])
         interest_per_day = self.loan_due_amount[c] * daily_interest_rate
-        days_late = self.today.day - self.due_list[c].day
+        days_late = (self.today - self.due_list[c]).days
+        print(days_late)
         penalty = interest_per_day * days_late
         total_due = self.loan_due_amount[c] + penalty
         self.days[self.id[c]] = total_due
     
-    print(self.result)
-    print(self.days)
     self.index1 = []
     self.final = []
     self.total = []
@@ -85,7 +82,7 @@ class defaulter_loans(defaulter_loansTemplate):
       self.final.append({'loan_id' : self.id[i], 'coustmer_id' : self.c_id[i], 'full_name' : self.full_name[i], 'amount': int(self.total[a])})
 
     self.repeating_panel_1.items = self.final
-    print(self.index1)
+    
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
