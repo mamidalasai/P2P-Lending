@@ -1,8 +1,5 @@
 correct_dependency_ids: {}
-dependencies:
-- dep_id: dep_if7gqyqo4yo8z9
-  version: {dev: false}
-  resolution_hints: {app_id: QV3UJZRCPLTZB2TD, name: TG, package_name: bank_client}
+dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
@@ -18,7 +15,7 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: bank_users.main_form}
-package_name: toggleswitch_1
+package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
