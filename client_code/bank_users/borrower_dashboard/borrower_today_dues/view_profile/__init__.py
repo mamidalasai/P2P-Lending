@@ -20,6 +20,7 @@ class view_profile(view_profileTemplate):
     self.tenure_label.text=f"{selected_row['tenure']}"
     self.date_of_apply_label.text=f"{selected_row['timestamp']}"
     self.due_amount_label.text=f"{selected_row['due_date']}"
+    
 
   def button_1_copy_click(self, **event_args):
     open_form('bank_users.borrower_dashboard')
