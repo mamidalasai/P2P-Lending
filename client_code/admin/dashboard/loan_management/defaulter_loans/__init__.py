@@ -1,4 +1,4 @@
-from ._anvil_designer import lapsed_loansTemplate
+from ._anvil_designer import defaulter_loansTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,8 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import datetime
 
-class lapsed_loans(lapsed_loansTemplate):
+
+class defaulter_loans(defaulter_loansTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -55,7 +56,8 @@ class lapsed_loans(lapsed_loansTemplate):
     self.days = {}
     for i in self.index:
       c = self.index.index(i)
-      d = (self.today.day - self.due_list[c].day) >= 1 and (self.today.day - self.due_list[c].day) <= 3
+      d = (self.today - self.due_list[c]).day
+      print(d)
       if (self.due_list[c] < self.today) and (d):
         annual_interest_rate = self.intrest[c]
         days_in_year = 365
@@ -88,3 +90,4 @@ class lapsed_loans(lapsed_loansTemplate):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('admin.dashboard.loan_management')
+    
