@@ -17,8 +17,8 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: lendor_registration_form.dashboard}
-package_name: bank_client
+startup: {type: form, module: bank_users.main_form}
+package_name: toggleswitch_1
 allow_embedding: false
 name: P2P Lending App
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
