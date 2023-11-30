@@ -1,6 +1,6 @@
 correct_dependency_ids: {}
 dependencies:
-- dep_id: dep_p8ip7h9o7lcuya
+- dep_id: dep_if7gqyqo4yo8z9
   version: {dev: false}
   resolution_hints: {app_id: QV3UJZRCPLTZB2TD, name: TG, package_name: bank_client}
 services:
@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: lendor_registration_form.dashboard}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
