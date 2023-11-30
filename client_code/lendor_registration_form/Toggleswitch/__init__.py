@@ -75,10 +75,10 @@ class Toggleswitch(ToggleswitchTemplate):
         pass
 
     def check_box_1_change(self, **event_args):
-        self.raise_event("x-change")
+        self.raise_event("x_change")
 
     def check_box_1_show(self, **event_args):
-        self.raise_event("x-show")
+        self.raise_event("x_show")
 
     def check_box_1_hide(self, **event_args):
-        self.raise_event("x-hide")
+        self.raise_event("x_hide")

@@ -109,10 +109,12 @@ class dashboard(dashboardTemplate):
     """This method is called when the Button is removed from the screen"""
     pass
 
-  def toggle_switch_1_x_change(self, **event_args):
+ 
+
+  def toggleswitch_1_x_change(self, **event_args):
     if self.toggleswitch_1.checked:
       self.button_status.text = "ONLINE"
-      self.button_status.background = '#00CC00'  # Green color
+      self.button_status.background = '#0876e8'  # Green color
       self.button_status.foreground = '#FFFFFF'  # White text
     else:
       self.button_status.text = "OFFLINE"
