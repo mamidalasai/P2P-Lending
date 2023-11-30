@@ -1,5 +1,11 @@
 properties:
-- {name: prop, type: object, important: true, default_binding_prop: true}
+- {name: checked, type: boolean, important: true, default_binding_prop: true, default_value: false}
+- {name: enable, type: boolean, default_value: false, important: true}
+- {name: visible, type: boolean, default_value: false, important: true}
+- {name: checked_colour, type: string, default_value: '#2196F3', important: true}
+- {name: unchecked_colour, type: string, default_value: '#c6bfbf', important: true}
+- {name: disabled_colour, type: string, default_value: '#dad5d5', important: true}
+- {name: enabled_colour, type: string, default_value: '#ffffff', important: true}
 is_package: true
 events:
 - {name: x_change, default_event: true}

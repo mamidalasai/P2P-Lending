@@ -94,20 +94,30 @@ class dashboard(dashboardTemplate):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.dasboard_contact")
 
-  def button_status_click(self, **event_args):
+  def button_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
 
-  def toggleswitch_1_event(self, **event_args):
-     if self.toggleswitch_1.checked:
-      self.button_status.text = "ONLINE"
-      self.button_status.background = '#00CC00'  # Green color
-      self.button_status.foreground = '#FFFFFF'  # White text
-     else:
-      self.button_status.text = "OFFLINE"
-      self.button_status.background = '#FFFFFF'  # White color
-      self.button_status.foreground = '#FF0000'  # Red text
+  
+     
 
+  def toggleswitch_1_x_change(self, **event_args):
+    if self.toggleswitch_1.checked:
+      self.button.text = "ONLINE"
+      self.button.background = '#00CC00'  # Green color
+      self.button.foreground = '#FFFFFF'  # White text
+    else:
+      self.button.text = "OFFLINE"
+      self.button.background = '#FFFFFF'  # White color
+      self.button.foreground = '#FF0000'  # Red text
+
+
+    if self.toggleswitch_2.checked:
+        self.label_status.text = "ONLINE"
+    else:
+        self.label_status.text = "OFFLINE"
+
+  
 
 
   
