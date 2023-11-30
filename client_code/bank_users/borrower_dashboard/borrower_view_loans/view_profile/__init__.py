@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...import borrower_main_form_module as main_form_module
-
+from datetime import datetime
 class view_profile(view_profileTemplate):
   def __init__(self,selected_row, **properties):
     #self.user_id=main_form_module.userId
