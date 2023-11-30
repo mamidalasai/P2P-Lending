@@ -1,5 +1,8 @@
 correct_dependency_ids: {}
-dependencies: []
+dependencies:
+- dep_id: dep_p8ip7h9o7lcuya
+  version: {dev: false}
+  resolution_hints: {app_id: QV3UJZRCPLTZB2TD, name: TG, package_name: bank_client}
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
