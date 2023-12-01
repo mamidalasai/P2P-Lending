@@ -24,3 +24,9 @@ components:
   type: Link
   layout_properties: {column: SPXQVA}
   event_bindings: {click: link_1_click}
+- name: days_left
+  properties: {}
+  type: Label
+  layout_properties: {column: VLUBHH}
+  data_bindings:
+  - {property: text, code: 'self.item[''days_left'']', writeback: false}
