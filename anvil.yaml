@@ -479,6 +479,9 @@ db_schema:
     - name: due_date
       admin_ui: {width: 200, order: 19}
       type: datetime
+    - name: lender_email_id
+      admin_ui: {width: 200}
+      type: string
     title: loan_details
   product_group:
     title: product_group
@@ -555,6 +558,9 @@ db_schema:
     - name: membership
       admin_ui: {width: 200, order: 10}
       type: string
+    - name: make_visibility
+      admin_ui: {width: 200, order: 11}
+      type: bool
   borrower:
     title: borrower
     client: full
@@ -569,9 +575,6 @@ db_schema:
     - name: user_name
       admin_ui: {width: 200, order: 2}
       type: string
-    - name: max_amount
-      admin_ui: {order: 3, width: 200}
-      type: number
     - name: out_standing_amount
       admin_ui: {width: 200, order: 4}
       type: number
@@ -593,6 +596,9 @@ db_schema:
     - name: bank_acc_details
       admin_ui: {width: 200, order: 10}
       type: string
+    - name: credit_limit
+      admin_ui: {width: 200}
+      type: number
   product_categories:
     client: full
     server: full
