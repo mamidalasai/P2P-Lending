@@ -27,12 +27,11 @@ class borrower_today_dues(borrower_today_duesTemplate):
             
             days_left = (due_date_aware - now).days
             days_gone = (now - due_date_aware).days
-
-            # Choose the minimum of days_left and days_gone
-            min_days = min(days_left, days_gone)
-
-            # Update the 'days_left' column in the database
-            loan['days_left'] = min_days
+            min=(days_gone,days_left)
+            # Update the 'days_positive' and 'days_negative' columns in the database
+            loan['days_left'] = max(0, days_left) 
+            loan['days_left'] = max(0, days_gone) * -1 
+            loan['days_left']=min
 
             loan.update()
 
