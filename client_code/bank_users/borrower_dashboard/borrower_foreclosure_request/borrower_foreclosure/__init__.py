@@ -48,8 +48,12 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
             self.button_3.visible = False
         else:
             # If there is no approved or reject status, make "Foreclose" button visible
-            self.button_foreclose.visible = True
+            self.button_foreclose.visible = False
+            self.button_2.visible = False 
+            self.button_4.visible = False
             self.button_3.visible = False
+            self.button_5.visible = True
+            self.button_6.visible = True 
 
         # Save selected_row as an instance variable for later use
         self.selected_row = selected_row
@@ -82,5 +86,9 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
         open_form('bank_users.borrower_dashboard')
 
     def button_4_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('bank_users.borrower_dashboard.borrower_foreclosure_request')
+
+    def button_5_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('bank_users.borrower_dashboard.borrower_foreclosure_request')
