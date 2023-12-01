@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from .. import borrower_main_form_module as main_form_module 
 
 class borrower_today_dues(borrower_today_duesTemplate):
@@ -22,13 +22,18 @@ class borrower_today_dues(borrower_today_duesTemplate):
         # Calculate days left and days gone for each loan
         for loan in all_loans:
             due_date = loan['due_date']
-            now = datetime.now()
-            days_left = (due_date - now).days
-            days_gone = (now - due_date).days
+            now = datetime.now(timezone.utc)
+            due_date_aware = due_date.replace(tzinfo=timezone.utc)
             
-            # Update the 'days_left' and 'days_gone' columns in the database
-            loan['days_left'] = days_left
-            loan['days_gone'] = days_gone
+            days_left = (due_date_aware - now).days
+            days_gone = (now - due_date_aware).days
+
+            # Choose the minimum of days_left and days_gone
+            min_days = min(days_left, days_gone)
+
+            # Update the 'days_left' column in the database
+            loan['days_left'] = min_days
+
             loan.update()
 
         # Display loans with the calculated values in the repeating panel
