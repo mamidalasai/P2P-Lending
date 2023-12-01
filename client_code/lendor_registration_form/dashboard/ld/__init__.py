@@ -1,4 +1,4 @@
-from ._anvil_designer import ldTemplate
+'''from ._anvil_designer import ldTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -12,6 +12,7 @@ class ld(ldTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.repeating_panel_1.items = app_tables.loan_disbursement.search()
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.avlbal")
@@ -72,4 +73,57 @@ class ld(ldTemplate):
 
 
 
-    # Any code you write here will run before the form opens.
+    # Any code you write here will run before the form opens.'''
+
+
+from ._anvil_designer import ldTemplate
+from anvil import *
+import anvil.server
+import anvil.google.auth, anvil.google.drive
+from anvil.google.drive import app_files
+import anvil.users
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+
+class ld(ldTemplate):
+    def __init__(self, **properties):
+        # Set Form properties and Data Bindings.
+        self.init_components(**properties)
+       # Set Form properties and Data Bindings.
+        self.init_components(**properties)
+        
+        # Get final_rta values for all lenders
+        lender_rows = app_tables.lender.search()
+        
+        # Calculate and display the total final_rta value
+        total_final_rta = sum(row['final_rta'] for row in lender_rows)
+        
+        self.label_2.text = f"{total_final_rta:,}"
+        
+        # Get loan amounts for all customers, filtering out None values
+        loan_amounts = [row['loan_amount'] for row in app_tables.loan_disbursement.search() if row['loan_amount'] is not None]
+
+        # Calculate and display the total loan amount
+        total_loan_amount = sum(loan_amounts)
+        self.label_3.text = f"{total_loan_amount}"
+
+        
+        
+        # Load loan disbursement data into the repeating panel
+        self.repeating_panel_1.items = app_tables.loan_disbursement.search()
+
+    def link_1_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        open_form("lendor_registration_form.dashboard.avlbal")
+
+    # ... (other link methods)
+
+    def link_13_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        open_form("lendor_registration_form.dashboard.cp")
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('lendor_registration_form.dashboard')
+

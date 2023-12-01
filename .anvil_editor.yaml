@@ -87,6 +87,7 @@ unique_ids:
     bank_users.borrower_dashboard.new_loan_request.loan_type: '1698663480920279749801604.1442'
     admin.dashboard.loan_management.rejected_loans: '1699528958889169021462649.09222'
     admin.dashboard.loan_management.rejected_loans.view_profile_2: '1700812221243295088415002.8101'
+    lendor_registration_form.dashboard.vblr.Borr_loan_request.loan_payment: '1701412918887920553133861.4945'
     admin.dashboard.loan_management.approved_loans.view_profile: '1700740546893987573171578.3491'
     lendor_registration_form.dashboard.rta: '1699957883953144866963289.06934'
     ? borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_2
@@ -141,6 +142,7 @@ unique_ids:
     : '17005720020403876226355.3249187'
     lendor_registration_form.dashboard.vler: '1699962962727731721010167.028'
     bank_users.borrower_dashboard.application_tracker: '1698927021026141533584098.39868'
+    lendor_registration_form.dashboard.vblr.Borr_loan_request.loan_payment.RowTemplate20: '1701415598402649814057463.0254'
     admin.dashboard.manage_products.view_product.RowTemplate5: '1700713251863745364072386.9193'
     bank_users.borrower_dashboard: '1700743782571887751708379.0123'
     ? borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_1
@@ -154,6 +156,7 @@ unique_ids:
     bank_users.user_form: '1700630694974484249170019.45953'
     lendor_registration_form.Lender_reg_Institutional_form_4: '1699430255086443143380907.82135'
     lendor_registration_form.dashboard.dasboard_about: '1700937676558669041781613.0414'
+    lendor_registration_form.dashboard.ld.RowTemplate21: '1701418275549485889492104.19055'
     admin.dashboard.loan_management.under_process.RowTemplate9: '1700822648257445883881327.55786'
     borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3f: '170003767984838881190201.539795'
     admin.dashboard.lenders.RowTemplate4: '1700737487916312936831844.4892'
@@ -181,6 +184,7 @@ unique_ids:
     bessem: '1700205325910571001573598.9252'
     bessem.Module1: '1700205351556369161479683.0478'
     bessem.Module2: '1700205354432627510262932.482'
+    lendor_registration_form.lender_main_module: '1701425120507628056881170.7043'
     lendor_registration_form: '1698165522178708771223568.9454'
     bank_users.borrower_dashboard.borrower_main_form_module: '1699015898653538926286773.5525'
     admin.user_issue: '1701187632020570869757232.485'
