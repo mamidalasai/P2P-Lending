@@ -28,10 +28,28 @@ components:
       name: button_1
       layout_properties: {grid_position: 'PMPTWL,LBDHHC'}
       event_bindings: {click: button_1_click}
-  - type: Spacer
-    properties: {height: 134}
-    name: spacer_1
-    layout_properties: {grid_position: 'ZUYFHI,VFYURS'}
+  - type: Label
+    properties: {}
+    name: label_1
+    layout_properties: {grid_position: 'FUYIEE,JKFMDI'}
+  - type: ColumnPanel
+    properties: {role: outlined-card, col_widths: '{}'}
+    name: outlined_card_1
+    layout_properties: {grid_position: 'XEKQZG,YDHCEB'}
+    components:
+    - type: DataGrid
+      properties:
+        columns:
+        - {id: ZARIGW, title: Column 1, data_key: column_1}
+        - {id: IYCJCN, title: Column 2, data_key: column_2}
+        - {id: QSGPAA, title: Column 3, data_key: column_3}
+      name: data_grid_1
+      layout_properties: {grid_position: 'TVRYTM,QTLGDT'}
+      components:
+      - type: RepeatingPanel
+        properties: {spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.ld.RowTemplate21}
+        name: repeating_panel_1
+        layout_properties: {}
 - type: FlowPanel
   properties: {}
   name: navbar_links

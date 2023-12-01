@@ -68,7 +68,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
     def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('lendor_registration_form.dashboard.vblr.Borr_loan_request.loan_payment.RowTemplate20',selected_row =selected_row)
+        open_form('lendor_registration_form.dashboard.vblr.Borr_loan_request.loan_payment',selected_row=self.selected_row)
 
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""

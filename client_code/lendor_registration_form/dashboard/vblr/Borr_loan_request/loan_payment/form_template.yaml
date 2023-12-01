@@ -57,7 +57,7 @@ components:
         name: label_2
         layout_properties: {row: ACNNPD, width_xs: 2, col_xs: 4, width: 130}
       - type: Label
-        properties: {}
+        properties: {bold: true}
         name: label_3
         layout_properties: {row: ACNNPD, width_xs: 2, col_xs: 6}
       - type: Label
@@ -92,11 +92,12 @@ components:
         layout_properties: {row: DAVJXU, width_xs: 2, col_xs: 8, width: 157.167}
       - type: Button
         properties: {role: outlined-button, align: center, tooltip: '', border: '',
-          enabled: true, foreground: Black, visible: true, text: Pay, font_size: null,
+          enabled: true, foreground: Black, visible: true, text: pay, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
           italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
         name: button_2
         layout_properties: {row: EWNMBT, width_xs: 2, col_xs: 6, width: 94.7708}
+        event_bindings: {click: button_2_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

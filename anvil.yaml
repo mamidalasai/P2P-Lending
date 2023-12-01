@@ -500,6 +500,14 @@ db_schema:
     - name: name
       admin_ui: {width: 200}
       type: string
+  loan_disbursement:
+    client: none
+    server: full
+    columns:
+    - name: lender_coustmer_id
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: loan_disbursement
   users:
     client: full
     server: full
