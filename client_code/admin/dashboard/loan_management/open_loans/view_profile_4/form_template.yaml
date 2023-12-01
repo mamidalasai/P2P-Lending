@@ -98,7 +98,7 @@ components:
     layout_properties: {grid_position: 'RCXFVE,ZGTQQH'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Minimum Amount, font_size: null, font: '', spacing_above: small,
+      visible: true, text: Amount, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: label_11
@@ -109,7 +109,7 @@ components:
     layout_properties: {grid_position: 'GIJNJP,EEEUTZ'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Maximum Amount, font_size: null, font: '', spacing_above: small,
+      visible: true, text: Credit Limit, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: label_13

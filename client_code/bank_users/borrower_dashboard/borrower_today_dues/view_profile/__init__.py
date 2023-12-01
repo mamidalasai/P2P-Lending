@@ -23,10 +23,7 @@ class view_profile(view_profileTemplate):
     self.date_of_apply_label.text=f"{selected_row['timestamp']}"
     self.due_amount_label.text=f"{selected_row['loan_amount']}"
     self.due_date_label.text=f"{selected_row['due_date']}"
-    
-    due_date = selected_row['due_date']
-    days_left = (due_date-datetime.now()).days
-    self.days_left_label.text = f"{days_left} days left"
+    self.days_left_label.text=f"{selected_row['days_left']}"
     
   def button_1_copy_click(self, **event_args):
     open_form('bank_users.borrower_dashboard')
