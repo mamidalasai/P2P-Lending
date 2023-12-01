@@ -1,4 +1,4 @@
-from ._anvil_designer import lapsed_loansTemplate
+from ._anvil_designer import NPA_loansTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import datetime
 
-class lapsed_loans(lapsed_loansTemplate):
+class NPA_loans(NPA_loansTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -50,14 +50,14 @@ class lapsed_loans(lapsed_loansTemplate):
     for i in self.id:
       if i in self.id_1:
         b = self.id_1.index(i)
-        if (self.loan_due_amount[b] == 0) and (self.status[b] != "closed"):
+        if (self.loan_amont[b] != 0) and (self.status[b] != "closed"):
           self.index.append(self.id_1[b])
 
     self.result = []
     self.days = {}
     for i in self.index:
       c = self.index.index(i)
-      d = d = ((self.today - self.due_list[c]).days >= 1) and ((self.today - self.due_list[c]).days <= 3)
+      d = d = ((self.today - self.due_list[c]).days > 90) 
       if (self.due_list[c] < self.today) and (d):
         annual_interest_rate = self.intrest[c]
         days_in_year = 365

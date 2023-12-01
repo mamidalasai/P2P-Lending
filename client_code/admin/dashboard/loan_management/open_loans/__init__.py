@@ -39,7 +39,7 @@ class open_loans(open_loansTemplate):
       b = -1
       for i in self.list_4:
         b+=1
-        if i == "Open" or i == 'open' or i == "Open Loans" or i == 'open loans' or i == 'openloan' or i == 'open loan' or i == "Open Loan":
+        if i == "Opened" or i == 'opened' or i == "Open Loans" or i == 'open loans' or i == 'openloan' or i == 'open loan' or i == "Open Loan":
           self.index.append(b)
           
       for i in self.index:
