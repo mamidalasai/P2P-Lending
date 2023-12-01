@@ -87,6 +87,7 @@ unique_ids:
     bank_users.borrower_dashboard.new_loan_request.loan_type: '1698663480920279749801604.1442'
     admin.dashboard.loan_management.rejected_loans: '1699528958889169021462649.09222'
     admin.dashboard.loan_management.rejected_loans.view_profile_2: '1700812221243295088415002.8101'
+    lendor_registration_form.dashboard.vblr.Borr_loan_request.loan_payment: '1701412918887920553133861.4945'
     admin.dashboard.loan_management.approved_loans.view_profile: '1700740546893987573171578.3491'
     lendor_registration_form.dashboard.rta: '1699957883953144866963289.06934'
     ? borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3b_business_3.star_1_borrower_registration_form_begin_3b_business_2

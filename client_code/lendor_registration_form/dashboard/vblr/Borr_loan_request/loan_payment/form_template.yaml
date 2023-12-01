@@ -1,8 +1,7 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {tooltip: '', background: white, foreground: '', border: '', visible: true,
-    role: null, html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
@@ -14,7 +13,7 @@ components:
     name: column_panel_1
     layout_properties:
       col_widths: {}
-      grid_position: RAKLEP,NRZKXO
+      grid_position: QLNQAV,GWOJQM
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 54, tooltip: '', border: '',
@@ -35,177 +34,16 @@ components:
       event_bindings: {click: button_1_click}
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-      visible: true, text: Borrower Loan Details, font_size: 25, font: '', spacing_above: small,
+      visible: true, text: Payment Info, font_size: 25, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '#083973',
       bold: false, underline: true, icon: ''}
     name: label_1
-    layout_properties: {grid_position: 'NLSDPF,JHPEKW'}
+    layout_properties: {grid_position: 'NRTARP,ZFDKPP'}
   - type: ColumnPanel
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: white}
+    properties: {role: outlined-card, col_widths: '{}'}
     name: outlined_card_1
-    layout_properties: {grid_position: 'HXTZTK,BLXSQC'}
-    components:
-    - type: GridPanel
-      properties: {}
-      name: grid_panel_1
-      layout_properties: {grid_position: 'RMYYPD,ENJZKF'}
-      components:
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'User ID :', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_2
-        layout_properties: {row: HPKKRX, width_xs: 3, col_xs: 3, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_user_id
-        layout_properties: {row: HPKKRX, width_xs: 3, col_xs: 6, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Name :', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_3
-        layout_properties: {row: PAVMCF, width_xs: 3, col_xs: 3, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_name
-        layout_properties: {row: PAVMCF, width_xs: 3, col_xs: 6, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Beseem Score:', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_4
-        layout_properties: {row: FUOHFR, width_xs: 3, col_xs: 3, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_beseem_score
-        layout_properties: {row: FUOHFR, width_xs: 3, col_xs: 6, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Loan Tenure :', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_5
-        layout_properties: {row: HYIUHK, width_xs: 3, col_xs: 3, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_loan_tenure
-        layout_properties: {row: HYIUHK, width_xs: 3, col_xs: 6, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Member Rom :', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_6
-        layout_properties: {row: EHRDEQ, width_xs: 3, col_xs: 3, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_member_rom
-        layout_properties: {row: EHRDEQ, width_xs: 3, col_xs: 6, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Member Since :', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_7
-        layout_properties: {row: HFXCZR, width_xs: 3, col_xs: 3, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_member_since
-        layout_properties: {row: HFXCZR, width_xs: 3, col_xs: 6, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Credit Limit :', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_8
-        layout_properties: {row: YOQBTM, width_xs: 3, col_xs: 3, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_credit_limit
-        layout_properties: {row: YOQBTM, width_xs: 3, col_xs: 6, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Loan Amount Applied :', font_size: null, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: true, underline: false, icon: ''}
-        name: label_9
-        layout_properties: {row: IVSUIL, width_xs: 3, col_xs: 3, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_loan_amount_applied
-        layout_properties: {row: IVSUIL, width_xs: 3, col_xs: 6, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Loan Account Number :', font_size: null, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: true, underline: false, icon: ''}
-        name: label_10
-        layout_properties: {row: TZEWKA, width_xs: 3, col_xs: 3, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_loan_acc_number
-        layout_properties: {row: TZEWKA, width_xs: 3, col_xs: 6, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Bank Account Details :', font_size: null, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: true, underline: false, icon: ''}
-        name: label_11
-        layout_properties: {row: SUHGPG, width_xs: 3, col_xs: 3, width: 157.197}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_bank_acc_details
-        layout_properties: {row: SUHGPG, width_xs: 3, col_xs: 6, width: 157.197}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: Black, visible: true, text: Accept, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0876e8', bold: false, underline: false, icon: ''}
-      name: button_2
-      layout_properties: {grid_position: 'FSPSUO,YYPPWE'}
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: Black, visible: true, text: Reject, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0876e8', bold: false, underline: false, icon: ''}
-      name: button_3
-      layout_properties: {grid_position: 'FSPSUO,GGFFHJ'}
+    layout_properties: {grid_position: 'VPGXEJ,LIGPKP'}
+    components: []
 - type: FlowPanel
   properties: {}
   name: navbar_links
