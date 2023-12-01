@@ -33,9 +33,6 @@ def product_details(product_id, product_name, processing_fee, extension_fee, mem
                                            discount_coupons = discount_coupons)
 
 
-@anvil.server.callable
-def manage_products(groups,category):
-  row = app_tables.product_categories.add_row(product_group=groups,product_category=category)
 
 
 @anvil.server.callable
