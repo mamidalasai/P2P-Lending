@@ -399,9 +399,6 @@ db_schema:
     - name: reason
       admin_ui: {width: 200, order: 1.5}
       type: string
-    - name: requested_on
-      admin_ui: {width: 200, order: 7}
-      type: datetime
     - name: outstanding_amount
       admin_ui: {width: 200}
       type: string
@@ -414,6 +411,9 @@ db_schema:
     - name: status
       admin_ui: {width: 200, order: 11}
       type: string
+    - name: requested_on
+      admin_ui: {width: 200, order: 7.5}
+      type: date
     title: foreclosure
   loan_details:
     client: full
@@ -434,9 +434,6 @@ db_schema:
     - name: application_status
       admin_ui: {width: 200}
       type: bool
-    - name: timestamp
-      admin_ui: {order: -0.015625, width: 200}
-      type: datetime
     - name: total_repayment_amount
       admin_ui: {order: -0.00390625, width: 200}
       type: number
@@ -476,9 +473,6 @@ db_schema:
     - name: monthly_emi
       admin_ui: {width: 200, order: -0.005859375}
       type: number
-    - name: due_date
-      admin_ui: {width: 200, order: 19}
-      type: datetime
     - name: lender_email_id
       admin_ui: {width: 200}
       type: string
@@ -490,6 +484,12 @@ db_schema:
       type: string
     - name: closed_date
       admin_ui: {width: 200, order: 23}
+      type: date
+    - name: timestamp
+      admin_ui: {width: 200, order: 9}
+      type: date
+    - name: due_date
+      admin_ui: {width: 200, order: 18.5}
       type: date
     title: loan_details
   product_group:
@@ -616,9 +616,6 @@ db_schema:
     - name: borrowing_status
       admin_ui: {width: 200, order: 7}
       type: bool
-    - name: borrower_approve_date_time
-      admin_ui: {width: 200, order: 8}
-      type: datetime
     - name: beseem_score
       admin_ui: {width: 200, order: 9}
       type: string
@@ -628,6 +625,9 @@ db_schema:
     - name: credit_limit
       admin_ui: {width: 200}
       type: number
+    - name: borrower_approved_date_time
+      admin_ui: {width: 200, order: 6.5}
+      type: date
   product_categories:
     client: full
     server: full

@@ -7,34 +7,55 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-#from ... import borrower_main_form_module
+from ... import borrower_main_form_module as main_form_module
 
 class loan_type(loan_typeTemplate):
-  def __init__(self, **properties):
-    #self.user_id=main_form_module.userId
-    #self.user_id=  1000  
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
+    def __init__(self, **properties):
+        self.user_id = main_form_module.userId
+        #self.user_id =  1000  
+        
+        # Set Form properties and Data Bindings.
+        self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
-  def link_1_click(self, **event_args):
-    open_form('bank_users.borrower_dashboard.new_loan_request.k12_loan')
+        # Manually fetch loan data and populate the dropdown
+        self.populate_loan_types()
 
-  def link_2_click(self, **event_args):
-    open_form('bank_users.borrower_dashboard.new_loan_request.business_loan')
+        # Any code you write here will run before the form opens.
 
-  def button_2_click(self, **event_args):
-    open_form('bank_users.borrower_dashboard.new_loan_request')
+    def populate_loan_types(self):
+        # Manually fetch loan types from the 'product_group' table
+        loan_types = app_tables.product_group.search()
 
-  def drop_down_1_change(self, **event_args):
+        # Populate the dropdown with fetched loan types
+        if loan_types:
+            self.drop_down_1.items = [loan['name'] for loan in loan_types]
+            self.drop_down_1.selected_value = loan_types[0]['name']  # Set the default selection
 
-    value=self.drop_down_1.selected_value 
-    if value=="K-12 Educational loan":
-      open_form('bank_users.borrower_dashboard.new_loan_request.k12_loan')
-    else:
-      open_form('bank_users.borrower_dashboard.new_loan_request.business_loan')
+    def drop_down_1_change(self, **event_args):
+        selected_value = self.drop_down_1.selected_value
+        self.label_1.visible=False
+        self.label_3.visible=True
+        self.drop_down_1.visible=True
+        self.drop_down_2.visible=True
 
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard')
-  
+        # Fetch product categories based on the selected loan type
+        product_categories = app_tables.product_categories.search(
+            name_group=selected_value
+        )
+
+        if product_categories:
+            # Display product categories in drop_down_2
+            self.drop_down_2.items = [category['name_categories'] for category in product_categories]
+            self.drop_down_2.selected_value = product_categories[0]['name_categories'] if product_categories else None
+
+    def button_1_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        open_form('bank_users.borrower_dashboard')
+
+    def button_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('bank_users.borrower_dashboard.new_loan_request')
+
+    def button_3_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('bank_users.borrower_dashboard.new_loan_request.check_out_form')
