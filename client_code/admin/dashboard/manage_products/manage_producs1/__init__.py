@@ -116,7 +116,5 @@ class manage_producs1(manage_producs1Template):
       self.drop_down_5.items = items_to_add  
 
   
-
-  
     
    
