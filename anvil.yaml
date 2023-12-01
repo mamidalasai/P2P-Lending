@@ -507,6 +507,15 @@ db_schema:
     - name: lender_coustmer_id
       admin_ui: {width: 200, order: 0}
       type: string
+    - name: borr_coustmer_id
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: borr_name
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: loan_amount
+      admin_ui: {width: 200, order: 3}
+      type: string
     title: loan_disbursement
   users:
     client: full
