@@ -22,18 +22,19 @@ class borrower_today_dues(borrower_today_duesTemplate):
         # Calculate days left and days gone for each loan
         for loan in all_loans:
             due_date = loan['due_date']
-            now = datetime.now(timezone.utc)
-            due_date_aware = due_date.replace(tzinfo=timezone.utc)
-            
-            days_left = (due_date_aware - now).days
-            days_gone = (now - due_date_aware).days
-            min=(days_gone,days_left)
-            # Update the 'days_positive' and 'days_negative' columns in the database
-            loan['days_left'] = max(0, days_left) 
-            loan['days_left'] = max(0, days_gone) * -1 
-            loan['days_left']=min
 
-            loan.update()
+            # Check if due_date is not None before processing
+            if due_date is not None:
+                now = datetime.now(timezone.utc)
+                due_date_aware = due_date.replace(tzinfo=timezone.utc)
+                
+                days_left = (due_date_aware - now).days
+                days_gone = (now - due_date_aware).days
+
+                # Update the 'days_positive' and 'days_negative' columns in the database
+                loan['days_left'] = max(0, days_left) 
+                loan['days_left'] = max(0, days_gone) * -1 
+                loan.update()
 
         # Display loans with the calculated values in the repeating panel
         self.repeating_panel_1.items = all_loans
