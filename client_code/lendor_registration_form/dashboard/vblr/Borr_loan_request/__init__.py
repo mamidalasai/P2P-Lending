@@ -11,6 +11,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
     def __init__(self, selected_row, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
+        self.selected_row = selected_row 
 
         # Populate labels with the selected row details
         self.label_user_id.text = f"{selected_row['coustmer_id']}"
@@ -67,7 +68,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
     def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('lendor_registration_form.dashboard.vblr')
+        open_form('lendor_registration_form.dashboard.vblr.Borr_loan_request.loan_payment.RowTemplate20',selected_row =selected_row)
 
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
