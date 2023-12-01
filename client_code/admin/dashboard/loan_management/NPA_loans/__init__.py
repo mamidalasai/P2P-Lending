@@ -50,7 +50,7 @@ class NPA_loans(NPA_loansTemplate):
     for i in self.id:
       if i in self.id_1:
         b = self.id_1.index(i)
-        if (self.loan_amont[b] != 0) and (self.status[b] != "closed"):
+        if (self.loan_due_amount[b] != 0) and (self.status[b] != "closed"):
           self.index.append(self.id_1[b])
 
     self.result = []

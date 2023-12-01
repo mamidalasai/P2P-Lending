@@ -47,11 +47,11 @@ class lapsed_loans(lapsed_loansTemplate):
 
 
     self.index = []  
+    b = -1
     for i in self.id:
-      if i in self.id_1:
-        b = self.id_1.index(i)
-        if (self.loan_due_amount[b] == 0) and (self.status[b] != "closed"):
-          self.index.append(self.id_1[b])
+      b += 1
+      if (self.loan_due_amount[b] != 0) or (self.status[b] != "closed"):
+        self.index.append(self.id_1[b])
 
     self.result = []
     self.days = {}
