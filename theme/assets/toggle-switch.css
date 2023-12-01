@@ -24,12 +24,12 @@
   border-radius: 50px;
 
 }
-
+/**/
 .anvil-role-toggleswitch-round span:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 25px;
+  width: 25px;
   left: 4px;
   bottom: 1px;
   background-color: white;
