@@ -47,22 +47,24 @@ class default_loans(default_loansTemplate):
 
 
     self.index = []  
+    b = -1
     for i in self.id:
-      if i in self.id_1:
-        b = self.id_1.index(i)
-        if (self.loan_due_amount[b] != 0) and (self.status[b] != "closed"):
-          self.index.append(self.id_1[b])
+      b += 1
+      if (self.loan_due_amount[b] != 0) and (self.status[b] != "closed"):
+        self.index.append(self.id[b])
 
+    print(self.index)
     self.result = []
     self.days = {}
     for i in self.index:
-      c = self.index.index(i)
-      d = d = ((self.today - self.due_list[c]).days > 3) and ((self.today - self.due_list[c]).days < 90)
+      c = self.id.index(i)
+      print(c)
+      d = ((self.today - self.due_list[c]).days > 3) and ((self.today - self.due_list[c]).days < 90)
       if (self.due_list[c] < self.today) and (d):
         annual_interest_rate = self.intrest[c]
         days_in_year = 365
         daily_interest_rate = (annual_interest_rate / 100) / days_in_year
-        print(daily_interest_rate)
+        
         self.result.append(self.id[c])
         interest_per_day = self.loan_due_amount[c] * daily_interest_rate
         days_late = (self.today - self.due_list[c]).days
@@ -70,8 +72,7 @@ class default_loans(default_loansTemplate):
         total_due = self.loan_due_amount[c] + penalty
         self.days[self.id[c]] = total_due
     
-    print(self.result)
-    print(self.days)
+    
     self.index1 = []
     self.final = []
     self.total = []
