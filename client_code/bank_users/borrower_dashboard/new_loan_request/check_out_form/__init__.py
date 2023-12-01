@@ -9,18 +9,18 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ... import borrower_main_form_module as main_form_module
 class check_out_form(check_out_formTemplate):
-  def __init__(self, **properties):
+    def __init__(self, **properties):
         # Initialize self.names as an instance variable
-        self.names = 'k-12 education loan'
+        # self.names = 'k-12 education loan'
 
         # Initialize self.interest_rate as an instance variable
         self.interest_rate = None
-
+        self.user_id = main_form_module.user_id
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
 
         # Any code you write here will run before the form opens.
-        user_request = app_tables.product_borrower.get(name=self.names)
+        user_request = app_tables.product_group.search()[0]  # Fetch the first row
 
         if user_request:
             self.interest_rate = user_request['interest_rate']
@@ -29,8 +29,7 @@ class check_out_form(check_out_formTemplate):
             self.int_rate.text = "Interest rate not found."
             return  # Exit the __init__ method if interest_rate is not available
 
-        all_requests = app_tables.loan_details.search()
-
+        
         if all_requests:
             most_recent_request = None
 
@@ -74,18 +73,18 @@ class check_out_form(check_out_formTemplate):
         else:
             self.trp_amount.text = "No user profile data available."
          
-  def submit_click(self, **event_args):
+    def submit_click(self, **event_args):
       
       
       
       alert('your request is submitted')
       open_form('bank_users.borrower_dashboard')
 
-  def button_1_click(self, **event_args):
+    def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('bank_users.borrower_dashboard.new_loan_request.k12_loan')
 
-  def button_2_click(self, **event_args):
+    def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('bank_users.borrower_dashboard')
 

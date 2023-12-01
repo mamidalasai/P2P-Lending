@@ -167,7 +167,7 @@ def add_loan_details(loan_amount, credit_limit, tenure, user_id):
             coustmer_id=user_id,
             full_name=full_name,
             email_id=email_id,                 
-            timestamp=datetime.now()
+            timestamp=datetime.now().date()
         )
 
         # Return the generated loan ID to the client
