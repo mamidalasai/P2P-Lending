@@ -77,6 +77,7 @@ class check_out_form(check_out_formTemplate):
   def submit_click(self, **event_args):
       
       
+      
       alert('your request is submitted')
       open_form('bank_users.borrower_dashboard')
 
