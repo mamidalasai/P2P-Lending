@@ -22,13 +22,15 @@ class borrower_today_dues(borrower_today_duesTemplate):
         # Calculate days left and days gone for each loan
         for loan in all_loans:
             due_date = loan['due_date']
-            days_left = (due_date - datetime.now()).days
-            days_gone = (datetime.now() - loan['timestamp']).days
+            now = datetime.now()
+            days_left = (due_date - now).days
+            days_gone = (now - due_date).days
             
-            # Add calculated values to the loan row
+            # Update the 'days_left' and 'days_gone' columns in the database
             loan['days_left'] = days_left
             loan['days_gone'] = days_gone
-        
+            loan.update()
+
         # Display loans with the calculated values in the repeating panel
         self.repeating_panel_1.items = all_loans
 
