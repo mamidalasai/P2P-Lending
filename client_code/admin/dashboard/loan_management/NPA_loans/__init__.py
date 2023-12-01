@@ -59,7 +59,7 @@ class NPA_loans(NPA_loansTemplate):
     for i in self.index:
       c = self.id.index(i)
       print(c)
-      d = ((self.today - self.due_list[c]).days > 90) and ((self.today - self.due_list[c]).days <= 3)
+      d = ((self.today - self.due_list[c]).days > 90)
       if (self.due_list[c] < self.today) and (d):
         annual_interest_rate = self.intrest[c]
         days_in_year = 365
