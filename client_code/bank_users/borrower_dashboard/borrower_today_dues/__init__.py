@@ -19,7 +19,7 @@ class borrower_today_dues(borrower_today_duesTemplate):
         # Fetch all loan details
         all_loans = app_tables.loan_details.search()
         
-        # Calculate days left and days gone for each loan
+        # Calculate days left for each loan
         for loan in all_loans:
             due_date = loan['due_date']
             now = datetime.now(timezone.utc)
@@ -29,16 +29,15 @@ class borrower_today_dues(borrower_today_duesTemplate):
             days_gone = (now - due_date_aware).days
 
             # Choose the minimum of days_left and days_gone
-            min_days = min(days_left, days_gone)
+            min_days = min(days_gone,days_left)
 
             # Update the 'days_left' column in the database
             loan['days_left'] = min_days
-
+            if loan 
             loan.update()
 
         # Display loans with the calculated values in the repeating panel
         self.repeating_panel_1.items = all_loans
-
     def home_borrower_registration_form_copy_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('bank_users.borrower_dashboard')
