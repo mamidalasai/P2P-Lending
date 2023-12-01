@@ -29,9 +29,60 @@ components:
       layout_properties: {grid_position: 'PMPTWL,LBDHHC'}
       event_bindings: {click: button_1_click}
   - type: Label
-    properties: {}
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+      visible: true, text: Loan Disbursement, font_size: 25, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#083973',
+      bold: false, underline: true, icon: ''}
     name: label_1
-    layout_properties: {grid_position: 'FUYIEE,JKFMDI'}
+    layout_properties: {grid_position: 'PLFXHN,RHISLU'}
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'IMMUVT,OVSFVY'}
+    components:
+    - type: ColumnPanel
+      properties: {role: outlined-card, tooltip: '', border: '', foreground: white,
+        visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+        col_widths: '{}', spacing_below: small, background: '#a51622'}
+      name: outlined_card_3
+      layout_properties: {width: 548.3333}
+      components:
+      - type: TextBox
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
+          placeholder: '', border: '', enabled: true, foreground: White, visible: true,
+          text: Total Available Balance, font_size: 15, font: '', spacing_above: small,
+          type: text, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false}
+        name: outlined_1
+        layout_properties: {grid_position: 'GGEXCH,YMANUK'}
+      - type: Label
+        properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: 20, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_2
+        layout_properties: {grid_position: 'LSGOOP,TSFOCN'}
+  - type: ColumnPanel
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#a51622'}
+    name: outlined_card_2
+    layout_properties: {width: 239.3333, grid_position: 'IMMUVT,XJNNSW'}
+    components:
+    - type: TextBox
+      properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: White, visible: true, text: Dibursed Amount,
+        font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false}
+      name: outlined_2
+      layout_properties: {grid_position: 'XOEZZD,PEBFWI'}
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+        visible: true, text: '', font_size: 20, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: true, underline: false,
+        icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'HCHFPK,RIYBTA'}
   - type: ColumnPanel
     properties: {role: outlined-card, col_widths: '{}'}
     name: outlined_card_1
@@ -39,10 +90,23 @@ components:
     components:
     - type: DataGrid
       properties:
+        role: null
         columns:
-        - {id: ZARIGW, title: Column 1, data_key: column_1}
-        - {id: IYCJCN, title: Column 2, data_key: column_2}
-        - {id: QSGPAA, title: Column 3, data_key: column_3}
+        - {id: ZARIGW, title: Borrower ID, data_key: column_1, $$hashKey: 'object:5348'}
+        - {id: IYCJCN, title: Loan ID, data_key: column_2, $$hashKey: 'object:5349'}
+        - {id: QSGPAA, title: Borrower Name, data_key: column_3, $$hashKey: 'object:5350'}
+        - {id: WSYLTB, title: Loan Amount, data_key: column_4, $$hashKey: 'object:5486'}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20
+        visible: true
+        wrap_on: never
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
       name: data_grid_1
       layout_properties: {grid_position: 'TVRYTM,QTLGDT'}
       components:
