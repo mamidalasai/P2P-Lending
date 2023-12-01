@@ -111,7 +111,6 @@ class edit_form_copy(edit_form_copyTemplate):
       self.spouse_number_list.append(i['spouse_mobile'])
       self.company_name_list.append(i['spouse_company_name'])
       self.company_adress_list.append(i['spouse_company_address'])
-      self.proffic_list.append(i['spouse_profficen'])
       self.user_type_list.append(i['usertype'])
       self.approve_list.append(i['registration_approve'])
       self.mobile_list.append(i['mobile'])
@@ -173,7 +172,6 @@ class edit_form_copy(edit_form_copyTemplate):
       self.text_box_18.text = self.spouse_number_list[c]
       self.text_box_19.text = self.company_name_list[c]
       self.text_box_20.text = self.company_adress_list[c]
-      self.text_box_21.text =  self.proffic_list[c]
       self.text_box_22.text = self.user_type_list[c]
       self.text_box_23.text = bool(self.approve_list[c])
       self.text_box_1.text = self.another_email[c]
@@ -234,7 +232,6 @@ class edit_form_copy(edit_form_copyTemplate):
       data[a]['spouse_mobile'] = self.text_box_18.text
       data[a]['spouse_company_name'] = self.text_box_19.text
       data[a]['spouse_company_address'] = self.text_box_20.text
-      data[a]['spouse_profficen'] = self.text_box_21.text
       data[a]['usertype'] = self.text_box_22.text
       data[a]['registration_approve'] = bool(self.text_box_23.text)
       data[a]['about'] = self.text_box_24.text

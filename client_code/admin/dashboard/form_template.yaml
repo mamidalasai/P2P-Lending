@@ -25,7 +25,7 @@ components:
   - type: XYPanel
     properties: {height: 505}
     name: xy_panel_1
-    layout_properties: {grid_position: 'CGUQPY,IXJGGB'}
+    layout_properties: {grid_position: 'CGUQPY,TZTJWR'}
     components:
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',

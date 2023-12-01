@@ -39,7 +39,7 @@ class closed_loans(closed_loansTemplate):
       b = -1
       for i in self.list_4:
         b+=1
-        if i == "Close" or i == 'close' or i == "Closed Loans" or i == 'closed loans' or i == 'closedloan' or i == 'closed loan' or i == 'Closed Loan':
+        if i == "Closed" or i == 'closed' or i == "Closed Loans" or i == 'closed loans' or i == 'closedloan' or i == 'closed loan' or i == 'Closed Loan':
           self.index.append(b)
           
       for i in self.index:

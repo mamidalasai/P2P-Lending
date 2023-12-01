@@ -117,7 +117,6 @@ class view_profile_copy(view_profile_copyTemplate):
       self.spouse_number_list.append(i['spouse_mobile'])
       self.company_name_list.append(i['spouse_company_name'])
       self.company_adress_list.append(i['spouse_company_address'])
-      self.proffic_list.append(i['spouse_profficen'])
       self.user_type_list.append(i['usertype'])
       self.approve_list.append(i['registration_approve'])
       self.mobile_list.append(i['mobile'])
@@ -190,7 +189,6 @@ class view_profile_copy(view_profile_copyTemplate):
         self.label_55.text = self.spouse_number_list[b]
         self.label_56.text = self.company_name_list[b]
         self.label_57.text = self.company_adress_list[b]
-        self.label_58.text =  self.proffic_list[b]
         self.label_59.text = self.user_type_list[b]
         self.label_60.text = bool(self.approve_list [b])
         self.label_74.text = self.another_email[b]
