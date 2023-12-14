@@ -1,18 +1,18 @@
 container: {type: ColumnPanel}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {}
   name: content_panel
   layout_properties:
     col_widths: {}
-    grid_position: TXEWWP,MLKQSE
+    grid_position: UBPVIZ,ESCWSS
   components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: content_panel_copy
     layout_properties:
       col_widths: {}
-      grid_position: AETBJQ,AWJFKB
+      grid_position: ADUYHR,ZCCOFL
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 32, tooltip: '', border: '',
@@ -39,7 +39,7 @@ components:
       - {id: EPCWQG, title: Loan ID, data_key: column_1, $$hashKey: 'object:53723'}
       - {id: WMIWXU, title: Costumer ID, data_key: column_2, $$hashKey: 'object:53724'}
       - {id: PVBYZX, title: Full Name, data_key: column_3, $$hashKey: 'object:53725'}
-      - {id: HCAQYD, title: Loan Status, data_key: column_4, $$hashKey: 'object:53773'}
+      - {id: HCAQYD, title: Full Amount Due, data_key: column_4, $$hashKey: 'object:53773'}
       auto_header: true
       tooltip: ''
       border: ''
@@ -52,10 +52,12 @@ components:
       spacing_below: small
       background: ''
     name: data_grid_1
-    layout_properties: {grid_position: 'SYHKHY,ODSIUS'}
+    layout_properties:
+      col_widths: {}
+      grid_position: HOLCPI,UNGSMN
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan_management.loan_disbursed.RowTemplate16}
+      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan.default_loans.RowTemplate19}
       name: repeating_panel_1
       layout_properties: {}
 is_package: true

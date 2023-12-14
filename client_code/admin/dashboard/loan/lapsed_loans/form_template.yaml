@@ -57,7 +57,7 @@ components:
       grid_position: HOLCPI,UNGSMN
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan_management.lapsed_loans.RowTemplate18}
+      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan.lapsed_loans.RowTemplate18}
       name: repeating_panel_1
       layout_properties: {}
 is_package: true

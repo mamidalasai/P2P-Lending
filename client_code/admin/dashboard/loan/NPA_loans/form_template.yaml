@@ -5,7 +5,7 @@ components:
   name: content_panel
   layout_properties:
     col_widths: {}
-    grid_position: UBPVIZ,ESCWSS
+    grid_position: EKXVFG,NVCRKO
   components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
@@ -57,7 +57,7 @@ components:
       grid_position: HOLCPI,UNGSMN
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan_management.default_loans.RowTemplate19}
+      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan.NPA_loans.RowTemplate20}
       name: repeating_panel_1
       layout_properties: {}
 is_package: true

@@ -1,18 +1,19 @@
-container: {type: ColumnPanel}
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
   properties: {}
   name: content_panel
-  layout_properties:
-    col_widths: {}
-    grid_position: EKXVFG,NVCRKO
+  layout_properties: {slot: default}
   components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: content_panel_copy
     layout_properties:
       col_widths: {}
-      grid_position: ADUYHR,ZCCOFL
+      grid_position: SDSJYQ,RIJUQY
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 32, tooltip: '', border: '',
@@ -39,7 +40,8 @@ components:
       - {id: EPCWQG, title: Loan ID, data_key: column_1, $$hashKey: 'object:53723'}
       - {id: WMIWXU, title: Costumer ID, data_key: column_2, $$hashKey: 'object:53724'}
       - {id: PVBYZX, title: Full Name, data_key: column_3, $$hashKey: 'object:53725'}
-      - {id: HCAQYD, title: Full Amount Due, data_key: column_4, $$hashKey: 'object:53773'}
+      - {id: HCAQYD, title: Loan Status, data_key: column_4, $$hashKey: 'object:53773'}
+      - {id: DBUUUO, title: '', data_key: column_5, $$hashKey: 'object:53775'}
       auto_header: true
       tooltip: ''
       border: ''
@@ -54,10 +56,21 @@ components:
     name: data_grid_1
     layout_properties:
       col_widths: {}
-      grid_position: HOLCPI,UNGSMN
+      grid_position: CGBQQP,CQBVOZ
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan_management.NPA_loans.RowTemplate20}
+      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan.rejected_loans.RowTemplate8}
       name: repeating_panel_1
       layout_properties: {}
-is_package: true
+    - type: Link
+      properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+        spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: 'fa:angle-double-left'}
+      name: link_2
+      layout_properties: {}
+      event_bindings: {click: link_2_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}

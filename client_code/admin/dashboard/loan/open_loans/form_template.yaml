@@ -13,7 +13,7 @@ components:
     name: content_panel_copy
     layout_properties:
       col_widths: {}
-      grid_position: SDSJYQ,RIJUQY
+      grid_position: ADUYHR,ZCCOFL
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 32, tooltip: '', border: '',
@@ -56,10 +56,10 @@ components:
     name: data_grid_1
     layout_properties:
       col_widths: {}
-      grid_position: CGBQQP,CQBVOZ
+      grid_position: HOLCPI,UNGSMN
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan_management.rejected_loans.RowTemplate8}
+      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan.open_loans.RowTemplate13}
       name: repeating_panel_1
       layout_properties: {}
     - type: Link
