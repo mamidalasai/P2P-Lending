@@ -31,7 +31,7 @@ class lapsed_loans(lapsed_loansTemplate):
     self.full_name = []
     self.status = []
     for i in self.loan:
-      self.due_list.append(i['due_date'].date())
+      self.due_list.append(i['due_date'])
       self.loan_amont.append(i['loan_amount'])
       self.id.append(i['loan_id'])
       self.intrest.append(i['interest_rate'])
@@ -39,11 +39,6 @@ class lapsed_loans(lapsed_loansTemplate):
       self.c_id.append(i['coustmer_id'])
       self.full_name.append(i['full_name'])
       self.status.append(i['loan_updated_status'])
-
-    self.id_1 = []
-    for i in self.fourcloser:
-      self.paid_amount.append(i['paid_amount'])
-      self.id_1.append(i['loan_id'])
 
 
     self.index = []  
